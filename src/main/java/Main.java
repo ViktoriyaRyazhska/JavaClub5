@@ -1,4 +1,5 @@
 import one.*;
+import two.Task02;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -17,6 +18,7 @@ public class Main {
         }
         switch (taskNumber) {
             case 1: Task01.task1(); break;
+            case 2: Task02.task02(); break;
 
             case 6: Task06.task6(); break;
         }
