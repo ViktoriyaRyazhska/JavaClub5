@@ -17,10 +17,10 @@ public class Main {
             System.out.println("Number incorrect!");
         }
         switch (taskNumber) {
-            case 1: Task01.task1(); break;
+            case 1: Task01.task01(); break;
             case 2: Task02.task02(); break;
 
-            case 6: Task06.task6(); break;
+            case 6: Task06.task06(); break;
 
             case 11: Task11.task11(); break;
 
