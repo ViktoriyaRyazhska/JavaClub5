@@ -1,4 +1,4 @@
-
+package basicprogramtest.task1test;
 
 import javaclub5.basicprogram.task1.Runner;
 import org.junit.Assert;
