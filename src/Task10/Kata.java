@@ -1,6 +1,6 @@
 package Task10;
 
-public class Task10 {
+public class Kata {
     public static String datingRange(int age) {
         int min = age / 2 + 7;
         int max = (age - 7) * 2;
