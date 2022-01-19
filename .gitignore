@@ -5,6 +5,7 @@
 # User-specific stuff
 .idea/**
 *.iml
+/target/**
 
 # Generated files
 .idea/**/contentModel.xml
