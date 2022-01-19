@@ -20,6 +20,5 @@ public class Main {
 
             case 6: Task06.task6(); break;
         }
-        Task01.task1();
     }
 }
