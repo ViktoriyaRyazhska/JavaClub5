@@ -2,7 +2,7 @@ package one;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-class Task01 {
+public class Task01 {
     public static int doubleInteger(int i) {
         return i * 2;
     }
