@@ -12,7 +12,7 @@ public class Main {
         int taskNumber = 1;
         try {
             taskNumber = Integer.parseInt(reader.readLine());
-            if(taskNumber < 1 && taskNumber > 72) throw new IOException();
+            if(taskNumber < 1 || taskNumber > 72) throw new IOException();
         } catch (IOException exception) {
             System.out.println("Number incorrect!");
         }
@@ -21,6 +21,16 @@ public class Main {
             case 2: Task02.task02(); break;
 
             case 6: Task06.task6(); break;
+
+            case 11: Task11.task11(); break;
+
+            case 16: Task16.task16(); break;
+
+            case 21: Task21.task21(); break;
+
+            case 26: Task26.task26(); break;
+
+            case 31: Task31.task31(); break;
         }
     }
 }

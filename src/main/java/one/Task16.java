@@ -49,7 +49,7 @@ public class Task16 {
             System.out.println("Answer: ");
             System.out.println("The winner is " + declareWinner(first, second, first.name));
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println("Invalid parameters!");
         }
     }
 
