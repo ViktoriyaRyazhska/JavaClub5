@@ -1,10 +1,9 @@
-package basicprogramtest.task1test;
+package javaclub5.basicprogram.task1;
 
-import javaclub5.basicprogram.task1.Runner;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class task1test {
+public class Task1Test {
 
     @Test
     public void doubleIntTest() {
