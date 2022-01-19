@@ -16,7 +16,7 @@ public class Task06 {
             int i = Integer.parseInt(reader.readLine());
             System.out.println("Answer: " + toBinary(i));
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println("Invalid parameter!");
         }
     }
 }
