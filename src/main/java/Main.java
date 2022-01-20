@@ -37,6 +37,16 @@ public class Main {
             case 41: Task41.task41(); break;
 
             case 46: Task46.task46(); break;
+
+            case 51: Task51.task51(); break;
+
+            case 56: Task56.task56(); break;
+
+            case 61: Task61.task61(); break;
+
+            case 66: Task66.task66(); break;
+
+            case 71: Task71.task71(); break;
         }
     }
 }
