@@ -1,19 +1,19 @@
 package one;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class Task01 {
-    public static int doubleInteger(int i) {
-        return i * 2;
+public class Task46 {
+    public static int makeMove(int sticks) {
+        return sticks % 4 != 0 ? sticks % 4 : 1;
     }
 
-    public static void task01() {
-        System.out.println("The task is to double the integer and return it.");
+    public static void task46() {
+        System.out.println("The task is to create strategy of winning game \"21 sticks\" ");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
             System.out.println("Set parameter:");
-            int i = Integer.parseInt(reader.readLine());
-            System.out.println("Answer: " + doubleInteger(i));
+            System.out.println("Answer: " + makeMove(Integer.parseInt(reader.readLine())));
         } catch (Exception e) {
             System.out.println("Invalid parameter!");
         }
