@@ -39,7 +39,7 @@ public class Runner {
     }
 
     /**
-     * calculate the volume of a cuboid with three values:
+     * Returns an array of integers from n to 1 where n>0
      * @param n - number where n>0.
      * @return an array of integers from n to 1
      */
