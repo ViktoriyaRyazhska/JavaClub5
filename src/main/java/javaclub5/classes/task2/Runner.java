@@ -1,5 +1,9 @@
 package javaclub5.classes.task2;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 /**
  /**
  *
@@ -24,7 +28,16 @@ public class Runner {
      *
      */
     public static void start() {
-        Dinglemouse dinglemouse = Dinglemouse.INST;
-        System.out.println(dinglemouse.plus100(23));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Input a number to increment by 100");
+        try {
+            int number = Integer.parseInt(reader.readLine());
+            Dinglemouse dinglemouse = Dinglemouse.INST;
+            System.out.println(dinglemouse.plus100(number));
+        } catch (IOException e) {
+            System.out.println("Wrong input");
+            e.printStackTrace();
+        }
+
     }
 }
