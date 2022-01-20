@@ -1,3 +1,4 @@
+import five.Task05;
 import one.*;
 import two.Task02;
 
@@ -17,36 +18,23 @@ public class Main {
             System.out.println("Number incorrect!");
         }
         switch (taskNumber) {
-            case 1: Task01.task01(); break;
-            case 2: Task02.task02(); break;
-
-            case 6: Task06.task06(); break;
-
-            case 11: Task11.task11(); break;
-
-            case 16: Task16.task16(); break;
-
-            case 21: Task21.task21(); break;
-
-            case 26: Task26.task26(); break;
-
-            case 31: Task31.task31(); break;
-
-            case 36: Task36.task36(); break;
-
-            case 41: Task41.task41(); break;
-
-            case 46: Task46.task46(); break;
-
-            case 51: Task51.task51(); break;
-
-            case 56: Task56.task56(); break;
-
-            case 61: Task61.task61(); break;
-
-            case 66: Task66.task66(); break;
-
-            case 71: Task71.task71(); break;
+            case 1 -> Task01.task01();
+            case 2 -> Task02.task02();
+            case 5 -> Task05.task05();
+            case 6 -> Task06.task06();
+            case 11 -> Task11.task11();
+            case 16 -> Task16.task16();
+            case 21 -> Task21.task21();
+            case 26 -> Task26.task26();
+            case 31 -> Task31.task31();
+            case 36 -> Task36.task36();
+            case 41 -> Task41.task41();
+            case 46 -> Task46.task46();
+            case 51 -> Task51.task51();
+            case 56 -> Task56.task56();
+            case 61 -> Task61.task61();
+            case 66 -> Task66.task66();
+            case 71 -> Task71.task71();
         }
     }
 }
