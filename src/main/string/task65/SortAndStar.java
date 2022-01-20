@@ -1,4 +1,4 @@
-package Task65;
+package main.string.task65;
 
 import java.util.Arrays;
 

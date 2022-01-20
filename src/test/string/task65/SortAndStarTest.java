@@ -1,5 +1,6 @@
-package Task65;
+package test.string.task65;
 
+import main.string.task65.SortAndStar;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

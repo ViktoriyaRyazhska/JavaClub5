@@ -1,4 +1,4 @@
-package Task60;
+package main.string.task60;
 
 public class FakeBinary {
 

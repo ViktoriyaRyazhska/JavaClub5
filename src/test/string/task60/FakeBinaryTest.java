@@ -1,5 +1,6 @@
-package Task60;
+package test.string.task60;
 
+import main.string.task60.FakeBinary;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

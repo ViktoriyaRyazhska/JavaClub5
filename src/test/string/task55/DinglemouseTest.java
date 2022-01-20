@@ -1,5 +1,6 @@
-package Task55;
+package test.string.task55;
 
+import main.string.task55.Dinglemouse;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

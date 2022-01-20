@@ -1,4 +1,4 @@
-package Task55;
+package main.string.task55;
 
 public class Dinglemouse {
 
