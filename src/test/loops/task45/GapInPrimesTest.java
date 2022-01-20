@@ -1,9 +1,10 @@
-package Task45;
+package test.loops.task45;
 
 import java.util.Arrays;
 
-import org.junit.Test;
 
+import main.loops.task45.GapInPrimes;
+import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class GapInPrimesTest {

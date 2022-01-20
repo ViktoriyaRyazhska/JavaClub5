@@ -1,4 +1,4 @@
-package Task35;
+package main.loops.task35;
 
 public class Maps {
     public static int[] map(int[] arr) {

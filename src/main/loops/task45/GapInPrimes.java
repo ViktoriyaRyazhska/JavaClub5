@@ -1,11 +1,11 @@
-package Task45;
+package main.loops.task45;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.LongStream;
 
-class GapInPrimes {
+public class GapInPrimes {
     public static boolean isPrime(long num) {
         return num > 1 && LongStream.rangeClosed(2, (long)Math.sqrt(num)).noneMatch(div-> num % div== 0);
     }

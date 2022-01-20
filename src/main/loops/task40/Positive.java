@@ -1,4 +1,4 @@
-package Task40;
+package main.loops.task40;
 
 public class Positive{
 

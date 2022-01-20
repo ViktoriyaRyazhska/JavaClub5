@@ -1,5 +1,6 @@
-package Task40;
+package test.loops.task40;
 
+import Task70.loops.task40.Positive;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
