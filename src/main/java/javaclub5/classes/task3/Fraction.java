@@ -1,4 +1,7 @@
 package javaclub5.classes.task3;
+
+import java.util.Objects;
+
 /**
  *
  * class 'Fraction', which accepts two arguments (numerator, denominator).
@@ -53,15 +56,21 @@ public class Fraction {
         return numerator;
     }
 
-    public void setNumerator(int numerator) {
-        this.numerator = numerator;
-    }
 
     public int getDenominator() {
         return denominator;
     }
 
-    public void setDenominator(int denominator) {
-        this.denominator = denominator;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Fraction fraction = (Fraction) o;
+        return numerator == fraction.numerator && denominator == fraction.denominator;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(numerator, denominator);
     }
 }
