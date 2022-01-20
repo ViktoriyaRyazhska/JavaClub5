@@ -20,7 +20,7 @@ public class Runner {
     }
 
     public static String reversed(String word) {
-        String reversedWord = " ";
+        String reversedWord = "";
         char w;
 
         for (int i = 0; i < word.length(); i++) {
