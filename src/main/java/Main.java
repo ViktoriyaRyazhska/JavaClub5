@@ -1,6 +1,8 @@
 import five.Task05;
 import one.*;
 import two.Task02;
+import two.Task07;
+import two.Task12;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -21,6 +23,7 @@ public class Main {
             case 1 -> Task01.task01();
             case 2 -> Task02.task02();
             case 5 -> Task05.task05();
+            case 7 -> Task07.task07();
             case 6 -> Task06.task06();
             case 11 -> Task11.task11();
             case 16 -> Task16.task16();
