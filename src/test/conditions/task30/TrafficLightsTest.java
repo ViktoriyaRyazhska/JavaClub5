@@ -1,5 +1,6 @@
-package Task30;
+package test.conditions.task30;
 
+import main.conditions.task30.TrafficLights;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

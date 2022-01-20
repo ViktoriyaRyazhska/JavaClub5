@@ -1,4 +1,4 @@
-package Task30;
+package main.conditions.task30;
 
 public class TrafficLights {
 

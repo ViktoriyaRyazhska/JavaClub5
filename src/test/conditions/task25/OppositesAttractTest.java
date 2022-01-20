@@ -1,5 +1,6 @@
-package Task25;
+package test.conditions.task25;
 
+import main.conditions.task25.OppositesAttract;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

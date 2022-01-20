@@ -1,4 +1,4 @@
-package Task25;
+package main.conditions.task25;
 
 public class OppositesAttract {
 
