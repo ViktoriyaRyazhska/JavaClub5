@@ -1,5 +1,6 @@
-package Task20;
+package test.conditions.task20;
 
+import main.conditions.task20.BooleanToString;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

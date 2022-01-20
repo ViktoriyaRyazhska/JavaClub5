@@ -1,4 +1,4 @@
-package Task15;
+package main.classes.task15;
 
 import java.util.stream.IntStream;
 

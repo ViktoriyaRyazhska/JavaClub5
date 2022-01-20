@@ -1,8 +1,10 @@
-package Task15;
+package test.classes.task15;
 
+import main.classes.task15.Canvas;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import org.junit.runners.JUnit4;
+
 
 public class CanvasTest {
 
