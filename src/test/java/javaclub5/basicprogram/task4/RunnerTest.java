@@ -1,8 +1,13 @@
 package javaclub5.basicprogram.task4;
 
-import junit.framework.TestCase;
 import org.junit.Assert;
 import org.junit.Test;
+
+/**
+ *
+ *
+ * @author Popova Anna
+ */
 
 public class RunnerTest {
     @Test
