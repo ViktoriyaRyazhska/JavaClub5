@@ -12,10 +12,10 @@ import org.junit.Test;
 
 public class Task2Test {
 
-    @Test
     /**
      * Test of reversed method
      */
+    @Test
     public void reversedTest() {
         Assert.assertEquals("dlrow", Runner.reversed("world"));
     }

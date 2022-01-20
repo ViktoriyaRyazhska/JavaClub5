@@ -12,10 +12,10 @@ import org.junit.Test;
 
 public class Task1Test {
 
-    @Test
     /**
      * Test of transformIntToString method
      */
+    @Test
     public void transformIntToStringTest() {
         Assert.assertEquals("67", Runner.transformIntToString(67));
         Assert.assertEquals("123", Runner.transformIntToString(123));

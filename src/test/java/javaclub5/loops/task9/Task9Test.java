@@ -12,10 +12,10 @@ import org.junit.Test;
 
 public class Task9Test {
 
-    @Test
     /**
      * Test of sumOfPositiveNumbers method
      */
+    @Test
     public void sumOfPositiveNumbersTest() {
         Assert.assertEquals(15, Runner.sumOfPositiveNumbers(new int[]{1,2,3,4,5}));
         Assert.assertEquals(13, Runner.sumOfPositiveNumbers(new int[]{1,-2,3,4,5}));

@@ -12,10 +12,10 @@ import org.junit.Test;
 
 public class Task3Test {
 
-    @Test
     /**
      * Test of sayHello method
      */
+    @Test
     public void sayHelloTest() {
         String[] name = {"John", "Smith"};
         Assert.assertEquals("Hello, John Smith! Welcome to Phoenix, Arizona!",

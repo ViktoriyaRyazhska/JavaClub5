@@ -2,12 +2,20 @@ package javaclub5.basicprogram.task1;
 
 import org.junit.Assert;
 import org.junit.Test;
+/**
+ *
+ * Tests of Task 1 BasicProgram
+ *
+ * @author Rostyslav Ros
+ */
 
 public class Task1Test {
 
+    /**
+     * Test of doubleInt method
+     */
     @Test
     public void doubleIntTest() {
-        Runner runner = new Runner();
-        Assert.assertTrue(runner.doubleInt(2) == 4);
+        Assert.assertEquals("Nope!" , 4, Runner.doubleInt(2));
     }
 }

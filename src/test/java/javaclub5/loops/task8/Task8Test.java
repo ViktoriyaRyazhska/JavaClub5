@@ -11,10 +11,10 @@ import org.junit.Test;
 
 public class Task8Test {
 
-    @Test
     /**
      * Test of multiplyNumsInArray method
      */
+    @Test
     public void multiplyNumsInArrayTest() {
         Assert.assertEquals(6, Runner.multiplyNumsInArray(new int[]{1,2,3}));
         Assert.assertEquals(16, Runner.multiplyNumsInArray(new int[]{4,1,1,1,4}));
