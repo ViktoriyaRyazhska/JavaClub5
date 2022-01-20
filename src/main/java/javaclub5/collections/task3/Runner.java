@@ -2,6 +2,15 @@ package javaclub5.collections.task3;
 
 import java.util.*;
 
+/**
+ *Fix the bug in Filtering method
+ * The method is supposed to remove even numbers from the list and return a list that contains the odd numbers.
+ *
+ * However, there is a bug in the method that needs to be resolved.
+ *
+ * @author Popova Anna
+ */
+
 public class Runner {
     public static void main(String[] args) {
         List<Integer> numbers = new ArrayList<>();
