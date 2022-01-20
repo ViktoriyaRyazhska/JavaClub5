@@ -30,7 +30,7 @@ public class Runner {
 
         Iterator<Integer> iter = inputList.iterator();
         while (iter.hasNext()) {
-            if (!(iter.next() % 2 == 0)) {
+            if (!(iter.next() % 2 == 1)) {
                 iter.remove();
             }
         }
