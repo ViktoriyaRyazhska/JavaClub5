@@ -1,4 +1,4 @@
-package Task50;
+package main.oop.task50;
 
 public abstract class Figure {
     double triangleBase;

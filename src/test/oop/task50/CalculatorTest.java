@@ -1,7 +1,8 @@
-package Task50;
+package test.oop.task50;
 
 import static org.junit.Assert.*;
 
+import main.oop.task50.*;
 import org.junit.Test;
 
 public class CalculatorTest {
