@@ -1,20 +1,18 @@
-package javaclub5.classes.task2;
+package javaclub5.conditions.task11;
+
+import javaclub5.conditions.task10.Bob;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- /**
  *
- * The code provided has a method plus100 which is supposed to return the number of the parameter incremented by 100.
- * But it's not working properly.
- * Task
- * Fix the code so we can all go home early.
- * Restrictions
- *     Do not modify the constructor
- *     Do not modify the plus100 method
- *     Do not modify the ONE_HUNDRED declaration
+ * Consider a sequence where the first two numbers are 0 and 1 and the next number of the sequence is the
+ * sum of the previous 2 modulo 3. Write a function that finds the nth number of the sequence.
+ * Constraints:
+ *
+ *     1 ≤ N ≤ 10^19
  *
  * @author Rostyslav Ros
  */
@@ -23,17 +21,19 @@ public class Runner {
     public static void main(String[] args) {
         start();
     }
+
     /**
      * main method of Class
      *
      */
     public static void start() {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Input a number to increment by 100");
+        System.out.println(" Input number of the sequence");
         try {
             int number = Integer.parseInt(reader.readLine());
-            Dinglemouse dinglemouse = Dinglemouse.INST;
-            System.out.println(dinglemouse.plus100(number));
+            int result = Solution.sequence(number);
+            System.out.printf("the %dth number of the sequence will be %d", number, result);
+
         } catch (IOException e) {
             System.out.println("Wrong input");
             e.printStackTrace();
