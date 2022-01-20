@@ -1,4 +1,4 @@
-package Task70;
+package main.collections.task70;
 
 import java.util.*;
 

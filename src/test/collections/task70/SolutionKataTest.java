@@ -1,5 +1,6 @@
-package Task70;
+package test.collections.task70;
 
+import main.collections.task70.SolutionKata;
 import org.junit.Test;
 
 import java.util.*;
