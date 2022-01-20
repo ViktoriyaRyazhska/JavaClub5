@@ -1,4 +1,5 @@
 import five.Task05;
+import five.Task10;
 import one.*;
 import two.Task02;
 
@@ -22,6 +23,7 @@ public class Main {
             case 2 -> Task02.task02();
             case 5 -> Task05.task05();
             case 6 -> Task06.task06();
+            case 10 -> Task10.task10();
             case 11 -> Task11.task11();
             case 16 -> Task16.task16();
             case 21 -> Task21.task21();
