@@ -6,6 +6,9 @@ import main.classes.task15.Canvas;
 import main.conditions.task20.BooleanToString;
 import main.conditions.task25.OppositesAttract;
 import main.conditions.task30.TrafficLights;
+import main.loops.task35.Maps;
+import main.loops.task40.Positive;
+import main.loops.task45.GapInPrimes;
 
 public class Model {
     private int value;
@@ -105,6 +108,56 @@ public class Model {
                 interfaceTestClass = new TrafficLights();
                 interfaceTestClass.execute();
             }
+            case 31 -> {
+
+            }
+            case 32 -> {
+
+            }
+            case 33 -> {
+
+            }
+            case 34 -> {
+
+            }
+            case 35 -> {
+                interfaceTestClass = new Maps();
+                interfaceTestClass.execute();
+            }
+            case 36 -> {
+
+            }
+            case 37 -> {
+
+            }
+            case 38 -> {
+
+            }
+            case 39 -> {
+
+            }
+            case 40 -> {
+                interfaceTestClass = new Positive();
+                interfaceTestClass.execute();
+            }
+            case 41 -> {
+
+            }
+            case 42 -> {
+
+            }
+            case 43 -> {
+
+            }
+            case 44 -> {
+
+            }
+            case 45 -> {
+                interfaceTestClass = new GapInPrimes();
+                interfaceTestClass.execute();
+            }
+
+
 
 
         }

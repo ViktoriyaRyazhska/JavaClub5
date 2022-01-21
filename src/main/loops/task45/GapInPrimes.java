@@ -1,11 +1,16 @@
 package main.loops.task45;
 
+import main.InterfaceTestClass;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 import java.util.stream.LongStream;
 
-public class GapInPrimes {
+public class GapInPrimes implements InterfaceTestClass {
+    Scanner scanner = new Scanner(System.in);
+
     public static boolean isPrime(long num) {
         return num > 1 && LongStream.rangeClosed(2, (long)Math.sqrt(num)).noneMatch(div-> num % div== 0);
     }
@@ -34,4 +39,19 @@ public class GapInPrimes {
         return null;
     }
 
+    @Override
+    public void execute() {
+        System.out.println("The prime numbers are not regularly spaced. For example from 2 to 3 the gap is 1.\n" +
+                " From 3 to 5 the gap is 2. From 7 to 11 it is 4. \n" +
+                "Between 2 and 50 we have the following pairs of 2-gaps primes: 3-5, 5-7, 11-13, 17-19, 29-31, 41-43");
+        System.out.println("I need from you 3 digits");
+        System.out.println("Please insert: g -> (integer >= 2) which indicates the gap we are looking for");
+        int first = scanner.nextInt();
+        System.out.println("Please insert: m -> (integer > 2) which gives the start of the search (m inclusive)");
+        long second = scanner.nextInt();
+        System.out.println("Please insert: n -> (integer >= m) which gives the end of the search (n inclusive)");
+        long third = scanner.nextInt();
+
+        System.out.println(Arrays.toString(GapInPrimes.gap(first, second, third)));
+    }
 }
