@@ -17,15 +17,15 @@ import java.util.Arrays;
 
 public class Runner {
     public static void main(String[] args) {
-        start();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        start(reader);
     }
 
     /**
      * main method of Class
      *
      */
-    public static void start() {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    public static void start(BufferedReader reader) {
         System.out.println(" Input number n");
         try {
             int number = Integer.parseInt(reader.readLine());

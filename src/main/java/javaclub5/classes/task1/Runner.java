@@ -1,4 +1,7 @@
 package javaclub5.classes.task1;
+
+import java.io.BufferedReader;
+
 /**
  * Make class with Lombok library
  *
@@ -14,5 +17,23 @@ public class Runner {
         System.out.println(encapsulatedDemo);
         System.out.println(encapsulatedDemo1);
     }
+
+    public static void start() {
+        System.out.println("Making class with Lombok library");
+        System.out.println("@Getter\n" +
+                "@Setter\n" +
+                "@NoArgsConstructor\n" +
+                "@AllArgsConstructor\n" +
+                "@ToString(exclude = {\"anObject\"})\n" +
+                "@EqualsAndHashCode\n" +
+                "\n" +
+                "@Data\n" +
+                "public class EncapsulatedDemo {\n" +
+                "    private int number;\n" +
+                "    private String stringValue;\n" +
+                "    private Object anObject;\n" +
+                "}");
+    }
+
 
 }

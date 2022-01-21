@@ -17,7 +17,8 @@ import java.io.InputStreamReader;
 
 public class Runner {
     public static void main(String[] args) {
-        start();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        start(reader);
     }
 
     /**
@@ -34,8 +35,7 @@ public class Runner {
      * main method of Class
      *
      */
-    public static void start() {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    public static void start(BufferedReader reader) {
         System.out.println("Input a number");
         try {
             double number = Double.parseDouble(reader.readLine());

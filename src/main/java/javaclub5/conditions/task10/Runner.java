@@ -22,14 +22,14 @@ import java.io.InputStreamReader;
 
 public class Runner {
     public static void main(String[] args) {
-        start();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        start(reader);
     }
     /**
      * main method of Class
      *
      */
-    public static void start() {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    public static void start(BufferedReader reader) {
         System.out.println(" Tell Bof if he will be able to fit all the passengers");
         try {
             System.out.println("Input the amount of people the bus can hold excluding the driver");

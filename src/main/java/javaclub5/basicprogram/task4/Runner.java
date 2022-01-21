@@ -22,7 +22,8 @@ import java.io.InputStreamReader;
 
 public class Runner {
     public static void main(String[] args) {
-        start();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        start(reader);
     }
     /**
      * calculate the volume of a cuboid with three values:
@@ -38,8 +39,7 @@ public class Runner {
      * main method of Class
      *
      */
-    public static void start() {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    public static void start(BufferedReader reader) {
         System.out.println("Input parameters of a rad pixel art mural");
         try {
             System.out.println("Input wallSize");
