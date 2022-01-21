@@ -8,9 +8,8 @@ public class Task06 {
         return Integer.parseInt(Integer.toBinaryString(n));
     }
 
-    public static void task06() {
+    public static void task06(BufferedReader reader) {
         System.out.println("The task is to convert integer to binary.");
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
             System.out.println("Set parameter:");
             int i = Integer.parseInt(reader.readLine());

@@ -10,9 +10,8 @@ public class Task66 {
         return string.replaceAll("5", "S");
     }
 
-    public static void task66() {
+    public static void task66(BufferedReader reader) {
         System.out.println("The task is to replace all 1, 0, 5 to I, O, S in string.");
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
             System.out.println("Set string:");
             System.out.println("Answer: " + correct(reader.readLine()));

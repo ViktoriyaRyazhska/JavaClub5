@@ -8,9 +8,8 @@ public class Task56 {
         return (name.charAt(0) == 'R' || name.charAt(0) == 'r') ? name + " plays banjo" : name + "does not play banjo";
     }
 
-    public static void task56() {
+    public static void task56(BufferedReader reader) {
         System.out.println("The task is to check if player will play the game.");
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
             System.out.println("Set parameter:");
             System.out.println("Answer: " + areYouPlayingBanjo(reader.readLine()));

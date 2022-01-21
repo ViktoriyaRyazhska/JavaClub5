@@ -12,9 +12,8 @@ public class Task36 {
         return counter;
     }
 
-    public static void task36() {
+    public static void task36(BufferedReader reader) {
         System.out.println("The task is to count true statements in boolean array.");
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Set array in format like this:");
         System.out.println("true false true true");
         try {

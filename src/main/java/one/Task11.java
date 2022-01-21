@@ -12,9 +12,8 @@ public class Task11 {
             return (tempInCelsius + " is above freezing temperature");
     }
 
-    public static void task11() {
+    public static void task11(BufferedReader reader) {
         System.out.println("The task is to convert fahrenheit to celsius.");
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
             System.out.println("Set parameter:");
             int i = Integer.parseInt(reader.readLine());

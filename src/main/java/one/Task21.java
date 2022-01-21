@@ -9,9 +9,8 @@ public class Task21 {
         return "\u00A3" + salary;
     }
 
-    public static void task21() {
+    public static void task21(BufferedReader reader) {
         System.out.println("The task is to check will employee receive a bonus or not and return final salary.");
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
             System.out.println("Set parameters (salary, bonus (1 - will receive):");
             int i = Integer.parseInt(reader.readLine());
