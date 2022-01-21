@@ -1,8 +1,7 @@
 package test.loops.task35;
 
-import Task70.loops.task35.Maps;
+import main.loops.task35.Maps;
 import org.junit.Test;
-
 import static org.junit.Assert.*;
 
 public class MapsTest {
