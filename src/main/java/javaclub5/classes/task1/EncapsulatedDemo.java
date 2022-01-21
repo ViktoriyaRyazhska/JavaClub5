@@ -2,6 +2,11 @@ package javaclub5.classes.task1;
 
 import lombok.*;
 
+/**
+ * Make class with Lombok library
+ *
+ * @author Popova Anna
+ */
 @Getter
 @Setter
 @NoArgsConstructor

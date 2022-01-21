@@ -1,5 +1,11 @@
 package javaclub5.classes.task1;
-
+/**
+ * Make class with Lombok library
+ *
+ * @author Popova Anna
+ *
+ * checking is everything working
+ */
 public class Runner {
     public static void main(String[] args) {
         EncapsulatedDemo encapsulatedDemo = new EncapsulatedDemo(10, "Lviv", null);
