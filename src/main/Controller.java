@@ -27,6 +27,10 @@ public class Controller {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
+        model.selectorMenu(model.getValue());
+
+
     }
 
     public int inputIntValueWithScanner(Scanner sc) {

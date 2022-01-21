@@ -1,13 +1,19 @@
 package main.classes.task15;
 
+import main.InterfaceTestClass;
+
+import java.util.Scanner;
 import java.util.stream.IntStream;
 
-public class Canvas {
+public class Canvas implements InterfaceTestClass {
     private int width;
     private int height;
     private int fullLength;
     private StringBuilder theCanvas;
     private String[][] canvasMatrix;
+
+    public Canvas(){
+    }
 
     public Canvas(int width, int height){
         if (width < 1 || height < 1) throw new IllegalArgumentException();
@@ -18,6 +24,8 @@ public class Canvas {
         theCanvas = new StringBuilder();
         canvasMatrix = new String[fullLength][height + 2];
     }
+
+    Scanner scanner = new Scanner(System.in);
 
     public Canvas draw(int x1, int y1, int x2, int y2) throws IllegalArgumentException {
 
@@ -133,5 +141,24 @@ public class Canvas {
         if (isTop) {
             addReturn(fullLength, 0);
         }
+    }
+
+    @Override
+    public void execute() {
+        System.out.println("You are going to write a simple console-style drawing board program");
+        System.out.println("Let's draw...");
+        System.out.println("Put width of table");
+        int width = scanner.nextInt();
+        System.out.println("Put height of table");
+        int height = scanner.nextInt();
+        System.out.println("Put more 4 digit, like coordinates. \n " +
+                "One digit + \" ENTER \" and so on..");
+        int [] coordinates = new int[4];
+        for (int i = 0; i < 4; i++) {
+            coordinates[i] = scanner.nextInt();
+        }
+
+        Canvas canvas = new Canvas(width,height);
+        System.out.println(canvas.draw(coordinates[0], coordinates[1], coordinates[2], coordinates[3]).drawCanvas());
     }
 }
