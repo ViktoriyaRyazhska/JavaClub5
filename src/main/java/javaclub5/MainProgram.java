@@ -313,12 +313,15 @@ public class MainProgram {
                 case 13:
                     System.out.println("Not done yet");
                     //javaclub5.loops.task13.Runner.start(reader);
+                    break;
                 case 14:
                     System.out.println("Not done yet");
                     //javaclub5.loops.task14.Runner.start(reader);
+                    break;
                 case 15:
                     System.out.println("Not done yet");
                     //javaclub5.loops.task15.Runner.start(reader);
+                    break;
                 case 16:
                     break;
                 default:
@@ -415,21 +418,26 @@ public class MainProgram {
                 case 13:
                     System.out.println("Not done yet");
                     //javaclub5.strings.task13.Runner.start(reader);
+                    break;
                 case 14:
                     System.out.println("Not done yet");
                     //javaclub5.strings.task14.Runner.start(reader);
+                    break;
                 case 15:
                     System.out.println("Not done yet");
                     //javaclub5.strings.task15.Runner.start(reader);
+                    break;
                 case 16:
                     System.out.println("Not done yet");
                     //javaclub5.strings.task16.Runner.start(reader);
+                    break;
                 case 17:
-                    System.out.println("Not done yet");
                     javaclub5.strings.task17.Runner.start(reader);
+                    break;
                 case 18:
                     System.out.println("Not done yet");
                     //javaclub5.strings.task18.Runner.start(reader);
+                    break;
                 case 19:
                     break;
                 default:
@@ -439,6 +447,4 @@ public class MainProgram {
             e.printStackTrace();
         }
     }
-
-
 }
