@@ -44,10 +44,10 @@ public class Fraction {
     @Override
     public String toString() {
         if (denominator == 1) {
-            return "Outputs: " + numerator;
+            return numerator + "";
         }
         else {
-            return "Outputs: " + numerator + "/" +
+            return numerator + "/" +
                     denominator;
         }
     }
@@ -66,7 +66,7 @@ public class Fraction {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Fraction fraction = (Fraction) o;
-        return numerator == fraction.numerator && denominator == fraction.denominator;
+        return numerator/denominator == fraction.numerator/fraction.denominator;
     }
 
     @Override
