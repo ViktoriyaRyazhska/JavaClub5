@@ -11,9 +11,8 @@ public class Task41 {
         return answer;
     }
 
-    public static void task41() {
+    public static void task41(BufferedReader reader) {
         System.out.println("The task is to reverse string array.");
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Print some text (separate words with whitespaces):");
         String[] strArr;
         try {

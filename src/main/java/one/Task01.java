@@ -7,9 +7,8 @@ public class Task01 {
         return i * 2;
     }
 
-    public static void task01() {
+    public static void task01(BufferedReader reader) {
         System.out.println("The task is to double the integer and return it.");
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
             System.out.println("Set parameter:");
             int i = Integer.parseInt(reader.readLine());

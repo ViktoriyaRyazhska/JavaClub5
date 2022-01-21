@@ -2,6 +2,7 @@ package one;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.Objects;
 
 public class Task16 {
     public static class Fighter {
@@ -15,7 +16,7 @@ public class Task16 {
     }
 
     public static String declareWinner(Fighter fighter1, Fighter fighter2, String firstAttacker) {
-        if(fighter1.name == firstAttacker) {
+        if(Objects.equals(fighter1.name, firstAttacker)) {
             Fighter tmpFighter = fighter2;
             fighter2 = fighter1;
             fighter1 = tmpFighter;
@@ -30,10 +31,9 @@ public class Task16 {
         }
     }
 
-    public static void task16() {
+    public static void task16(BufferedReader reader) {
         System.out.println("The task is to create a function that returns the name of the winner" +
                 " in a fight between two fighters.");
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
             System.out.println("Set fighters fields, first fighter will beat first");
             System.out.println("Set first fighter fields (name, health, damage per attack):");

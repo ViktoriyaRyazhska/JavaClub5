@@ -12,9 +12,8 @@ public class Task31 {
         return d * 40;
     }
 
-    public static void task31() {
+    public static void task31(BufferedReader reader) {
         System.out.println("The task is to count how much it will cost to rent a car.");
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
             System.out.println("Set parameter:");
             int days = Integer.parseInt(reader.readLine());
