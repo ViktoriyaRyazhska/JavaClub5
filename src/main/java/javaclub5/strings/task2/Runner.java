@@ -1,5 +1,8 @@
 package javaclub5.strings.task2;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 /**
@@ -11,12 +14,21 @@ import java.util.Scanner;
 public class Runner {
 
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        start(br);
+    }
+
+    public static void start(BufferedReader br) {
         System.out.println("Reversed words.\nEnter the word: ");
-        String word = s.nextLine();
+        String word = null;
+        try {
+            word = br.readLine();
+        } catch (IOException e) {
+            System.out.println("Smth wrong.");
+            e.printStackTrace();
+        }
         System.out.println("Normal word " + word + ".");
         System.out.println("Reversed word: " + reversed(word) + ".");
-
     }
 
     public static String reversed(String word) {

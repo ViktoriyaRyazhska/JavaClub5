@@ -1,5 +1,8 @@
 package javaclub5.strings.task3;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 /**
@@ -16,21 +19,28 @@ import java.util.Scanner;
 
 public class Runner {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String[] fullname = new String[2];
-        System.out.println("Enter your name and surname: ");
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        start(br);
+    }
 
-        for (int i = 0; i < fullname.length; i++) {
-            fullname[i] = sc.nextLine();
-            System.out.println(fullname[i]);
+    public static void start(BufferedReader br) {
+        String[] fullName = new String[2];
+        System.out.println("Enter your name and surname(on different lines): ");
+        try {
+            for (int i = 0; i < fullName.length; i++) {
+                fullName[i] = br.readLine();
+                System.out.println(fullName[i]);
+            }
+            System.out.println("Enter your city: ");
+            String city = br.readLine();
+            System.out.println("Enter your state: ");
+            String state = br.readLine();
+
+            System.out.println(sayHello(fullName, city, state));
+        } catch (IOException e) {
+            System.out.println("Smth wrong.");
+            e.printStackTrace();
         }
-        System.out.println("Enter your city: ");
-        String city = sc.nextLine();
-        System.out.println("Enter your state: ");
-        String state = sc.nextLine();
-
-        System.out.println(sayHello(fullname, city, state));
-
     }
 
     public static String sayHello(String[] fullname, String city, String state) {

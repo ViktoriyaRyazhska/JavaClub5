@@ -3,9 +3,9 @@ package javaclub5.collections.task3;
 import java.util.*;
 
 /**
- *Fix the bug in Filtering method
+ * Fix the bug in Filtering method
  * The method is supposed to remove even numbers from the list and return a list that contains the odd numbers.
- *
+ * <p>
  * However, there is a bug in the method that needs to be resolved.
  *
  * @author Popova Anna
@@ -13,6 +13,10 @@ import java.util.*;
 
 public class Runner {
     public static void main(String[] args) {
+        start();
+    }
+
+    public static void start() {
         List<Integer> numbers = new ArrayList<>();
         Random rand = new Random();
         for (int i = 0; i < 20; i++) {

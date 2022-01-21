@@ -26,13 +26,13 @@ import java.io.InputStreamReader;
 public class Runner {
 
     public static void main(String[] args) {
-        start();
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        start(br);
     }
 
-    public static void start() {
+    public static void start(BufferedReader br) {
         System.out.println("Enter some word to change it case: ");
         try {
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             String input = br.readLine();
             System.out.println("Your changed case in the word: " + changingLetterCase(input));
         } catch (IOException ex) {

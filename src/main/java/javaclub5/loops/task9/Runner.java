@@ -1,5 +1,7 @@
 package javaclub5.loops.task9;
 
+import java.util.Arrays;
+
 /**
  * You get an array of numbers, return the sum of all the positives ones.
  * Example [1,-4,7,12] => 1 + 7 + 12 = 20
@@ -10,13 +12,18 @@ package javaclub5.loops.task9;
 public class Runner {
 
     public static void main(String[] args) {
+        start();
+    }
 
+    public static void start() {
+        System.out.println("Total sum of all positive numbers in array.");
         int[] arr = new int[10];
+
         for (int i = 0; i < arr.length; i++) {
             arr[i] = (int) ((Math.random() * 20) - 5);
-            System.out.print(arr[i] + " ");
         }
 
+        System.out.print("Numbers in array: " + Arrays.toString(arr));
         System.out.println("\nSum of positive numbers in array: " + sumOfPositiveNumbers(arr));
     }
 

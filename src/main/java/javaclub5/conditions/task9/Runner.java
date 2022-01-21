@@ -12,9 +12,12 @@ import java.util.Scanner;
  */
 public class Runner {
     public static void main(String[] args) {
-
-        System.out.println("Lets, play. You need answer: true or false.");
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        start(br);
+    }
+
+    public static void start(BufferedReader br) {
+        System.out.println("Lets, play. You need answer: true or false.");
         System.out.println("Do you like dogs?");
         try {
             String answer = br.readLine();
@@ -28,7 +31,6 @@ public class Runner {
         } catch (IOException e) {
             System.out.println("Entered something wrong.");
         }
-
     }
 
     public static String yesOrNo(boolean answer) {
