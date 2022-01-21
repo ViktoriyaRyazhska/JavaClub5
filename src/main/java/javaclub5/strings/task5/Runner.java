@@ -22,7 +22,7 @@ public class Runner {
     }
 
     /**
-     * eplace all the dots . in the specified String str with dashes -
+     * Replaces all the dots . in the specified String str with dashes -
      * @param str - specified String,
      * @return String without dots
      */
