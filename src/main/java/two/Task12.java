@@ -41,9 +41,8 @@ public class Task12 {
     }
 
 
-    public static void task12() {
+    public static void task12(BufferedReader reader) {
         System.out.println("Encapsulation if information");
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
             System.out.println("Enter life expectancy");
 
@@ -75,7 +74,6 @@ public class Task12 {
             e.printStackTrace();
             System.out.println("Error");
         }
-
     }
 }
 

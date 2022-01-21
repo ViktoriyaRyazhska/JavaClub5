@@ -9,9 +9,8 @@ public class Task02{
         return a * b;
     }
 
-    public static void task02() {
+    public static void task02(BufferedReader reader) {
         System.out.println("Multiplying of two numbers and return result.");
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
             System.out.println("Enter first number:");
             int a = Integer.parseInt(reader.readLine());
