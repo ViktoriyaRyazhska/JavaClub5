@@ -6,6 +6,7 @@ import main.classes.task15.Canvas;
 
 public class Model {
     private int value;
+    InterfaceTestClass interfaceTestClass;
 
     public int getValue() {
         return value;
@@ -26,8 +27,8 @@ public class Model {
             case 4 -> {
             }
             case 5 -> {
-                InterfaceTestClass ic = new Greeter();
-                ic.execute();
+                interfaceTestClass = new Greeter();
+                interfaceTestClass.execute();
             }
             case 6 -> {
             }
@@ -38,8 +39,8 @@ public class Model {
             case 9 -> {
             }
             case 10 -> {
-                InterfaceTestClass ic = new Kata();
-                ic.execute();
+                interfaceTestClass = new Kata();
+                interfaceTestClass.execute();
             }
             case 11 -> {
             }
@@ -50,8 +51,8 @@ public class Model {
             case 14 -> {
             }
             case 15 -> {
-                InterfaceTestClass ic = new Canvas();
-                ic.execute();
+                interfaceTestClass = new Canvas();
+                interfaceTestClass.execute();
             }
 
         }
