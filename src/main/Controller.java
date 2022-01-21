@@ -11,11 +11,11 @@ public class Controller {
         this.view = view;
     }
 
-    public void processUser(){
+    public void processUser() {
         Scanner sc = new Scanner(System.in);
         view.printMessage(View.GREETINGS);
         model.setValue(inputIntValueWithScanner(sc));
-        while (model.getValue()<1 || model.getValue()>72){
+        while (model.getValue() < 1 || model.getValue() > 72) {
             view.printMessage(View.OUT);
             model.setValue(inputIntValueWithScanner(sc));
         }
@@ -35,7 +35,7 @@ public class Controller {
 
     public int inputIntValueWithScanner(Scanner sc) {
         view.printMessage(View.TRY_AGAIN);
-        while( ! sc.hasNextInt()) {
+        while (!sc.hasNextInt()) {
             view.printMessage(View.WRONG_INPUT + View.TRY_AGAIN);
             sc.next();
         }
