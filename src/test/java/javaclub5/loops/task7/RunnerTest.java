@@ -3,6 +3,9 @@ package javaclub5.loops.task7;
 import org.junit.Assert;
 import org.junit.Test;
 
+/**
+ * @author Popova Anna
+ */
 
 public class RunnerTest {
     @Test

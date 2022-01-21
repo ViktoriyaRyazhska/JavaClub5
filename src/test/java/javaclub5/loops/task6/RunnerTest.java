@@ -3,6 +3,10 @@ package javaclub5.loops.task6;
 import org.junit.Assert;
 import org.junit.Test;
 
+/**
+ * @author Popova Anna
+ */
+
 public class RunnerTest {
 
     private int[] reverseSolution(int n) {

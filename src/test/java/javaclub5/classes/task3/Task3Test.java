@@ -1,4 +1,4 @@
-package javaclub5.classes;
+package javaclub5.classes.task3;
 
 import javaclub5.classes.task3.Fraction;
 import javaclub5.strings.task3.Runner;
