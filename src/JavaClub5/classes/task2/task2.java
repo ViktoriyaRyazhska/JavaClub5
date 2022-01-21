@@ -1,3 +1,3 @@
-package JavaClub5.classes.task2;
+package javaclub5.classes.task2;
 public class task2 {
 }
