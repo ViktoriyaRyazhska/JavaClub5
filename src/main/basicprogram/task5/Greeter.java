@@ -11,7 +11,7 @@ public class Greeter implements InterfaceTestClass {
         if(name.equals("Johnny")){
             return "Hello, my love!";
         }
-        return "Hello, " + name;
+        return "Hello, " + name + "!";
     }
 
     @Override
