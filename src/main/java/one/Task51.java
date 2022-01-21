@@ -8,9 +8,8 @@ public class Task51 {
         return Integer.toString(num);
     }
 
-    public static void task51() {
+    public static void task51(BufferedReader reader) {
         System.out.println("The task is to convert integer to string.");
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
             System.out.println("Set parameter:");
             int i = Integer.parseInt(reader.readLine());

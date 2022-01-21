@@ -8,9 +8,8 @@ public class Task46 {
         return sticks % 4 != 0 ? sticks % 4 : 1;
     }
 
-    public static void task46() {
+    public static void task46(BufferedReader reader) {
         System.out.println("The task is to create strategy of winning game \"21 sticks\" ");
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
             System.out.println("Set parameter:");
             System.out.println("Answer: " + makeMove(Integer.parseInt(reader.readLine())));
