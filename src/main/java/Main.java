@@ -26,6 +26,7 @@ public class Main {
             case 6 -> Task06.task06();
             case 10 -> Task10.task10();
             case 11 -> Task11.task11();
+            case 12 -> Task12.task12();
             case 16 -> Task16.task16();
             case 17 -> Task17.task17();
             case 21 -> Task21.task21();
