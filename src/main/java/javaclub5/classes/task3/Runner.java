@@ -47,7 +47,7 @@ public class Runner {
             int secondDenominator = Integer.parseInt(reader.readLine());
             Fraction secondFraction = new Fraction(secondNumerator, secondDenominator);
             System.out.println("Yours second fraction wil be: " + secondFraction);
-            System.out.println("Sum of fractions will be" + firstFraction.add(secondFraction));
+            System.out.println("Sum of fractions will be: " + firstFraction.add(secondFraction));
         } catch (IOException e) {
             e.printStackTrace();
         }
