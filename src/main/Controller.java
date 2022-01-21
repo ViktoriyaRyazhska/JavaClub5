@@ -13,7 +13,16 @@ public class Controller {
 
     public void processUser(){
         Scanner sc = new Scanner(System.in);
+        model.setValue(inputIntValueWithScanner(sc));
 
+        view.printMessageAndSomething(View.CHOICE, model.getValue());
+
+        try {
+            view.printMessageAndSomething(View.JUST_MESSAGE);
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public int inputIntValueWithScanner(Scanner sc) {
