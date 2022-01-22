@@ -2,6 +2,7 @@ package program;
 
 import solutions.Executable;
 import solutions.basicProgram.*;
+import solutions.classes.Battle;
 import solutions.classes.IsDivisible;
 
 import java.util.Map;
@@ -20,6 +21,8 @@ public class MenuCommands {
         options.put("PixelArt", new PixelArt());
         options.put("Year to century", new CenturyToYear());
         options.put("IsDivisible",new IsDivisible());
+
+        options.put("Battle fighters",new Battle());
 
 
     }
