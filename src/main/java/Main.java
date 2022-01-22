@@ -22,14 +22,16 @@ public class Main {
         switch (taskNumber) {
             case 1 -> Task01.task01(reader);
             case 2 -> Task02.task02(reader);
-            case 5 -> Task05.task05();
+            case 5 -> Task05.task05(reader);
             case 6 -> Task06.task06(reader);
             case 7 -> Task07.task07(reader);
-            case 10 -> Task10.task10();
+            case 10 -> Task10.task10(reader);
             case 11 -> Task11.task11(reader);
             case 12 -> Task12.task12(reader);
+            case 15 -> Task15.task15(reader);
             case 16 -> Task16.task16(reader);
             case 17 -> Task17.task17(reader);
+            case 20 -> Task20.task20(reader);
             case 21 -> Task21.task21(reader);
             case 26 -> Task26.task26(reader);
             case 31 -> Task31.task31(reader);

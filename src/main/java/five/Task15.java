@@ -1,6 +1,7 @@
 package five;
 
-import java.util.Arrays;
+import java.io.BufferedReader;
+import java.io.IOException;
 
 public class Task15 {
     Canvas canvas;
@@ -9,20 +10,34 @@ public class Task15 {
         canvas = new Canvas(width, height);
     }
 
-    public static void main(String[] args) {
+    public static void task15(BufferedReader reader) {
+        System.out.println("Simple Drawing Board, Draw the line with 'x' which connects the given points.");
+        try {
+            System.out.println("Enter the width and height of the canvas size");
+            System.out.println("Enter width");
+            int width = Integer.parseInt(reader.readLine());
+            System.out.println("Enter height");
+            int height = Integer.parseInt(reader.readLine());
+            System.out.println("Enter your coordinates - x1,x2,y1,y2 ");
+            String coordinates = reader.readLine();
+            String[] splitCoordinates = coordinates.split(",");
+            System.out.println("Enter coordinated to fill - x,y,char");
+            String fill = reader.readLine();
+            String[] splitFill = fill.split(",");
+            System.out.println("Your picture is : ");
+            Task15 task15 = new Task15(width, height);
+            System.out.println(task15.canvas
+                    .draw(Integer.parseInt(splitCoordinates[0]), Integer.parseInt(splitCoordinates[1]), Integer.parseInt(splitCoordinates[2]), Integer.parseInt(splitCoordinates[3]))
+                    .fill(Integer.parseInt(splitFill[0]),Integer.parseInt(splitFill[1]), splitFill[2].charAt(0))
+                    .drawCanvas());
 
-//        Task15 task15 = new Task15(5, 5);
-//        System.out.println(task15.canvas.draw(0, 2, 4, 2)
-//                .draw(2,0,2,4)
-//                .drawCanvas());
-                Task15 task15 = new Task15(20, 4);
-        System.out.println(task15.canvas.draw(0, 1, 5, 1)
-                .draw(5, 2, 5, 3)
-                .draw(13, 0, 17, 2)
-                .fill(9, 2, 'o').drawCanvas());
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Something went wrong");
+        }
     }
 
-    public class Canvas {
+    public static class Canvas {
         int width;
         int height;
         char[][] result;
