@@ -28,7 +28,7 @@ public class Task15 {
             Task15 task15 = new Task15(width, height);
             System.out.println(task15.canvas
                     .draw(Integer.parseInt(splitCoordinates[0]), Integer.parseInt(splitCoordinates[1]), Integer.parseInt(splitCoordinates[2]), Integer.parseInt(splitCoordinates[3]))
-                    .fill(Integer.parseInt(splitFill[0]),Integer.parseInt(splitFill[1]), splitFill[2].charAt(0))
+                    .fill(Integer.parseInt(splitFill[0]), Integer.parseInt(splitFill[1]), splitFill[2].charAt(0))
                     .drawCanvas());
 
         } catch (IOException e) {
@@ -96,10 +96,13 @@ public class Task15 {
             if (x > width || y > height) {
                 throw new IllegalArgumentException("Input correct canvas");
             }
-            for (int i = 3; i < y + 2; i++) {
-                for (int j = 3; j < x + 3; j++) {
-                    result[i][j] = ch;
-                }
+
+            if (result[x][y] == ' ') {
+                result[x][y] = ch;
+                fill(x + 1, y, ch);
+                fill(x - 1, y, ch);
+                fill(x, y - 1, ch);
+                fill(x, y + 1, ch);
             }
             return this;
         }
@@ -118,3 +121,4 @@ public class Task15 {
         }
     }
 }
+
