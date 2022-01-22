@@ -19,13 +19,30 @@ public class Task14 implements Comparable<Task14>{
     public int compareTo(Task14 f2){
         return Long.compare(top * f2.bottom, f2.top * bottom); }
 
-    // Your work here!
+    //public long getTop() {
+       // return top;
+   // }
 
-    //Add two fractions
+    //public long getBottom() {
+       //return bottom;
+    //}
+//
+//   public  long newnomeration(){
+//       return top*f2
+//    }
+//            this.nomerition * input.denomeration + input.numeration + this.denomeration;
+
     public Task14 add(Task14 f2) {
 
-        return null;
-    }
 
+        return f2;
+    }
+//    @Override
+//    public String toString() {
+//        return "Task14{" +
+//                "top=" + top +
+//                ", bottom=" + bottom +
+//                '}';
+//    }
     //...and make this class string representable
 }
