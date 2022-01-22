@@ -37,8 +37,8 @@ public class Task1 extends Input  {
                     Task1.main(args);
                     break;
                 default:
-                    System.err.println("You need ro put 1 or 2 ");
-                    System.err.println("You transfer to menu ");
+                    System.err.println("You need to do this: put 1 or 2 ");
+                    System.err.println("Transfer to menu ");
                     Task1.main(args);
             }
         } catch (IOException e) {
