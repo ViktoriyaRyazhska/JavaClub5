@@ -3,6 +3,7 @@ package program;
 import solutions.Executable;
 import solutions.basicProgram.*;
 import solutions.classes.IsDivisible;
+import solutions.classes.RockPaperScissors;
 
 import java.util.Map;
 import java.util.TreeMap;
@@ -20,6 +21,7 @@ public class MenuCommands {
         options.put("PixelArt", new PixelArt());
         options.put("Year to century", new CenturyToYear());
         options.put("IsDivisible",new IsDivisible());
+        options.put("Rock Paper Scissors",new RockPaperScissors());
 
 
     }
