@@ -5,6 +5,7 @@ import solutions.basicProgram.*;
 import solutions.classes.Battle;
 import solutions.classes.IsDivisible;
 import solutions.classes.RockPaperScissors;
+import solutions.conditions.BoolConverter;
 
 import java.util.Map;
 import java.util.TreeMap;
@@ -23,8 +24,8 @@ public class MenuCommands {
         options.put("Year to century", new CenturyToYear());
         options.put("IsDivisible",new IsDivisible());
         options.put("Rock Paper Scissors",new RockPaperScissors());
-
         options.put("Battle fighters",new Battle());
+        options.put("Convert bool to string",new BoolConverter());
 
 
     }
