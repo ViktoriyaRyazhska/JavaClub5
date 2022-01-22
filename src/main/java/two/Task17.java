@@ -37,10 +37,9 @@ public class Task17 {
             return 2 * (width * length + width * height + length * height);
         }
 
-        public static void task17(){
+        public static void task17(BufferedReader reader){
             System.out.println("Volume and SurfaceArea of block");
 
-            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             try {
                 System.out.println("Enter width:");
                 int w = Integer.parseInt(reader.readLine());

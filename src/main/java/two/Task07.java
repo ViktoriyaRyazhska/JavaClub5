@@ -25,7 +25,7 @@ public class Task07 {
         return dt;
     }
 
-    public static void task07(){
+    public static void task07(BufferedReader reader){
         SimpleDateFormat format = new SimpleDateFormat();
         format.applyPattern("hh:mm:ss");
         System.out.println("Is writing a function which returns the time since midnight in milliseconds.");
