@@ -1,5 +1,6 @@
 import four.Task24;
 import four.Task29;
+import four.Task34;
 import one.*;
 import two.*;
 import five.*;
@@ -42,6 +43,7 @@ public class Main {
             case 30 -> Task30.task30(reader);
             case 31 -> Task31.task31(reader);
             case 32 -> Task32.task32(reader);
+            case 34 -> Task34.task34(reader);
             case 36 -> Task36.task36(reader);
             case 37 -> Task37.task37(reader);
             case 41 -> Task41.task41(reader);
