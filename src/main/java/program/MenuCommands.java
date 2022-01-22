@@ -27,6 +27,7 @@ public class MenuCommands {
         options.put("Battle fighters", new Battle());
         options.put("Will be enough space", new WillBeEnoughSpace());
         options.put("Convert bool to str", new BoolConverter());
+        options.put("Transportation on vacation",new TransportationOnVacation());
         options.put("Making basical math operation", new BasicalMath());
 
     }
