@@ -23,7 +23,7 @@ public class Controller {
 
         try {
             view.printMessage(View.JUST_MESSAGE);
-            Thread.sleep(2000);
+            Thread.sleep(4000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
