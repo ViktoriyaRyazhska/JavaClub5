@@ -1,4 +1,4 @@
-package solutions.classes;
+package solutions.conditions;
 
 import solutions.Executable;
 
