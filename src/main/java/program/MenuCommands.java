@@ -2,6 +2,7 @@ package program;
 
 import solutions.Executable;
 import solutions.basicProgram.*;
+import solutions.classes.IsDivisible;
 
 import java.util.Map;
 import java.util.TreeMap;
@@ -17,6 +18,7 @@ public class MenuCommands {
         options.put("Beginner series number clock", new BeginnerSeriesNumberClock());
         options.put("Grasshopper", new Grasshopper());
         options.put("PixelArt", new PixelArt());
+        options.put("IsDivisible",new IsDivisible());
 
     }
 }
