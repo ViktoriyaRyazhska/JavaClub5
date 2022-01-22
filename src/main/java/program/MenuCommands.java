@@ -17,6 +17,7 @@ public class MenuCommands {
         options.put("Beginner series number clock", new BeginnerSeriesNumberClock());
         options.put("Grasshopper", new Grasshopper());
         options.put("PixelArt", new PixelArt());
+        options.put("Year to century", new CenturyToYear());
 
     }
 }
