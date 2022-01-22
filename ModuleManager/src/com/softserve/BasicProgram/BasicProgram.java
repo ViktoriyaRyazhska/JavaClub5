@@ -23,6 +23,10 @@ public class BasicProgram extends Input {
                     Task7.main(args);
                     break;
 
+                case "8":
+                    Task8.main(args);
+                    break;
+
                 default:
                     System.err.println("You need to put number with 1 to 11");
                     BasicProgram.main(args);
