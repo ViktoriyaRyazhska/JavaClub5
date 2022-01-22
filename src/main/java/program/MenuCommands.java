@@ -31,6 +31,7 @@ public class MenuCommands {
         options.put("Transportation on vacation",new TransportationOnVacation());
         options.put("Making basical math operation", new BasicalMath());
         options.put("Beginner lost without map",new BeginnerLostWithoutMap());
+        options.put("Fibonacci numbers modulo 3", new FibonacciModulo());
 
     }
 }
