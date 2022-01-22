@@ -1,8 +1,6 @@
 package main.basicprogram.task5;
 
-import main.Database;
 import main.InterfaceTestClass;
-import main.classes.task15.Canvas;
 
 import java.util.Scanner;
 

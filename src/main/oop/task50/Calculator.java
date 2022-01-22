@@ -1,11 +1,16 @@
 package main.oop.task50;
 
-public class Calculator {
+import main.InterfaceTestClass;
+
+import java.util.Scanner;
+
+public class Calculator implements InterfaceTestClass {
+    Scanner scanner = new Scanner(System.in);
 
     public double getTotalArea(Figure... figures) {
         double sum = 0;
-        for (int i = 0; i < figures.length; i++) {
-            sum += figures[i].gretArea();
+        for (Figure figure : figures) {
+            sum += figure.gretArea();
         }
         return roundDouble(sum);
     }
@@ -15,6 +20,39 @@ public class Calculator {
         return (double) i/100;
     }
 
+    @Override
+    public void execute() {
+        System.out.println("Define the different shapes: `Square`, `Rectangle`, `Circle` and `Triangle`");
+        System.out.println("Let's calculate area.");
+        System.out.println("Which figure you will choose: \n 1) Circle \n 2) Rectangle \n 3) Square \n 4) Triangle");
+        int figure = scanner.nextInt();
+        switch (figure){
+            case 1 -> {
+                System.out.println("Please specify -> Radius");
+                double radius = scanner.nextDouble();
+                System.out.println(getTotalArea(new Circle(radius)));
+            }
+            case 2 -> {
+                System.out.println("Please specify -> Height");
+                double height = scanner.nextDouble();
+                System.out.println("Please specify -> Width");
+                double width = scanner.nextDouble();
+                System.out.println(getTotalArea(new Rectangle(height, width)));
+            }
+            case 3 -> {
+                System.out.println("Please specify -> Square Side");
+                double squareSide = scanner.nextDouble();
+                System.out.println(getTotalArea(new Square(squareSide)));
+            }
+            case 4 -> {
+                System.out.println("Please specify -> Triangle Base");
+                double triangleBase = scanner.nextDouble();
+                System.out.println("Please specify -> Triangle Height");
+                double triangleHeight = scanner.nextDouble();
+                System.out.println(getTotalArea(new Triangle(triangleBase, triangleHeight)));
+            }
+        }
+    }
 }
 
 

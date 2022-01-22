@@ -9,6 +9,7 @@ import main.conditions.task30.TrafficLights;
 import main.loops.task35.Maps;
 import main.loops.task40.Positive;
 import main.loops.task45.GapInPrimes;
+import main.oop.task50.Calculator;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -66,7 +67,7 @@ public class Database {
 //        map.put(47, new /* назва класу*/);
 //        map.put(48, new /* назва класу*/);
 //        map.put(49, new /* назва класу*/);
-//        map.put(50, new /* назва класу*/);
+        map.put(50, new Calculator());
 //        map.put(51, new /* назва класу*/);
 //        map.put(52, new /* назва класу*/);
 //        map.put(53, new /* назва класу*/);
