@@ -22,6 +22,10 @@ public class Database {
     public Map<Integer, InterfaceTestClass> map = new HashMap<>();;
 
     public Database() {
+        programAdder();
+    }
+
+    void programAdder(){
 //        map.put(1, new /* назва класу*/);
 //        map.put(2, new /* назва класу*/);
 //        map.put(3, new /* назва класу*/);
@@ -95,6 +99,7 @@ public class Database {
 //        map.put(71, new /* назва класу*/);
 //        map.put(72, new /* назва класу*/);
     }
+
 
     public Map<Integer, InterfaceTestClass> getPosition(){
         return map;
