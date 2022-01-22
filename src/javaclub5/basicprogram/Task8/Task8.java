@@ -16,7 +16,6 @@ public class Task8 {
         try {
             System.out.println("Enter a year: ");
             int year = Integer.parseInt(bufferedReader.readLine());
-            System.out.println("Century of this year is ");
             defineCentury(year);
 
         } catch (IOException e) {
@@ -27,7 +26,11 @@ public class Task8 {
 
     public static void defineCentury(int a) {
         if (a <= 100) {
-            System.out.println(a + " --> " + 1);
+            System.out.println("Century of a year " + a + " is " + 1);
+        } else if (a > 100 && a <= 200) {
+            System.out.println("Century of a year " + a + " is " + 2);
+        } else if (a > 200 && a <= 300) {
+            System.out.println("Century of a year " + a + " is " + 3);
         }
     }
 
