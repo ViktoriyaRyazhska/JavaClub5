@@ -25,7 +25,7 @@ public class Database {
         programAdder();
     }
 
-    void programAdder(){
+    public void programAdder(){
 //        map.put(1, new /* назва класу*/);
 //        map.put(2, new /* назва класу*/);
 //        map.put(3, new /* назва класу*/);
