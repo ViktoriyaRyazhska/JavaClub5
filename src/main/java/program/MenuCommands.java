@@ -4,6 +4,7 @@ import solutions.Executable;
 import solutions.basicProgram.*;
 import solutions.classes.Battle;
 
+import solutions.conditions.BoolConverter;
 import solutions.conditions.IsDivisible;
 import solutions.conditions.RockPaperScissors;
 import solutions.conditions.WillBeEnoughSpace;
@@ -28,6 +29,7 @@ public class MenuCommands {
         options.put("Rock Paper Scissors", new RockPaperScissors());
         options.put("Battle fighters", new Battle());
         options.put("Will be enough space", new WillBeEnoughSpace());
+        options.put("Convert bool to str", new BoolConverter());
 
 
     }
