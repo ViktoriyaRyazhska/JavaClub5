@@ -3,9 +3,11 @@ package program;
 import solutions.Executable;
 import solutions.basicProgram.*;
 import solutions.classes.Battle;
+
 import solutions.conditions.IsDivisible;
 import solutions.conditions.RockPaperScissors;
 import solutions.conditions.WillBeEnoughSpace;
+
 
 import java.util.Map;
 import java.util.TreeMap;
@@ -26,6 +28,7 @@ public class MenuCommands {
         options.put("Rock Paper Scissors", new RockPaperScissors());
         options.put("Battle fighters", new Battle());
         options.put("Will be enough space", new WillBeEnoughSpace());
+
 
     }
 }
