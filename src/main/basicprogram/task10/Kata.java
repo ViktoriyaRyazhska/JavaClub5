@@ -1,7 +1,6 @@
 package main.basicprogram.task10;
 
 import main.InterfaceTestClass;
-import main.basicprogram.task5.Greeter;
 
 import java.util.Scanner;
 

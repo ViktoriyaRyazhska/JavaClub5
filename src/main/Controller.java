@@ -5,10 +5,17 @@ import java.util.Scanner;
 public class Controller {
     Model model;
     View view;
+    Database database;
 
     public Controller(Model model, View view) {
         this.model = model;
         this.view = view;
+    }
+
+    public Controller(Model model, View view, Database database) {
+        this.model = model;
+        this.view = view;
+        this.database = database;
     }
 
     public void processUser() {
@@ -29,7 +36,6 @@ public class Controller {
         }
 
         model.selectorMenu(model.getValue());
-
 
     }
 
