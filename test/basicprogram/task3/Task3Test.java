@@ -9,6 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class Task3Test {
     private static final double delta = 0.0001;
 
+
     @Test
     public void examples() {
         // assertEquals("expected", "actual");
