@@ -1,7 +1,4 @@
-import four.Task24;
-import four.Task29;
-import four.Task34;
-import four.Task39;
+import four.*;
 import one.*;
 import two.*;
 import five.*;
@@ -50,6 +47,7 @@ public class Main {
             case 39 -> Task39.task39(reader);
             case 41 -> Task41.task41(reader);
             case 42 -> Task42.task42(reader);
+            case 44 -> Task44.task44(reader);
             case 46 -> Task46.task46(reader);
             case 47 -> Task52.task52(reader);
             case 51 -> Task51.task51(reader);
