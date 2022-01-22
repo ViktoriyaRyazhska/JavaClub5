@@ -1,10 +1,7 @@
 package program;
 
 import solutions.Executable;
-import solutions.basicProgram.BeginnerSeriesNumberClock;
-import solutions.basicProgram.Grasshopper;
-import solutions.basicProgram.VolumeOfCuboid;
-import solutions.basicProgram.YouCantCodeUnderPressure1;
+import solutions.basicProgram.*;
 
 import java.util.Map;
 import java.util.TreeMap;
@@ -19,6 +16,7 @@ public class MenuCommands {
         options.put("Volume of a cuboid", new VolumeOfCuboid());
         options.put("Beginner series number clock", new BeginnerSeriesNumberClock());
         options.put("Grasshopper", new Grasshopper());
+        options.put("PixelArt", new PixelArt());
 
     }
 }
