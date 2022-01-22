@@ -2,6 +2,7 @@ package program;
 
 import solutions.Executable;
 import solutions.basicProgram.*;
+import solutions.classes.Battle;
 import solutions.classes.IsDivisible;
 import solutions.classes.RockPaperScissors;
 
@@ -22,6 +23,8 @@ public class MenuCommands {
         options.put("Year to century", new CenturyToYear());
         options.put("IsDivisible",new IsDivisible());
         options.put("Rock Paper Scissors",new RockPaperScissors());
+
+        options.put("Battle fighters",new Battle());
 
 
     }
