@@ -5,6 +5,7 @@ import solutions.basicProgram.*;
 import solutions.classes.Battle;
 
 import solutions.conditions.*;
+import solutions.loops.BeginnerLostWithoutMap;
 
 
 import java.util.Map;
@@ -29,6 +30,7 @@ public class MenuCommands {
         options.put("Convert bool to str", new BoolConverter());
         options.put("Transportation on vacation",new TransportationOnVacation());
         options.put("Making basical math operation", new BasicalMath());
+        options.put("Beginner lost without map",new BeginnerLostWithoutMap());
 
     }
 }
