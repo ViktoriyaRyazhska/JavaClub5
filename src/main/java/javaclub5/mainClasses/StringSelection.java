@@ -1,7 +1,6 @@
 package javaclub5.mainClasses;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 
 import static javaclub5.mainClasses.MainProgram.selectTheme;
 
