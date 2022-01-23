@@ -10,6 +10,7 @@ import javaclub5.basicprogram.task4.Task4;
 import javaclub5.classes.task12.Task12;
 import javaclub5.basicprogram.task9.Task9;
 import javaclub5.basicprogram.task10.Task10;
+import javaclub5.classes.task17.Task17;
 import javaclub5.conditions.task27.Task27;
 import javaclub5.conditions.task28.Task28;
 import javaclub5.conditions.task29.Task29;
@@ -61,6 +62,9 @@ public class MainConsoleProgram {
                 break;
             case 12:
                 Task12.start();
+                break;
+            case 17:
+                Task17.main(scanner);
                 break;
             case 27:
                 Task27.main(scanner);
