@@ -54,7 +54,7 @@ public class MenuCommands {
         options.put("Correct mistakes", new CorrectMistakes());
         options.put("Loop bug fixing", new LoopBugFixing());
         options.put("Beginner reduce but grow", new BeginnerReduceButGrow());
-
+        options.put("Find nearest square number", new NearestSquareNumber());
         options.put("Exit", new Exit());
     }
 
