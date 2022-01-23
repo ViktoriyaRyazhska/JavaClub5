@@ -9,7 +9,9 @@ public class Task49Test {
 
     @Test
     public void simpleTest(){
-        assertTrue("empty string", myEncoder.encode("").equals(""));
-        assertTrue("abcdef string", myEncoder.encode("abcdef").equals("4bcd3f"));
+       // assertTrue("empty string", myEncoder.encode("").equals(""));
+       // assertTrue("abcdef string", myEncoder.encode("abcdef").equals("4bcd3f"));
+        assertEquals("empty string", myEncoder.encode(""));
+        assertEquals("4bcd3f", myEncoder.encode("abcdef"));
     }
 }
