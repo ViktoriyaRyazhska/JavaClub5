@@ -1,10 +1,9 @@
 package basicprogram.task3;
 
 import javaclub5.basicprogram.task3.Task3;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertEquals;
 
 class Task3Test {
     private static final double delta = 0.0001;
