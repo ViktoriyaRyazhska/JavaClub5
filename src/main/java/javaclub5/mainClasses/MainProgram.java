@@ -60,10 +60,11 @@ public class MainProgram {
                     selectTheme(reader);
                     break;
             }
-        } catch (Exception e) {
+
+        }
+        catch (Exception e) {
             System.out.println("Wrong input");
             selectTheme(reader);
-            e.printStackTrace();
         }
     }
 }

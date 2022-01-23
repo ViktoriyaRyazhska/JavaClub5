@@ -75,8 +75,10 @@ public class LoopsSelection {
                 default:
                     System.out.println("Wrong input");
             }
-        } catch (IOException e) {
-            e.printStackTrace();
+        }
+        catch (Exception e) {
+            System.out.println("Wrong input");
+            selectTheme(reader);
         }
     }
 }
