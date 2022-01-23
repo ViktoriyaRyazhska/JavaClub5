@@ -1,7 +1,5 @@
 package javaclub5.classes.task15;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class Canvas {
     private int width;
