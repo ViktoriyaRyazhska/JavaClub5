@@ -18,6 +18,8 @@ public class Task29 {
                 System.out.println("Wrong number");
             }
             switch (m) {
+                case 0:
+                    System.out.println("Zero");
                 case 1:
                     System.out.println("One");
                     break;
