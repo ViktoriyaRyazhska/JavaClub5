@@ -9,7 +9,7 @@ import java.util.Set;
 
 public class Task72 {
 
-    public static HashMap Dictionary(String name) {
+    public static String Dictionary(String name) {
         HashMap<String, String> typeAndLocation = new HashMap<>();
         typeAndLocation.put("Apple", "A fruit that grows on trees");
         typeAndLocation.put("Pear", "A fruit that grows on trees");
@@ -17,7 +17,9 @@ public class Task72 {
         typeAndLocation.put("Plum", "A fruit that grows on trees");
         typeAndLocation.put("Orange", "A fruit that grows on trees");
         typeAndLocation.put("Coconut", "A fruit that grows on palms");
-        return  typeAndLocation;
+        StringBuilder encode = new StringBuilder();
+        String get = typeAndLocation.get(name);
+        return (get != null)? String.valueOf(encode) : "Can't find entry for " + name;
     }
 
     public static void task72( BufferedReader reader) {
@@ -25,15 +27,7 @@ public class Task72 {
         try {
             System.out.println("Enter type of fruit");
             String name = reader.readLine();
-
-            StringBuilder encode = new StringBuilder();
-            String get = (String) Dictionary(name).get(name);
-            if (get != null) {
-                encode.append(get);
-                System.out.println(encode);
-            }else{
-                System.out.println("Can't find entry for " + name);
-            }
+            System.out.println(Dictionary(name));
         } catch (IOException e) {
             e.printStackTrace();
         }
