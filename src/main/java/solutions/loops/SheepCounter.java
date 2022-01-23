@@ -33,7 +33,7 @@ public class SheepCounter implements Executable {
         else {
             this.arrayOfSheeps = new Boolean[arrSize];
             for (int i = 0; i < arrSize; i++) {
-                System.out.println("Enter boolean number: "+(i+1));
+                System.out.println("Enter bool number: "+(i+1));
                 this.arrayOfSheeps[i] = new Scanner(System.in).nextBoolean();
             }
         }

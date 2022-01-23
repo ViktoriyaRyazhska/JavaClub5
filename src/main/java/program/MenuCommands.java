@@ -47,7 +47,7 @@ public class MenuCommands {
         options.put("SortAndStar", new SortAndStar());
         options.put("Find the position", new FindThePosition());
         options.put("Repeating the string", new StringRepeat());
-        options.put("Count sheeps", new SheepCounter());
+        options.put("Count sheep", new SheepCounter());
 
 
 
