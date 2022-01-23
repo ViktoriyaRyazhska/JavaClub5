@@ -9,6 +9,7 @@ public class Task11 {
             System.out.println("To convert, wright temperature in (°F):");
             System.out.println(x = convertToCelsius(scanner.nextInt()));
             System.out.println(weatherInfo(x));
+            scanner.close();
         }catch (Exception e){
 
         }
