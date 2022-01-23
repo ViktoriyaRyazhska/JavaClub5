@@ -50,7 +50,7 @@ public class MenuCommands {
         options.put("Triple trouble 2 ", new TripleTrouble2());
         options.put("Opposite number ", new OppositeNumbers());
         options.put("Grasshoper debug", new GrasshopperDebug());
-
+        options.put("Correct mistakes", new CorrectMistakes());
 
 
 
