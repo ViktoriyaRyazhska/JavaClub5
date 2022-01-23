@@ -3,13 +3,11 @@ package solutions.basicProgram;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class YouCantCodeUnderPressure1Test {
 
     @Test
     void multiply() {
-        YouCantCodeUnderPressure1 y = new YouCantCodeUnderPressure1();
+        YouCantCodeUnderPressure y = new YouCantCodeUnderPressure();
 
         Assert.assertEquals("Nope!" , 4, y.multiply(2));
         Assert.assertEquals("Nope!" , 0, y.multiply(0));

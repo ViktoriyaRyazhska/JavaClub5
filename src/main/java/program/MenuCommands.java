@@ -1,19 +1,24 @@
 package program;
 
 import solutions.Executable;
-import solutions.basicProgram.VolumeOfCuboid;
-import solutions.basicProgram.YouCantCodeUnderPressure1;
+import solutions.*;
+import solutions.basicProgram.*;
 
 import java.util.Map;
 import java.util.TreeMap;
 
 public class MenuCommands {
-    public final Map<String, Executable> options;
+    private final Map<String, Executable> options;
 
     public MenuCommands() {
         this.options = new TreeMap<>();
 
-        options.put("You Can't code under pressure 1", new YouCantCodeUnderPressure1());
-        options.put("volume-of-a-cuboid", new VolumeOfCuboid());
+        options.put("You can't code under pressure", new YouCantCodeUnderPressure());
+        options.put("Volume of a cuboid", new VolumeOfCuboid());
+        options.put("Exit", new Exit());
+    }
+
+    public Map<String, Executable> getOptions() {
+        return options;
     }
 }
