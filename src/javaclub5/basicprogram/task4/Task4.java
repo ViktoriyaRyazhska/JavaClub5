@@ -23,13 +23,12 @@ public class Task4 {
             return wallLength % pixelSize == 0 && wallLength > 0 && pixelSize > 0;
         }
 
-    public static void main(String[] args) {
+    public static void main(Scanner scanner) {
             try{
         System.out.println("Enter size of wall: ");
-        Scanner sc = new Scanner(System.in);
-        int wallLength = sc.nextInt();
+        int wallLength = scanner.nextInt();
         System.out.println("Enter size of pixel: ");
-        int pixelSize = sc.nextInt();
+        int pixelSize = scanner.nextInt();
         System.out.println(isDivisible(wallLength,pixelSize));
 
             } catch (Exception e) {
