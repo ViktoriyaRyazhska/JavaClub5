@@ -8,6 +8,7 @@ import solutions.basicProgram.*;
 import solutions.classes.Battle;
 
 import solutions.classes.Block;
+import solutions.collections.FilteringBugFixing;
 import solutions.collections.LoopBugFixing;
 import solutions.conditions.*;
 import solutions.loops.*;
@@ -61,6 +62,7 @@ public class MenuCommands {
         options.put("Remove string spaces",new RemoveSpaces());
         options.put("Parse int from char",new ParseInt());
         options.put("Alternating case",new AlternatingCase());
+        options.put("Remove even numbers",new FilteringBugFixing());
         options.put("Exit", new Exit());
     }
 
