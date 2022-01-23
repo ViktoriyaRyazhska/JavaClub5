@@ -1,7 +1,10 @@
 package solutions.oop.Leetspeak;
 
 
-public class Leetspeak extends Encoder{
+import program.helper.Helper;
+import solutions.Executable;
+
+public class Leetspeak extends Encoder implements Executable {
 
     public String encode(String source){
         if (source == null){return "";}
@@ -22,6 +25,13 @@ public class Leetspeak extends Encoder{
         return source;
     }
 
+    @Override
+    public void execute() {
+        System.out.println("Encode string you enter. Enter the String: ");
+        String str =  Helper.getLine();
+        System.out.println("Result: " + encode(str));
+        Helper.promptEnterKey();
+    }
 }
 
 
