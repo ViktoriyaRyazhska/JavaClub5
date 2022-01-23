@@ -17,8 +17,7 @@ public class Task3 {
         return V;
     }
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public static void main(Scanner scanner) {
 
         System.out.println("Enter high, length and width of your cuboid: ");
 
