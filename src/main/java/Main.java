@@ -29,6 +29,7 @@ public class Main {
             case 10 -> Task10.task10(reader);
             case 11 -> Task11.task11(reader);
             case 12 -> Task12.task12(reader);
+            case 14 -> Task14.task14(reader);
             case 15 -> Task15.task15(reader);
             case 16 -> Task16.task16(reader);
             case 17 -> Task17.task17(reader);
