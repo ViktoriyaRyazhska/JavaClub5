@@ -11,9 +11,9 @@ public class Task21 {
     the fatcat did not make enough money and must receive only his stated salary.
     */
 
-    public static void main(String[] args) {
-        System.out.println("Salary 25000 + bonus" + Kata.bonusTime(25000, true));
-        System.out.println("Salary 1000  " +Kata.bonusTime(1000, false));
-        System.out.println("Salary 15000  " +Kata.bonusTime(15000, false));
+    public static void main() {
+        System.out.println("Salary 25000 + bonus:" + Kata.bonusTime(25000, true));
+        System.out.println("Salary 1000         :" +Kata.bonusTime(1000, false));
+        System.out.println("Salary 15000        :" +Kata.bonusTime(15000, false));
     }
 }
