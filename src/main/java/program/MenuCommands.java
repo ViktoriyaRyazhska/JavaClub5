@@ -35,9 +35,9 @@ public class MenuCommands {
         options.put("Battle fighters", new Battle());
         options.put("Will be enough space", new WillBeEnoughSpace());
         options.put("Convert bool to str", new BoolConverter());
-        options.put("Transportation on vacation",new TransportationOnVacation());
+        options.put("Transportation on vacation", new TransportationOnVacation());
         options.put("Making basical math operation", new BasicalMath());
-        options.put("Beginner lost without map",new BeginnerLostWithoutMap());
+        options.put("Beginner lost without map", new BeginnerLostWithoutMap());
         options.put("Fibonacci numbers modulo 3", new FibonacciModulo());
         options.put("Block", new Block());
         options.put("CatDogYears", new CatDogYears());
@@ -53,7 +53,7 @@ public class MenuCommands {
         options.put("Grasshoper debug", new GrasshopperDebug());
         options.put("Correct mistakes", new CorrectMistakes());
         options.put("Loop bug fixing", new LoopBugFixing());
-
+        options.put("Beginner reduce but grow", new BeginnerReduceButGrow());
 
         options.put("Exit", new Exit());
     }
