@@ -6,9 +6,14 @@ import javaclub5.basicprogram.task11.Task11;
 import javaclub5.basicprogram.task2.Task2;
 import javaclub5.basicprogram.task3.Task3;
 import javaclub5.basicprogram.task4.Task4;
+import javaclub5.basicprogram.task9.Task9;
+import javaclub5.basicprogram.task10.Task10;
 import javaclub5.conditions.task27.Task27;
 import javaclub5.conditions.task28.Task28;
 import javaclub5.conditions.task29.Task29;
+import javaclub5.string.task63.Task63;
+import javaclub5.string.task64.Task64;
+
 
 import java.util.Scanner;
 
@@ -43,6 +48,12 @@ public class MainConsoleProgram {
             case 8:
                 Task8.start(scanner);
                 break;
+            case 9:
+                Task9.main(scanner);
+                break;
+            case 10:
+                Task10.main(scanner);
+                break;
             case 11:
                 Task11.start(scanner);
                 break;
@@ -54,6 +65,12 @@ public class MainConsoleProgram {
                 break;
             case 29:
                 Task29.main(scanner);
+                break;
+            case 63:
+                Task63.main(scanner);
+                break;
+            case 64:
+                Task64.main(scanner);
                 break;
         }
     }

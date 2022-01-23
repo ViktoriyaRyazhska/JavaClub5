@@ -11,16 +11,15 @@ public class Task10 {
             max =x+0.10f*x;
         }
         return ((int)min+"-"+(int)max);
-    }/*
-    public static void main(String[] args) {
+    }
+    public static void main(Scanner sc) {
         Task10 obj = new Task10();
-        Scanner sc = new Scanner(System.in);
-
         try {
+            System.out.println("Enter age");
             int x= sc.nextInt();
-            System.out.println(obj.datingRange(x));
+            System.out.println("Your range of dating age:"+obj.datingRange(x));
         } catch (Exception e) {
             System.out.println("Wrong input");
         }
-    }*/
+    }
 }

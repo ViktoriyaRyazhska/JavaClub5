@@ -13,19 +13,19 @@ public class Task64 {
             count++;
         }
         return count;
-    }/*
-    public static void main(String[] args) {
+    }
+    public static void main(Scanner sc) {
         Task64 obj = new Task64();
-        Scanner sc = new Scanner(System.in);
 
         try {
+            System.out.println("Enter your message:");
             String text = sc.nextLine();
+            System.out.println("Enter symbol to find");
             String pattern = sc.nextLine();
 
-
-            System.out.println(obj.strCount(text, pattern));
+            System.out.println("There are "+obj.strCount(text, pattern)+ " \""+pattern +"\"" +" in this message");
         } catch (Exception e) {
             System.out.println("Wrong input");
         }
-    }*/
+    }
 }

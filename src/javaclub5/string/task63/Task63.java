@@ -8,17 +8,17 @@ public class Task63 {
     fullName=fullName.toUpperCase(Locale.ROOT);
     int idxLastWhitespace = fullName.indexOf(' ');
     return fullName.substring(0, 1) +"."+ fullName.substring(idxLastWhitespace + 1, idxLastWhitespace + 2);
-}/*
-    public static void main(String[] args) {
+}
+    public static void main(Scanner sc) {
         Task63 obj = new Task63();
-        Scanner sc = new Scanner(System.in);
 
         try {
+            System.out.println("Enter your full name:");
             String x= sc.nextLine();
-            System.out.println(obj.getInitials(x));
+            System.out.println("Your initials are:"+obj.getInitials(x));
         } catch (Exception e) {
             System.out.println("Wrong input");
         }
-    }*/
+    }
 
 }

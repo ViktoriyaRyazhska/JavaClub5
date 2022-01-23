@@ -10,17 +10,17 @@ public class Task9 {
         }
         return m;
     }
-/*
-    public static void main(String[] args) {
+
+    public static void main(Scanner sc) {
         Task9 obj = new Task9();
-        Scanner sc = new Scanner(System.in);
 
         try {
+            System.out.println("Enter number:");
             int x= sc.nextInt();
             System.out.println(obj.makeNegative(x));
         } catch (Exception e) {
             System.out.println("Wrong input");
         }
     }
-    */
+
 }
