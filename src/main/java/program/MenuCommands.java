@@ -7,8 +7,12 @@ import solutions.*;
 import solutions.basicProgram.*;
 import solutions.classes.Battle;
 
+import solutions.classes.Block;
 import solutions.conditions.*;
 import solutions.loops.BeginnerLostWithoutMap;
+import solutions.loops.CatDogYears;
+import solutions.oop.Leetspeak.Leetspeak;
+import solutions.strings.*;
 
 
 import java.util.Map;
@@ -21,8 +25,6 @@ public class MenuCommands {
         this.options = new TreeMap<>();
 
         options.put("You can't code under pressure", new YouCantCodeUnderPressure());
-        options.put("Volume of a cuboid", new VolumeOfCuboid());
-        options.put("You Can't code under pressure 1", new YouCantCodeUnderPressure1());
         options.put("Volume of a cuboid", new VolumeOfCuboid());
         options.put("Beginner series number clock", new BeginnerSeriesNumberClock());
         options.put("Grasshopper", new Grasshopper());
@@ -37,6 +39,12 @@ public class MenuCommands {
         options.put("Making basical math operation", new BasicalMath());
         options.put("Beginner lost without map",new BeginnerLostWithoutMap());
         options.put("Fibonacci numbers modulo 3", new FibonacciModulo());
+        options.put("Block", new Block());
+        options.put("CatDogYears", new CatDogYears());
+        options.put("Leetspeak", new Leetspeak());
+        options.put("SortAndStar", new SortAndStar());
+        options.put("Find the position", new FindThePosition());
+
         options.put("Exit", new Exit());
     }
 
