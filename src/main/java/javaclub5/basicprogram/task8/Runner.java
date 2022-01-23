@@ -1,5 +1,8 @@
 package javaclub5.basicprogram.task8;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 /**
  * The first century spans from the year 1 up to and including the year 100, the second century - from the year 101 up to and including the year 200, etc.
  *
@@ -10,15 +13,25 @@ package javaclub5.basicprogram.task8;
 
 public class Runner {
     public static void main(String[] args) {
-        int result = century(1900);
-        System.out.println(result);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        start(br);
 
+    }
+
+    public static void start(BufferedReader br) {
+        System.out.println("Enter pleas year:");
+        try {
+            int year = Integer.parseInt(br.readLine());
+            System.out.println("Result: " + century(year));
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     public static int century(int number) {
         if (number % 100 == 0) {
-            number = number/100;
-        }else {
+            number = number / 100;
+        } else {
             number = (number / 100) + 1;
         }
         return number;
