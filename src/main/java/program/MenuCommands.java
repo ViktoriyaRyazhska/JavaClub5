@@ -1,6 +1,9 @@
 package program;
 
 import solutions.Executable;
+
+import solutions.*;
+
 import solutions.basicProgram.*;
 import solutions.classes.Battle;
 
@@ -12,11 +15,13 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class MenuCommands {
-    public final Map<String, Executable> options;
+    private final Map<String, Executable> options;
 
     public MenuCommands() {
         this.options = new TreeMap<>();
 
+        options.put("You can't code under pressure", new YouCantCodeUnderPressure());
+        options.put("Volume of a cuboid", new VolumeOfCuboid());
         options.put("You Can't code under pressure 1", new YouCantCodeUnderPressure1());
         options.put("Volume of a cuboid", new VolumeOfCuboid());
         options.put("Beginner series number clock", new BeginnerSeriesNumberClock());
@@ -32,6 +37,10 @@ public class MenuCommands {
         options.put("Making basical math operation", new BasicalMath());
         options.put("Beginner lost without map",new BeginnerLostWithoutMap());
         options.put("Fibonacci numbers modulo 3", new FibonacciModulo());
+        options.put("Exit", new Exit());
+    }
 
+    public Map<String, Executable> getOptions() {
+        return options;
     }
 }

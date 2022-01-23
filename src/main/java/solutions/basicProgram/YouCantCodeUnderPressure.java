@@ -3,7 +3,7 @@ package solutions.basicProgram;
 import program.helper.Helper;
 import solutions.Executable;
 
-public class YouCantCodeUnderPressure1 implements Executable {
+public class YouCantCodeUnderPressure implements Executable {
 
     @Override
     public void execute() {

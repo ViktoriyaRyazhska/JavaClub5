@@ -1,4 +1,5 @@
 package solutions.basicProgram;
+import program.helper.Helper;
 import solutions.Executable;
 
 import java.util.Scanner;
@@ -16,10 +17,9 @@ public class VolumeOfCuboid implements Executable {
         void readData() {
             while (true) {
                 System.out.println("Enter length , width and height:");
-                Scanner scanner = new Scanner(System.in);
-                length = scanner.nextDouble();
-                width = scanner.nextDouble();
-                height = scanner.nextDouble();
+                length = Helper.getDouble(1000.0);
+                width = Helper.getDouble(1000.0);
+                height = Helper.getDouble(1000.0);
                 if(length<0||width<0||height<0){
                     System.out.println("Enter variables higher than 0!");
                 }

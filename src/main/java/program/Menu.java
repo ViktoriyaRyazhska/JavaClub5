@@ -1,22 +1,20 @@
 package program;
 
-import java.util.Scanner;
+import program.helper.Helper;
 
 public class Menu {
-    private MenuCommands commands;
+    private final MenuCommands options;
 
-    public Menu(MenuCommands commands){
-        this.commands = commands;
+    public Menu(MenuCommands options){
+        this.options = options;
     }
 
     public void run(){
         while (true){
-            System.out.println("Enter command:");
-            System.out.println(commands.options.toString());
-            Scanner scanner = new Scanner(System.in);
-            String str = scanner.nextLine();
-            commands.options.get(str).execute();
-            break;
+            Helper.printBar( "Menu" );
+            Helper.menuOptionPrint( options.getOptions() );
+            String option = Helper.getOptionStr( options.getOptions());
+            options.getOptions().get( option ).execute();
         }
     }
 }
