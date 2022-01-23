@@ -43,9 +43,11 @@ public class Main {
             case 31 -> Task31.task31(reader);
             case 32 -> Task32.task32(reader);
             case 34 -> Task34.task34(reader);
+            case 35 -> Task35.task35(reader);
             case 36 -> Task36.task36(reader);
             case 37 -> Task37.task37(reader);
             case 39 -> Task39.task39(reader);
+            case 40 -> Task40.task40(reader);
             case 41 -> Task41.task41(reader);
             case 42 -> Task42.task42(reader);
             case 44 -> Task44.task44(reader);
