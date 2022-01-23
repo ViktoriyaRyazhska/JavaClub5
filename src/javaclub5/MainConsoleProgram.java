@@ -1,5 +1,6 @@
 package javaclub5;
 
+import javaclub5.basicprogram.Task8.Task8;
 import javaclub5.basicprogram.task1.Task1;
 import javaclub5.basicprogram.task11.Task11;
 import javaclub5.basicprogram.task2.Task2;
@@ -26,11 +27,14 @@ public class MainConsoleProgram {
         }
 
         switch (taskNumber) {
-            case 1 :
+            case 1:
                 Task1.start(scanner);
                 break;
-            case 2 :
+            case 2:
                 Task2.start(scanner);
+                break;
+            case 8:
+                Task8.start(scanner);
                 break;
             case 3 :
                 Task3.main(scanner);
@@ -38,7 +42,7 @@ public class MainConsoleProgram {
             case 4:
                 Task4.main(scanner);
                 break;
-            case 11 :
+            case 11:
                 Task11.start(scanner);
                 break;
             case 27:

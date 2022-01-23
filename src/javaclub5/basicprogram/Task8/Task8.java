@@ -1,37 +1,33 @@
 package javaclub5.basicprogram.Task8;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class Task8 {
 
-    public static void main(String[] args) {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        century(bufferedReader);
-    }
-
-    public static void century(BufferedReader bufferedReader) {
-
+    public static void start(Scanner scanner) {
+        System.out.println("Enter a year: ");
         try {
-            System.out.println("Enter a year: ");
-            int year = Integer.parseInt(bufferedReader.readLine());
+            int year = Integer.parseInt(scanner.nextLine());
             defineCentury(year);
 
-        } catch (IOException e) {
+        } catch (NumberFormatException e) {
             e.printStackTrace();
         }
+
 
     }
 
     public static void defineCentury(int a) {
         if (a <= 100) {
             System.out.println("Century of a year " + a + " is " + 1);
-        } else if (a > 100 && a <= 200) {
-            System.out.println("Century of a year " + a + " is " + 2);
-        } else if (a > 200 && a <= 300) {
-            System.out.println("Century of a year " + a + " is " + 3);
+        } else if (a > 100) {
+            if (a % 100 == 0) {
+                System.out.println("Century of a year " + a + " is " + a / 100);
+            } else if (a % 100 != 0) {
+                System.out.println("Century of a year " + a + " is " + (a / 100 + 1));
+            }
         }
     }
-
 }
+
+
