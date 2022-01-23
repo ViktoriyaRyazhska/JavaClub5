@@ -7,8 +7,16 @@ public class Task5 {
      * She added a special case to her function, but she made a mistake.
      * */
     public static void main(String[] args) {
-        System.out.println(greet("Johnny"));
-        System.out.println(greet("Sem"));
+//        System.out.println("Function returns a greeting for a user.");
+//        System.out.println("For Johnny:'" + greet("Johnny") + "'");
+//        System.out.println("For other :'" + greet("Sem") + "'");
+        start();
+    }
+
+    public static void start() {
+        System.out.println("Function returns a greeting for a user.");
+        System.out.println("For Johnny:'" + greet("Johnny") + "'");
+        System.out.println("For other :'" + greet("Sem") + "'");
     }
 
     public static String greet(String name) {
