@@ -19,12 +19,9 @@ public class BooleanToString {
 
     public static void start(BufferedReader br) {
         System.out.println("Enter a logical value: ");
-        boolean b = true;
-        int i = -("false".indexOf("", + b));
-        b = false;
-        i = -("false".indexOf("",b));
+
         try{
-            i = Integer.parseInt(br.readLine());
+            boolean b = Boolean.parseBoolean(br.readLine());
             System.out.println("Result: " + convert(b));
         }catch (IOException e){
             System.out.println(e.getMessage());
