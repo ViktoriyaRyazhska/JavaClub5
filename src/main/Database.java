@@ -2,7 +2,9 @@ package main;
 
 import main.basicprogram.task1.CodeFast;
 import main.basicprogram.task10.Kata;
+import main.basicprogram.task11.GrassHopper;
 import main.basicprogram.task5.Greeter;
+import main.basicprogram.task6.ParseToBinary;
 import main.classes.task15.Canvas;
 import main.collections.task70.SolutionKata;
 import main.conditions.task20.BooleanToString;
@@ -32,12 +34,12 @@ public class Database {
 //        map.put(3, new /* назва класу*/);
 //        map.put(4, new /* назва класу*/);
         map.put(5, new Greeter());
-//        map.put(6, new /* назва класу*/);
+        map.put(6, new ParseToBinary());
 //        map.put(7, new /* назва класу*/);
 //        map.put(8, new /* назва класу*/);
 //        map.put(9, new /* назва класу*/);
         map.put(10, new Kata());
-//        map.put(11, new /* назва класу*/);
+        map.put(11, new GrassHopper());
 //        map.put(12, new /* назва класу*/);
 //        map.put(13, new /* назва класу*/);
 //        map.put(14, new /* назва класу*/);
