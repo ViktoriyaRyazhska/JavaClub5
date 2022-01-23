@@ -11,6 +11,7 @@ import solutions.classes.Block;
 import solutions.collections.LoopBugFixing;
 import solutions.conditions.*;
 import solutions.loops.*;
+import solutions.oop.AdamEndEve;
 import solutions.oop.Leetspeak.Leetspeak;
 import solutions.strings.*;
 
@@ -55,6 +56,7 @@ public class MenuCommands {
         options.put("Loop bug fixing", new LoopBugFixing());
         options.put("Beginner reduce but grow", new BeginnerReduceButGrow());
         options.put("Find nearest square number", new NearestSquareNumber());
+        options.put("Adam and Eve", new AdamEndEve());
         options.put("Exit", new Exit());
     }
 
