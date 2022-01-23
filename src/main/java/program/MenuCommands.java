@@ -57,6 +57,7 @@ public class MenuCommands {
         options.put("Beginner reduce but grow", new BeginnerReduceButGrow());
         options.put("Find nearest square number", new NearestSquareNumber());
         options.put("Adam and Eve", new AdamEndEve());
+        options.put("Welcome to city",new WelcomeToCity());
         options.put("Exit", new Exit());
     }
 
