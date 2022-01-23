@@ -17,17 +17,22 @@ public class Task15 {
     * Description:Fill the entire area connected to the given point with given character, also known as "bucket fill" in paint programs
     * */
 
-    public static void main(String[] args) {
+    public static void main() {
+        System.out.println("Program  write a simple console-style drawing board program");
+        System.out.println("Example 1: canvas 7x7 and filled by 'o' rectangle[1,1,5,4,] ");
         Canvas c = new Canvas(7, 7);
         c.draw(1, 1, 5, 4).fill(3, 3, 'o');
         c.drawCanvas();
         System.out.println(c);
 
+
+        System.out.println("\nExample 2: canvas 5x5 and two lines [0, 2, 4, 2] and [2, 0, 2, 4]");
         c = new Canvas(5, 5);
-        c.draw(0, 2, 4, 2).draw(2, 0, 2, 4);
         c.draw(0, 2, 4, 2).draw(2, 0, 2, 4);
         System.out.println(c);
 
+        System.out.println("\nExample 3: canvas 20x4, two lines [0, 1, 5, 1] and [5, 2, 5, 3]");
+        System.out.println("not filed rectangle [13,0,17,2] and filling arr area by '.' in [9,2]");
         c = new Canvas(20, 4);
         c.draw(0, 1, 5, 1).draw(5, 2, 5, 3).draw(13,0,17,2).fill(9,2,'.');
         System.out.println(c);
