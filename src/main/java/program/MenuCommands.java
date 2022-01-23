@@ -48,6 +48,7 @@ public class MenuCommands {
         options.put("Count positive numbers", new SumOfPozitive());
         options.put("Grasshopper summation", new GrassshoperSummation());
         options.put("Triple trouble 2 ", new TripleTrouble2());
+        options.put("Opposite number ", new OppositeNumbers());
 
 
 
