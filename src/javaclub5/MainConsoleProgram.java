@@ -33,14 +33,14 @@ public class MainConsoleProgram {
             case 2:
                 Task2.start(scanner);
                 break;
-            case 8:
-                Task8.start(scanner);
-                break;
-            case 3 :
+            case 3:
                 Task3.main(scanner);
                 break;
             case 4:
                 Task4.main(scanner);
+                break;
+            case 8:
+                Task8.start(scanner);
                 break;
             case 11:
                 Task11.start(scanner);
