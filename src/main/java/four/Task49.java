@@ -31,7 +31,7 @@ public class Task49 {
                            .replaceAll("O","0");
             return source;
         }else {
-        return "empty string";
+        return "";
     }
     }
     public static void task49(BufferedReader reader) {
