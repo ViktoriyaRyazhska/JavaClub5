@@ -60,6 +60,10 @@ public class MainProgram {
         }
     }
 
+    /**
+     *
+     * @param reader
+     */
     private static void selectBasicProgram(BufferedReader reader) {
         System.out.println("Select number of Task (1-11) \n 0. Main menu \n 12. exit");
         try {
@@ -168,12 +172,10 @@ public class MainProgram {
                     selectTheme(reader);
                     break;
                 case 1:
-                    System.out.println("Not done yet");
-                    //javaclub5.conditions.task1.Runner.start(reader);
+                    javaclub5.conditions.task1.Runner.start(reader);
                     break;
                 case 2:
-                    System.out.println("Not done yet");
-                    //javaclub5.conditions.task2.Runner.start(reader);
+                    javaclub5.conditions.task2.DivisibleNb.start(reader);
                     break;
                 case 3:
                     System.out.println("Not done yet");
