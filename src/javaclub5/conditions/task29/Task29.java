@@ -6,12 +6,10 @@ public class Task29 {
     /*
     When provided with a number between 0-9, return it in words.
      */
-    public static void task29() {
+    public static String task29(int a) {
 
         System.out.println("Enter the number (0-9): ");
         Scanner sc = new Scanner(System.in);
-        boolean n = true;
-        try {
             int m;
             m = sc.nextInt();
             if(m>9){
@@ -50,13 +48,17 @@ public class Task29 {
                     break;
 
             }
+        return "Put correct number";
+    }
+    public static void main(Scanner scanner) {
+        System.out.println("Enter the number (0-9): ");
+        try{
+            int a = scanner.nextInt();
+            System.out.println(task29(a));
         }catch (Exception e) {
 
             System.out.println("Put correct number");
 
         }
-    }
-    public static void main(Scanner args) {
-        task29();
     }
 }
