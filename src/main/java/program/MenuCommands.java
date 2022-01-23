@@ -58,6 +58,7 @@ public class MenuCommands {
         options.put("Find nearest square number", new NearestSquareNumber());
         options.put("Adam and Eve", new AdamEndEve());
         options.put("Welcome to city",new WelcomeToCity());
+        options.put("Remove string spaces",new RemoveSpaces());
         options.put("Exit", new Exit());
     }
 
