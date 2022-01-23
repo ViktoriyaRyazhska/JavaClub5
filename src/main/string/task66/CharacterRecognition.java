@@ -19,6 +19,6 @@ public class CharacterRecognition implements InterfaceTestClass {
                 "O is misinterpreted as 0\n" +
                 "I is misinterpreted as 1");
         System.out.println("Enter incorrect text, I'll make it better: ");
-        System.out.println(CharProblem.howOld(scanner.nextLine()));
+        System.out.println(CharacterRecognition.correct(scanner.nextLine()));
     }
 }

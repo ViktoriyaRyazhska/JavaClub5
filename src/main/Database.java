@@ -7,6 +7,7 @@ import main.basicprogram.task5.Greeter;
 import main.basicprogram.task6.ParseToBinary;
 import main.classes.task15.Canvas;
 import main.collections.task70.SolutionKata;
+import main.collections.task71.BugFixes;
 import main.conditions.task20.BooleanToString;
 import main.conditions.task25.OppositesAttract;
 import main.conditions.task30.TrafficLights;
@@ -103,7 +104,7 @@ public class Database {
 //        map.put(68, new /* назва класу*/);
 //        map.put(69, new /* назва класу*/);
         map.put(70, new SolutionKata());
-//        map.put(71, new /* назва класу*/);
+        map.put(71, new BugFixes());
 //        map.put(72, new /* назва класу*/);
     }
 
