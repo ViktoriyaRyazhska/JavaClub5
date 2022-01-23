@@ -47,6 +47,7 @@ public class Main {
             case 62 -> Task62.task62(reader);
             case 66 -> Task66.task66(reader);
             case 71 -> Task71.task71(reader);
+            case 72 -> Task72.task72(reader);
         }
     }
 }
