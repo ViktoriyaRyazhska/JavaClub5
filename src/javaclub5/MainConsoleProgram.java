@@ -23,8 +23,10 @@ public class MainConsoleProgram {
         switch (taskNumber) {
             case 1 :
                 Task1.start(scanner);
+                break;
             case 2 :
                 Task2.start(scanner);
+                break;
         }
     }
 }
