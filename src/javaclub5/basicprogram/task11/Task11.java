@@ -1,32 +1,31 @@
 package javaclub5.basicprogram.task11;
 
-public class Task11 {
-    public static void main(String[] args) {
-        GrassHopper gs = new GrassHopper();
+import java.util.Scanner;
 
+public class Task11 {
+    public static void start(Scanner scanner){
+        try {
+            int x;
+            System.out.println("To convert, wright temperature in (°F):");
+            System.out.println(x = convertToCelsius(scanner.nextInt()));
+            System.out.println(weatherInfo(x));
+        }catch (Exception e){
+
+        }
     }
 
-    public static class GrassHopper {
-
         public static String weatherInfo(int temp) {
-            double c = convert(temp);
-            if (c > 0)
-                return (c + " is freezing temperature");
-            else if (c < 0)
-                return (c + " is above freezing temperature");
+            if (temp > 0)
+                return (temp + " is freezing temperature");
+            else if (temp < 0)
+                return (temp + " is above freezing temperature");
             else {
                 return null;
             }
         }
 
-        private static double convert(int temp) {
-            double num = temp;
-            return num;
-        }
-
-        public static double convertToCelsius(int temperature) {
+        public static int convertToCelsius(int temperature) {
             double celsius = (temperature - 32) * (5 / 9.0);
-            return celsius;
+            return (int) celsius;
         }
     }
-}
