@@ -1,6 +1,7 @@
 package javaclub5;
 
 import javaclub5.basicprogram.task1.Task1;
+import javaclub5.basicprogram.task11.Task11;
 import javaclub5.basicprogram.task2.Task2;
 
 import java.util.Scanner;
@@ -26,6 +27,9 @@ public class MainConsoleProgram {
                 break;
             case 2 :
                 Task2.start(scanner);
+                break;
+            case 11 :
+                Task11.start(scanner);
                 break;
         }
     }
