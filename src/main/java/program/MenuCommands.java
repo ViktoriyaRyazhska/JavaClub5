@@ -60,6 +60,7 @@ public class MenuCommands {
         options.put("Welcome to city",new WelcomeToCity());
         options.put("Remove string spaces",new RemoveSpaces());
         options.put("Parse int from char",new ParseInt());
+        options.put("Alternating case",new AlternatingCase());
         options.put("Exit", new Exit());
     }
 
