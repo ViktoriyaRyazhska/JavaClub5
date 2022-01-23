@@ -47,6 +47,8 @@ public class MenuCommands {
         options.put("Count sheep", new SheepCounter());
         options.put("Count positive numbers", new SumOfPozitive());
         options.put("Grasshopper summation", new GrassshoperSummation());
+        options.put("Triple trouble 2 ", new TripleTrouble2());
+
 
 
 
