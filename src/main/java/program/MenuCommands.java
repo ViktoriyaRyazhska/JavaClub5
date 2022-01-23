@@ -8,6 +8,7 @@ import solutions.basicProgram.*;
 import solutions.classes.Battle;
 
 import solutions.classes.Block;
+import solutions.collections.LoopBugFixing;
 import solutions.conditions.*;
 import solutions.loops.*;
 import solutions.oop.Leetspeak.Leetspeak;
@@ -51,7 +52,7 @@ public class MenuCommands {
         options.put("Opposite number ", new OppositeNumbers());
         options.put("Grasshoper debug", new GrasshopperDebug());
         options.put("Correct mistakes", new CorrectMistakes());
-
+        options.put("Loop bug fixing", new LoopBugFixing());
 
 
         options.put("Exit", new Exit());
