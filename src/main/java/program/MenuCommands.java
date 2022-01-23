@@ -46,6 +46,7 @@ public class MenuCommands {
         options.put("Repeating the string", new StringRepeat());
         options.put("Count sheep", new SheepCounter());
         options.put("Count positive numbers", new SumOfPozitive());
+        options.put("Grasshopper summation", new GrassshoperSummation());
 
 
 
