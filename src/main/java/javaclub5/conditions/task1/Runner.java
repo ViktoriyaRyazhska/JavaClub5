@@ -15,7 +15,7 @@ public class Runner{
     }
 
     public static void start(BufferedReader br) {
-        System.out.println("Enter pleas number: ");
+        System.out.println("Enter please number: ");
         try {
             int number = Integer.parseInt(br.readLine());
             System.out.println("Result: " + opposite(number));
