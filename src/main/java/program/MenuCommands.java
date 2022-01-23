@@ -9,10 +9,7 @@ import solutions.classes.Battle;
 
 import solutions.classes.Block;
 import solutions.conditions.*;
-import solutions.loops.BeginnerLostWithoutMap;
-import solutions.loops.CatDogYears;
-import solutions.loops.SheepCounter;
-import solutions.loops.StringRepeat;
+import solutions.loops.*;
 import solutions.oop.Leetspeak.Leetspeak;
 import solutions.strings.*;
 
@@ -48,6 +45,7 @@ public class MenuCommands {
         options.put("Find the position", new FindThePosition());
         options.put("Repeating the string", new StringRepeat());
         options.put("Count sheep", new SheepCounter());
+        options.put("Count positive numbers", new SumOfPozitive());
 
 
 
