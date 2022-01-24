@@ -1,4 +1,4 @@
-package javaclub5.strings.task12;
+package javaclub5.basicprogram.task12;
 
 
 
@@ -12,7 +12,7 @@ public class GrassHopper {
     }
 
     public static double convertToCelsius(int temperature) {
-        return (temperature - 32) * (5/9.0);
+        return (temperature - 32) * (5/9.0F);
     }
 
 }
