@@ -5,12 +5,13 @@ import main.java.com.softserve.ReadConsole;
 
 import java.io.IOException;
 
+import static main.java.com.softserve.statics.StaticImports.backToMenuOrRetry;
+import static main.java.com.softserve.statics.StaticImports.start16TaskStrings;
+
 public class Task16 extends ReadConsole {
     static String input;
     public static void main(String[] args) {
-        System.out.println("Task 16 Runs from now");
-        System.out.println("Enter a string to change some letters in it:");
-        System.out.println("Enter only with high register");
+        start16TaskStrings();
 
         try {
             input = br.readLine();
@@ -20,8 +21,7 @@ public class Task16 extends ReadConsole {
         System.out.println("Now we have some letter changed!");
         System.out.println(correct(input));
 
-        System.out.println("Beak to main menu => input 1 ");
-        System.out.println("Try again  => input 2 ");
+        backToMenuOrRetry();
 
         try {
             switch (br.readLine()) {

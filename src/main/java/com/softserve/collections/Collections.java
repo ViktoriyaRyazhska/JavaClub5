@@ -19,6 +19,10 @@ public class Collections extends ReadConsole {
                     Task2.main(args);
                     break;
 
+                case "3":
+                    Task3.main(args);
+                    break;
+
                 default:
                     System.err.println("You need to put number with 1 to 4");
                     Collections.main(args);

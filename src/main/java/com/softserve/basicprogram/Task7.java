@@ -5,7 +5,9 @@ import main.java.com.softserve.ReadConsole;
 
 import java.io.IOException;
 
-import static main.java.com.softserve.string.Task14.backToMenuOrRetry;
+import static main.java.com.softserve.statics.StaticImports.backToMenuOrRetry;
+import static main.java.com.softserve.statics.StaticImports.start7TaskBasicProgram;
+
 
 public class Task7 extends ReadConsole {
 
@@ -14,7 +16,7 @@ public class Task7 extends ReadConsole {
     static int seconds;
 
     public static void main(String[] args) {
-        start7Task();
+        start7TaskBasicProgram();
 
         try {
             hours = Integer.parseInt(br.readLine());
@@ -63,9 +65,5 @@ public class Task7 extends ReadConsole {
         return (s * 1000) + (m * 60000) + (h * 3600000);
     }
 
-    public static void start7Task(){
-        System.out.println("Task 7 is starting");
-        System.out.println("This function shows the time from midnight in milliseconds");
-        System.out.println("Enter hours:");
-    }
+
 }

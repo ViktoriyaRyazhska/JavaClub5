@@ -5,12 +5,14 @@ import main.java.com.softserve.ReadConsole;
 
 import java.io.IOException;
 
+import static main.java.com.softserve.statics.StaticImports.backToMenuOrRetry;
+import static main.java.com.softserve.statics.StaticImports.start9TaskBasicProgram;
+
 public class Task9 extends ReadConsole {
     static int number;
 
     public static void main(String[] args) {
-        System.out.println("Task 9 is starting");
-        System.out.println("Enter number to get negative:");
+        start9TaskBasicProgram();
 
         try {
             number = Integer.parseInt(br.readLine());
@@ -19,8 +21,8 @@ public class Task9 extends ReadConsole {
         }
         System.out.println("Result: " + makeNegative(number));
 
-        System.out.println("Beak to main menu => input 1 ");
-        System.out.println("Try again  => input 2 ");
+        backToMenuOrRetry();
+
         try {
             switch (br.readLine()) {
                 case "1":

@@ -4,6 +4,9 @@ import main.java.com.softserve.MainClass;
 import main.java.com.softserve.ReadConsole;
 
 import java.io.IOException;
+
+import static main.java.com.softserve.statics.StaticImports.*;
+
 //need to rework!!!!!!!
 public class Task14 extends ReadConsole {
     static String str;
@@ -11,8 +14,7 @@ public class Task14 extends ReadConsole {
     static int counter = 0;
     public static void main(String[] args) throws IOException {
 
-        start14Task();
-
+        start14TaskStrings();
 
         try {
             str = br.readLine();
@@ -21,7 +23,7 @@ public class Task14 extends ReadConsole {
         }
 
 
-        toDoIn14();
+        toDoIn14Strings();
 
         char letter = (char) br.read();
 
@@ -57,18 +59,8 @@ public class Task14 extends ReadConsole {
         return counter;
     }
 
-    public static void start14Task(){
-        System.out.println("Task 14 runs!");
-        System.out.println("Enter string to count same letters:");
-    }
-    public static void toDoIn14(){
-        System.out.println("Enter a symbol to find duplicates:");
-    }
 
-    public static void backToMenuOrRetry(){
-        System.out.println("Back to main menu => input 1 ");
-        System.out.println("Try again  => input 2 ");
 
-    }
+
 
 }

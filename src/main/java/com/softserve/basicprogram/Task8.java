@@ -5,13 +5,15 @@ import main.java.com.softserve.ReadConsole;
 
 import java.io.IOException;
 
+import static main.java.com.softserve.statics.StaticImports.backToMenuOrRetry;
+import static main.java.com.softserve.statics.StaticImports.start8TaskBasicProgram;
+
 public class Task8 extends ReadConsole {
 
     static int century;
 
     public static void main(String[] args) {
-        System.out.println("Task 8 is starting");
-        System.out.println("Enter the year to find out what this century is ;)");
+        start8TaskBasicProgram();
 
         if (isInteger()) {
             System.out.println("Result :" + century(century));
@@ -20,8 +22,7 @@ public class Task8 extends ReadConsole {
             Task8.main(args);
         }
 
-        System.out.println("Beak to main menu => input 1 ");
-        System.out.println("Try again  => input 2 ");
+        backToMenuOrRetry();
         try {
             switch (br.readLine()) {
                 case "1":
