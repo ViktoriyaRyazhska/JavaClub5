@@ -35,12 +35,10 @@ public class BasicProgramSelection {
                     //javaclub5.basicprogram.task6.Runner.start(reader);
                     break;
                 case 7:
-                    System.out.println("Not done yet");
-                    //javaclub5.basicprogram.task7.Runner.start(reader);
+                    javaclub5.basicprogram.task7.Runner.start(reader);
                     break;
                 case 8:
-                    System.out.println("Not done yet");
-                    //javaclub5.basicprogram.task8.Runner.start(reader);
+                    javaclub5.basicprogram.task8.Runner.start(reader);
                     break;
                 case 9:
                     System.out.println("Not done yet");
