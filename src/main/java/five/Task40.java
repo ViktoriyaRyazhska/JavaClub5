@@ -9,7 +9,6 @@ public class Task40 {
         return Arrays.stream(arr).filter(x -> x > 0).sum();
     }
 
-
     public static void task40(BufferedReader reader) {
         System.out.println("Enter an array of numbers, returns the sum of all of the positives ones.");
         try {
