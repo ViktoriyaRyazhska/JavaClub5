@@ -32,52 +32,39 @@ public class Battle implements Executable {
 
 
 
-    public static String declareWinner(Fighter fighter1, Fighter fighter2, String firstAttacker) {
+    public static String declareWinner(Fighter fighter1, Fighter fighter2, String firstToFight) {
         // Your code goes here. Have fun!
-        if(fighter1.damagePerAttack <= 0 || fighter1.health <= 0 || fighter2.damagePerAttack <= 0 || fighter2.health <= 0)
+        if (fighter1.damagePerAttack <= 0 || fighter1.health <= 0 || fighter2.damagePerAttack <= 0 || fighter2.health <= 0)
             return "All characteristics must be greater than 0 at beginning";
 
-        if(firstAttacker.equals(fighter1.name))
-        {
-            while(true)
-            {
-
-                fighter2.health -= fighter1.damagePerAttack;
-                if (fighter2.health <= 0) {
-                    return "The winner is fighter 1 " + fighter1.name;
-                }
-
-                fighter1.health -= fighter2.damagePerAttack;
-                if (fighter1.health <= 0) {
-                    return "The winner is fighter 2 " + fighter2.name;
-                }
-
-
-            }
-        }
-        else if (firstAttacker.equals(fighter2.name))
-        {
-            while(true)
-            {
-                fighter1.health -= fighter2.damagePerAttack;
-                if (fighter1.health<=0)
-                {
-                    return "The winner is fighter 2 "+fighter2.name;
-                }
-
-                fighter2.health -= fighter1.damagePerAttack;
-                if (fighter2.health<=0)
-                {
-                    return "The winner is fighter 2 "+fighter1.name;
-                }
-
-            }
+        Fighter firstAttacker, secondAttacker;
+        if (firstToFight.equals(fighter1.name)) {
+            firstAttacker = fighter1;
+            secondAttacker = fighter2;
+        } else if(firstToFight.equals(fighter2.name)) {
+            firstAttacker = fighter2;
+            secondAttacker = fighter1;
         }
         else
         {
-            return "No such fighter found ";
+            return "First attacker name is nor correct";
         }
 
+
+        while (true) {
+
+            secondAttacker.health -= firstAttacker.damagePerAttack;
+            if (secondAttacker.health <= 0) {
+                return "The winner is fighter 1 " + firstAttacker.name;
+            }
+
+            firstAttacker.health -= secondAttacker.damagePerAttack;
+            if (fighter1.health <= 0) {
+                return "The winner is fighter 2 " + secondAttacker.name;
+            }
+
+
+        }
     }
 
     public void getData()
