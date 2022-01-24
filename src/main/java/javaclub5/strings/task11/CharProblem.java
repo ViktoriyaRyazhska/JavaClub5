@@ -19,13 +19,13 @@ public class CharProblem {
     public static void start(BufferedReader br) {
         System.out.println("Ask a small girl - How old are you?");
         try {
-            int year = Integer.parseInt(br.readLine());
+            String  year = br.readLine();
             System.out.println("Result: " + howOld(year));
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
     }
-    public static int howOld(final String herOld) {
+    public static int howOld( String herOld) {
         char ch1 = herOld.charAt(0);
         int a;
         a = ch1 - '0';
