@@ -10,9 +10,9 @@ public class Topics {
     int max = 7;
     int decision;
 
-    public void runMenu(){
+    public void runMenu() {
         printHeader();
-        while (!exit){
+        while (!exit) {
             iterate(menu);
             choice = getInput();
             performAction(choice);
@@ -20,51 +20,64 @@ public class Topics {
     }
 
     private void performAction(int choice) {
-        switch (choice){
+        switch (choice) {
             case 0 -> {
                 exit = true;
                 System.out.println("Thank you for using our application.");
             }
             case 1 -> {
+                max = 11;
                 iterate(topicFirst);
                 System.out.println("Please make next selection: ");
-                decision = selectorOfFirstSelection();
+                decision = getInput();
                 exit = true;
             }
             case 2 -> {
+                min = 12;
+                max = 17;
                 iterate(topicSecond);
                 System.out.println("Please make next selection: ");
-                decision = selectorOfSecondSelection();
+                decision = getInput();
                 exit = true;
             }
             case 3 -> {
+                min = 18;
+                max = 31;
                 iterate(topicThird);
                 System.out.println("Please make next selection: ");
-                decision = selectorOfThirdSelection();
+                decision = getInput();
                 exit = true;
             }
             case 4 -> {
+                min = 32;
+                max = 46;
                 iterate(topicFourth);
                 System.out.println("Please make next selection: ");
-                decision = selectorOfFourthSelection();
+                decision = getInput();
                 exit = true;
             }
             case 5 -> {
+                min = 47;
+                max = 50;
                 iterate(topicFifth);
                 System.out.println("Please make next selection: ");
-                decision = selectorOfFifthSelection();
+                decision = getInput();
                 exit = true;
             }
             case 6 -> {
+                min = 51;
+                max = 68;
                 iterate(topicSixth);
                 System.out.println("Please make next selection: ");
-                decision = selectorOfSisxthSelection();
+                decision = getInput();
                 exit = true;
             }
             case 7 -> {
+                min = 69;
+                max = 72;
                 iterate(topicSeventh);
                 System.out.println("Please make next selection: ");
-                decision = selectorOfSeventhSelection();
+                decision = getInput();
                 exit = true;
             }
             default -> System.out.println("Wrong input!");
@@ -77,16 +90,16 @@ public class Topics {
         int choice = -1;
 
 
-        while (choice < min || choice > max){
-            try{
+        while (choice < min || choice > max) {
+            try {
                 System.out.println("Enter your choice: ");
                 choice = Integer.parseInt(scanner.nextLine());
-                if (choice > max || choice < min){
+                if (choice > max || choice < min) {
                     System.out.println("Your input out of border.");
                     System.out.println("Please try again");
                 }
 
-            }catch (NumberFormatException ex){
+            } catch (NumberFormatException ex) {
                 System.out.println("Invalid selection. Please try again.");
             }
         }
@@ -102,6 +115,7 @@ public class Topics {
     }
 
     private final static List<String> menu = getList();
+
     private static List<String> getList() {
         return List.of(
                 "Please make a selection: ",
@@ -116,13 +130,8 @@ public class Topics {
         );
     }
 
-    public int selectorOfFirstSelection(){
-        max = 11;
-        choice = getInput();
-        return choice;
-    }
-
     private final static List<String> topicFirst = getListOne();
+
     private static List<String> getListOne() {
         return List.of(
                 "1: \"You Can't Code Under Pressure\"",
@@ -139,13 +148,8 @@ public class Topics {
         );
     }
 
-    public int selectorOfSecondSelection(){
-        min = 12;
-        max = 17;
-        choice = getInput();
-        return choice;
-    }
     private final static List<String> topicSecond = getListTwo();
+
     private static List<String> getListTwo() {
         return List.of(
                 "12: \"Lombok Encapsulation\"",
@@ -157,14 +161,8 @@ public class Topics {
         );
     }
 
-    public int selectorOfThirdSelection(){
-        min = 18;
-        max = 31;
-        choice = getInput();
-        return choice;
-    }
-
     private final static List<String> topicThird = getListTree();
+
     private static List<String> getListTree() {
         return List.of(
                 "18: \"Opposite number\"",
@@ -185,14 +183,8 @@ public class Topics {
         );
     }
 
-    public int selectorOfFourthSelection(){
-        min = 32;
-        max = 46;
-        choice = getInput();
-        return choice;
-    }
-
     private final static List<String> topicFourth = getListFour();
+
     private static List<String> getListFour() {
         return List.of(
                 "32: \"String repeat\"",
@@ -213,14 +205,8 @@ public class Topics {
         );
     }
 
-    public int selectorOfFifthSelection(){
-        min = 47;
-        max = 50;
-        choice = getInput();
-        return choice;
-    }
-
     private final static List<String> topicFifth = getListFive();
+
     private static List<String> getListFive() {
         return List.of(
                 "47: \"Basic subclasses - Adam and Eve\"",
@@ -230,14 +216,8 @@ public class Topics {
         );
     }
 
-    public int selectorOfSisxthSelection(){
-        min = 51;
-        max = 68;
-        choice = getInput();
-        return choice;
-    }
-
     private final static List<String> topicSixth = getListSix();
+
     private static List<String> getListSix() {
         return List.of(
                 "51: \"Convert a Number to a String!\"",
@@ -261,14 +241,8 @@ public class Topics {
         );
     }
 
-    public int selectorOfSeventhSelection(){
-        min = 69;
-        max = 72;
-        choice = getInput();
-        return choice;
-    }
-
     private final static List<String> topicSeventh = getListSeven();
+
     private static List<String> getListSeven() {
         return List.of(
                 "69: \"Push a hash/an object into array\"",
@@ -278,7 +252,7 @@ public class Topics {
         );
     }
 
-    public void iterate(List<String>list){
+    public void iterate(List<String> list) {
         for (String s : list) {
             System.out.println(s);
         }
