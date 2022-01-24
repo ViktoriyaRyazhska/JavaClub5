@@ -44,16 +44,13 @@ public class StringSelection {
                     //javaclub5.strings.task9.Runner.start();
                     break;
                 case 10:
-                    System.out.println("Not done yet");
-                    //javaclub5.strings.task10.Runner.start(reader);
+                    javaclub5.strings.task10.FakeBinary.start(reader);
                     break;
                 case 11:
-                    System.out.println("Not done yet");
-                    //javaclub5.strings.task11.Runner.start(reader);
+                    javaclub5.strings.task11.CharProblem.start(reader);
                     break;
                 case 12:
-                    System.out.println("Not done yet");
-                    //javaclub5.strings.task12.Runner.start(reader);
+                    javaclub5.strings.task12.GrassHopper.start(reader);
                     break;
                 case 13:
                     System.out.println("Not done yet");

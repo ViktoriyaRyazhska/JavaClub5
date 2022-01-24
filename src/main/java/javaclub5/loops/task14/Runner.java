@@ -35,7 +35,7 @@ public class Runner {
         }
     }
 
-    public static long[] gettingPrimes(int g, long m, long n) throws IOException {
+    public static long[] gettingPrimes(int g, long m, long n) {
 
         if (n > 1100000) {
             System.out.println("Entered number is over 110000!");
