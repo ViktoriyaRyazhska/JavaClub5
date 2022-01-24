@@ -15,7 +15,7 @@ public class Runner {
     }
 
     public static void start(BufferedReader br) {
-        System.out.println("Program expecting from you two numbers to enter: ");
+        System.out.println("Program expecting from you two numbers to enter to multiply them: ");
         try {
             System.out.println("Enter first number: ");
             int firstNum = Integer.parseInt(br.readLine());

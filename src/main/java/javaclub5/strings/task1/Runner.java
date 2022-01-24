@@ -24,6 +24,7 @@ public class Runner {
 
     public static void start(BufferedReader br) {
         try {
+            System.out.println("This task transforms integer to string.");
             System.out.println("Enter some number: ");
             int number = Integer.parseInt(br.readLine());
             System.out.println("Transformed from integer to string: " + transformIntToString(number));

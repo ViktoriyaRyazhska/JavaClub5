@@ -17,6 +17,7 @@ public class Runner {
     }
 
     public static void start(BufferedReader br) {
+        System.out.println("In this task true is gonna be converted to YES, and false to NO.");
         System.out.println("Lets, play. You need answer: true or false.");
         System.out.println("Do you like dogs?");
         try {

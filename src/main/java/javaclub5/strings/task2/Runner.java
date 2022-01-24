@@ -19,7 +19,7 @@ public class Runner {
     }
 
     public static void start(BufferedReader br) {
-        System.out.println("Reversed words.\nEnter the word: ");
+        System.out.println("In this task we gonna reverse the word.\nEnter the word: ");
         String word = null;
         try {
             word = br.readLine();

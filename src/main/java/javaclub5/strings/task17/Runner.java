@@ -31,7 +31,8 @@ public class Runner {
     }
 
     public static void start(BufferedReader br) {
-        System.out.println("Enter some word to change it case: ");
+        System.out.println("This task is for changing the letters case in the word to the opposite." +
+                "\nEnter some word to change it case: ");
         try {
             String input = br.readLine();
             System.out.println("Your changed case in the word: " + changingLetterCase(input));
