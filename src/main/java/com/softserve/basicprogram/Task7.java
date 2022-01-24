@@ -5,6 +5,8 @@ import main.java.com.softserve.ReadConsole;
 
 import java.io.IOException;
 
+import static main.java.com.softserve.string.Task14.backToMenuOrRetry;
+
 public class Task7 extends ReadConsole {
 
     static int hours;
@@ -12,9 +14,7 @@ public class Task7 extends ReadConsole {
     static int seconds;
 
     public static void main(String[] args) {
-        System.out.println("Task 7 is starting");
-        System.out.println("This function shows the time from midnight in milliseconds");
-        System.out.println("Enter hours:");
+        start7Task();
 
         try {
             hours = Integer.parseInt(br.readLine());
@@ -25,22 +25,22 @@ public class Task7 extends ReadConsole {
         System.out.println("Enter minutes:");
         try {
             minutes = Integer.parseInt(br.readLine());
-        } catch (IOException e) {
+        } catch (IOException | NumberFormatException exception) {
             System.out.println("==> Wrong input! Try again! <==");
             Task7.main(args);
         }
         System.out.println("Enter seconds:");
         try {
             seconds = Integer.parseInt(br.readLine());
-        } catch (IOException e) {
+        } catch (IOException | NumberFormatException exception) {
             System.out.println("==> Wrong input! Try again! <==");
             Task7.main(args);
         }
 
         System.out.println("Result: " + enterTime(hours, minutes, seconds));
 
-        System.out.println("Beak to main menu => input 1 ");
-        System.out.println("Try again  => input 2 ");
+        backToMenuOrRetry();
+
         try {
             switch (br.readLine()) {
                 case "1":
@@ -61,5 +61,11 @@ public class Task7 extends ReadConsole {
 
     public static int enterTime(int h, int m, int s) {
         return (s * 1000) + (m * 60000) + (h * 3600000);
+    }
+
+    public static void start7Task(){
+        System.out.println("Task 7 is starting");
+        System.out.println("This function shows the time from midnight in milliseconds");
+        System.out.println("Enter hours:");
     }
 }
