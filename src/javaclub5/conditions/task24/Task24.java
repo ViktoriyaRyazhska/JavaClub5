@@ -7,6 +7,7 @@ public class Task24 {
         String s;
         int a;
         int b;
+
         try {
             System.out.println("Input operator (+,-,*,/): ");
             System.out.println(s=scanner.nextLine());
