@@ -1,7 +1,6 @@
+import four.*;
 import one.*;
 import two.*;
-import three.*;
-import four.*;
 import five.*;
 
 import java.io.BufferedReader;
