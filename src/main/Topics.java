@@ -27,56 +27,56 @@ public class Topics {
             }
             case 1 -> {
                 max = 11;
-                iterate(getListOne());
                 System.out.println("Please make next selection: ");
+                iterate(getListOne());
                 decision = getInput();
                 exit = true;
             }
             case 2 -> {
                 min = 12;
                 max = 17;
-                iterate(getListTwo());
                 System.out.println("Please make next selection: ");
+                iterate(getListTwo());
                 decision = getInput();
                 exit = true;
             }
             case 3 -> {
                 min = 18;
                 max = 31;
-                iterate(getListTree());
                 System.out.println("Please make next selection: ");
+                iterate(getListTree());
                 decision = getInput();
                 exit = true;
             }
             case 4 -> {
                 min = 32;
                 max = 46;
-                iterate(getListFour());
                 System.out.println("Please make next selection: ");
+                iterate(getListFour());
                 decision = getInput();
                 exit = true;
             }
             case 5 -> {
                 min = 47;
                 max = 50;
-                iterate(getListFive());
                 System.out.println("Please make next selection: ");
+                iterate(getListFive());
                 decision = getInput();
                 exit = true;
             }
             case 6 -> {
                 min = 51;
                 max = 68;
-                iterate(getListSix());
                 System.out.println("Please make next selection: ");
+                iterate(getListSix());
                 decision = getInput();
                 exit = true;
             }
             case 7 -> {
                 min = 69;
                 max = 72;
-                iterate(getListSeven());
                 System.out.println("Please make next selection: ");
+                iterate(getListSeven());
                 decision = getInput();
                 exit = true;
             }
