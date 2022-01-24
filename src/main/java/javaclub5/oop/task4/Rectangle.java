@@ -24,6 +24,8 @@ public class Rectangle extends Figure{
      * method for calculation area of rectangle
      */
     public double calculateArea() {
-        return height * width;
+        double result = height * width;
+        result = Math.ceil(result * 100) / 100;
+        return result;
     }
 }

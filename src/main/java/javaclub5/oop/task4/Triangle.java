@@ -25,6 +25,8 @@ public class Triangle extends Figure{
      *
      */
     public double calculateArea() {
-        return (triangleBase * triangleHeight)/2;
+        double result = (triangleBase * triangleHeight)/2;
+        result = Math.ceil(result * 100) / 100;
+        return result;
     }
 }

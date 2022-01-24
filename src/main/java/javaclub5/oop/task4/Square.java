@@ -20,6 +20,8 @@ public class Square extends Figure{
      * method for calculation area of square
      */
     public double calculateArea() {
-        return side * side;
+        double result = side * side;
+        result = Math.ceil(result * 100) / 100;
+        return result;
     }
 }

@@ -21,8 +21,8 @@ public class Circle extends Figure{
      *
      */
     public double calculateArea() {
-
-
-        return 3.14 * radius * radius;
+        double result = 3.14 * radius * radius;
+        result = Math.ceil(result * 100) / 100;
+        return result;
     }
 }
