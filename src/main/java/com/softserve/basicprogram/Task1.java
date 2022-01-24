@@ -14,8 +14,8 @@ public class Task1 extends ReadConsole {
     public static void main(String[] args) {
 
         message1();
-        if (isBigInteger(br) != null) {
-            System.out.println("Double Integer = " + isBigInteger(br));
+        if (isBigInteger(br)) {
+            System.out.println("Double Integer = " + (b.add(b)));
 
         } else {
             System.out.println("==> It's not an integer! Try again! <==");
@@ -54,12 +54,12 @@ public class Task1 extends ReadConsole {
         System.out.println("Try again  => input 2 ");
     }
 
-    public static BigInteger isBigInteger(BufferedReader br) {
+    public static boolean isBigInteger(BufferedReader br) {
         try {
             b = new BigInteger(br.readLine());
-            return b.add(b);
+            return true;
         } catch (NumberFormatException | IOException e) {
-            return null;
+            return false;
         }
     }
 
