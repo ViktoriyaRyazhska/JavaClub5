@@ -6,6 +6,7 @@ import main.basicprogram.task11.GrassHopper;
 import main.basicprogram.task5.Greeter;
 import main.basicprogram.task6.ParseToBinary;
 import main.classes.task15.Canvas;
+import main.classes.task16.WarOfFighters;
 import main.collections.task70.SolutionKata;
 import main.collections.task71.BugFixes;
 import main.conditions.task20.BooleanToString;
@@ -49,7 +50,7 @@ public class Database {
 //        map.put(13, new /* назва класу*/);
 //        map.put(14, new /* назва класу*/);
         map.put(15, new Canvas());
-//        map.put(16, new /* назва класу*/);
+        map.put(16, new WarOfFighters());
 //        map.put(17, new /* назва класу*/);
 //        map.put(18, new /* назва класу*/);
 //        map.put(19, new /* назва класу*/);
