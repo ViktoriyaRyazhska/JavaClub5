@@ -1,5 +1,6 @@
 package solutions.conditions;
 
+import program.helper.Helper;
 import solutions.Executable;
 
 import java.util.Scanner;
@@ -19,8 +20,7 @@ public class BoolConverter implements Executable {
     public void getData()
     {
         System.out.println("Enter 'true' or 'false' to get it string representation");
-        this.b = new Scanner(System.in).nextBoolean();
-
+        this.b = Helper.getBool();
 
     }
 
