@@ -19,28 +19,12 @@ public class BooleanToString {
 
     public static void start(BufferedReader br) {
         System.out.println("Enter a logical value: ");
-
         try{
             boolean b = Boolean.parseBoolean(br.readLine());
             System.out.println("Result: " + convert(b));
         }catch (IOException e){
             System.out.println(e.getMessage());
         }
-//        boolean value = true;
-//        int result = booleanToInt(value);
-//        try {
-//            result = Integer.parseInt(br.readLine());
-//            System.out.println("Result: " + convert(value));
-//        } catch (IOException e) {
-//            System.out.println(e.getMessage());
-//        }
-
-    }
-//    private static int booleanToInt(boolean b){
-//        if (b)
-//            return 1;
-//        return 0;
-//    }
 
     public static String convert(boolean b) {
         if (b) {
