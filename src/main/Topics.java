@@ -10,14 +10,13 @@ public class Topics {
     int max = 7;
     int decision;
 
-    public int runMenu(){
+    public void runMenu(){
         printHeader();
         while (!exit){
-            printMenu();
+            iterate(menu);
             choice = getInput();
             performAction(choice);
         }
-        return choice;
     }
 
     private void performAction(int choice) {
@@ -27,50 +26,49 @@ public class Topics {
                 System.out.println("Thank you for using our application.");
             }
             case 1 -> {
-                printTopicFirst();
+                iterate(topicFirst);
                 System.out.println("Please make next selection: ");
                 decision = selectorOfFirstSelection();
                 exit = true;
             }
             case 2 -> {
-                printTopicSecond();
+                iterate(topicSecond);
                 System.out.println("Please make next selection: ");
                 decision = selectorOfSecondSelection();
                 exit = true;
             }
             case 3 -> {
-                printTopicThird();
+                iterate(topicThird);
                 System.out.println("Please make next selection: ");
                 decision = selectorOfThirdSelection();
                 exit = true;
             }
             case 4 -> {
-                printTopicFourth();
+                iterate(topicFourth);
                 System.out.println("Please make next selection: ");
                 decision = selectorOfFourthSelection();
                 exit = true;
             }
             case 5 -> {
-                printTopicFifth();
+                iterate(topicFifth);
                 System.out.println("Please make next selection: ");
                 decision = selectorOfFifthSelection();
                 exit = true;
             }
             case 6 -> {
-                printTopicSixth();
+                iterate(topicSixth);
                 System.out.println("Please make next selection: ");
                 decision = selectorOfSisxthSelection();
                 exit = true;
             }
             case 7 -> {
-                printTopicSeventh();
+                iterate(topicSeventh);
                 System.out.println("Please make next selection: ");
                 decision = selectorOfSeventhSelection();
                 exit = true;
             }
-            default -> {
-                System.out.println("Wrong input!");
-            }
+            default -> System.out.println("Wrong input!");
+
         }
     }
 
@@ -117,11 +115,6 @@ public class Topics {
                 "0: Exit"
         );
     }
-    public void printMenu() {
-        for (String str : Topics.menu) {
-            System.out.println(str);
-        }
-    }
 
     public int selectorOfFirstSelection(){
         max = 11;
@@ -145,12 +138,6 @@ public class Topics {
                 "11: \"Grasshopper \""
         );
     }
-    public void printTopicFirst() {
-        for (String str : topicFirst) {
-            System.out.println(str);
-        }
-    }
-
 
     public int selectorOfSecondSelection(){
         min = 12;
@@ -168,11 +155,6 @@ public class Topics {
                 "16: \"Two fighters, one winner\"",
                 "17: \"Building blocks\""
         );
-    }
-    public void printTopicSecond() {
-        for (String str : topicSecond) {
-            System.out.println(str);
-        }
     }
 
     public int selectorOfThirdSelection(){
@@ -202,11 +184,6 @@ public class Topics {
 
         );
     }
-    public void printTopicThird() {
-        for (String str : topicThird) {
-            System.out.println(str);
-        }
-    }
 
     public int selectorOfFourthSelection(){
         min = 32;
@@ -235,11 +212,6 @@ public class Topics {
                 "46 \"21 Sticks\""
         );
     }
-    public void printTopicFourth() {
-        for (String str : topicFourth) {
-            System.out.println(str);
-        }
-    }
 
     public int selectorOfFifthSelection(){
         min = 47;
@@ -256,11 +228,6 @@ public class Topics {
                 "49: \"L3375p34k\"",
                 "50: \"TDD Area Calculations\""
         );
-    }
-    public void printTopicFifth() {
-        for (String str : topicFifth) {
-            System.out.println(str);
-        }
     }
 
     public int selectorOfSisxthSelection(){
@@ -293,11 +260,6 @@ public class Topics {
                 "68: \" Remover of marks (from left to right)\""
         );
     }
-    public void printTopicSixth() {
-        for (String str : topicSixth) {
-            System.out.println(str);
-        }
-    }
 
     public int selectorOfSeventhSelection(){
         min = 69;
@@ -315,9 +277,10 @@ public class Topics {
                 "72: \"Interactive Dictionary\""
         );
     }
-    public void printTopicSeventh() {
-        for (String str : topicSeventh) {
-            System.out.println(str);
+
+    public void iterate(List<String>list){
+        for (String s : list) {
+            System.out.println(s);
         }
     }
 
