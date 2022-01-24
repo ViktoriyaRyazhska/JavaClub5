@@ -80,4 +80,18 @@ public class Helper {
         System.out.println("Wrong input!");
         return getLetter();
     }
+
+    public static long getLong(long min, long max) {
+        String line = scanner.nextLine();
+
+        long i=0;
+        try {
+            i = Long.parseLong(line);
+            if (i<min || i>max){throw new NumberFormatException();}
+        } catch (NumberFormatException e){
+            System.out.println("Wrong input!");
+            i = getLong(min, max);
+        }
+        return i;
+    }
 }
