@@ -55,9 +55,12 @@ public class Task17 {
                 b.getLength();
                 b.getHeight();
 
-
+                 if(w>=0 && l>=0 && h>=0){
                 System.out.println("Blok's Volume " + b.getVolume());
-                System.out.println("Blok's SurfaceArea" + b.getSurfaceArea());
+                System.out.println("Blok's SurfaceArea" + b.getSurfaceArea());}
+                else{  System.out.println("Invalid values, it can not have negative values");
+                }
+
             } catch (Exception e) {
                 System.out.println("Invalid parameter!");
             }
