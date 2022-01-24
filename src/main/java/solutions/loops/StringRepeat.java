@@ -6,8 +6,8 @@ import java.util.Scanner;
 
 public class StringRepeat implements Executable {
 
-    final int repeats = getRepeats();
-    final String string = getString();
+     int repeats;
+     String stringToRepeat;
 
     public static String repeatStr(final int repeat, final String string) {
         StringBuilder finStr= new StringBuilder();
@@ -21,19 +21,19 @@ public class StringRepeat implements Executable {
         return finStr.toString();
     }
 
-    public int getRepeats()
+
+    public void getData()
     {
+
         System.out.println("Enter repeats number: ");
-        return new Scanner(System.in).nextInt();
-    }
-    public String getString()
-    {
+        this.repeats= new Scanner(System.in).nextInt();
         System.out.println("Enter string: ");
-        return new Scanner(System.in).nextLine();
+        this.stringToRepeat= new Scanner(System.in).nextLine();
     }
+
 
     @Override
     public void execute() {
-        System.out.println(repeatStr(repeats,string));
+        System.out.println(repeatStr(repeats,stringToRepeat));
     }
 }
