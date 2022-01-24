@@ -1,5 +1,6 @@
 package solutions.strings;
 
+import program.helper.Helper;
 import solutions.Executable;
 
 import java.util.Scanner;
@@ -14,7 +15,7 @@ public class CorrectMistakes implements Executable {
     public void getData()
     {
         System.out.println("Enter text: ");
-        this.text = new Scanner(System.in).nextLine();
+        this.text = Helper.getLine();
 
     }
 

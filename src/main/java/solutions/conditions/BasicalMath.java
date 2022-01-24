@@ -1,5 +1,6 @@
 package solutions.conditions;
 
+import program.helper.Helper;
 import solutions.Executable;
 
 import java.util.Scanner;
@@ -41,11 +42,11 @@ public class BasicalMath implements Executable {
     {
 
         System.out.print("Enter first number: ");
-        this.v1 = new Scanner(System.in).nextInt();
+        this.v1 = Helper.getInt(1000000);
         System.out.print("Enter second number: ");
-        this.v2 = new Scanner(System.in).nextInt();
+        this.v2 = Helper.getInt(1000000);;
         System.out.print("Enter operation like '+' or '-' or '/' or '*': ");
-        this.op =new Scanner(System.in).nextLine();
+        this.op =Helper.getLine();
 
     }
 

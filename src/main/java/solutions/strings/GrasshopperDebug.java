@@ -1,5 +1,6 @@
 package solutions.strings;
 
+import program.helper.Helper;
 import solutions.Executable;
 
 import java.util.Scanner;
@@ -22,7 +23,7 @@ public class GrasshopperDebug implements Executable {
     public void getData()
     {
         System.out.println("Enter temp in fahrenheit: ");
-        this.temp = new Scanner(System.in).nextInt();
+        this.temp = Helper.getInt(1000);
     }
 
 
