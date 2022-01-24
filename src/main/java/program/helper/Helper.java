@@ -74,7 +74,16 @@ public class Helper {
 
     public static Boolean getBool() {
 
-        return scanner.nextBoolean();
+        String line = scanner.nextLine();
+
+        boolean i;
+        try {
+            i = Boolean.parseBoolean(line);
+        } catch (NumberFormatException e){
+            System.out.println("Wrong input!");
+            i = getBool();
+        }
+        return i;
     }
 
     public static char getLetter() {
