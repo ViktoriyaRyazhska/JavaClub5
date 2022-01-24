@@ -66,8 +66,7 @@ public class LoopsSelection {
                     //javaclub5.loops.task14.Runner.start(reader);
                     break;
                 case 15:
-                    System.out.println("Not done yet");
-                    //javaclub5.loops.task15.Runner.start(reader);
+                    javaclub5.loops.task15.Runner.start(reader);
                     break;
                 case 16:
                     break;
