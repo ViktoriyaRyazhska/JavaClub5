@@ -8,9 +8,6 @@ import java.util.List;
 import java.util.Objects;
 
 public class Task45 {
-    public static void main(String[] args) {
-        System.out.println(primeListWithRange(2 , 1000));
-    }
     public static long[] gap(int g, long m, long n) {
         List<Long> longs = primeListWithRange(m, n);
         if (longs == null) {
