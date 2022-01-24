@@ -17,15 +17,18 @@ import static javaclub5.mainClasses.StringSelection.selectStrings;
  * @author Rostyslav Ros
  */
 
-public class MainProgram {
+public  final class MainProgram {
     public static void start() {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         selectTheme(reader);
 
     }
-
+    /**
+     * Method for selecton of the Theme
+     * @param reader BufferedReader
+     */
     public static void selectTheme(BufferedReader reader) {
-        System.out.println("Select theme of Tasks");
+        System.out.println("Select theme of the Tasks");
         System.out.println("1. Basic Program \n2. Classes \n3. Colections \n4. Conditions \n5. Loops \n" +
                 "6. OOP \n7. Strings \n0. Exit ");
         try {

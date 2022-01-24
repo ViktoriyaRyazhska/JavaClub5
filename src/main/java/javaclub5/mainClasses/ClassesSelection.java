@@ -4,7 +4,16 @@ import java.io.BufferedReader;
 
 import static javaclub5.mainClasses.MainProgram.selectTheme;
 
-public class ClassesSelection {
+/**
+ * Class for selection tasks from Classes theme
+ *
+ * @author Rostyslav Ros
+ */
+public final class ClassesSelection {
+    /**
+     * Method for selecton of the Task
+     * @param reader BufferedReader
+     */
     public static void selectClasses(BufferedReader reader) {
         System.out.println("Select number of Task (1-6) \n 0. Main menu \n 12. exit");
         try {

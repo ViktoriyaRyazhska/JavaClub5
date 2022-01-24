@@ -5,7 +5,17 @@ import java.io.BufferedReader;
 
 import static javaclub5.mainClasses.MainProgram.selectTheme;
 
-public class BasicProgramSelection {
+/**
+ * Class for selection tasks from Basic Programs theme
+ *
+ * @author Rostyslav Ros
+ */
+public final class BasicProgramSelection {
+
+    /**
+     * Method for selecton of the Task
+     * @param reader BufferedReader
+     */
     public static void selectBasicProgram(BufferedReader reader) {
         System.out.println("Select number of Task (1-11) \n 0. Main menu \n 12. exit");
         try {

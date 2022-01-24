@@ -4,7 +4,16 @@ import java.io.BufferedReader;
 
 import static javaclub5.mainClasses.MainProgram.selectTheme;
 
+/**
+ * Class for selection tasks from Condition theme
+ *
+ * @author Rostyslav Ros
+ */
 public class ConditionSelection {
+    /**
+     * Method for selecton of the Task
+     * @param reader BufferedReader
+     */
     public static void selectConditions(BufferedReader reader) {
         System.out.println("Select number of Task (1-14) \n 0. Main menu \n 15. exit");
         try {

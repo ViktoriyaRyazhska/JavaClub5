@@ -4,7 +4,16 @@ import java.io.BufferedReader;
 
 import static javaclub5.mainClasses.MainProgram.selectTheme;
 
+/**
+ * Class for selection tasks from Loops theme
+ *
+ * @author Rostyslav Ros
+ */
 public class LoopsSelection {
+    /**
+     * Method for selecton of the Task
+     * @param reader BufferedReader
+     */
     public static void selectLoops(BufferedReader reader) {
         System.out.println("Select number of Task (1-15) \n 0. Main menu \n 16. exit");
         try {

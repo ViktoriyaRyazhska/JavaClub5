@@ -4,7 +4,17 @@ import java.io.BufferedReader;
 
 import static javaclub5.mainClasses.MainProgram.selectTheme;
 
+/**
+ * Class for selection tasks from Spring theme
+ *
+ * @author Rostyslav Ros
+ */
 public class StringSelection {
+
+    /**
+     * Method for selecton of the Task
+     * @param reader BufferedReader
+     */
     public static void selectStrings(BufferedReader reader) {
         System.out.println("Select number of Task (1-18) \n 0. Main menu \n 19. exit");
         try {
@@ -72,8 +82,7 @@ public class StringSelection {
                     javaclub5.strings.task17.Runner.start(reader);
                     break;
                 case 18:
-                    System.out.println("Not done yet");
-                    //javaclub5.strings.task18.Runner.start(reader);
+                    javaclub5.strings.task18.Kata.start(reader);
                     break;
                 case 19:
                     break;
