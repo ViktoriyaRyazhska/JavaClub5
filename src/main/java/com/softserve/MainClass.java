@@ -43,6 +43,11 @@ public class MainClass extends ReadConsole {
                     Collections.main(args);
                     break;
 
+                case "8":
+                    System.out.println("program completion ...");
+                    System.exit(0);
+                    break;
+
                 default:
                     System.err.println("You need to put number with 1 to 7 ");
                     MainClass.main(args);
@@ -62,6 +67,7 @@ public class MainClass extends ReadConsole {
         System.out.println("5" + "  ==>OOP");
         System.out.println("6" + "  ==>String");
         System.out.println("7" + "  ==>Collections");
+        System.out.println("8" + "  ==>Exit");
     }
 
 }
