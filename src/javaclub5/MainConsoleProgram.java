@@ -100,6 +100,8 @@ public class MainConsoleProgram {
             case 64:
                 Task64.main(scanner);
                 break;
+            default:
+                System.out.println("Ups. Task is not ready yet (.");
         }
     }
 }
