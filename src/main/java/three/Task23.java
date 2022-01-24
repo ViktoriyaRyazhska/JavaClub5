@@ -1,5 +1,7 @@
+package three;
+
 // Task23. Rock Paper Scissors
-public class Kata {
+public class Task23 {
     public static String rps(String p1, String p2) {
         if (p1.equals(p2)) {
             return "Draw!";

@@ -1,5 +1,7 @@
+package three;
+
 //  Task08. Century From Year
-public class Solution {
+public class Task08 {
     public static int century(int number) {
         if (number % 100 == 0) {
             return number / 100;

@@ -1,5 +1,7 @@
+package three;
+
 // Task28. The Modulo-3 Sequence
-public class Solution {
+public class Task28 {
     public static int sequence(int n) {
         int[] arr = new int[n];
         arr[0] = 0;
