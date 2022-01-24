@@ -19,6 +19,14 @@ public class Strings extends ReadConsole {
                     Task2.main(args);
                     break;
 
+                case "14":
+                    Task14.main(args);
+                    break;
+
+                case "16":
+                    Task16.main(args);
+                    break;
+
                 default:
                     System.err.println("You need to put number with 1 to 18");
                     Strings.main(args);
