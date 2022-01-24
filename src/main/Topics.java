@@ -1,26 +1,324 @@
 package main;
 
 import java.util.List;
+import java.util.Scanner;
 
 public class Topics {
-    private static List<String> menu = getList();
+    public boolean exit;
+    int choice;
+    int min = 0;
+    int max = 7;
+    int decision;
 
+    public int runMenu(){
+        printHeader();
+        while (!exit){
+            printMenu();
+            choice = getInput();
+            performAction(choice);
+        }
+        return choice;
+    }
+
+    private void performAction(int choice) {
+        switch (choice){
+            case 0 -> {
+                exit = true;
+                System.out.println("Thank you for using our application.");
+            }
+            case 1 -> {
+                printTopicFirst();
+                System.out.println("Please make next selection: ");
+                decision = selectorOfFirstSelection();
+                exit = true;
+            }
+            case 2 -> {
+                printTopicSecond();
+                System.out.println("Please make next selection: ");
+                decision = selectorOfSecondSelection();
+                exit = true;
+            }
+            case 3 -> {
+                printTopicThird();
+                System.out.println("Please make next selection: ");
+                decision = selectorOfThirdSelection();
+                exit = true;
+            }
+            case 4 -> {
+                printTopicFourth();
+                System.out.println("Please make next selection: ");
+                decision = selectorOfFourthSelection();
+                exit = true;
+            }
+            case 5 -> {
+                printTopicFifth();
+                System.out.println("Please make next selection: ");
+                decision = selectorOfFifthSelection();
+                exit = true;
+            }
+            case 6 -> {
+                printTopicSixth();
+                System.out.println("Please make next selection: ");
+                decision = selectorOfSisxthSelection();
+                exit = true;
+            }
+            case 7 -> {
+                printTopicSeventh();
+                System.out.println("Please make next selection: ");
+                decision = selectorOfSeventhSelection();
+                exit = true;
+            }
+            default -> {
+                System.out.println("Wrong input!");
+            }
+        }
+    }
+
+    private int getInput() {
+        Scanner scanner = new Scanner(System.in);
+        int choice = -1;
+
+
+        while (choice < min || choice > max){
+            try{
+                System.out.println("Enter your choice: ");
+                choice = Integer.parseInt(scanner.nextLine());
+                if (choice > max || choice < min){
+                    System.out.println("Your input out of border.");
+                    System.out.println("Please try again");
+                }
+
+            }catch (NumberFormatException ex){
+                System.out.println("Invalid selection. Please try again.");
+            }
+        }
+        return choice;
+    }
+
+    private void printHeader() {
+        System.out.println("+---------------------------------------+");
+        System.out.println("|             Welcome to our            |");
+        System.out.println("|            Menu Application           |");
+        System.out.println("+---------------------------------------+");
+        System.out.println();
+    }
+
+    private final static List<String> menu = getList();
     private static List<String> getList() {
         return List.of(
+                "Please make a selection: ",
                 "1: \"Basic program\"",
                 "2: \"Classes\"",
                 "3: \"Conditions\"",
                 "4: \"Loops\"",
                 "5: \"OOP\"",
                 "6: \"String\"",
-                "7: \"Collections\""
+                "7: \"Collections\"",
+                "0: Exit"
         );
     }
-
-    public List<String> getMenu (){
+    public void printMenu() {
         for (String str : Topics.menu) {
             System.out.println(str);
         }
-        return menu;
     }
+
+    public int selectorOfFirstSelection(){
+        max = 11;
+        choice = getInput();
+        return choice;
+    }
+
+    private final static List<String> topicFirst = getListOne();
+    private static List<String> getListOne() {
+        return List.of(
+                "1: \"You Can't Code Under Pressure\"",
+                "2: \"Multiplying two numbers\"",
+                "3: \"Volume of a Cuboid\"",
+                "4: \"Number Drills: Pixelart planning\"",
+                "5: \"Jenny's secret message\"",
+                "6: \"Convert to Binary\"",
+                "7: \"Beginner Series\"",
+                "8: \"Century From Years\"",
+                "9: \"Return Negative\"",
+                "10: \"Age Range Compatibility Equation\"",
+                "11: \"Grasshopper \""
+        );
+    }
+    public void printTopicFirst() {
+        for (String str : topicFirst) {
+            System.out.println(str);
+        }
+    }
+
+
+    public int selectorOfSecondSelection(){
+        min = 12;
+        max = 17;
+        choice = getInput();
+        return choice;
+    }
+    private final static List<String> topicSecond = getListTwo();
+    private static List<String> getListTwo() {
+        return List.of(
+                "12: \"Lombok Encapsulation\"",
+                "13: \"Static electrickery\"",
+                "14: \"Fractions class\"",
+                "15: \"Simple Drawing Board\"",
+                "16: \"Two fighters, one winner\"",
+                "17: \"Building blocks\""
+        );
+    }
+    public void printTopicSecond() {
+        for (String str : topicSecond) {
+            System.out.println(str);
+        }
+    }
+
+    public int selectorOfThirdSelection(){
+        min = 18;
+        max = 31;
+        choice = getInput();
+        return choice;
+    }
+
+    private final static List<String> topicThird = getListTree();
+    private static List<String> getListTree() {
+        return List.of(
+                "18: \"Opposite number\"",
+                "19: \"Is n divisible by x and y?\"",
+                "20: \"Convert a Boolean to a String\"",
+                "21: \"Do I get a bonus?\"",
+                "22: \"How old will I be in 2099?\"",
+                "23: \"Rock Paper Scissors!\"",
+                "24: \"Basic Mathematical Operations\"",
+                "25: \"Opposites Attract\"",
+                "26: \"Convert boolean values to strings 'Yes' or 'No'.\"",
+                "27: \"Will there be enough space?\"",
+                "28: \"The Modulo-3 Sequence\"",
+                "29: \"Switch it Up!\"",
+                "30: \"Thinkful - Logic Drills: Traffic light\"",
+                "31: \"Transportation on vacation \""
+
+        );
+    }
+    public void printTopicThird() {
+        for (String str : topicThird) {
+            System.out.println(str);
+        }
+    }
+
+    public int selectorOfFourthSelection(){
+        min = 32;
+        max = 46;
+        choice = getInput();
+        return choice;
+    }
+
+    private final static List<String> topicFourth = getListFour();
+    private static List<String> getListFour() {
+        return List.of(
+                "32: \"String repeat\"",
+                "33: \"Cat years, Dog years\"",
+                "34: \"Get the mean of an array\"",
+                "35: \"Beginner - Lost Without a Map\"",
+                "36: \"Counting sheep...\"",
+                "37: \"Reversed sequence \"",
+                "38: \"How good are you really?\"",
+                "39: \"Reduce but Grow\"",
+                "40: \"Sum of positive\"",
+                "41: \"My head is at the wrong end!\"",
+                "42: \"Twice as old\"",
+                "43: \"Find Nearest square number\"",
+                "44: \"Grasshopper - Summation\"",
+                "45: \"Gap in Primes\"",
+                "46 \"21 Sticks\""
+        );
+    }
+    public void printTopicFourth() {
+        for (String str : topicFourth) {
+            System.out.println(str);
+        }
+    }
+
+    public int selectorOfFifthSelection(){
+        min = 47;
+        max = 50;
+        choice = getInput();
+        return choice;
+    }
+
+    private final static List<String> topicFifth = getListFive();
+    private static List<String> getListFive() {
+        return List.of(
+                "47: \"Basic subclasses - Adam and Eve\"",
+                "48: \"Rotations and reflections I\"",
+                "49: \"L3375p34k\"",
+                "50: \"TDD Area Calculations\""
+        );
+    }
+    public void printTopicFifth() {
+        for (String str : topicFifth) {
+            System.out.println(str);
+        }
+    }
+
+    public int selectorOfSisxthSelection(){
+        min = 51;
+        max = 68;
+        choice = getInput();
+        return choice;
+    }
+
+    private final static List<String> topicSixth = getListSix();
+    private static List<String> getListSix() {
+        return List.of(
+                "51: \"Convert a Number to a String!\"",
+                "52: \"Reversed Strings\"",
+                "53: \"Welcome to the City\"",
+                "54: \"Opposite number\"",
+                "55: \"Replace all dots\"",
+                "56: \"Are You Playing Banjo?\"",
+                "57: \"Remove String Spaces\"",
+                "58: \"Triple Trouble\"",
+                "59: \"Find the position!\"",
+                "60: \"Fake Binary\"",
+                "61: \"Parse nice int from char problem\"",
+                "62: \"Grasshopper - Debug\"",
+                "63: \"Abbreviate a Two Word Name\"",
+                "64: \"All Star Code Challenge\"",
+                "65: \"Sort and Star\"",
+                "66: \"Correct the mistakes of the character recognition software\"",
+                "67: \"altERnaTIng cAsE <=> ALTerNAtiNG CaSe\"",
+                "68: \" Remover of marks (from left to right)\""
+        );
+    }
+    public void printTopicSixth() {
+        for (String str : topicSixth) {
+            System.out.println(str);
+        }
+    }
+
+    public int selectorOfSeventhSelection(){
+        min = 69;
+        max = 72;
+        choice = getInput();
+        return choice;
+    }
+
+    private final static List<String> topicSeventh = getListSeven();
+    private static List<String> getListSeven() {
+        return List.of(
+                "69: \"Push a hash/an object into array\"",
+                "70: \"Unfinished Loop\"",
+                "71: \"Filtering even numbers (Bug Fixes)\"",
+                "72: \"Interactive Dictionary\""
+        );
+    }
+    public void printTopicSeventh() {
+        for (String str : topicSeventh) {
+            System.out.println(str);
+        }
+    }
+
 }
