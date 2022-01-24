@@ -10,14 +10,13 @@ public class Topics {
     int max = 7;
     int decision;
 
-    public int runMenu(){
+    public void runMenu(){
         printHeader();
         while (!exit){
             printMenu();
             choice = getInput();
             performAction(choice);
         }
-        return choice;
     }
 
     private void performAction(int choice) {
@@ -68,9 +67,8 @@ public class Topics {
                 decision = selectorOfSeventhSelection();
                 exit = true;
             }
-            default -> {
-                System.out.println("Wrong input!");
-            }
+            default -> System.out.println("Wrong input!");
+
         }
     }
 
