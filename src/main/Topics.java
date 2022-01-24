@@ -13,7 +13,7 @@ public class Topics {
     public void runMenu() {
         printHeader();
         while (!exit) {
-            iterate(menu);
+            iterate(getList());
             choice = getInput();
             performAction(choice);
         }
@@ -27,7 +27,7 @@ public class Topics {
             }
             case 1 -> {
                 max = 11;
-                iterate(topicFirst);
+                iterate(getListOne());
                 System.out.println("Please make next selection: ");
                 decision = getInput();
                 exit = true;
@@ -35,7 +35,7 @@ public class Topics {
             case 2 -> {
                 min = 12;
                 max = 17;
-                iterate(topicSecond);
+                iterate(getListTwo());
                 System.out.println("Please make next selection: ");
                 decision = getInput();
                 exit = true;
@@ -43,7 +43,7 @@ public class Topics {
             case 3 -> {
                 min = 18;
                 max = 31;
-                iterate(topicThird);
+                iterate(getListTree());
                 System.out.println("Please make next selection: ");
                 decision = getInput();
                 exit = true;
@@ -51,7 +51,7 @@ public class Topics {
             case 4 -> {
                 min = 32;
                 max = 46;
-                iterate(topicFourth);
+                iterate(getListFour());
                 System.out.println("Please make next selection: ");
                 decision = getInput();
                 exit = true;
@@ -59,7 +59,7 @@ public class Topics {
             case 5 -> {
                 min = 47;
                 max = 50;
-                iterate(topicFifth);
+                iterate(getListFive());
                 System.out.println("Please make next selection: ");
                 decision = getInput();
                 exit = true;
@@ -67,7 +67,7 @@ public class Topics {
             case 6 -> {
                 min = 51;
                 max = 68;
-                iterate(topicSixth);
+                iterate(getListSix());
                 System.out.println("Please make next selection: ");
                 decision = getInput();
                 exit = true;
@@ -75,7 +75,7 @@ public class Topics {
             case 7 -> {
                 min = 69;
                 max = 72;
-                iterate(topicSeventh);
+                iterate(getListSeven());
                 System.out.println("Please make next selection: ");
                 decision = getInput();
                 exit = true;
@@ -114,8 +114,6 @@ public class Topics {
         System.out.println();
     }
 
-    private final static List<String> menu = getList();
-
     private static List<String> getList() {
         return List.of(
                 "Please make a selection: ",
@@ -129,8 +127,6 @@ public class Topics {
                 "0: Exit"
         );
     }
-
-    private final static List<String> topicFirst = getListOne();
 
     private static List<String> getListOne() {
         return List.of(
@@ -148,8 +144,6 @@ public class Topics {
         );
     }
 
-    private final static List<String> topicSecond = getListTwo();
-
     private static List<String> getListTwo() {
         return List.of(
                 "12: \"Lombok Encapsulation\"",
@@ -160,8 +154,6 @@ public class Topics {
                 "17: \"Building blocks\""
         );
     }
-
-    private final static List<String> topicThird = getListTree();
 
     private static List<String> getListTree() {
         return List.of(
@@ -179,11 +171,8 @@ public class Topics {
                 "29: \"Switch it Up!\"",
                 "30: \"Thinkful - Logic Drills: Traffic light\"",
                 "31: \"Transportation on vacation \""
-
         );
     }
-
-    private final static List<String> topicFourth = getListFour();
 
     private static List<String> getListFour() {
         return List.of(
@@ -205,8 +194,6 @@ public class Topics {
         );
     }
 
-    private final static List<String> topicFifth = getListFive();
-
     private static List<String> getListFive() {
         return List.of(
                 "47: \"Basic subclasses - Adam and Eve\"",
@@ -215,8 +202,6 @@ public class Topics {
                 "50: \"TDD Area Calculations\""
         );
     }
-
-    private final static List<String> topicSixth = getListSix();
 
     private static List<String> getListSix() {
         return List.of(
@@ -240,8 +225,6 @@ public class Topics {
                 "68: \" Remover of marks (from left to right)\""
         );
     }
-
-    private final static List<String> topicSeventh = getListSeven();
 
     private static List<String> getListSeven() {
         return List.of(
