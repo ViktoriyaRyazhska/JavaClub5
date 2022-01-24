@@ -2,8 +2,11 @@ package main;
 
 public class Model {
     private int value;
+    Database database;
 
-    Database database = new Database();
+    public Model(Database database) {
+        this.database = database;
+    }
 
     public int getValue() {
         return value;

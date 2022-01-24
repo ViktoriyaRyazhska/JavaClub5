@@ -1,7 +1,5 @@
 package main;
 
-import java.util.Scanner;
-
 public class Controller {
     Model model;
     View view;
@@ -12,32 +10,15 @@ public class Controller {
     }
 
     public void processUser() {
-        Scanner sc = new Scanner(System.in);
+        Topics topics = new Topics();
         view.printMessage(View.GREETINGS);
-        model.setValue(inputIntValueWithScanner(sc));
-        while (model.getValue() < 1 || model.getValue() > 72) {
-            view.printMessage(View.OUT);
-            model.setValue(inputIntValueWithScanner(sc));
-        }
-        view.printMessageAndSomething(View.CHOICE, model.getValue());
 
+        topics.runMenu();
+        model.setValue(topics.decision);
         try {
-            view.printMessage(View.JUST_MESSAGE);
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+            model.selectorMenu(model.getValue());
+        }catch (NullPointerException exception){
+            view.printMessage(View.SAY_GOOBYE);
         }
-
-        model.selectorMenu(model.getValue());
-
-    }
-
-    public int inputIntValueWithScanner(Scanner sc) {
-        view.printMessage(View.TRY_AGAIN);
-        while (!sc.hasNextInt()) {
-            view.printMessage(View.WRONG_INPUT + View.TRY_AGAIN);
-            sc.next();
-        }
-        return sc.nextInt();
     }
 }
