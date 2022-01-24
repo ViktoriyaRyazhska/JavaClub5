@@ -1,8 +1,7 @@
 package solutions.strings;
 
+import program.helper.Helper;
 import solutions.Executable;
-
-import java.util.Scanner;
 
 public class WelcomeToCity implements Executable {
     public String sayHello(String[] name, String city, String state) {
@@ -16,11 +15,10 @@ public class WelcomeToCity implements Executable {
 
     @Override
     public void execute() {
-        Scanner scanner = new Scanner(System.in);
-        String name = scanner.nextLine();
-        String surname = scanner.nextLine();
-        String city = scanner.nextLine();
-        String state = scanner.nextLine();
+        String name = Helper.getLine();
+        String surname = Helper.getLine();
+        String city = Helper.getLine();
+        String state = Helper.getLine();
         System.out.println(sayHello(new String[]{name,surname},city,state));
     }
 }

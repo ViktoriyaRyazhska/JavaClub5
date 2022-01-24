@@ -1,23 +1,27 @@
 package solutions.conditions;
 
+import program.helper.Helper;
 import solutions.Executable;
 
-import java.util.Scanner;
-
 public class WillBeEnoughSpace implements Executable {
-    public static int enough(int cap, int on, int wait){
+    public static int enough(int cap, int on, int wait) {
         // your code here
-        if(cap-on>=wait) return 0;
-        else return Math.abs(cap-on-wait);
+        if (on > cap) throw new IllegalArgumentException();
+        if (cap - on >= wait) return 0;
+        else return Math.abs(cap - on - wait);
     }
+
     @Override
     public void execute() {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter capacity, passengers and waiters");
-        int cap = scanner.nextInt();
-        int on = scanner.nextInt();
-        int wait = scanner.nextInt();
-        if(cap<=0||on<0||wait<0||on>cap) throw new IllegalArgumentException();
-        System.out.println(enough(cap,on,wait));
+        int cap = Helper.getInt(1, 100);
+        int on = Helper.getInt(0, 100);
+        int wait = Helper.getInt(0, 100);
+        try {
+            System.out.println(enough(cap, on, wait));
+        }
+        catch (IllegalArgumentException e){
+            execute();
+        }
     }
 }

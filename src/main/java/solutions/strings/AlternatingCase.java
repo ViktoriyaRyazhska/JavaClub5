@@ -1,5 +1,6 @@
 package solutions.strings;
 
+import program.helper.Helper;
 import solutions.Executable;
 
 import java.util.Scanner;
@@ -20,7 +21,7 @@ public class AlternatingCase implements Executable {
 
     @Override
     public void execute() {
-        String str = new Scanner(System.in).nextLine();
+        String str = Helper.getLine();;
         System.out.println(toAlternativeString(str));
     }
 }

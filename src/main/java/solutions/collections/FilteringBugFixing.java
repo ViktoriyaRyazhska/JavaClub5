@@ -1,5 +1,6 @@
 package solutions.collections;
 
+import program.helper.Helper;
 import solutions.Executable;
 
 import java.util.List;
@@ -24,7 +25,8 @@ public class FilteringBugFixing implements Executable {
     @Override
     public void execute() {
         System.out.println("Enter arr size");
-        System.out.println((CreateList(new Scanner(System.in).nextInt())));
-        System.out.println(filterOddNumber(CreateList(new Scanner(System.in).nextInt())));
+        List<Integer> list = CreateList(Helper.getInt(1,100));
+        System.out.println(list);
+        System.out.println(filterOddNumber(list));
     }
 }
