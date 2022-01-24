@@ -1,4 +1,4 @@
-package javaclub5.loops.tesk43;
+package javaclub5.loops.task43;
 
 /**
  * Created by Sergiy Zapadenko on 24.01.2022 18:25

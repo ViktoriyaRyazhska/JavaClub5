@@ -1,6 +1,4 @@
-package javaclub5.loops.tesk43;
-
-import javaclub5.loops.task32.Solution;
+package javaclub5.loops.task43;
 
 import java.util.Scanner;
 
