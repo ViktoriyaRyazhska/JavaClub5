@@ -1,6 +1,7 @@
 package javaclub5;
 
 
+import javaclub5.OOP.task49.Task49;
 import javaclub5.basicprogram.task1.Task1;
 import javaclub5.basicprogram.task2.Task2;
 import javaclub5.basicprogram.task3.Task3;
@@ -126,6 +127,9 @@ public class MainConsoleProgram {
                 break;
             case 47:
                 Task47.main(scanner);
+                break;
+            case 49:
+                Task49.start(scanner);
                 break;
             case 54:
                 Task54.main(scanner);
