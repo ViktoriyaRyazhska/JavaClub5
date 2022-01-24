@@ -1,31 +1,34 @@
 package javaclub5;
 
-import javaclub5.OOP.task47.Task47;
-import javaclub5.basicprogram.Task8.Task8;
+
 import javaclub5.basicprogram.task1.Task1;
-import javaclub5.basicprogram.task11.Task11;
 import javaclub5.basicprogram.task2.Task2;
 import javaclub5.basicprogram.task3.Task3;
 import javaclub5.basicprogram.task4.Task4;
 import javaclub5.basicprogram.task5.Task5;
 import javaclub5.basicprogram.task6.Task6;
-import javaclub5.classes.task12.Task12;
+import javaclub5.basicprogram.Task8.Task8;
 import javaclub5.basicprogram.task9.Task9;
 import javaclub5.basicprogram.task10.Task10;
+import javaclub5.basicprogram.task11.Task11;
+import javaclub5.classes.task12.Task12;
 import javaclub5.classes.task15.Task15;
-import javaclub5.conditions.task21.Task21;
 import javaclub5.classes.task17.Task17;
+import javaclub5.conditions.task21.Task21;
 import javaclub5.conditions.task22.Task22;
 import javaclub5.conditions.task24.Task24;
 import javaclub5.conditions.task27.Task27;
 import javaclub5.conditions.task28.Task28;
 import javaclub5.conditions.task29.Task29;
-import javaclub5.string.task63.Task63;
-import javaclub5.string.task64.Task64;
-
+import javaclub5.loops.task34.Task34;
+import javaclub5.OOP.task47.Task47;
 import javaclub5.string.task54.Task54;
 import javaclub5.string.task55.Task55;
 import javaclub5.string.task56.Task56;
+import javaclub5.string.task63.Task63;
+import javaclub5.string.task64.Task64;
+
+
 
 import java.util.Scanner;
 
@@ -102,6 +105,10 @@ public class MainConsoleProgram {
             case 29:
                 Task29.main(scanner);
                 break;
+            case 34:
+                Task34.main(scanner);
+                break;
+
             case 47:
                 Task47.main(scanner);
                 break;
