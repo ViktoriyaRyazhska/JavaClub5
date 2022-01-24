@@ -3,7 +3,7 @@ package javaclub5.basicprogram.task10;
 import java.util.Scanner;
 
 public class Task10 {
-    public String datingRange(int x){
+    public static String datingRange(int x){
         float min=x/2+7;
         float max=(x-7)*2;
         if(x<=14){
