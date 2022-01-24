@@ -1,5 +1,6 @@
 package solutions.conditions;
 
+import program.helper.Helper;
 import solutions.Executable;
 
 import java.util.Scanner;
@@ -13,10 +14,9 @@ public class IsDivisible implements Executable {
     @Override
     public void execute() {
         Scanner scanner = new Scanner(System.in);
-        long n = scanner.nextLong();
-        long x = scanner.nextLong();
-        long y = scanner.nextLong();
-        if(n<=0||x<=0||y<=0) throw new IllegalArgumentException();
+        long n = Helper.getLong(1,1000);
+        long x = Helper.getLong(1,1000);
+        long y = Helper.getLong(1,1000);
         System.out.println(isDivisible(n,x,y));
     }
 

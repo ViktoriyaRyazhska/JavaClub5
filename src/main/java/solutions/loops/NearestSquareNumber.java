@@ -1,5 +1,6 @@
 package solutions.loops;
 
+import program.helper.Helper;
 import solutions.Executable;
 
 import java.util.Scanner;
@@ -13,10 +14,8 @@ public class NearestSquareNumber implements Executable {
 
     @Override
     public void execute() {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter number greater than 0");
-        int n = scanner.nextInt();
-        if(n<0) throw new IllegalArgumentException();
+        int n = Helper.getInt(1,1000);
         System.out.println(nearestSq(n));
     }
 }

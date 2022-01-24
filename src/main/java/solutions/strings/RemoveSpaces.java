@@ -1,5 +1,6 @@
 package solutions.strings;
 
+import program.helper.Helper;
 import solutions.Executable;
 
 import java.util.Scanner;
@@ -11,8 +12,7 @@ public class RemoveSpaces implements Executable {
 
     @Override
     public void execute() {
-        Scanner scanner = new Scanner(System.in);
-        String str = scanner.nextLine();
+        String str = Helper.getLine();
         System.out.println(noSpace(str));
     }
 }
