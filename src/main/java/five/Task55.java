@@ -18,5 +18,4 @@ public class Task55 {
             System.out.println("Something went wrong");
         }
     }
-
 }
