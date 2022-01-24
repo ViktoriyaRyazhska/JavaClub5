@@ -72,6 +72,11 @@ public class Helper {
 
     }
 
+    public static Boolean getBool() {
+
+        return scanner.nextBoolean();
+    }
+
     public static char getLetter() {
         String line = scanner.nextLine();
         if (line.length() == 1 && (line.charAt(0) > 96 && line.charAt(0) < 123) ||  (line.charAt(0) > 64 && line.charAt(0) < 91)){
