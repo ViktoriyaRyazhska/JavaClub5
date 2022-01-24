@@ -1,7 +1,5 @@
-package three;
-
 // Task13. FIXME: Static electrickery
-public class Task13 {
+public class Dinglemouse {
 
     private static int ONE_HUNDRED = 100;
 

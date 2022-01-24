@@ -1,7 +1,5 @@
-package three;
-
 // Task18. Opposite number
-public class Task18 {
+public class Kata {
     public static int opposite(int number)
     {
         return number - 2 * number;
