@@ -1,5 +1,6 @@
 package solutions.collections;
 
+import program.helper.Helper;
 import solutions.Executable;
 
 import java.util.ArrayList;
@@ -7,7 +8,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class LoopBugFixing implements Executable {
-    int arrSize;
+
 
     public static List CreateList(int number)
     {
@@ -26,6 +27,6 @@ public class LoopBugFixing implements Executable {
     @Override
     public void execute() {
         System.out.println("Enter arr size");
-        System.out.println(CreateList(new Scanner(System.in).nextInt()));
+        System.out.println(CreateList(Helper.getInt(1,10000)));
     }
 }

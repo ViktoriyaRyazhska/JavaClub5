@@ -1,5 +1,6 @@
 package solutions.loops;
 
+import program.helper.Helper;
 import solutions.Executable;
 
 import java.util.Arrays;
@@ -16,18 +17,13 @@ public class SumOfPozitive implements Executable {
     public void getData()
     {
         System.out.println("Enter array size: ");
-        int arrSize= new Scanner(System.in).nextInt();
-        if(arrSize == 0)
-        {
-            throw new NegativeArraySizeException("The number must be greater than 0");
-        }
-        else {
+        int arrSize= Helper.getInt(1,10000);
+
             this.arr = new int[arrSize];
             for (int i = 0; i < arrSize; i++) {
                 System.out.println("Enter "+(i+1)+" number:");
                 this.arr[i] = new Scanner(System.in).nextInt();
-            }
-        }
+             }
     }
 
 

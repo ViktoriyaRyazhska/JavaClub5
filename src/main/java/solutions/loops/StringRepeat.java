@@ -1,5 +1,6 @@
 package solutions.loops;
 
+import program.helper.Helper;
 import solutions.Executable;
 
 import java.util.Scanner;
@@ -26,14 +27,16 @@ public class StringRepeat implements Executable {
     {
 
         System.out.println("Enter repeats number: ");
-        this.repeats= new Scanner(System.in).nextInt();
+        this.repeats= Helper.getInt(1,1000);
         System.out.println("Enter string: ");
-        this.stringToRepeat= new Scanner(System.in).nextLine();
+        this.stringToRepeat= Helper.getLine();
     }
 
 
     @Override
+
     public void execute() {
+        getData();
         System.out.println(repeatStr(repeats,stringToRepeat));
     }
 }

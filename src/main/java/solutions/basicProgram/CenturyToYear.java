@@ -1,5 +1,6 @@
 package solutions.basicProgram;
 
+import program.helper.Helper;
 import solutions.Executable;
 
 import java.util.Scanner;
@@ -25,7 +26,7 @@ public class CenturyToYear implements Executable {
     public void getData()
     {
         System.out.print("Enter a year: ");
-        this.year = new Scanner(System.in).nextInt();
+        this.year = Helper.getInt(10000);
 
     }
 

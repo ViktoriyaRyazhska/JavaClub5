@@ -1,5 +1,6 @@
 package solutions.strings;
 
+import program.helper.Helper;
 import solutions.Executable;
 
 import java.util.Scanner;
@@ -16,7 +17,7 @@ public class OppositeNumbers implements Executable {
     public void getData()
     {
         System.out.println("Enter number which should be opposite: ");
-        this.number = new Scanner(System.in).nextInt();
+        this.number = Helper.getInt(100000);
 
     }
 

@@ -1,5 +1,6 @@
 package solutions.basicProgram;
 
+import program.helper.Helper;
 import solutions.Executable;
 
 import java.util.Scanner;
@@ -20,9 +21,9 @@ public class PixelArt implements Executable {
     public void getData()
     {
         System.out.print("Enter wall length: ");
-        this.wallLength= new Scanner(System.in).nextInt();
+        this.wallLength= Helper.getInt(0,1000000);
         System.out.print("Enter pixel size: ");
-        this.pixelSize= new Scanner(System.in).nextInt();
+        this.pixelSize= Helper.getInt(0,100000);
 
     }
 

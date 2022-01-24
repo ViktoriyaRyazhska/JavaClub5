@@ -1,5 +1,6 @@
 package solutions.loops;
 
+import program.helper.Helper;
 import solutions.Executable;
 
 import java.util.Scanner;
@@ -22,7 +23,7 @@ public class GrassshoperSummation implements Executable {
     public void getData()
     {
         System.out.println("Enter how many elements will be in sequence: ");
-        this.n = new Scanner(System.in).nextInt();
+        this.n = Helper.getInt(1,100000);
 
     }
 

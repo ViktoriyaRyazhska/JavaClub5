@@ -1,5 +1,6 @@
 package solutions.strings;
 
+import program.helper.Helper;
 import solutions.Executable;
 
 import java.util.Scanner;
@@ -29,9 +30,9 @@ public class TripleTrouble2 implements Executable {
 
     public void getData(){
         System.out.println("Enter three strings of same size: ");
-        this.one = new Scanner(System.in).nextLine();
-        this.two = new Scanner(System.in).nextLine();
-        this.three = new Scanner(System.in).nextLine();
+        this.one = Helper.getLine();
+        this.two = Helper.getLine();
+        this.three = Helper.getLine();
 
     }
 

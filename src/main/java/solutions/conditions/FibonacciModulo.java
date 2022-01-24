@@ -1,5 +1,6 @@
 package solutions.conditions;
 
+import program.helper.Helper;
 import solutions.Executable;
 
 import java.util.Scanner;
@@ -27,11 +28,7 @@ public class FibonacciModulo implements Executable {
     {
         System.out.println("Enter sequence number: ");
         Scanner scan = new Scanner(System.in);
-        int n = scan.nextInt();
-        if(n<3)
-            System.out.println("Greater number is needed");
-        else
-            this.n=n;
+        this.n = Helper.getInt(3,1000000);
     }
 
 

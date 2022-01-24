@@ -1,5 +1,6 @@
 package solutions.classes;
 
+import program.helper.Helper;
 import solutions.Executable;
 
 import java.util.Scanner;
@@ -70,19 +71,19 @@ public class Battle implements Executable {
     public void getData()
     {
         System.out.print("Enter your first fighter name: ");
-        this.firstName = new Scanner(System.in).nextLine();
+        this.firstName = Helper.getLine();
         System.out.print("Enter your first fighter health points: ");
-        this.hp1 = new Scanner(System.in).nextInt();
+        this.hp1 = Helper.getInt(1,100000);
         System.out.print("Enter your first fighter damage per attack: ");
-        this.dpa1 = new Scanner(System.in).nextInt();
+        this.dpa1 = Helper.getInt(1,100000);
         System.out.print("Enter your second fighter name: ");
-        this.secondName = new Scanner(System.in).nextLine();
+        this.secondName = Helper.getLine();
         System.out.print("Enter your first second health points: ");
-        this.hp2= new Scanner(System.in).nextInt();
+        this.hp2= Helper.getInt(1,100000);
         System.out.print("Enter your second fighter damage per attack: ");
-        this.dpa2 = new Scanner(System.in).nextInt();
+        this.dpa2 = Helper.getInt(1,100000);
         System.out.print("Enter name of fighter that attack first: ");
-        this.firstAttacker = new Scanner(System.in).nextLine();
+        this.firstAttacker = Helper.getLine();
         this.fighter1 = new Fighter(this.firstName,this.hp1,this.dpa1);
         this.fighter2 = new Fighter(this.secondName,this.hp2,this.dpa2);
 
