@@ -12,15 +12,16 @@ public class Task10 {
             min = age - 0.1 * age;
             max = age + 0.1 * age;
         } else {
-            min = (age >> 1) + 7;
+            min = (age / 2) + 7;
             max = (age - 7) * 2;
         }
 
         return (int) min + "-" + (int) max;
     }
 
-    public static void task10(BufferedReader reader) {
+    public static void task10() {
         System.out.println("Age Range Compatibility Equation");
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
             System.out.println("Enter your age please !");
             String age = reader.readLine();

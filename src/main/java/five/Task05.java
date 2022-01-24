@@ -12,8 +12,9 @@ public class Task05 {
         return String.format("Hello, %s!", name);
     }
 
-    public static void task05(BufferedReader reader) {
+    public static void task05() {
         System.out.println("Jenny has written a function that returns a greeting for a user.");
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
             System.out.println("Enter your name please !");
             String name = reader.readLine();
