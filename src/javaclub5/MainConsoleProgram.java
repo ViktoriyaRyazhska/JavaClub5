@@ -22,6 +22,9 @@ import javaclub5.conditions.task29.Task29;
 import javaclub5.string.task63.Task63;
 import javaclub5.string.task64.Task64;
 
+import javaclub5.string.task54.Task54;
+import javaclub5.string.task55.Task55;
+import javaclub5.string.task56.Task56;
 
 import java.util.Scanner;
 
@@ -98,6 +101,15 @@ public class MainConsoleProgram {
             case 47:
                 Task47.main(scanner);
                 break;
+            case 54:
+                Task54.main(scanner);
+                break;
+            case 55:
+                Task55.main(scanner);
+                break;
+            case 56:
+                Task56.main(scanner);
+                break;
             case 63:
                 Task63.main(scanner);
                 break;
@@ -106,6 +118,7 @@ public class MainConsoleProgram {
                 break;
             default:
                 System.out.println("Ups. Task is not ready yet (.");
+
         }
     }
 }
