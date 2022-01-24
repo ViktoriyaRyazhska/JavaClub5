@@ -37,6 +37,9 @@ public class Kata {
      * @return Sentence without n exclamation marks in the sentence from left to right
      */
     public static String remove(String s, int n) {
+        if (n == 0) {
+            return s;
+        }
         String pattern = "!";
         String text = s;
         Pattern p = Pattern.compile(pattern);
