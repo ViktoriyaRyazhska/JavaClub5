@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 public class BeginnerReduceButGrow implements Executable {
     public static int grow(int[] x) {
+        if(x==null) throw new IllegalArgumentException("The array is null");
         int product = 1;
         for (int i : x) {
             product *= i;
