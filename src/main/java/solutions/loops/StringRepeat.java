@@ -14,8 +14,7 @@ public class StringRepeat implements Executable {
         StringBuilder finStr= new StringBuilder();
         if(repeat<1)
         {
-            System.out.println("Repeat number must be higher");
-            return "";
+            throw new IllegalArgumentException("Repeat number must be higher");
         }
         finStr.append(String.valueOf(string).repeat(repeat));
 
