@@ -7,12 +7,11 @@ public class Task27 {
     public static int bus(int cap, int on, int wait){
         if(on+wait<=cap){
             System.out.println("Driver can fit all " + wait + " passengers");
-            System.out.print("Now on a bus: ");
-            return on+wait;
+            return 0;
         }else
             System.out.println("Driver can't fit " + (on+wait-cap)+ " of the " + wait + " waiting");
         System.out.print("Max amount of people in this bus: ");
-        return cap;
+        return on+wait-cap;
     }
 
     public static void main(Scanner scanner) {
@@ -22,6 +21,6 @@ public class Task27 {
         int on = scanner.nextInt();
         System.out.println("Enter the number of people waiting to get on to the bus excluding the driver(wait): ");
         int wait = scanner.nextInt();
-        System.out.println(bus(cap,on,wait));
+        bus(cap,on,wait);
     }
 }
