@@ -9,7 +9,7 @@ public class Task18 {
 
 
     public static void task18(BufferedReader reader) {
-        System.out.println("The task is to , given an integer or a floating-point number, find its opposite.");
+        System.out.println("The task is to, given an integer or a floating-point number, find its opposite.");
         try {
             System.out.println("Set number:");
             int i = Integer.parseInt(reader.readLine());
