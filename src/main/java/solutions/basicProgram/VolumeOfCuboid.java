@@ -2,7 +2,6 @@ package solutions.basicProgram;
 import program.helper.Helper;
 import solutions.Executable;
 
-import java.util.Scanner;
 
 public class VolumeOfCuboid implements Executable {
 

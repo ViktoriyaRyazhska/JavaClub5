@@ -3,8 +3,6 @@ package solutions.basicProgram;
 import program.helper.Helper;
 import solutions.Executable;
 
-import java.util.Scanner;
-
 public class PixelArt implements Executable {
     int wallLength;
     int pixelSize;

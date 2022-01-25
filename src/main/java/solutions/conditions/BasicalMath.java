@@ -3,7 +3,6 @@ package solutions.conditions;
 import program.helper.Helper;
 import solutions.Executable;
 
-import java.util.Scanner;
 
 public class BasicalMath implements Executable {
     String op;

@@ -3,7 +3,6 @@ package solutions.conditions;
 import program.helper.Helper;
 import solutions.Executable;
 
-import java.util.Scanner;
 
 public class TransportationOnVacation implements Executable {
     public static int rentalCarCost(int d) {
@@ -14,7 +13,6 @@ public class TransportationOnVacation implements Executable {
 
     @Override
     public void execute() {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter capacity, passengers and waiters");
         int d = Helper.getInt(0,100);
         System.out.println(rentalCarCost(d));

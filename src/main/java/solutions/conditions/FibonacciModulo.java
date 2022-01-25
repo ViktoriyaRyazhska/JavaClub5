@@ -3,8 +3,6 @@ package solutions.conditions;
 import program.helper.Helper;
 import solutions.Executable;
 
-import java.util.Scanner;
-
 public class FibonacciModulo implements Executable {
     int n;
 
@@ -23,7 +21,6 @@ public class FibonacciModulo implements Executable {
 
     public void getData() {
         System.out.println("Enter sequence number: ");
-        Scanner scan = new Scanner(System.in);
         this.n = Helper.getInt(3, 1000000);
     }
 
