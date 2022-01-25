@@ -35,6 +35,5 @@ public class CatDogYears implements Executable {
                             +"Cat years: " +  ints[1] +"\n"
                             +"Dog years: " +  ints[2] +"\n"
         );
-        Helper.promptEnterKey();
     }
 }

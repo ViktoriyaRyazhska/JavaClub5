@@ -1,7 +1,9 @@
 package program.helper;
 
+import program.MenuCommands;
 import solutions.Executable;
 
+import java.util.ArrayList;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -45,10 +47,16 @@ public class Helper {
     }
 
 
-    public static void menuOptionPrint ( Map<String, Executable> options ){
-        for (String l : options.keySet())
-            System.out.printf( "| %s\n", l );
-        System.out.println( "|-----------------------------------------|\nChoose menu option-> " );
+    public static void menuOptionPrint (ArrayList<String> options ){
+        int i = 1;
+        for (String l : options){
+            System.out.printf( "| %d %s\n", i, l );
+            i++;
+        }
+
+        System.out.println( "|-----------------------------------------|" +
+                "\nYou can choose menu option both by the number and by the name" +
+                "\nChoose menu option-> " );
     }
 
     public static void printBar(String upBarMessage) {
@@ -58,10 +66,22 @@ public class Helper {
         System.out.println( str );
     }
 
-    public static String getOptionStr(Map<String, Executable> options) {
+    public static String getOptionStr(MenuCommands options) {
         while (true) {
             String str = scanner.nextLine( );
-            if (options.containsKey( str )) return str;
+            if (options.getOptions().containsKey( str )) return str;
+
+            int i;
+            try {
+                i = Integer.parseInt(str);
+                if ( i > 0 && i <= options.getPosition().size()) {
+                    return options.getPosition().get(i-1);
+                }
+            } catch (NumberFormatException ignored){
+
+            }
+
+
             System.out.println("There is no such option");
         }
     }

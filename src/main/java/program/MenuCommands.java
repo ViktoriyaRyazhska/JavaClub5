@@ -16,13 +16,16 @@ import solutions.oop.Leetspeak.Leetspeak;
 import solutions.oop.AdamEndEve;
 
 
+import java.util.ArrayList;
 import java.util.Map;
 import java.util.TreeMap;
 
 public class MenuCommands {
     private final Map<String, Executable> options;
+    private final ArrayList<String> position;
 
     public MenuCommands() {
+        this.position = new ArrayList<>();
         this.options = new TreeMap<>();
 
         options.put("You can't code under pressure", new YouCantCodeUnderPressure());
@@ -70,7 +73,21 @@ public class MenuCommands {
         options.put("Switch it up", new SwitchItUp());
         options.put("Plus 100" , new StaticElectrickery());
         options.put("MultiplyingTwo" , new MultiplyingTwo());
+
+
+        //Це костиль щоб Ехіт був в кінці і щоб
+        //Можна було звертатися до команд по номеру
+        //Тому добавляти всі опції ЗВЕРХУ!
+        for (String name: options.keySet()) {
+            position.add(name);
+        }
+        position.add("Exit");
+
         options.put("Exit", new Exit());
+    }
+
+    public ArrayList<String> getPosition() {
+        return position;
     }
 
     public Map<String, Executable> getOptions() {

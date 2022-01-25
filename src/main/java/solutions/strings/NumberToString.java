@@ -10,7 +10,6 @@ public class NumberToString implements Executable {
         int i = Helper.getInt(2000000000);
         String s = numToString(i);
         System.out.println(s);
-        Helper.promptEnterKey();
     }
 
     private String numToString(int i) {

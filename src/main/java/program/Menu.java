@@ -3,18 +3,18 @@ package program;
 import program.helper.Helper;
 
 public class Menu {
-    private final MenuCommands options;
+    private final MenuCommands MenuCommands;
 
     public Menu(MenuCommands options){
-        this.options = options;
+        this.MenuCommands = options;
     }
 
     public void run(){
         while (true){
             Helper.printBar( "Menu" );
-            Helper.menuOptionPrint( options.getOptions() );
-            String option = Helper.getOptionStr( options.getOptions());
-            options.getOptions().get( option ).execute();
+            Helper.menuOptionPrint( MenuCommands.getPosition() );
+            String option = Helper.getOptionStr(MenuCommands);
+            MenuCommands.getOptions().get( option ).execute();
             Helper.promptEnterKey();
         }
     }

@@ -30,7 +30,6 @@ public class Leetspeak extends Encoder implements Executable {
         System.out.println("Encode string you enter. Enter the String: ");
         String str =  Helper.getLine();
         System.out.println("Result: " + encode(str));
-        Helper.promptEnterKey();
     }
 }
 

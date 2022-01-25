@@ -10,7 +10,6 @@ public class SwitchItUp implements Executable {
         int i=0;
         i = Helper.getInt(0,9);
         System.out.println("In words: " + IntToWords(i));
-        Helper.promptEnterKey();
     }
 
     private String IntToWords(int i) {
