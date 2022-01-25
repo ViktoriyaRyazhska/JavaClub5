@@ -78,13 +78,15 @@ public class LoopsSelection {
                     break;
                 case 16:
                     break;
-                default:
+                default:{
                     System.out.println("Wrong input");
+                    selectLoops(reader);
+                }
             }
         }
         catch (Exception e) {
             System.out.println("Wrong input");
-            selectTheme(reader);
+            selectLoops(reader);
         }
     }
 }

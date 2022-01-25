@@ -69,13 +69,15 @@ public class ConditionSelection {
                     //javaclub5.conditions.task14.Runner.start(reader);
                 case 15:
                     break;
-                default:
+                default:{
                     System.out.println("Wrong input");
+                    selectConditions(reader);
+                }
             }
         }
         catch (Exception e) {
             System.out.println("Wrong input");
-            selectTheme(reader);
+            selectConditions(reader);
         }
     }
 }

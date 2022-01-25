@@ -86,13 +86,15 @@ public class StringSelection {
                     break;
                 case 19:
                     break;
-                default:
+                default:{
                     System.out.println("Wrong input");
+                    selectStrings(reader);
+                }
             }
         }
         catch (Exception e) {
             System.out.println("Wrong input");
-            selectTheme(reader);
+            selectStrings(reader);
         }
     }
 }

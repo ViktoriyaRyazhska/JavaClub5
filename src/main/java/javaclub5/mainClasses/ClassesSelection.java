@@ -45,13 +45,15 @@ public final class ClassesSelection {
                     break;
                 case 12:
                     break;
-                default:
+                default: {
                     System.out.println("Wrong input");
+                    selectClasses(reader);
+                }
             }
         }
         catch (Exception e) {
             System.out.println("Wrong input");
-            selectTheme(reader);
+            selectClasses(reader);
         }
 
     }

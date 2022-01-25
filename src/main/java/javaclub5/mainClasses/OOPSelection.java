@@ -40,13 +40,15 @@ public class OOPSelection {
                     break;
                 case 12:
                     break;
-                default:
+                default: {
                     System.out.println("Wrong input");
+                    selectOOP(reader);
+                }
             }
         }
         catch (Exception e) {
             System.out.println("Wrong input");
-            selectTheme(reader);
+            selectOOP(reader);
         }
     }
 }

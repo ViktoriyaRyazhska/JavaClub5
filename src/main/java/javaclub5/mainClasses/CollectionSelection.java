@@ -39,13 +39,15 @@ public class CollectionSelection {
                     break;
                 case 12:
                     break;
-                default:
+                default:{
                     System.out.println("Wrong input");
+                    selectCollections(reader);
+                }
             }
         }
         catch (Exception e) {
             System.out.println("Wrong input");
-            selectTheme(reader);
+            selectCollections(reader);
         }
     }
 }

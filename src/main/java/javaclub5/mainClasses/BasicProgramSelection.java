@@ -63,8 +63,10 @@ public final class BasicProgramSelection {
                     break;
                 case 12:
                     break;
-                default:
+                default: {
                     System.out.println("Wrong input");
+                    selectBasicProgram(reader);
+                }
             }
         }
         catch (Exception e) {
