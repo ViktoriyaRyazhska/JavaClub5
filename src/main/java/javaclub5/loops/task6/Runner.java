@@ -22,6 +22,7 @@ public class Runner {
      *
      */
     public static void start(BufferedReader reader) {
+        System.out.println("Build an array of integers from n to 1 where n>0");
         System.out.println(" Input number n");
         try {
             int number = Integer.parseInt(reader.readLine());

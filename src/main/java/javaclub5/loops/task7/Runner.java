@@ -26,6 +26,7 @@ public class Runner {
      *
      */
     public static void start(BufferedReader reader) {
+        System.out.println("Let's calculate the average score of the class and compare with your score!");
         System.out.println(" Input number of students in you class");
         try {
             int number = Integer.parseInt(reader.readLine());
