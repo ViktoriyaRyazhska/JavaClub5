@@ -1,4 +1,4 @@
-package javaclub5.strings.task12;
+package javaclub5.basicprogram.task11;
 
 
 import java.io.BufferedReader;
