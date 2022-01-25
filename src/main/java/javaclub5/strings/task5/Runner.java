@@ -33,7 +33,8 @@ public class Runner {
      */
     public static void start(BufferedReader reader) {
 
-        System.out.println("Input a string");
+        System.out.println("Input a string tha you want to recieve " +
+                "where all the dots . in the specified are replaced with dashes -");
         try {
             String word = reader.readLine();
             System.out.println("String without dots: " + replaceDots(word));
