@@ -1,5 +1,7 @@
 package javaclub5.string.task66;
 
+import java.util.Scanner;
+
 /**
  * Created by Sergiy Zapadenko on 25.01.2022 9:35
  */
@@ -12,6 +14,10 @@ public class Task66 {
      */
 
     public static void main(String[] args) {
+        start();
+    }
+    public static void start(){
+        System.out.println("Task  corrects the errors in the digitised text \n");
         String[] lines = {"1F-RUDYARD K1PL1NG",
                 "R0BERT MERLE - THE DAY 0F THE D0LPH1N",
                 "R1CHARD P. FEYNMAN - THE FEYNMAN LECTURE5 0N PHY51C5",
@@ -31,6 +37,5 @@ public class Task66 {
         for (String l : lines) {
             System.out.printf("%-60s :-> %-60s\n", l, corrector.correct(l));
         }
-
     }
 }
