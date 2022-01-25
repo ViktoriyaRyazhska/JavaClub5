@@ -25,10 +25,6 @@ import java.io.InputStreamReader;
  * @author Rostyslav Ros
  */
 public class Runner {
-    public static void main(String[] args) {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        start(reader);
-    }
 
     /**
      * main method of Class

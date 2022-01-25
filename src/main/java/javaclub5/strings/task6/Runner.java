@@ -14,10 +14,6 @@ import java.io.InputStreamReader;
 
 
 public class Runner {
-    public static void main(String[] args) {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        start(reader);
-    }
 
     /**
      * The function takes a name as its only argument, and returns one of the following strings:     *
@@ -45,7 +41,6 @@ public class Runner {
             System.out.println(areYouPlayingBanjo(name));
         } catch (IOException e) {
             System.out.println("Wrong input");
-            e.printStackTrace();
         }
     }
 }

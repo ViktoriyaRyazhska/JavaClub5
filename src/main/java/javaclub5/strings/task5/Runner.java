@@ -17,10 +17,6 @@ import java.io.InputStreamReader;
 
 
 public class Runner {
-    public static void main(String[] args) {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        start(reader);
-    }
 
     /**
      * Replaces all the dots . in the specified String str with dashes -
@@ -43,7 +39,6 @@ public class Runner {
             System.out.println("String without dots: " + replaceDots(word));
         } catch (IOException e) {
             System.out.println("Wrong input");
-            e.printStackTrace();
         }
     }
 }

@@ -25,10 +25,6 @@ import java.util.regex.Pattern;
  * @author Rostyslav Ros
  */
 public class Kata {
-    public static void main(String[] args) {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        start(reader);
-    }
 
     /**
      *

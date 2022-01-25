@@ -16,10 +16,6 @@ import java.io.InputStreamReader;
 
 
 public class Runner {
-    public static void main(String[] args) {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        start(reader);
-    }
 
     /**
      * finds the opposite number
@@ -42,7 +38,6 @@ public class Runner {
             System.out.printf("Opposite number will be: %f.3", opposite(number));
         } catch (IOException e) {
             System.out.println("Wrong input");
-            e.printStackTrace();
         }
     }
 }

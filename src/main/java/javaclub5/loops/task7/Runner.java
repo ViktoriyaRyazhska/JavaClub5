@@ -20,10 +20,6 @@ import java.util.Arrays;
  */
 
 public class Runner {
-    public static void main(String[] args) {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        start(reader);
-    }
 
     /**
      * main method of Class
@@ -49,7 +45,6 @@ public class Runner {
 
         } catch (IOException e) {
             System.out.println("Wrong input");
-            e.printStackTrace();
         }
     }
 

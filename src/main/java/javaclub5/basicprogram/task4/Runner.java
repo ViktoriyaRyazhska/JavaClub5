@@ -21,10 +21,6 @@ import java.io.InputStreamReader;
  */
 
 public class Runner {
-    public static void main(String[] args) {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        start(reader);
-    }
     /**
      * calculate the volume of a cuboid with three values:
      * @param wallSize - size of the wall in millimeters,
@@ -49,7 +45,6 @@ public class Runner {
             System.out.println(is_divisible(wallSize, pixelSize));
         } catch (IOException e) {
             System.out.println("Wrong input");
-            e.printStackTrace();
         }
     }
 

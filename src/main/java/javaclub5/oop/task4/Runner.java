@@ -17,10 +17,6 @@ import static javaclub5.oop.task4.SelectionMenu.selectFigure;
 
 
 public class Runner {
-    public static void main(String[] args) {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        start(reader);
-    }
 
     /**
      * main method of Class
