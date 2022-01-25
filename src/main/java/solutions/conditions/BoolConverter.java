@@ -10,11 +10,7 @@ public class BoolConverter implements Executable {
     boolean b;
 
     public static String convert(boolean b){
-        if(b) {
-            return "true";
-        } else {
-            return "false";
-        }
+        return  b?"true":"false";
     }
 
     public void getData()
