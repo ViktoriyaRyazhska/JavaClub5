@@ -14,8 +14,8 @@ public class Task3 extends ReadConsole {
     static double height;
 
     public static void main(String[] args) {
-        start3TaskBasicProgram();
 
+        start3TaskBasicProgram();
         try {
             length = Double.parseDouble(br.readLine());
             width = Double.parseDouble(br.readLine());
@@ -24,8 +24,8 @@ public class Task3 extends ReadConsole {
             System.out.println("==> It's not a Double value! Try again! <==");
             Task3.main(args);
         }
-        System.out.println("You have entered : "+ length+" "+ width+ " "+ height);
-        System.out.println("Result: "+getVolumeOfCuboid(length,width,height));
+        System.out.println("You have entered : " + length + " " + width + " " + height);
+        System.out.println("Result: " + getVolumeOfCuboid(length, width, height));
 
         backToMenuOrRetry();
         try {
@@ -50,10 +50,9 @@ public class Task3 extends ReadConsole {
     }
 
     public static double getVolumeOfCuboid(final double length, final double width, final double height) {
-        if(length>0&&width>0&&height>0){
-            return length*width*height;
-        }
-        else return 0;
+        if (length > 0 && width > 0 && height > 0) {
+            return length * width * height;
+        } else return 0;
     }
 }
 
