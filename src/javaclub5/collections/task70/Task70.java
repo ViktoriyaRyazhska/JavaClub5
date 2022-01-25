@@ -9,7 +9,7 @@ public class Task70 {
         start();
     }
 
-    private static void start() {
+    public static void start() {
         System.out.println("Collection, Task70.");
         System.out.println("Task was about Bug Fixing #1 - Unfinished Loop");
         System.out.println("for (int count = 1; count <= number; count++) {");

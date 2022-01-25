@@ -15,6 +15,7 @@ import javaclub5.basicprogram.task11.Task11;
 import javaclub5.classes.task12.Task12;
 import javaclub5.classes.task15.Task15;
 import javaclub5.classes.task17.Task17;
+import javaclub5.collections.task70.Task70;
 import javaclub5.conditions.task21.Task21;
 import javaclub5.conditions.task22.Task22;
 import javaclub5.conditions.task23.Task23;
@@ -157,6 +158,9 @@ public class MainConsoleProgram {
                 break;
             case 64:
                 Task64.main(scanner);
+                break;
+            case 70:
+                Task70.start();
                 break;
             default:
                 System.out.println("Ups. Task is not ready yet (.");
