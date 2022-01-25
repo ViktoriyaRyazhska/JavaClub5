@@ -3,7 +3,6 @@ package four;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
-import org.junit.runners.JUnit4;
 
 // TODO: Replace examples and use TDD development by writing your own tests
 
