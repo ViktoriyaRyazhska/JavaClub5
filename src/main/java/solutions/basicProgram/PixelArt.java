@@ -10,7 +10,7 @@ public class PixelArt implements Executable {
     int pixelSize;
 
     public static boolean isDivisible(int wallLength, int pixelSize) {
-        if(wallLength < 0 || pixelSize < 0)
+        if(wallLength < 0 || pixelSize <= 0)
         {
             throw new ArithmeticException("Enter data greater than 0");
         }
