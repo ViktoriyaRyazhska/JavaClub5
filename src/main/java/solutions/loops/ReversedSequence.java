@@ -12,7 +12,6 @@ public class ReversedSequence implements Executable {
         int n;
         n = Helper.getInt(2000000000);
         System.out.println(Arrays.toString(createReversedSequence(n)));
-        Helper.promptEnterKey();
     }
 
     private int[] createReversedSequence(int n) {

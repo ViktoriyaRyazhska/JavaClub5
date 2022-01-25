@@ -48,6 +48,5 @@ public class Block implements Executable {
         height = Helper.getInt(1290);
         System.out.println("The surface area is: " + getSurfaceArea());
         System.out.println("The volume is: " + getVolume());
-        Helper.promptEnterKey();
     }
 }

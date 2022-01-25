@@ -29,6 +29,5 @@ public class SortAndStar implements Executable {
         }
         String[] s1 = s.toArray(new String[0]);
         System.out.println("Result is: " + twoSort(s1));
-        Helper.promptEnterKey();
     }
 }

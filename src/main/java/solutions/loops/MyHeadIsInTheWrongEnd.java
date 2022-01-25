@@ -18,7 +18,6 @@ public class MyHeadIsInTheWrongEnd implements Executable {
         arr[2] = Helper.getLine();
         reverse(arr);
         System.out.println("The string is: " + Arrays.toString(arr));
-        Helper.promptEnterKey();
     }
 
     public void reverse(String[] arr){

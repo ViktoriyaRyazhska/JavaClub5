@@ -14,6 +14,5 @@ public class FindThePosition implements Executable {
         System.out.println("Return the number of char in alphabet:");
         char a = Helper.getLetter();
         System.out.println("Position is: " + position(Character.toLowerCase(a)));
-        Helper.promptEnterKey();
     }
 }

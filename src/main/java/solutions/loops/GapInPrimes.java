@@ -25,7 +25,6 @@ public class GapInPrimes implements Executable {
         } else {
             System.out.println("The gap is: " + Arrays.toString(longs));
         }
-        Helper.promptEnterKey();
     }
 
     public long[] gapInPrimes(int g, long m, long n) {

@@ -13,6 +13,5 @@ public class ReplaceAllDots implements Executable {
         System.out.println("Replace all dots to dashes.\nEnter string:");
         String line = Helper.getLine();
         System.out.println(replaceDots(line));
-        Helper.promptEnterKey();
     }
 }

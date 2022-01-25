@@ -25,6 +25,5 @@ public class StaticElectrickery implements Executable {
         int i = Helper.getInt(0, 20000000);
         i = StaticElectrickery.INST.plus100(i);
         System.out.println(i);
-        Helper.promptEnterKey();
     }
 }
