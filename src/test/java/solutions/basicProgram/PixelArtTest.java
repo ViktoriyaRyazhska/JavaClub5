@@ -15,16 +15,12 @@ class PixelArtTest {
     @ParameterizedTest
     @MethodSource("testCases")
     void isDivisible(Integer a, Integer b, Boolean expected) {
-        if (a <= 0 || b <= 0) {
             try {
-               PixelArt.isDivisible(a, b);
+                assertEquals(expected, PixelArt.isDivisible(a, b));
             } catch (Exception e) {
                 String msg = e.getMessage();
                 assertEquals("Enter data greater than 0", msg);
             }
-        } else {
-            assertEquals(expected, PixelArt.isDivisible(a, b));
-        }
     }
 
 
