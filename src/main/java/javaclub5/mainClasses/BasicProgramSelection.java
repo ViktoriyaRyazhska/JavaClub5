@@ -16,7 +16,7 @@ public final class BasicProgramSelection {
      * Method for selection of the Task
      * @param reader BufferedReader
      */
-    public static void selectBasicProgram(BufferedReader reader) {
+    public static final void selectBasicProgram(BufferedReader reader) {
         System.out.println("Select number of Task (1-11) \n 0. Main menu \n 12. exit");
         try {
             int selection = Integer.parseInt(reader.readLine());

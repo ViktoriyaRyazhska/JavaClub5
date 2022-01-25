@@ -9,12 +9,12 @@ import static javaclub5.mainClasses.MainProgram.selectTheme;
  *
  * @author Rostyslav Ros
  */
-public class LoopsSelection {
+public final class LoopsSelection {
     /**
      * Method for selection of the Task
      * @param reader BufferedReader
      */
-    public static void selectLoops(BufferedReader reader) {
+    public static final void selectLoops(BufferedReader reader) {
         System.out.println("Select number of Task (1-15) \n 0. Main menu \n 16. exit");
         try {
             int selection = Integer.parseInt(reader.readLine());

@@ -9,12 +9,12 @@ import static javaclub5.mainClasses.MainProgram.selectTheme;
  *
  * @author Rostyslav Ros
  */
-public class ConditionSelection {
+public final class ConditionSelection {
     /**
      * Method for selection of the Task
      * @param reader BufferedReader
      */
-    public static void selectConditions(BufferedReader reader) {
+    public static final void selectConditions(BufferedReader reader) {
         System.out.println("Select number of Task (1-14) \n 0. Main menu \n 15. exit");
         try {
             int selection = Integer.parseInt(reader.readLine());
