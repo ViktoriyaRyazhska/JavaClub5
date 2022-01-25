@@ -17,7 +17,8 @@ public class Task66 {
         start();
     }
     public static void start(){
-        System.out.println("Task  corrects the errors in the digitised text \n");
+        System.out.println("Task  corrects the errors in the digitised text");
+        System.out.println("change 5->S, 0->O, 1->I \n");
         String[] lines = {"1F-RUDYARD K1PL1NG",
                 "R0BERT MERLE - THE DAY 0F THE D0LPH1N",
                 "R1CHARD P. FEYNMAN - THE FEYNMAN LECTURE5 0N PHY51C5",
