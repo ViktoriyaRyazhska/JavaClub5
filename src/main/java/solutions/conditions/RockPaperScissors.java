@@ -32,7 +32,7 @@ public class RockPaperScissors implements Executable {
                     return "Player 2 won!";
                 }
             default:
-                throw new IllegalArgumentException();
+                throw new IllegalArgumentException("Enter correct sentence");
         }
     }
 
