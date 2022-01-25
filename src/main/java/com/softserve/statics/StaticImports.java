@@ -83,11 +83,17 @@ public class StaticImports {
         System.out.println("Task 9 Starts now!");
         System.out.println("Enter size of array:");
     }
+    //Task 3 BasicProgram
     public static void start3TaskBasicProgram(){
         System.out.println("Task 3 starts now !");
         System.out.println("Bob needs a fast way to calculate the volume of a cuboid.");
         System.out.println("Lets help him =)");
         System.out.println("Enter 3 values: Length, Width, Height");
+    }
+    //Task 1 Conditions
+    public static void start1TaskConditions(){
+        System.out.println("Task 1 has started!");
+        System.out.println("Enter a number to get opposite");
     }
 
 }
