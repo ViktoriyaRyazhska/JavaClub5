@@ -24,7 +24,7 @@ public  final class MainProgram {
 
     }
     /**
-     * Method for selecton of the Theme
+     * Method for selection of the Theme
      * @param reader BufferedReader
      */
     public static void selectTheme(BufferedReader reader) {

@@ -11,7 +11,7 @@ import static javaclub5.mainClasses.MainProgram.selectTheme;
  */
 public class LoopsSelection {
     /**
-     * Method for selecton of the Task
+     * Method for selection of the Task
      * @param reader BufferedReader
      */
     public static void selectLoops(BufferedReader reader) {
