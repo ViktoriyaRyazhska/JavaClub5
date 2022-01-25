@@ -11,10 +11,6 @@ import java.util.Scanner;
  * @author Popova Anna
  */
 public class Runner {
-    public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        start(br);
-    }
 
     public static void start(BufferedReader br) {
         System.out.println("In this task true is gonna be converted to YES, and false to NO.");

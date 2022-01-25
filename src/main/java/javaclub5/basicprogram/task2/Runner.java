@@ -9,10 +9,6 @@ import java.io.InputStreamReader;
  * @author Popova Anna
  */
 public class Runner {
-    public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        start(br);
-    }
 
     public static void start(BufferedReader br) {
         System.out.println("Program expecting from you two numbers to enter to multiply them: ");

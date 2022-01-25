@@ -25,11 +25,6 @@ import java.io.InputStreamReader;
 
 public class Runner {
 
-    public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        start(br);
-    }
-
     public static void start(BufferedReader br) {
         System.out.println("This task is for changing the letters case in the word to the opposite." +
                 "\nEnter some word to change it case: ");

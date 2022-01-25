@@ -11,10 +11,6 @@ import java.util.Arrays;
  */
 public class Runner {
 
-    public static void main(String[] args) {
-        start();
-    }
-
     public static void start() {
         System.out.println("Total sum of all positive numbers in array.");
         int[] arr = new int[10];

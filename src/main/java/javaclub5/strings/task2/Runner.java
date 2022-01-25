@@ -13,11 +13,6 @@ import java.util.Scanner;
 
 public class Runner {
 
-    public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        start(br);
-    }
-
     public static void start(BufferedReader br) {
         System.out.println("In this task we gonna reverse the word.\nEnter the word: ");
         String word = null;
