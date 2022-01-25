@@ -12,6 +12,7 @@ public class LoopBugFixing implements Executable {
     public static List CreateList(int number)
     {
 
+        if(number<0)throw new ArithmeticException("Negative List size");
         List list = new ArrayList();
 
         for(int count = 1; count <= number; count++)
