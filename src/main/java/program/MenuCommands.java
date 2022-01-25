@@ -69,7 +69,7 @@ public class MenuCommands {
         options.put("Gap in primes", new GapInPrimes());
         options.put("Switch it up", new SwitchItUp());
         options.put("Plus 100" , new StaticElectrickery());
-
+        options.put("MultiplyingTwo" , new MultiplyingTwo());
         options.put("Exit", new Exit());
     }
 
