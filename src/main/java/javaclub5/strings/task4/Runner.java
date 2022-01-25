@@ -35,7 +35,7 @@ public class Runner {
         System.out.println("Input a number");
         try {
             double number = Double.parseDouble(reader.readLine());
-            System.out.printf("Opposite number will be: %f.3", opposite(number));
+            System.out.printf("Opposite number will be: %.2f", opposite(number));
         } catch (IOException e) {
             System.out.println("Wrong input");
         }
