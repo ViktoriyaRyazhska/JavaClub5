@@ -9,16 +9,19 @@ public class SheepCounter implements Executable {
     Boolean[] arrayOfSheeps;
 
 
-    static public int Counter(Boolean[] arrayOfSheeps)
+    static public int counter(Boolean[] arrayOfSheeps)
     {
         int counter=0;
+        if (arrayOfSheeps == null) throw new IllegalArgumentException("The array is null");
+
         for (Boolean arrayOfSheep : arrayOfSheeps) {
-            if (arrayOfSheep != null) {
+
                 if (arrayOfSheep) {
                     counter += 1;
                 }
 
-            }
+
+
         }
         return counter;
     }
@@ -40,6 +43,6 @@ public class SheepCounter implements Executable {
     @Override
     public void execute() {
         getData();
-        System.out.println("There are: "+Counter(this.arrayOfSheeps)+" sheep");
+        System.out.println("There are: "+counter(this.arrayOfSheeps)+" sheep");
     }
 }
