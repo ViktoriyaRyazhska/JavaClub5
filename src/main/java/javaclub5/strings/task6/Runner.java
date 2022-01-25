@@ -34,7 +34,7 @@ public class Runner {
      *
      */
     public static void start(BufferedReader reader) {
-
+        System.out.println("Let's answer the question \"Are you playing banjo?\".");
         System.out.println("Input a name");
         try {
             String name = reader.readLine();
