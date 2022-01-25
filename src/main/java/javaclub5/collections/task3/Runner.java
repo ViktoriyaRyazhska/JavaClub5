@@ -1,5 +1,7 @@
 package javaclub5.collections.task3;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.*;
 
 /**
@@ -12,19 +14,17 @@ import java.util.*;
  */
 
 public class Runner {
-    public static void main(String[] args) {
-        start();
-    }
 
     public static void start() {
+        System.out.println("This task removes even numbers from the list and return list that contains the odd numbers.");
         List<Integer> numbers = new ArrayList<>();
         Random rand = new Random();
         for (int i = 0; i < 20; i++) {
             numbers.add(rand.nextInt(100));
         }
-        System.out.println(numbers);
+        System.out.println("Full list: " + numbers);
 
-        System.out.println(removeEvenNumbers(numbers));
+        System.out.println("List with removed even numbers: " + removeEvenNumbers(numbers));
     }
 
     public static List<Integer> removeEvenNumbers(List<Integer> inputList) {

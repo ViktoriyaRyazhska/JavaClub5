@@ -20,10 +20,7 @@ import java.io.InputStreamReader;
  */
 
 public class Runner {
-    public static void main(String[] args) {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        start(reader);
-    }
+
     /**
      * main method of Class
      *
@@ -33,10 +30,9 @@ public class Runner {
         try {
             int number = Integer.parseInt(reader.readLine());
             Dinglemouse dinglemouse = Dinglemouse.INST;
-            System.out.println(dinglemouse.plus100(number));
+            System.out.println("Th result will be: " + dinglemouse.plus100(number));
         } catch (IOException e) {
             System.out.println("Wrong input");
-            e.printStackTrace();
         }
 
     }

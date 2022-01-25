@@ -18,17 +18,15 @@ import java.io.InputStreamReader;
  */
 
 public class Runner {
-    public static void main(String[] args) {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        start(reader);
-    }
 
     /**
      * main method of Class
      *
      */
     public static void start(BufferedReader reader) {
-        System.out.println(" Input number of the sequence");
+        System.out.println("The sequence where the first two numbers are 0 and 1 and the next number " +
+                "of the sequence is sum of the previous 2 modulo 3");
+        System.out.println(" Input number of the sequence you want to get");
         try {
             int number = Integer.parseInt(reader.readLine());
             int result = Solution.sequence(number);
@@ -36,7 +34,6 @@ public class Runner {
 
         } catch (IOException e) {
             System.out.println("Wrong input");
-            e.printStackTrace();
         }
 
     }

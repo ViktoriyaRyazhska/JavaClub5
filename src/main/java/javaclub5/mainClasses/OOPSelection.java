@@ -4,7 +4,17 @@ import java.io.BufferedReader;
 
 import static javaclub5.mainClasses.MainProgram.selectTheme;
 
+/**
+ * Class for selection tasks from OOP theme
+ *
+ * @author Rostyslav Ros
+ */
 public class OOPSelection {
+
+    /**
+     * Method for selection of the Task
+     * @param reader BufferedReader
+     */
     public static void selectOOP(BufferedReader reader) {
         System.out.println("Select number of Task (1-4) \n 0. Main menu \n 12. exit");
         try {
@@ -30,13 +40,15 @@ public class OOPSelection {
                     break;
                 case 12:
                     break;
-                default:
+                default: {
                     System.out.println("Wrong input");
+                    selectOOP(reader);
+                }
             }
         }
         catch (Exception e) {
             System.out.println("Wrong input");
-            selectTheme(reader);
+            selectOOP(reader);
         }
     }
 }

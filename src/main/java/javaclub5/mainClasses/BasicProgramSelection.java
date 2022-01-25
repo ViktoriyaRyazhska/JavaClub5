@@ -5,7 +5,17 @@ import java.io.BufferedReader;
 
 import static javaclub5.mainClasses.MainProgram.selectTheme;
 
-public class BasicProgramSelection {
+/**
+ * Class for selection tasks from Basic Programs theme
+ *
+ * @author Rostyslav Ros
+ */
+public final class BasicProgramSelection {
+
+    /**
+     * Method for selection of the Task
+     * @param reader BufferedReader
+     */
     public static void selectBasicProgram(BufferedReader reader) {
         System.out.println("Select number of Task (1-11) \n 0. Main menu \n 12. exit");
         try {
@@ -41,8 +51,7 @@ public class BasicProgramSelection {
                     javaclub5.basicprogram.task8.Runner.start(reader);
                     break;
                 case 9:
-                    System.out.println("Not done yet");
-                    //javaclub5.basicprogram.task9.Runner.start(reader);
+                    javaclub5.basicprogram.task9.Runner.start(reader);
                     break;
                 case 10:
                     System.out.println("Not done yet");
@@ -54,8 +63,10 @@ public class BasicProgramSelection {
                     break;
                 case 12:
                     break;
-                default:
+                default: {
                     System.out.println("Wrong input");
+                    selectBasicProgram(reader);
+                }
             }
         }
         catch (Exception e) {

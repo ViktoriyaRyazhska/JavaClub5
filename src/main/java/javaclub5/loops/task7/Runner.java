@@ -20,16 +20,13 @@ import java.util.Arrays;
  */
 
 public class Runner {
-    public static void main(String[] args) {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        start(reader);
-    }
 
     /**
      * main method of Class
      *
      */
     public static void start(BufferedReader reader) {
+        System.out.println("Let's calculate the average score of the class and compare with your score!");
         System.out.println(" Input number of students in you class");
         try {
             int number = Integer.parseInt(reader.readLine());
@@ -49,7 +46,6 @@ public class Runner {
 
         } catch (IOException e) {
             System.out.println("Wrong input");
-            e.printStackTrace();
         }
     }
 

@@ -11,13 +11,10 @@ import java.util.Scanner;
  * @author Popova Anna
  */
 public class Runner {
-    public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        start(br);
-    }
 
     public static void start(BufferedReader br) {
-        System.out.println("Lets, play. You need answer: true or false.");
+        System.out.println("In this task true is gonna be converted to YES, and false to NO.");
+        System.out.println("Lets, start. You need answer: true or false.");
         System.out.println("Do you like dogs?");
         try {
             String answer = br.readLine();
