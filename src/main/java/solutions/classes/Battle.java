@@ -56,12 +56,12 @@ public class Battle implements Executable {
 
             secondAttacker.health -= firstAttacker.damagePerAttack;
             if (secondAttacker.health <= 0) {
-                return "The winner is fighter 1 " + firstAttacker.name;
+                return "The winner is fighter " + firstAttacker.name;
             }
 
             firstAttacker.health -= secondAttacker.damagePerAttack;
-            if (fighter1.health <= 0) {
-                return "The winner is fighter 2 " + secondAttacker.name;
+            if (firstAttacker.health <= 0) {
+                return "The winner is fighter " + secondAttacker.name;
             }
 
 
