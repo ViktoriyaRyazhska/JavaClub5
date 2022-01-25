@@ -3,8 +3,6 @@ package solutions.basicProgram;
 import program.helper.Helper;
 import solutions.Executable;
 
-import java.util.Scanner;
-
 public class CenturyToYear implements Executable {
     int year;
     public static int century(int number) {

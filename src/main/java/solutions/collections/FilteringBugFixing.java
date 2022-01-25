@@ -4,7 +4,6 @@ import program.helper.Helper;
 import solutions.Executable;
 
 import java.util.List;
-import java.util.Scanner;
 
 import static solutions.collections.LoopBugFixing.CreateList;
 

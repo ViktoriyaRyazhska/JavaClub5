@@ -3,8 +3,6 @@ package solutions.loops;
 import program.helper.Helper;
 import solutions.Executable;
 
-import java.util.Scanner;
-
 public class GrassshoperSummation implements Executable {
     int n;
 
