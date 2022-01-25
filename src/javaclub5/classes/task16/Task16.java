@@ -1,5 +1,6 @@
 package javaclub5.classes.task16;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Task16 {
@@ -16,6 +17,12 @@ public class Task16 {
     }
 
     public static String declareWinner(Fighter fighter1, Fighter fighter2, String firstAttacker) {
+
+        if (Objects.equals(fighter1.name, firstAttacker)) {
+            Fighter fighter = fighter2;
+            fighter2 = fighter1;
+            fighter1 = fighter;
+        }
 
         while (true) {
             fighter1.health -= fighter2.damagePerAttack;
