@@ -7,7 +7,8 @@ public class Task26 {
 
         System.out.println("Input what bool think u want back. Set (True) for Yes or (False) for No: ");
         try {
-            boolean bool = Boolean.getBoolean(scanner.nextLine());
+            String answ = scanner.nextLine();
+            boolean bool = Boolean.parseBoolean(answ);
             System.out.println("Answer is:" + boolWorld(bool));
         } catch (Exception e) {
 
