@@ -39,6 +39,13 @@ public class StaticImports {
         System.out.println("Please input integer number: ");
     }
 
+    //BasicProgram Task4
+    public static void start4TaskBasicProgram() {
+        System.out.println("Task 4 is starting");
+        System.out.println("This function returns a greeting for a user");
+        System.out.println("Enter your name:");
+    }
+
     //BasicProgram Task7
     public static void start7TaskBasicProgram() {
         System.out.println("Task 7 is starting");
