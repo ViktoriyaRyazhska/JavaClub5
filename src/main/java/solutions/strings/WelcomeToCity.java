@@ -5,6 +5,7 @@ import solutions.Executable;
 
 public class WelcomeToCity implements Executable {
     public String sayHello(String[] name, String city, String state) {
+        if(name==null || city==null || state==null) throw new IllegalArgumentException("The array is null");
         StringBuilder sb = new StringBuilder();
         for (String s : name) {
             sb.append(" ");
