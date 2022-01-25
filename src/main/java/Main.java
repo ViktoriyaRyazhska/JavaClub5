@@ -7,14 +7,29 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 public class Main {
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        while (start(reader));
+    }
+
+    private static boolean start(BufferedReader reader) {
         int taskNumber;
         while (true) {
             try {
-                System.out.println("Select task (1-72):");
+                System.out.println("""
+                        Main:\s
+                        1. Task (1-72)\s
+                        2. Exit (0)""");
                 taskNumber = Integer.parseInt(reader.readLine());
-                if (taskNumber < 1 || taskNumber > 72) throw new Exception();
+                if (taskNumber == 0) {
+                    System.out.println("Good Bye!");
+                  return false;
+
+                }
+                if (taskNumber < 1 || taskNumber > 72) {
+                    throw new Exception();
+                }
                 break;
             } catch (Exception exception) {
                 System.out.println("Number incorrect!");
@@ -79,5 +94,8 @@ public class Main {
             case 71 -> Task71.task71(reader);
             case 72 -> Task72.task72(reader);
         }
+        System.out.println("The program is finished!");
+        System.out.println("----------------------------------------------");
+        return true;
     }
 }
