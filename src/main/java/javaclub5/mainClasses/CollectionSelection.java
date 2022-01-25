@@ -25,17 +25,21 @@ public class CollectionSelection {
                 case 1:
                     System.out.println("Not done yet");
                     //javaclub5.collections.task1.Runner.start();
+                    selectTheme(reader);
                     break;
                 case 2:
                     System.out.println("Not done yet");
                     //javaclub5.conditions.task2.Runner.start(reader);
+                    selectTheme(reader);
                     break;
                 case 3:
                     javaclub5.collections.task3.Runner.start();
+                    selectTheme(reader);
                     break;
                 case 4:
                     System.out.println("Not done yet");
                     //javaclub5.collections.task4.Runner.start(reader);
+                    selectTheme(reader);
                     break;
                 case 12:
                     break;

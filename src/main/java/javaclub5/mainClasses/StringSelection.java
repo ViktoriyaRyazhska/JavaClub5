@@ -25,64 +25,82 @@ public class StringSelection {
                     break;
                 case 1:
                     javaclub5.strings.task1.Runner.start(reader);
+                    selectTheme(reader);
                     break;
                 case 2:
                     javaclub5.strings.task2.Runner.start(reader);
+                    selectTheme(reader);
                     break;
                 case 3:
                     javaclub5.strings.task3.Runner.start(reader);
+                    selectTheme(reader);
                     break;
                 case 4:
                     javaclub5.strings.task4.Runner.start(reader);
+                    selectTheme(reader);
                     break;
                 case 5:
                     javaclub5.strings.task5.Runner.start(reader);
+                    selectTheme(reader);
                     break;
                 case 6:
                     javaclub5.strings.task6.Runner.start(reader);
+                    selectTheme(reader);
                     break;
                 case 7:
                     System.out.println("Not done yet");
                     //javaclub5.strings.task7.Runner.start(reader);
+                    selectTheme(reader);
                     break;
                 case 8:
                     System.out.println("Not done yet");
                     //javaclub5.strings.task8.Runner.start();
+                    selectTheme(reader);
                     break;
                 case 9:
                     System.out.println("Not done yet");
                     //javaclub5.strings.task9.Runner.start();
+                    selectTheme(reader);
                     break;
                 case 10:
                     javaclub5.strings.task10.FakeBinary.start(reader);
+                    selectTheme(reader);
                     break;
                 case 11:
                     javaclub5.strings.task11.CharProblem.start(reader);
+                    selectTheme(reader);
                     break;
                 case 12:
                     javaclub5.strings.task12.GrassHopper.start(reader);
+                    selectTheme(reader);
                     break;
                 case 13:
                     System.out.println("Not done yet");
                     //javaclub5.strings.task13.Runner.start(reader);
+                    selectTheme(reader);
                     break;
                 case 14:
                     System.out.println("Not done yet");
                     //javaclub5.strings.task14.Runner.start(reader);
+                    selectTheme(reader);
                     break;
                 case 15:
                     System.out.println("Not done yet");
                     //javaclub5.strings.task15.Runner.start(reader);
+                    selectTheme(reader);
                     break;
                 case 16:
                     System.out.println("Not done yet");
                     //javaclub5.strings.task16.Runner.start(reader);
+                    selectTheme(reader);
                     break;
                 case 17:
                     javaclub5.strings.task17.Runner.start(reader);
+                    selectTheme(reader);
                     break;
                 case 18:
                     javaclub5.strings.task18.Kata.start(reader);
+                    selectTheme(reader);
                     break;
                 case 19:
                     break;
