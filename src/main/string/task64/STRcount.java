@@ -1,4 +1,4 @@
-package main.basicprogram.task64;
+package main.string.task64;
 
 import main.InterfaceTestClass;
 

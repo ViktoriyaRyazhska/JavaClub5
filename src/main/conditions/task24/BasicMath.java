@@ -1,4 +1,4 @@
-package main.basicprogram.task24;
+package main.conditions.task24;
 import java.util.Scanner;
 import main.InterfaceTestClass;
 

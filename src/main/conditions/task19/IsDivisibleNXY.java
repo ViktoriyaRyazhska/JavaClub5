@@ -1,4 +1,4 @@
-package main.basicprogram.task19;
+package main.conditions.task19;
 
 import main.InterfaceTestClass;
 

@@ -1,10 +1,10 @@
-package main.basicprogram.task29;
+package main.conditions.task29;
 
 import main.InterfaceTestClass;
 
 import java.util.Scanner;
 
-public class switchItUp implements InterfaceTestClass {
+public class SwitchItUp implements InterfaceTestClass {
     Scanner myObj = new Scanner(System.in);
     public static String switchItUp(int number)
     {

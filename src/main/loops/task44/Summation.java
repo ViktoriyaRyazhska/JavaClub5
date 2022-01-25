@@ -1,4 +1,4 @@
-package main.basicprogram.task44;
+package main.loops.task44;
 
 import main.InterfaceTestClass;
 

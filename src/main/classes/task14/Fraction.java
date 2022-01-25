@@ -1,4 +1,4 @@
-package main.basicprogram.task14;
+package main.classes.task14;
 
 import main.InterfaceTestClass;
 

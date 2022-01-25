@@ -18,6 +18,9 @@ public class Kata implements InterfaceTestClass {
         return min + "-" + max;
     }
 
+
+
+
     @Override
     public void execute() {
         System.out.println("Everybody knows the classic \"half your age plus seven\" " +
