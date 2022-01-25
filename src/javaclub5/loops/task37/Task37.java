@@ -1,8 +1,6 @@
 package javaclub5.loops.task37;
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Task37 {
@@ -22,9 +20,9 @@ public class Task37 {
         return arr;
     }
 
-    public static void main(String[] args) {
+    public static void main(Scanner scanner) {
         try {
-            Scanner scanner = new Scanner(System.in);
+
             System.out.println("Enter the size of array: ");
             int n = scanner.nextInt();
             System.out.print("n=" + n + " --> ");
