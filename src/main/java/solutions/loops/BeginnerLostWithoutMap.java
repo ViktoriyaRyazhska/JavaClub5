@@ -8,6 +8,8 @@ import java.util.Scanner;
 
 public class BeginnerLostWithoutMap implements Executable {
     public static int[] map(int[] arr) {
+
+        if(arr==null) throw new IllegalArgumentException("The array is null");
         return Arrays.stream(arr).map(x -> x * 2).toArray();
     }
 
