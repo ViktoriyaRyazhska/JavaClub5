@@ -42,6 +42,10 @@ public class Runner {
             try {
                 System.out.println("You'll take?");
                 number =  Integer.parseInt(reader.readLine());
+                if (number > 3 || number < 1) {
+                    System.out.println("Wrong input");
+                    continue;
+                }
                 sticks -= number;
                 System.out.printf("%d sticks left in game \n", sticks);
                 number = makeMove(sticks);
