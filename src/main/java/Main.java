@@ -1,7 +1,8 @@
+import five.*;
 import four.*;
 import one.*;
 import two.*;
-import five.*;
+import three.*;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -38,6 +39,7 @@ public class Main {
         switch (taskNumber) {
             case 1 -> Task01.task01(reader);
             case 2 -> Task02.task02(reader);
+            case 3 -> Task03.task03(reader);
             case 4 -> Task04.task04(reader);
             case 5 -> Task05.task05(reader);
             case 6 -> Task06.task06(reader);
