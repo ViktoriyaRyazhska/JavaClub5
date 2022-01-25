@@ -8,7 +8,8 @@ public class Task27 {
         int left = cap - on;
         String put = Integer.toString(left);
         String waitAll = Integer.toString(wait);
-        return (wait == cap - on || wait < cap - on) ? "He can fit all " + waitAll + " passengers" : "He can't fit " + put + " of the " + waitAll + " waiting";
+        return (wait == cap - on || wait < cap - on) ? "He can fit all " + waitAll + " passengers" :
+                "He can fit " + put + " of the " + waitAll + " waiting";
     }
 
     public static void task27(BufferedReader reader) {

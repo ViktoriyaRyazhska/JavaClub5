@@ -6,10 +6,12 @@ import java.io.InputStreamReader;
 public class Task11 {
     public static String weatherInfo(int temp) {
         double tempInCelsius = (temp - 32) * 5/9.0;
-        if (tempInCelsius < 0)
-            return (tempInCelsius + " is freezing temperature");
+        double res = Math.round(tempInCelsius);
+
+        if (res < 0)
+            return (res + " is freezing temperature");
         else
-            return (tempInCelsius + " is above freezing temperature");
+            return (res + " is above freezing temperature");
     }
 
     public static void task11(BufferedReader reader) {

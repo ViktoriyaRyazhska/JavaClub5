@@ -8,6 +8,7 @@ public class Task16 {
     public static class Fighter {
         public String name;
         public int health, damagePerAttack;
+
         public Fighter(String name, int health, int damagePerAttack) {
             this.name = name;
             this.health = health;
@@ -16,7 +17,7 @@ public class Task16 {
     }
 
     public static String declareWinner(Fighter fighter1, Fighter fighter2, String firstAttacker) {
-        if(Objects.equals(fighter1.name, firstAttacker)) {
+        if (Objects.equals(fighter1.name, firstAttacker)) {
             Fighter tmpFighter = fighter2;
             fighter2 = fighter1;
             fighter1 = tmpFighter;
@@ -28,6 +29,8 @@ public class Task16 {
             fighter2.health -= fighter1.damagePerAttack;
             if (fighter2.health <= 0)
                 return fighter1.name;
+            System.out.println("Health " + fighter1.name + " : " + fighter1.health);
+            System.out.println("Health " + fighter2.name + " : " + fighter2.health);
         }
     }
 
