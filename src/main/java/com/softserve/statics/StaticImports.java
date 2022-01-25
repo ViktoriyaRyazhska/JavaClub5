@@ -46,5 +46,21 @@ public class StaticImports {
         System.out.println("Task 9 is starting");
         System.out.println("Enter number to get negative:");
     }
+    //Conditions Task9
+    public static void start9TaskConditions(){
+        System.out.println("Task 9 is starting");
+        System.out.println("You need to choose. If true -> enter 1, If false - 2");
+    }
+    //Conditions Task10
+    public static void start10TaskConditions(){
+        System.out.println("Task 10 has started!");
+        System.out.println("Bob is working as a bus driver.");
+        System.out.println(" He wants you to write a simple program telling him if he will be able to fit all the passengers.");
+    }
+    //Loop task9
+    public static void start9TaskLoop(){
+        System.out.println("Task 9 Starts now!");
+        System.out.println("Enter size of array:");
+    }
 
 }
