@@ -1,4 +1,4 @@
-package test.string.task71;
+package test.collections.task71;
 
 import main.collections.task71.BugFixes;
 import main.string.task66.CharacterRecognition;
