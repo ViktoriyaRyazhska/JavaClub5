@@ -63,7 +63,7 @@ public class MenuCommands {
         options.put("Alternating case",new AlternatingCase());
         options.put("Remove even numbers",new FilteringBugFixing());
         options.put("Replace all dots", new ReplaceAllDots());
-        options.put("Nunber to string" , new NumberToString());
+        options.put("Number to string" , new NumberToString());
         options.put("Reversed sequence", new ReversedSequence());
         options.put("My head is in the wrong end", new MyHeadIsInTheWrongEnd());
         options.put("Gap in primes", new GapInPrimes());

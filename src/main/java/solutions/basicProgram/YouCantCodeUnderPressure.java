@@ -11,7 +11,7 @@ public class YouCantCodeUnderPressure implements Executable {
 
         int i = Helper.getInt(2147483647/2);
         i = multiply(i);
-        System.out.println(i);
+        System.out.println("Result is: " + i);
     }
 
     public int multiply(int i){
