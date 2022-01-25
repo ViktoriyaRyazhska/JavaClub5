@@ -15,7 +15,7 @@ public class Task4 extends ReadConsole {
 
             try {
                 name = br.readLine();
-                System.out.println("Hello," + greet(name));
+                System.out.println(greet(name));
             } catch (IOException e) {
                 e.printStackTrace();
                 Task4.main(args);
