@@ -23,7 +23,7 @@ public class Runner {
      *
      */
     public static void start(BufferedReader reader) {
-        System.out.println(" Input number ");
+        System.out.println("Input number from 0 till 9, and i'll return it in words");
         try {
             int number = Integer.parseInt(reader.readLine());
             System.out.println("The result will be: " + switchItUp(number));
