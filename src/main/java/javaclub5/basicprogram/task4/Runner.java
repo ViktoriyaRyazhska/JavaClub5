@@ -41,7 +41,12 @@ public class Runner {
             int wallSize = Integer.parseInt(reader.readLine());
             System.out.println("Input pixelSize");
             int pixelSize = Integer.parseInt(reader.readLine());
-            System.out.println(is_divisible(wallSize, pixelSize));
+            if (is_divisible(wallSize, pixelSize)) {
+                System.out.println("you can fit an exact number of pixels on the wall");
+            }
+            else {
+                System.out.println("you can't fit an exact number of pixels on the wall");
+            }
         } catch (IOException e) {
             System.out.println("Wrong input");
         }
