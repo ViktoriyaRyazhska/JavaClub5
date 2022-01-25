@@ -18,7 +18,7 @@ public class GrassHopper {
         start(reader);
     }
 
-    private static void start(BufferedReader reader) {
+    public static void start(BufferedReader reader) {
         System.out.println("Input temperature in Fahrenheit");
         try {
             int fahrenheitTemperature = Integer.parseInt(reader.readLine());
