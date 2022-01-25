@@ -41,13 +41,11 @@ public final class BasicProgramSelection {
                     selectTheme(reader);
                     break;
                 case 5:
-                    System.out.println("Not done yet");
-                    //javaclub5.basicprogram.task5.Runner.start(reader);
+                    javaclub5.basicprogram.task5.Runner.start(reader);
                     selectTheme(reader);
                     break;
                 case 6:
-                    System.out.println("Not done yet");
-                    //javaclub5.basicprogram.task6.Runner.start(reader);
+                    javaclub5.basicprogram.task6.Runner.start(reader);
                     selectTheme(reader);
                     break;
                 case 7:
