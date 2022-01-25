@@ -15,6 +15,7 @@ public class Menu {
             Helper.menuOptionPrint( options.getOptions() );
             String option = Helper.getOptionStr( options.getOptions());
             options.getOptions().get( option ).execute();
+            Helper.promptEnterKey();
         }
     }
 }
