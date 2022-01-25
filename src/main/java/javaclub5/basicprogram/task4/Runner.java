@@ -2,7 +2,6 @@ package javaclub5.basicprogram.task4;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 /**
  *
