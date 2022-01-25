@@ -43,7 +43,7 @@ public class MainClass extends ReadConsole {
                     Collections.main(args);
                     break;
 
-                case "8":
+                case "0":
                     System.out.println("program completion ...");
                     System.exit(0);
                     break;
@@ -67,7 +67,7 @@ public class MainClass extends ReadConsole {
         System.out.println("5" + "  ==>OOP");
         System.out.println("6" + "  ==>String");
         System.out.println("7" + "  ==>Collections");
-        System.out.println("8" + "  ==>Exit");
+        System.out.println("0" + "  ==>Exit");
     }
 
 }
