@@ -5,6 +5,12 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * GrassHooper
+ *
+ * @author Mysakovych Maksym
+ */
+
 public class GrassHopper {
 
     public static void main(String[] args) {
@@ -16,7 +22,7 @@ public class GrassHopper {
         System.out.println("Input temperature in Fahrenheit");
         try {
             int fahrenheitTemperature = Integer.parseInt(reader.readLine());
-            System.out.printf(weatherInfo(fahrenheitTemperature));
+            System.out.print(weatherInfo(fahrenheitTemperature));
 
         } catch (IOException e) {
             System.out.println("Wrong input");
