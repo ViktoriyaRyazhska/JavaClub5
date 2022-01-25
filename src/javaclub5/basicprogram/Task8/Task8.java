@@ -8,7 +8,7 @@ public class Task8 {
         System.out.println("Enter a year: ");
         try {
             int year = Integer.parseInt(scanner.nextLine());
-            defineCentury(year);
+            System.out.println("Century of a year " + year + " is " + defineCentury(year));
 
         } catch (NumberFormatException e) {
             e.printStackTrace();
@@ -17,16 +17,17 @@ public class Task8 {
 
     }
 
-    public static void defineCentury(int a) {
+    public static int defineCentury(int a) {
         if (a <= 100) {
-            System.out.println("Century of a year " + a + " is " + 1);
+            a = 1;
         } else if (a > 100) {
             if (a % 100 == 0) {
-                System.out.println("Century of a year " + a + " is " + a / 100);
+                a = a / 100;
             } else if (a % 100 != 0) {
-                System.out.println("Century of a year " + a + " is " + (a / 100 + 1));
+                a = a / 100 + 1;
             }
         }
+        return a;
     }
 }
 
