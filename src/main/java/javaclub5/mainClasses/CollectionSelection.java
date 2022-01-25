@@ -9,7 +9,7 @@ import static javaclub5.mainClasses.MainProgram.selectTheme;
  *
  * @author Rostyslav Ros
  */
-public class CollectionSelection {
+public final class CollectionSelection {
     /**
      * Method for selection of the Task
      * @param reader BufferedReader
@@ -25,17 +25,20 @@ public class CollectionSelection {
                 case 1:
                     System.out.println("Not done yet");
                     //javaclub5.collections.task1.Runner.start();
+                    selectTheme(reader);
                     break;
                 case 2:
                     System.out.println("Not done yet");
                     //javaclub5.conditions.task2.Runner.start(reader);
+                    selectTheme(reader);
                     break;
                 case 3:
                     javaclub5.collections.task3.Runner.start();
+                    selectTheme(reader);
                     break;
                 case 4:
-                    System.out.println("Not done yet");
-                    //javaclub5.collections.task4.Runner.start(reader);
+                    javaclub5.collections.task4.Dictionary.start(reader);
+                    selectTheme(reader);
                     break;
                 case 12:
                     break;

@@ -1,6 +1,8 @@
 package javaclub5.collections.task4;
 
 import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 
 
@@ -11,24 +13,32 @@ import java.util.HashMap;
  */
 
 public class Dictionary {
-    public static void start(BufferedReader br) {
-        System.out.println("Enter the word: ");
-        Dictionary d = new Dictionary();
-        d.newEntry(d.look("Apple"),"A fruit that grows on trees");
-        d.look("Banana");
-
-    }
-    private final HashMap<String, String> map;
+    public HashMap<String, String> map;
 
     public Dictionary() {
-        map = new HashMap<>();
+        this.map = new HashMap<>();
+    }
+
+    public static void start(BufferedReader br) {
+        System.out.println("Enter the word: ");
+
+        try {
+            String word = br.readLine();
+            Dictionary d = new Dictionary();
+            d.newEntry("Apple","A fruit that grows on trees");
+            System.out.println(d.look(word));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
     }
 
     public void newEntry(String key, String value) {
-        map.put(key, value);
+        map.put(key.toLowerCase(), value);
     }
 
     public String look(String key) {
-        return map.getOrDefault(key, "Cant find entry for " + key);
+        return map.getOrDefault(key.toLowerCase(), "Cant find entry for " + key);
     }
 }
