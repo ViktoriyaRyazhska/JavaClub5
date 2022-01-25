@@ -10,7 +10,6 @@ public class OppositeNumbers implements Executable {
 
     public static int opposite(int number)
     {
-
         return number* (-1);
     }
 
