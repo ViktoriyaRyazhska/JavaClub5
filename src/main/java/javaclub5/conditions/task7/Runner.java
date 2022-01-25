@@ -12,10 +12,6 @@ import java.io.InputStreamReader;
  */
 
 public class Runner {
-    public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        start(br);
-    }
 
     public static void start(BufferedReader br) {
         try {

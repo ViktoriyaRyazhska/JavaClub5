@@ -14,11 +14,6 @@ import java.io.InputStreamReader;
 
 
 public class Runner {
-    public static void main(String[] args) {
-
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        start(reader);
-    }
 
     /**
      * calculate the volume of a cuboid with three values:
@@ -49,7 +44,6 @@ public class Runner {
             System.out.printf("Volume of cuboid wil be %.2f", volume);
         } catch (IOException e) {
             System.out.println("Wrong input");
-            e.printStackTrace();
         }
     }
 }

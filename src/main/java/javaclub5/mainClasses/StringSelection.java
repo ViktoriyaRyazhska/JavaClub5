@@ -4,7 +4,17 @@ import java.io.BufferedReader;
 
 import static javaclub5.mainClasses.MainProgram.selectTheme;
 
+/**
+ * Class for selection tasks from Spring theme
+ *
+ * @author Rostyslav Ros
+ */
 public class StringSelection {
+
+    /**
+     * Method for selection of the Task
+     * @param reader BufferedReader
+     */
     public static void selectStrings(BufferedReader reader) {
         System.out.println("Select number of Task (1-18) \n 0. Main menu \n 19. exit");
         try {
@@ -44,16 +54,13 @@ public class StringSelection {
                     //javaclub5.strings.task9.Runner.start();
                     break;
                 case 10:
-                    System.out.println("Not done yet");
-                    //javaclub5.strings.task10.Runner.start(reader);
+                    javaclub5.strings.task10.FakeBinary.start(reader);
                     break;
                 case 11:
-                    System.out.println("Not done yet");
-                    //javaclub5.strings.task11.Runner.start(reader);
+                    javaclub5.strings.task11.CharProblem.start(reader);
                     break;
                 case 12:
-                    System.out.println("Not done yet");
-                    //javaclub5.strings.task12.Runner.start(reader);
+                    javaclub5.strings.task12.GrassHopper.start(reader);
                     break;
                 case 13:
                     System.out.println("Not done yet");
@@ -75,18 +82,19 @@ public class StringSelection {
                     javaclub5.strings.task17.Runner.start(reader);
                     break;
                 case 18:
-                    System.out.println("Not done yet");
-                    //javaclub5.strings.task18.Runner.start(reader);
+                    javaclub5.strings.task18.Kata.start(reader);
                     break;
                 case 19:
                     break;
-                default:
+                default:{
                     System.out.println("Wrong input");
+                    selectStrings(reader);
+                }
             }
         }
         catch (Exception e) {
             System.out.println("Wrong input");
-            selectTheme(reader);
+            selectStrings(reader);
         }
     }
 }

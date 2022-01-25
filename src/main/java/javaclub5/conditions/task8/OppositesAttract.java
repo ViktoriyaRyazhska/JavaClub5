@@ -17,19 +17,14 @@ import java.util.Scanner;
  */
 public class OppositesAttract {
 
-    public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        start(br);
-    }
-
     public static void start(BufferedReader br) {
         System.out.println("In this game if you have even number of petals, you are not in love," +
                 " but if odd than you are.");
         System.out.println("Girl enters her amount of petals: ");
         try {
-            int flower1 = br.read();
+            int flower1 = Integer.parseInt(br.readLine());
             System.out.println("Boy enters his amount of petals: ");
-            int flower2 = br.read();
+            int flower2 = Integer.parseInt(br.readLine());
 
             if (!isLove(flower1, flower2)) {
                 System.out.println("You are not in Love!");

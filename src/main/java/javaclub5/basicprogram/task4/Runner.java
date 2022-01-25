@@ -2,7 +2,6 @@ package javaclub5.basicprogram.task4;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 /**
  *
@@ -21,10 +20,6 @@ import java.io.InputStreamReader;
  */
 
 public class Runner {
-    public static void main(String[] args) {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        start(reader);
-    }
     /**
      * calculate the volume of a cuboid with three values:
      * @param wallSize - size of the wall in millimeters,
@@ -46,10 +41,14 @@ public class Runner {
             int wallSize = Integer.parseInt(reader.readLine());
             System.out.println("Input pixelSize");
             int pixelSize = Integer.parseInt(reader.readLine());
-            System.out.println(is_divisible(wallSize, pixelSize));
+            if (is_divisible(wallSize, pixelSize)) {
+                System.out.println("you can fit an exact number of pixels on the wall");
+            }
+            else {
+                System.out.println("you can't fit an exact number of pixels on the wall");
+            }
         } catch (IOException e) {
             System.out.println("Wrong input");
-            e.printStackTrace();
         }
     }
 

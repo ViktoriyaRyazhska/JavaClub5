@@ -17,24 +17,19 @@ import java.io.InputStreamReader;
  */
 
 public class Runner {
-    public static void main(String[] args) {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        start(reader);
-    }
 
     /**
      * main method of Class
      *
      */
     public static void start(BufferedReader reader) {
-        System.out.println(" Input number ");
+        System.out.println("Input number from 0 till 9, and i'll return it in words");
         try {
             int number = Integer.parseInt(reader.readLine());
             System.out.println("The result will be: " + switchItUp(number));
 
         } catch (IOException e) {
             System.out.println("Wrong input");
-            e.printStackTrace();
         }
     }
 

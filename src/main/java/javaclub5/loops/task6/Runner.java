@@ -16,16 +16,13 @@ import java.util.Arrays;
  */
 
 public class Runner {
-    public static void main(String[] args) {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        start(reader);
-    }
 
     /**
      * main method of Class
      *
      */
     public static void start(BufferedReader reader) {
+        System.out.println("Build an array of integers from n to 1 where n>0");
         System.out.println(" Input number n");
         try {
             int number = Integer.parseInt(reader.readLine());
@@ -34,7 +31,6 @@ public class Runner {
             System.out.println(Arrays.toString(result));
         } catch (IOException e) {
             System.out.println("Wrong input");
-            e.printStackTrace();
         }
     }
 
