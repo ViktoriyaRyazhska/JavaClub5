@@ -50,7 +50,7 @@ public class MenuCommands {
         options.put("Find the position", new FindThePosition());
         options.put("Repeating the string", new StringRepeat());
         options.put("Count sheep", new SheepCounter());
-        options.put("Count positive numbers", new SumOfPozitive());
+        options.put("Count positive numbers", new SumOfPositive());
         options.put("Grasshopper summation", new GrassshoperSummation());
         options.put("Triple trouble 2 ", new TripleTrouble2());
         options.put("Opposite number ", new OppositeNumbers());

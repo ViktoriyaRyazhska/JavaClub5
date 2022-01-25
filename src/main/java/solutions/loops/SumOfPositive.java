@@ -6,11 +6,11 @@ import solutions.Executable;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class SumOfPozitive implements Executable {
+public class SumOfPositive implements Executable {
     int[] arr;
 
     public static int sum(int[] arr){
-
+        if(arr==null) throw new IllegalArgumentException("The array is null");
         return Arrays.stream(arr).filter(x->x>=0).sum();
     }
 
