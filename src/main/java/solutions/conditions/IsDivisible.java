@@ -8,6 +8,11 @@ import java.util.Scanner;
 public class IsDivisible implements Executable {
     public static boolean isDivisible(long n, long x, long y) {
         // your code
+        if(x==0 || y ==0)
+        {
+            throw new ArithmeticException("Can't be devided by 0");
+
+        }
         return n % x == 0 && n % y == 0;
     }
 
