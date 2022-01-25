@@ -3,21 +3,22 @@ package main.java.com.softserve.basicprogram;
 import main.java.com.softserve.MainClass;
 import main.java.com.softserve.ReadConsole;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.math.BigInteger;
 
 public class Task1 extends ReadConsole {
 
+    static int i;
     static BigInteger b;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         message1();
-        if (isBigInteger(br)) {
-            System.out.println("Double Integer = " + (b.add(b)));
 
-        } else {
+        try {
+            b = BigInteger.valueOf(Long.parseLong(br.readLine()));
+            System.out.println("Double the number = " + doubleTheNumber(b));
+        } catch (NumberFormatException | IOException e) {
             System.out.println("==> It's not an integer! Try again! <==");
             Task1.main(args);
         }
@@ -44,7 +45,7 @@ public class Task1 extends ReadConsole {
     }
 
     public static void message1() {
-        System.out.println("\nTask is starting!");
+        System.out.println("\nTask1 is starting!");
         System.out.println("You need to enter an integer and double it !!!");
         System.out.println("Please input integer number: ");
     }
@@ -54,13 +55,8 @@ public class Task1 extends ReadConsole {
         System.out.println("Try again  => input 2 ");
     }
 
-    public static boolean isBigInteger(BufferedReader br) {
-        try {
-            b = new BigInteger(br.readLine());
-            return true;
-        } catch (NumberFormatException | IOException e) {
-            return false;
-        }
+    public static BigInteger doubleTheNumber(BigInteger b) {
+        return b.add(b);
     }
 
 }
