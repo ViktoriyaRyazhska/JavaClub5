@@ -2,63 +2,77 @@ package main.java.com.softserve.statics;
 
 public class StaticImports {
     //for all Tasks
-    public static void backToMenuOrRetry(){
+    public static void backToMenuOrRetry() {
         System.out.println("Back to main menu => input 1 ");
         System.out.println("Try again  => input 2 ");
 
     }
 
     //Strings 14Task
-    public static void start14TaskStrings(){
+    public static void start14TaskStrings() {
         System.out.println("Task 14 runs!");
         System.out.println("Enter string to count same letters:");
     }
-    public static void toDoIn14Strings(){
+
+    public static void toDoIn14Strings() {
         System.out.println("Enter a symbol to find duplicates:");
     }
 
     //Strings 16Task
-    public static void start16TaskStrings(){
+    public static void start16TaskStrings() {
         System.out.println("Task 16 Runs from now");
         System.out.println("Enter a string to change some letters in it:");
         System.out.println("Enter only with high register");
     }
+
     //Collections 3Task
-    public static void start3TaskCollections(){
+    public static void start3TaskCollections() {
         System.out.println(" ");
         System.out.println("Task 3 runs!");
         System.out.println("Enter number of digits u want to add: ");
     }
 
+    //BasicProgram Task1
+    public static void start1TaskBasicProgram() {
+        System.out.println("\nTask 1 is starting");
+        System.out.println("You need to enter an integer and double it !!!");
+        System.out.println("Please input integer number: ");
+    }
+
     //BasicProgram Task7
-    public static void start7TaskBasicProgram(){
+    public static void start7TaskBasicProgram() {
         System.out.println("Task 7 is starting");
         System.out.println("This function shows the time from midnight in milliseconds");
         System.out.println("Enter hours:");
     }
+
     //BasicProgram Task8
-    public static void start8TaskBasicProgram(){
+    public static void start8TaskBasicProgram() {
         System.out.println("Task 8 is starting");
         System.out.println("Enter the year to find out what this century is ;)");
     }
+
     //BasicProgram Task9
-    public static void start9TaskBasicProgram(){
+    public static void start9TaskBasicProgram() {
         System.out.println("Task 9 is starting");
         System.out.println("Enter number to get negative:");
     }
+
     //Conditions Task9
-    public static void start9TaskConditions(){
+    public static void start9TaskConditions() {
         System.out.println("Task 9 is starting");
         System.out.println("You need to choose. If true -> enter 1, If false - 2");
     }
+
     //Conditions Task10
-    public static void start10TaskConditions(){
+    public static void start10TaskConditions() {
         System.out.println("Task 10 has started!");
         System.out.println("Bob is working as a bus driver.");
         System.out.println(" He wants you to write a simple program telling him if he will be able to fit all the passengers.");
     }
+
     //Loop task9
-    public static void start9TaskLoop(){
+    public static void start9TaskLoop() {
         System.out.println("Task 9 Starts now!");
         System.out.println("Enter size of array:");
     }
