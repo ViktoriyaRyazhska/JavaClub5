@@ -6,14 +6,14 @@ import main.java.com.softserve.ReadConsole;
 import java.io.IOException;
 
 import static main.java.com.softserve.statics.StaticImports.backToMenuOrRetry;
-import static main.java.com.softserve.statics.StaticImports.start2TaskConditions;
 
 public class Task2 extends ReadConsole {
     static int n;
     static int x;
     static int y;
     public static void main(String[] args) {
-        start2TaskConditions();
+        System.out.println("Task 2 starts now!");
+        System.out.println("Enter general number and two numbers to see if we can divide it");
         try {
             n = Integer.parseInt(br.readLine());
             x = Integer.parseInt(br.readLine());
