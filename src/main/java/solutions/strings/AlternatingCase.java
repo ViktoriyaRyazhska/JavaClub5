@@ -8,6 +8,8 @@ import java.util.Scanner;
 public class AlternatingCase implements Executable {
     public static String toAlternativeString(String string) {
         // your code here!
+        if(string==null) throw new IllegalArgumentException("The str is null");
+
         char[] arr = string.toCharArray();
         for (int i = 0; i < string.length(); i++) {
             if (Character.isLowerCase(arr[i])) {
@@ -21,7 +23,7 @@ public class AlternatingCase implements Executable {
 
     @Override
     public void execute() {
-        String str = Helper.getLine();;
+        String str = Helper.getLine();
         System.out.println(toAlternativeString(str));
     }
 }
