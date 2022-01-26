@@ -1,10 +1,6 @@
 package program.helper;
 
-import program.MenuCommands;
-import solutions.Executable;
-
 import java.util.ArrayList;
-import java.util.Map;
 import java.util.Scanner;
 
 public class Helper {
@@ -66,16 +62,16 @@ public class Helper {
         System.out.println( str );
     }
 
-    public static String getOptionStr(MenuCommands options) {
+    public static String getOptionStr(ArrayList<String> options) {
         while (true) {
             String str = scanner.nextLine( );
-            if (options.getOptions().containsKey( str )) return str;
+            if (options.contains( str )) return str;
 
             int i;
             try {
                 i = Integer.parseInt(str);
-                if ( i > 0 && i <= options.getPosition().size()) {
-                    return options.getPosition().get(i-1);
+                if ( i > 0 && i <= options.size()) {
+                    return options.get(i-1);
                 }
             } catch (NumberFormatException ignored){
 
