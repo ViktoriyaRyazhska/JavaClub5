@@ -13,7 +13,7 @@ public class Task4 extends ReadConsole {
     public static void main(String[] args) throws IOException {
             start4TaskBasicProgram();
 
-            try {
+             try {
                 name = br.readLine();
                 System.out.println(greet(name));
             } catch (IOException e) {
@@ -21,6 +21,10 @@ public class Task4 extends ReadConsole {
                 Task4.main(args);
             }
     }
-    public static String greet(String name){return String.format("Hello, %s!", name);
+    public static String greet(String name) {
+        if (name.equals("Johnny")) {
+            return "Hello, my love!";
+        }
+        return String.format("Hello, %s!", name);
     }
 }

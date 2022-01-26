@@ -27,6 +27,10 @@ public class BasicProgram extends ReadConsole {
                     Task4.main(args);
                     break;
 
+                case "5":
+                    Task5.main(args);
+                    break;
+
                 case "7":
                     Task7.main(args);
                     break;

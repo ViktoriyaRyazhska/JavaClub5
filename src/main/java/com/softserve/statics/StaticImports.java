@@ -52,6 +52,13 @@ public class StaticImports {
         System.out.println("Enter your name:");
     }
 
+    //BasicProgram Task5
+    public static void start5TaskBasicProgram() {
+        System.out.println("Task 5 is starting");
+        System.out.println("This function tell you whether a wall of a certain length can exactly fit an integer number of pixels of a certain length.");
+        System.out.println("Enter size of the wall:");
+    }
+
     //BasicProgram Task7
     public static void start7TaskBasicProgram() {
         System.out.println("Task 7 is starting");
