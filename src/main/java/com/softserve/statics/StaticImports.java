@@ -39,6 +39,12 @@ public class StaticImports {
         System.out.println("Please input integer number: ");
     }
 
+    //BasicProgram Task2
+    public static void start2TaskBasicProgram() {
+        System.out.println("\nTask 2 is starting");
+        System.out.println("You need  implement a function which multiplies two numbers !!!");
+        System.out.println("Please input two number: ");
+    }
     //BasicProgram Task4
     public static void start4TaskBasicProgram() {
         System.out.println("Task 4 is starting");
