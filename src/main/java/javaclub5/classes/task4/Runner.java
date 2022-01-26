@@ -115,11 +115,11 @@ public class Runner {
                     sb.append(s);
                 }
             }
-            return sb.toString();
+            String result = sb.toString();
+            result = result.replaceAll("\r", "");
+            return result;
         }
     }
-
-
 }
 
 

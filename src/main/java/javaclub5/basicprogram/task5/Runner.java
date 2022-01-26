@@ -23,7 +23,7 @@ public class Runner {
         System.out.println("Enter user name");
         try {
             String name = reader.readLine();
-            System.out.println("Result" + greet(name));
+            System.out.println("Result: " + greet(name));
         } catch (IOException e) {
             System.out.println("Wrong input");
             System.out.println(e.getMessage());

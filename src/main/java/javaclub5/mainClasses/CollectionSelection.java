@@ -28,8 +28,7 @@ public final class CollectionSelection {
                     selectTheme(reader);
                     break;
                 case 2:
-                    System.out.println("Not done yet");
-                    //javaclub5.conditions.task2.Runner.start(reader);
+                    javaclub5.collections.task2.Runner.start(reader);
                     selectTheme(reader);
                     break;
                 case 3:
