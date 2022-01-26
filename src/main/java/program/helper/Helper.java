@@ -124,4 +124,14 @@ public class Helper {
         }
         return i;
     }
+
+    public static String getWord() {
+        String s = "";
+        while (true){
+            s = getLine();
+            if (!s.equals("") && !s.contains(" ")){break;}
+            System.out.println("Enter not null line");
+        }
+        return s;
+    }
 }
