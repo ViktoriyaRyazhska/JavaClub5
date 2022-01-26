@@ -140,5 +140,10 @@ public class StaticImports {
         System.out.println("If your choice is TRUE - Enter 1");
         System.out.println("Ef your choice if FALSE - Enter 2");
     }
+    //Task 1 Loops
+    public static void start1TaskLoops(){
+        System.out.println("Task 1 Starts now!");
+        System.out.println("Here u need to add some string to repeat it:");
+    }
 
 }
