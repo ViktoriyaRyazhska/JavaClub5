@@ -1,30 +1,56 @@
 package main.java.com.softserve.basicprogram;
 
-import main.java.com.softserve.ReadConsole;
+        import main.java.com.softserve.MainClass;
+        import main.java.com.softserve.ReadConsole;
 
-import java.io.IOException;
-
-import static main.java.com.softserve.statics.StaticImports.start4TaskBasicProgram;
+        import java.io.IOException;
+        import static main.java.com.softserve.statics.StaticImports.backToMenuOrRetry;
+        import static main.java.com.softserve.statics.StaticImports.start4TaskBasicProgram;
 
 public class Task4 extends ReadConsole {
 
-       static String name;
+    static int wallLength;
+    static int pixelSize;
 
     public static void main(String[] args) throws IOException {
-            start4TaskBasicProgram();
+        start4TaskBasicProgram();
 
-             try {
-                name = br.readLine();
-                System.out.println(greet(name));
-            } catch (IOException e) {
-                e.printStackTrace();
-                Task4.main(args);
+        try {
+            wallLength = Integer.parseInt(br.readLine());
+            System.out.println("Enter size of pixel:");
+            pixelSize = Integer.parseInt(br.readLine());
+            if (isDivisible(wallLength, pixelSize)) {
+                System.out.println("You can fit an exact number of pixels on the wall");
             }
-    }
-    public static String greet(String name) {
-        if (name.equals("Johnny")) {
-            return "Hello, my love!";
+            else {
+                System.out.println("You can't fit an exact number of pixels on the wall");
+            }
+        } catch (IOException e) {
+            System.out.println("==> Wrong input! Try again! <==");
+            Task4.main(args);
         }
-        return String.format("Hello, %s!", name);
+
+        backToMenuOrRetry();
+        try {
+            switch (br.readLine()) {
+                case "1":
+                    MainClass.main(args);
+                    break;
+
+                case "2":
+                    Task4.main(args);
+                    break;
+
+                default:
+                    System.err.println("You need to do this: put 1 or 2");
+                    System.err.println("Transfer to menu ");
+                    Task4.main(args);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    public static boolean isDivisible(int wallLength, int pixelSize) {
+        return wallLength % pixelSize == 0 ? true : false;
     }
 }

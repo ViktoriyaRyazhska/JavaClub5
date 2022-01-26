@@ -45,18 +45,19 @@ public class StaticImports {
         System.out.println("You need  implement a function which multiplies two numbers !!!");
         System.out.println("Please input two number: ");
     }
+
     //BasicProgram Task4
     public static void start4TaskBasicProgram() {
         System.out.println("Task 4 is starting");
-        System.out.println("This function returns a greeting for a user");
-        System.out.println("Enter your name:");
+        System.out.println("This function tell you whether a wall of a certain length can exactly fit an integer number of pixels of a certain length.");
+        System.out.println("Enter size of the wall:");
     }
 
     //BasicProgram Task5
     public static void start5TaskBasicProgram() {
         System.out.println("Task 5 is starting");
-        System.out.println("This function tell you whether a wall of a certain length can exactly fit an integer number of pixels of a certain length.");
-        System.out.println("Enter size of the wall:");
+        System.out.println("This function returns a greeting for a user");
+        System.out.println("Enter your name:");
     }
 
     //BasicProgram Task7
