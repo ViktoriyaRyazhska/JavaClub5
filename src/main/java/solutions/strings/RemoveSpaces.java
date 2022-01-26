@@ -7,6 +7,8 @@ import java.util.Scanner;
 
 public class RemoveSpaces implements Executable {
     public static String noSpace(final String x) {
+        if(x==null) throw new IllegalArgumentException("The array is null");
+
         return x.replaceAll(" ", "");
     }
 
