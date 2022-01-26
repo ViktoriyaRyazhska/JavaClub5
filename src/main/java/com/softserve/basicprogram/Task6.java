@@ -6,21 +6,21 @@ import main.java.com.softserve.ReadConsole;
 import java.io.IOException;
 
 import static main.java.com.softserve.statics.StaticImports.backToMenuOrRetry;
-import static main.java.com.softserve.statics.StaticImports.start4TaskBasicProgram;
+import static main.java.com.softserve.statics.StaticImports.start6TaskBasicProgram;
 
-public class Task4 extends ReadConsole {
+public class Task6 extends ReadConsole {
 
-       static String name;
+    static int number;
 
     public static void main(String[] args) throws IOException {
-        start4TaskBasicProgram();
+        start6TaskBasicProgram();
 
         try {
-            name = br.readLine();
-            System.out.println(greet(name));
+            number = Integer.parseInt(br.readLine());
+            System.out.println("Result: " + toBinary(number));
         } catch (IOException e) {
             e.printStackTrace();
-            Task4.main(args);
+            Task6.main(args);
         }
 
         backToMenuOrRetry();
@@ -31,18 +31,20 @@ public class Task4 extends ReadConsole {
                     break;
 
                 case "2":
-                    Task4.main(args);
+                    Task6.main(args);
                     break;
 
                 default:
                     System.err.println("You need to do this: put 1 or 2");
                     System.err.println("Transfer to menu ");
-                    Task4.main(args);
+                    Task6.main(args);
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
-    public static String greet(String name){return String.format("Hello, %s!", name);
+    public static int toBinary(int number) {
+        return Integer.parseInt(Integer.toBinaryString(number));
     }
 }

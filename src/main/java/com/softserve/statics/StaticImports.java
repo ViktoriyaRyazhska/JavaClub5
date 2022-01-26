@@ -60,6 +60,13 @@ public class StaticImports {
         System.out.println("Enter your name:");
     }
 
+    //BasicProgram Task6
+    public static void start6TaskBasicProgram() {
+        System.out.println("Task 6 is starting");
+        System.out.println("This function returns your number in a binary format");
+        System.out.println("Enter number:");
+    }
+
     //BasicProgram Task7
     public static void start7TaskBasicProgram() {
         System.out.println("Task 7 is starting");
