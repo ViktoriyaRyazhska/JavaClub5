@@ -23,7 +23,6 @@ import java.util.TreeMap;
 
 public class MenuCommands {
     private final Map<String, Executable> options;
-    private final ArrayList<String> position;
 
     private final ArrayList<String> topics  = new ArrayList<>();
     private final ArrayList<ArrayList<String>>  namesOfSolutions = new ArrayList<>();
@@ -33,15 +32,22 @@ public class MenuCommands {
 
 
     public MenuCommands() {
-        this.position = new ArrayList<>();
         this.options = new TreeMap<>();
 
         topics.add("Basic programs");
         namesOfSolutions.add(new ArrayList<>());
         namesOfSolutions.get(0).add("Beginner series number clock");
+        //сюди всі рішення з basicprograms
         namesOfSolutions.get(0).add("Return to main menu");
 
+        topics.add("Classes");
+        namesOfSolutions.add(new ArrayList<>());
+        //сюди всі рішення з Classes і т.д.
+        namesOfSolutions.get(1).add("Block");
 
+
+
+        topics.add("Exit");
 
 
         options.put("You can't code under pressure", new YouCantCodeUnderPressure());
@@ -91,18 +97,9 @@ public class MenuCommands {
         options.put("MultiplyingTwo" , new MultiplyingTwo());
 
 
-        //Це костиль щоб Ехіт був в кінці і щоб
-        //Можна було звертатися до команд по номеру
-        //Тому добавляти всі опції ЗВЕРХУ!
-        position.addAll(options.keySet());
-        position.add("Exit");
-
         options.put("Exit", new Exit());
     }
 
-    public ArrayList<String> getPosition() {
-        return position;
-    }
 
     public Map<String, Executable> getOptions() {
         return options;
@@ -122,6 +119,7 @@ public class MenuCommands {
 
     public void executeCommand(String command){
 
+        //не трограти має бути саме в такому порядку
         if (options.containsKey(command)) {
             options.get(command).execute();
             Helper.promptEnterKey();
