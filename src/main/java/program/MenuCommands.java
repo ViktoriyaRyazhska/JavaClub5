@@ -1,5 +1,6 @@
 package program;
 
+import program.helper.Helper;
 import solutions.Executable;
 
 import solutions.*;
@@ -24,9 +25,24 @@ public class MenuCommands {
     private final Map<String, Executable> options;
     private final ArrayList<String> position;
 
+    private final ArrayList<String> topics  = new ArrayList<>();
+    private final ArrayList<ArrayList<String>>  namesOfSolutions = new ArrayList<>();
+    private String state = "Menu";
+    private Integer intState = -1;
+
+
+
     public MenuCommands() {
         this.position = new ArrayList<>();
         this.options = new TreeMap<>();
+
+        topics.add("Basic programs");
+        namesOfSolutions.add(new ArrayList<>());
+        namesOfSolutions.get(0).add("Beginner series number clock");
+        namesOfSolutions.get(0).add("Return to main menu");
+
+
+
 
         options.put("You can't code under pressure", new YouCantCodeUnderPressure());
         options.put("Volume of a cuboid", new VolumeOfCuboid());
@@ -78,9 +94,7 @@ public class MenuCommands {
         //Це костиль щоб Ехіт був в кінці і щоб
         //Можна було звертатися до команд по номеру
         //Тому добавляти всі опції ЗВЕРХУ!
-        for (String name: options.keySet()) {
-            position.add(name);
-        }
+        position.addAll(options.keySet());
         position.add("Exit");
 
         options.put("Exit", new Exit());
@@ -92,5 +106,37 @@ public class MenuCommands {
 
     public Map<String, Executable> getOptions() {
         return options;
+    }
+
+    public ArrayList<String> getCommandsList(){
+        if (intState == -1){
+            return topics;
+        } else {
+            return namesOfSolutions.get(intState);
+        }
+    }
+
+    public String getState(){
+        return state;
+    }
+
+    public void executeCommand(String command){
+
+        if (options.containsKey(command)) {
+            options.get(command).execute();
+            Helper.promptEnterKey();
+            return;
+        }
+
+        if (topics.contains(command)) {
+            state = command;
+            intState = topics.indexOf(command);
+            return;
+        }
+
+        if (command.equals("Return to main menu")){
+            state = "Menu";
+            intState = topics.indexOf(command);
+        }
     }
 }
