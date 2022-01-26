@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 
 public class Task65 {
-    public String sortAndStar(String[] s) {
+    public static String sortAndStar(String[] s) {
         return String.join("***", Arrays.stream(s).sorted().findFirst().orElse("").split(""));
     }
 
@@ -16,8 +16,7 @@ public class Task65 {
             System.out.println("Enter string:");
             String nextLine = sc.nextLine();
             String[] str = nextLine.split(" ");
-            Task65 obj = new Task65();
-            System.out.println("First word:" + obj.sortAndStar(str));
+            System.out.println("First word:" +sortAndStar(str));
         } catch (Exception e) {
             System.out.println("Wrong input");
             System.exit(1);

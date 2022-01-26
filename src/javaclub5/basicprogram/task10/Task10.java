@@ -13,11 +13,10 @@ public class Task10 {
         return ((int)min+"-"+(int)max);
     }
     public static void main(Scanner sc) {
-        Task10 obj = new Task10();
         try {
             System.out.println("Enter age");
             int x= sc.nextInt();
-            System.out.println("Your range of dating age:"+obj.datingRange(x));
+            System.out.println("Your range of dating age:"+datingRange(x));
         } catch (Exception e) {
             System.out.println("Wrong input");
         }
