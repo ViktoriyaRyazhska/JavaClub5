@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class task5Test {
+class Task5Test {
     @Test
-    void name() {
+    void greet() {
         Assertions.assertAll(() ->assertEquals("Hello, my love!", Task5.greet("Johnny")),
                              ()-> assertEquals("Hello, Sam!", Task5.greet("Sam")),
                              ()-> assertEquals("Hello, Peter!", Task5.greet("Peter")),
