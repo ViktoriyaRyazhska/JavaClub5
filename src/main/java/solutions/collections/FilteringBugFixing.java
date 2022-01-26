@@ -10,6 +10,8 @@ import static solutions.collections.LoopBugFixing.CreateList;
 public class FilteringBugFixing implements Executable {
     public static List<Integer> filterOddNumber(List<Integer> listOfNumbers)
     {
+        if(listOfNumbers==null) throw new IllegalArgumentException("The list is null");
+
         for (int i = 0; i < listOfNumbers.size(); i++)
         {
             if (listOfNumbers.get(i)%2 == 0)
