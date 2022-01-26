@@ -24,7 +24,7 @@ public class Runner {
 
     }
     public static String CalculateAge(int birth, int yearTo) {
-
+        
         String rez;
         if(yearTo>birth){
             if((yearTo-birth) == 1)

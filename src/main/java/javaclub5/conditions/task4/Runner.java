@@ -10,7 +10,7 @@ public class Runner {
         start(br);
     }
 
-    private static void start(BufferedReader br) {
+    public static void start(BufferedReader br) {
         System.out.println("Enter your salary");
         try {
             int salary = Integer.parseInt(br.readLine());
