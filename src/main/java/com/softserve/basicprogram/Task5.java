@@ -31,13 +31,13 @@ public class Task5 extends ReadConsole {
                     break;
 
                 case "2":
-                    Task4.main(args);
+                    Task5.main(args);
                     break;
 
                 default:
                     System.err.println("You need to do this: put 1 or 2");
                     System.err.println("Transfer to menu ");
-                    Task4.main(args);
+                    Task5.main(args);
             }
         } catch (IOException e) {
             e.printStackTrace();
