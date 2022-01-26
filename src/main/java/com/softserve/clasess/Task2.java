@@ -57,4 +57,5 @@ public class Task2 extends ReadConsole {
     public int plus100(int n) {
         return value + n;
     }
+
 }
