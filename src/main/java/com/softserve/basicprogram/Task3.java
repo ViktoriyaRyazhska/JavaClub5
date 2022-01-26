@@ -1,14 +1,15 @@
 package main.java.com.softserve.basicprogram;
 
+import java.io.IOException;
+
 import main.java.com.softserve.MainClass;
 import main.java.com.softserve.ReadConsole;
-
-import java.io.IOException;
 
 import static main.java.com.softserve.statics.StaticImports.backToMenuOrRetry;
 import static main.java.com.softserve.statics.StaticImports.start3TaskBasicProgram;
 
 public class Task3 extends ReadConsole {
+
     static double length;
     static double width;
     static double height;
@@ -24,7 +25,8 @@ public class Task3 extends ReadConsole {
             System.out.println("==> It's not a Double value! Try again! <==");
             Task3.main(args);
         }
-        System.out.println("You have entered : " + length + " " + width + " " + height);
+
+        System.out.println("You have entered : " + "| l = " + length + " | w = " + width + " | h = " + height + " |");
         System.out.println("Result: " + getVolumeOfCuboid(length, width, height));
 
         backToMenuOrRetry();
@@ -54,6 +56,7 @@ public class Task3 extends ReadConsole {
             return length * width * height;
         } else return 0;
     }
+
 }
 
 
