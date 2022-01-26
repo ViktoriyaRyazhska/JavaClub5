@@ -107,6 +107,7 @@ public class MenuCommands {
         topics.add("Strings");
         namesOfSolutions.add(new ArrayList<>());
         namesOfSolutions.get(6).add("Alternating case");
+        namesOfSolutions.get(6).add("Get initials from name");
         namesOfSolutions.get(6).add("Correct mistakes");
         namesOfSolutions.get(6).add("Find the position");
         namesOfSolutions.get(6).add("Grasshopper");
@@ -173,6 +174,7 @@ public class MenuCommands {
         options.put("Switch it up", new SwitchItUp());
         options.put("Plus 100" , new StaticElectrickery());
         options.put("MultiplyingTwo" , new MultiplyingTwo());
+        options.put("Get initials from name", new AbbreviateATwoWordName());
 
 
         options.put("Exit", new Exit());
