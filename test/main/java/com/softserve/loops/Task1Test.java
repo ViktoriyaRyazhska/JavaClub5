@@ -1,5 +1,6 @@
 package main.java.com.softserve.loops;
 
+import main.java.com.softserve.clasess.loops.Task1;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -8,7 +9,7 @@ class Task1Test {
 
     @Test
     void repeatStr() {
-        assertEquals("aaaa",Task1.repeatStr(4, "a"));
+        assertEquals("aaaa", Task1.repeatStr(4, "a"));
     }
     @Test
     void repeatStr2(){

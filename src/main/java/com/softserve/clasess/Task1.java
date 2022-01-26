@@ -5,20 +5,16 @@ import main.java.com.softserve.ReadConsole;
 
 public class Task1 extends ReadConsole {
 
+    @Getter
+    @Setter
     @NoArgsConstructor
     @AllArgsConstructor
     @ToString
     static
     class EncapsulationDemo {
-        private @Getter
-        @Setter
-        int number;
-        private @Getter
-        @Setter
-        String stringValue;
-        private @Getter
-        @Setter
-        Object anObject;
+        private int number;
+        private String stringValue;
+        private Object anObject;
     }
 
     public static void main(String[] args) {

@@ -1,8 +1,7 @@
-package main.java.com.softserve.loops;
+package main.java.com.softserve.clasess.loops;
 
 import main.java.com.softserve.MainClass;
 import main.java.com.softserve.ReadConsole;
-import main.java.com.softserve.basicprogram.Task1;
 
 import java.io.IOException;
 
