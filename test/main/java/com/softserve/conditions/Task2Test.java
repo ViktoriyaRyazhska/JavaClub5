@@ -10,7 +10,8 @@ class Task2Test {
     void isDivisible() {
         boolean expected = true;
         boolean input = Task2.isDivisible(20,4,5);
-        assertEquals(expected,input);
+      assertEquals(expected,input);
+
     }
     @Test
     void isNotDivisible() {

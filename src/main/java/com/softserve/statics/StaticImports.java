@@ -109,5 +109,10 @@ public class StaticImports {
         System.out.println("Task 1 has started!");
         System.out.println("Enter a number to get opposite");
     }
+    //Task 2 Conditions
+    public static void start2TaskConditions(){
+        System.out.println("Task 2 starts now!");
+        System.out.println("Enter general number and two numbers to see if we can divide it");
+    }
 
 }
