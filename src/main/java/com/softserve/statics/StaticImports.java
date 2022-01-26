@@ -120,5 +120,12 @@ public class StaticImports {
         System.out.println("Enter number to calculate ");
         System.out.println("human years to cat years and dog years");
     }
+    //Task3 Loops
+    public static void start3TaskLoops(){
+        System.out.println("Task 3 Starts now!");
+        System.out.println("All the students come to you and entreat you to calculate their average for them.");
+        System.out.println("Lets start.");
+        System.out.println("How many grades will you enter?");
+    }
 
 }
