@@ -114,5 +114,11 @@ public class StaticImports {
         System.out.println("Task 2 starts now!");
         System.out.println("Enter general number and two numbers to see if we can divide it");
     }
+    //Task 2 Loops
+    public static void start2TaskLoops(){
+        System.out.println("Task 2 runs now!");
+        System.out.println("Enter number to calculate ");
+        System.out.println("human years to cat years and dog years");
+    }
 
 }
