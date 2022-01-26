@@ -44,6 +44,7 @@ public class Task2 extends ReadConsole {
         }
     }
 
+
     public static BigInteger parseNum(BigInteger i) {
         try {
             i = new BigInteger(br.readLine());
