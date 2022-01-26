@@ -145,5 +145,9 @@ public class StaticImports {
         System.out.println("Task 1 Starts now!");
         System.out.println("Here u need to add some string to repeat it:");
     }
-
+    //Task 2 Classes
+    public static void start2classes(){
+        System.out.println("Task 2 starts now!");
+        System.out.println("Enter a number to add +100");
+    }
 }
