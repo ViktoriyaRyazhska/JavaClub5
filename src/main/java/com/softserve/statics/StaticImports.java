@@ -127,5 +127,11 @@ public class StaticImports {
         System.out.println("Lets start.");
         System.out.println("How many grades will you enter?");
     }
+    //Task 3 Conditions
+    public static void start3TaskConditions(){
+        System.out.println("Task 3 Runs now!");
+        System.out.println("If your choice is TRUE - Enter 1");
+        System.out.println("Ef your choice if FALSE - Enter 2");
+    }
 
 }

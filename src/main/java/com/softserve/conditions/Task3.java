@@ -7,15 +7,14 @@ import main.java.com.softserve.basicprogram.Task1;
 import java.io.IOException;
 
 import static main.java.com.softserve.statics.StaticImports.backToMenuOrRetry;
+import static main.java.com.softserve.statics.StaticImports.start3TaskConditions;
 
 public class Task3 extends ReadConsole {
     static int trueOrFalse;
     static boolean choose;
     public static void main(String[] args) {
 
-        System.out.println("Task 3 Runs now!");
-        System.out.println("If your choice is TRUE - Enter 1");
-        System.out.println("Ef your choice if FALSE - Enter 2");
+        start3TaskConditions();
 
         try {
             trueOrFalse = Integer.parseInt(br.readLine());
