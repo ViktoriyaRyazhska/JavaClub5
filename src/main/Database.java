@@ -3,6 +3,7 @@ package main;
 import main.basicprogram.task1.CodeFast;
 import main.basicprogram.task10.Kata;
 import main.basicprogram.task11.GrassHopper;
+import main.basicprogram.task2.Kata3;
 import main.basicprogram.task5.Greeter;
 import main.basicprogram.task6.ParseToBinary;
 import main.classes.task15.Canvas;
@@ -42,7 +43,7 @@ public class Database {
 
     public void programAdder(){
         map.put(1, new CodeFast());
-//        map.put(2, new /* назва класу*/);
+        map.put(2, new Kata3());
 //        map.put(3, new /* назва класу*/);
 //        map.put(4, new /* назва класу*/);
         map.put(5, new Greeter());
