@@ -27,13 +27,13 @@ public class Runner {
     }
     public static List CreateList(int number)
     {
-        List list = new ArrayList();
+        List listS= new ArrayList();
 
         for(int count = 1; count <= number;count++)
         {
-            list.add(count);
+            listS.add(count);
         }
 
-        return list;
+        return listS;
     }
 }
