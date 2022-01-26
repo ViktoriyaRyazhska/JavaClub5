@@ -38,13 +38,32 @@ public class MenuCommands {
         namesOfSolutions.add(new ArrayList<>());
         namesOfSolutions.get(0).add("Beginner series number clock");
         //сюди всі рішення з basicprograms
-        namesOfSolutions.get(0).add("Return to main menu");
 
         topics.add("Classes");
         namesOfSolutions.add(new ArrayList<>());
         //сюди всі рішення з Classes і т.д.
         namesOfSolutions.get(1).add("Block");
 
+        topics.add("Collections");
+        namesOfSolutions.add(new ArrayList<>());
+        namesOfSolutions.get(2).add("Loop bug fixing");
+
+
+        topics.add("Conditions");
+        namesOfSolutions.add(new ArrayList<>());
+        namesOfSolutions.get(3).add("Switch it up");
+
+        topics.add("Loops");
+        namesOfSolutions.add(new ArrayList<>());
+        namesOfSolutions.get(4).add("Switch it up");
+
+        topics.add("OOP");
+        namesOfSolutions.add(new ArrayList<>());
+        namesOfSolutions.get(5).add("Switch it up");
+
+        topics.add("Strings");
+        namesOfSolutions.add(new ArrayList<>());
+        namesOfSolutions.get(6).add("Switch it up");
 
 
         topics.add("Exit");
