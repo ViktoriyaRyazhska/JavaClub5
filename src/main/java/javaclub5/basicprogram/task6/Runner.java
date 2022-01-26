@@ -10,17 +10,19 @@ public class Runner {
         start(reader);
     }
 
-    public static void start(BufferedReader n) {
+    public static void start(BufferedReader br) {
         try {
-            System.out.println("Enter your nuber to convert to binary");
-            int i = Integer.parseInt(n.readLine());
-            System.out.println(Integer.valueOf(Integer.toBinaryString(i)));
-
+            System.out.println("Enter your number to convert to binary");
+            int i = Integer.parseInt(br.readLine());
+            System.out.println("Result: " + toBinary(i));
         } catch (IOException e) {
             System.out.println("Wrong input");
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
 
+    }
+    public static int toBinary(int n) {
+        return Integer.parseInt(Integer.toBinaryString(n));
     }
 
 }
