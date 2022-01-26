@@ -9,6 +9,7 @@ import java.lang.String;
  * Jenny has written a function that returns a greeting for a user.
  * However, she's in love with Johnny, and would like to greet him slightly different.
  * She added a special case to her function, but she made a mistake.
+ *
  * @author Dmytro Savitskyi
  */
 
@@ -20,16 +21,21 @@ public class Runner {
 
     public static void start(BufferedReader reader) {
         System.out.println("Enter user name");
-        try{
+        try {
             String name = reader.readLine();
-            if (name.equals("Johnny")) {
-                System.out.println("Hello, my love!");
-            }
-            else System.out.println("Hello, "+ name);
+            System.out.println("Result" + greet(name));
         } catch (IOException e) {
             System.out.println("Wrong input");
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
+
+    }
+
+    public static String greet(String name) {
+        if (name.equals("Johnny")) {
+            return "Hello, my love!";
+        }
+        return String.format("Hello, %s!", name);
 
     }
 }
