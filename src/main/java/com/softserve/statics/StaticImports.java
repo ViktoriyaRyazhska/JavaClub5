@@ -109,5 +109,29 @@ public class StaticImports {
         System.out.println("Task 1 has started!");
         System.out.println("Enter a number to get opposite");
     }
+    //Task 2 Conditions
+    public static void start2TaskConditions(){
+        System.out.println("Task 2 starts now!");
+        System.out.println("Enter general number and two numbers to see if we can divide it");
+    }
+    //Task 2 Loops
+    public static void start2TaskLoops(){
+        System.out.println("Task 2 runs now!");
+        System.out.println("Enter number to calculate ");
+        System.out.println("human years to cat years and dog years");
+    }
+    //Task3 Loops
+    public static void start3TaskLoops(){
+        System.out.println("Task 3 Starts now!");
+        System.out.println("All the students come to you and entreat you to calculate their average for them.");
+        System.out.println("Lets start.");
+        System.out.println("How many grades will you enter?");
+    }
+    //Task 3 Conditions
+    public static void start3TaskConditions(){
+        System.out.println("Task 3 Runs now!");
+        System.out.println("If your choice is TRUE - Enter 1");
+        System.out.println("Ef your choice if FALSE - Enter 2");
+    }
 
 }
