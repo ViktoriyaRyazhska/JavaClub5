@@ -10,9 +10,62 @@ public enum Dih4 {
     REFLECT_HORIZONTAL,
     REFLECT_REVERSE_DIAGONAL;
 
-    public static Dih4 then(Dih4 dih4) {
+    public Dih4 then(Dih4 dih4) {
+        switch (this) {
+            case IDENTITY: {
+                switch (dih4) {
+                    case REFLECT_FORWARD_DIAGONAL: {
+                        return REFLECT_FORWARD_DIAGONAL;
+                    }
+                    case ROTATE_90_ANTICLOCKWISE: {
+                        return ROTATE_90_ANTICLOCKWISE;
+                    }
+                    case ROTATE_180: {
+                        return ROTATE_180;
+                    }
+                    case ROTATE_90_CLOCKWISE: {
+                        return ROTATE_90_CLOCKWISE;
+                    }
+                    case REFLECT_VERTICAL: {
+                        return REFLECT_VERTICAL;
+                    }
+                    case IDENTITY: {
+                        return IDENTITY;
+                    }
+                    case REFLECT_HORIZONTAL: {
+                        return REFLECT_HORIZONTAL;
+                    }
+                    case REFLECT_REVERSE_DIAGONAL: {
+                        return REFLECT_REVERSE_DIAGONAL;
+                    }
+                }
+            }
+            case ROTATE_90_ANTICLOCKWISE: {
+                switch (dih4) {
+                    case REFLECT_FORWARD_DIAGONAL: {
+                        return REFLECT_REVERSE_DIAGONAL;
+                    }
+                    case ROTATE_90_ANTICLOCKWISE:
+                    case REFLECT_VERTICAL:
+                    case REFLECT_HORIZONTAL: {
+                        return ROTATE_90_CLOCKWISE;
+                    }
+                    case ROTATE_180:
+                    case IDENTITY: {
+                        return ROTATE_90_ANTICLOCKWISE;
+                    }
+                    case ROTATE_90_CLOCKWISE: {
+                        return IDENTITY;
+                    }
+                    case REFLECT_REVERSE_DIAGONAL: {
+                        return REFLECT_REVERSE_DIAGONAL;
+                    }
+                }
+            }
+        }
         return null;
     }
+
 
     public Dih4 inv() {
         switch (this) {
