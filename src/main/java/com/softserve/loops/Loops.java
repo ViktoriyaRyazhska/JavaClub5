@@ -1,4 +1,4 @@
-package main.java.com.softserve.clasess.loops;
+package main.java.com.softserve.loops;
 
 import main.java.com.softserve.ReadConsole;
 

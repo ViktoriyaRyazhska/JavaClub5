@@ -10,8 +10,15 @@ public class StaticImports {
     //Strings 1Task
     public static void start1TaskStrings() {
         System.out.println("Task 1 runs!");
-        System.out.println("You can transform a number into a string: ");
+        System.out.println("You can transform a number into a string. ");
         System.out.println("Enter some number: ");
+    }
+
+    //Strings 2Task
+    public static void start2TaskStrings() {
+        System.out.println("Task 2 runs!");
+        System.out.println("Repeat the given string exactly n times. ");
+        System.out.println("Enter n repetitions (positive number) and some string: ");
     }
 
     //Strings 14Task

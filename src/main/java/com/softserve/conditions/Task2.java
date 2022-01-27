@@ -6,23 +6,26 @@ import main.java.com.softserve.ReadConsole;
 import java.io.IOException;
 
 import static main.java.com.softserve.statics.StaticImports.backToMenuOrRetry;
+import static main.java.com.softserve.statics.StaticImports.start2TaskConditions;
 
 public class Task2 extends ReadConsole {
+
     static int n;
     static int x;
     static int y;
+
     public static void main(String[] args) {
-        System.out.println("Task 2 starts now!");
-        System.out.println("Enter general number and two numbers to see if we can divide it");
+
+        start2TaskConditions();
         try {
             n = Integer.parseInt(br.readLine());
             x = Integer.parseInt(br.readLine());
             y = Integer.parseInt(br.readLine());
+            System.out.println("Can we? Result: " + isDivisible(n, x, y));
         } catch (NumberFormatException | IOException e) {
             System.out.println("==> Wrong input!!=) Try again! <==");
             Task2.main(args);
         }
-        System.out.println("Can we? Result: "+isDivisible(n,x,y));
 
         backToMenuOrRetry();
         try {
@@ -44,9 +47,11 @@ public class Task2 extends ReadConsole {
             e.printStackTrace();
         }
     }
+
     public static boolean isDivisible(long n, long x, long y) {
-        if (n > 0 && x > 0 && y > 0){
+        if (n > 0 && x > 0 && y > 0) {
             return n % x == 0 && n % y == 0;
-        }else return false;
+        } else return false;
     }
+
 }

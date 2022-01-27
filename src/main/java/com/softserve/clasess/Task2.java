@@ -21,9 +21,10 @@ public class Task2 extends ReadConsole {
         value = ONE_HUNDRED;
     }
 
-    public static void main(String[] args) {
-        start2classes();
 
+    public static void main(String[] args) {
+
+        start2classes();
         int number = 0;
         try {
             number = Integer.parseInt(br.readLine());

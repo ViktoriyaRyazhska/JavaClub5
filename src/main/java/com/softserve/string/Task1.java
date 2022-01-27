@@ -17,7 +17,7 @@ public class Task1 extends ReadConsole {
 
         start1TaskStrings();
         try {
-            String str = br.readLine();
+            str = br.readLine();
             if (isNumber(str)) {
                 number = Integer.parseInt(str);
                 str = numberToString(number);

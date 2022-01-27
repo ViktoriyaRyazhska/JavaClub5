@@ -4,7 +4,7 @@ import main.java.com.softserve.basicprogram.BasicProgram;
 import main.java.com.softserve.clasess.Classes;
 import main.java.com.softserve.collections.Collections;
 import main.java.com.softserve.conditions.Conditions;
-import main.java.com.softserve.clasess.loops.Loops;
+import main.java.com.softserve.loops.Loops;
 import main.java.com.softserve.oop.OOP;
 import main.java.com.softserve.string.Strings;
 

@@ -1,4 +1,4 @@
-package main.java.com.softserve.clasess.loops;
+package main.java.com.softserve.loops;
 
 import main.java.com.softserve.MainClass;
 import main.java.com.softserve.ReadConsole;
@@ -10,10 +10,12 @@ import static main.java.com.softserve.statics.StaticImports.backToMenuOrRetry;
 import static main.java.com.softserve.statics.StaticImports.start9TaskLoop;
 
 public class Task9 extends ReadConsole {
+
     static int sizeArray;
     static int number;
 
     public static void main(String[] args) throws IOException {
+
         start9TaskLoop();
         try {
             sizeArray = Integer.parseInt(br.readLine());
