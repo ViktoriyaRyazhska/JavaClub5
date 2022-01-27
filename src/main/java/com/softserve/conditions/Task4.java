@@ -9,9 +9,12 @@ import static main.java.com.softserve.statics.StaticImports.backToMenuOrRetry;
 import static main.java.com.softserve.statics.StaticImports.start4Conditions;
 
 public class Task4 extends ReadConsole {
+
     static int salary;
     static int yesOrNo;
+
     public static void main(String[] args) {
+
         start4Conditions();
         try {
             salary = Integer.parseInt(br.readLine());
@@ -23,7 +26,7 @@ public class Task4 extends ReadConsole {
 
         try {
             yesOrNo = Integer.parseInt(br.readLine());
-            if (yesOrNo<=0||yesOrNo>2){
+            if (yesOrNo <= 0 || yesOrNo > 2) {
                 System.out.println("You have only 2 choices");
                 System.out.println("Lets try again");
                 Task4.main(args);
@@ -35,11 +38,9 @@ public class Task4 extends ReadConsole {
 
         boolean userChoice = isBool(yesOrNo);
         System.out.println("Now lets se result.");
-
-        System.out.println("Result: "+bonusTime(salary,userChoice));
+        System.out.println("Result: " + bonusTime(salary, userChoice));
 
         backToMenuOrRetry();
-
         try {
             switch (br.readLine()) {
                 case "1":
@@ -58,13 +59,14 @@ public class Task4 extends ReadConsole {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
-    public static boolean isBool(int i ){
-        return (i==1);
+
+    public static boolean isBool(int i) {
+        return (i == 1);
     }
 
     public static String bonusTime(final int salary, final boolean bonus) {
         return String.format("£%d", bonus ? salary * 10 : salary);
     }
+
 }

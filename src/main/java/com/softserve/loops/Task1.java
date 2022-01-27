@@ -35,7 +35,7 @@ public class Task1 extends ReadConsole {
                 System.out.println("It's not a String");
                 Task1.main(args);
             }
-        } catch (NumberFormatException | IOException e) {
+        } catch (IOException e) {
             System.out.println("==> It's not a String! Try again! <==");
             Task1.main(args);
         }
