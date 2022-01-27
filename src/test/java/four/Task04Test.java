@@ -4,6 +4,7 @@ package four;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+
 // TODO: Replace examples and use TDD development by writing your own tests
 
     public class Task04Test {
