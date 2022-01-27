@@ -11,9 +11,6 @@ import java.io.InputStreamReader;
 public class Runner {
     public static int TwiceAsOld(int a, int b){
         int result = 0;
-        if (b == 0) {
-            return a;
-        }
         for (int i = 0; i < b; i++) {
             if ((a - i)/((double)(b - i)) == 2) {
                 result = i;
