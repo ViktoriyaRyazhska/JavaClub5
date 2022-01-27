@@ -1,5 +1,5 @@
 package javaclub5.loops.task34;
-;
+
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.stream.IntStream;
