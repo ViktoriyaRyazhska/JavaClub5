@@ -39,8 +39,7 @@ public final class LoopsSelection {
                     selectTheme(reader);
                     break;
                 case 5:
-                    System.out.println("Not done yet");
-                    //javaclub5.loops.task5.Runner.start(reader);
+                    javaclub5.loops.task5.Runner.start(reader);
                     selectTheme(reader);
                     break;
                 case 6:
