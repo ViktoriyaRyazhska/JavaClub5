@@ -31,4 +31,5 @@ public class Task36 {
         }
         return countSheeps;
     }
+
 }
