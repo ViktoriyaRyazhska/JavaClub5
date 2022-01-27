@@ -8,7 +8,6 @@ import static org.junit.jupiter.api.Assertions.*;
  * Created by Sergiy Zapadenko on 27.01.2022 17:18
  */
 class Task62Test {
-
     @Test
     void convertToCelsius() {
         assertEquals(10, Task62.convertToCelsius(50));
