@@ -17,9 +17,8 @@ public class Task72 {
         typeAndLocation.put("Plum", "A fruit that grows on trees");
         typeAndLocation.put("Orange", "A fruit that grows on trees");
         typeAndLocation.put("Coconut", "A fruit that grows on palms");
-        StringBuilder encode = new StringBuilder();
         String get = typeAndLocation.get(name);
-        return (get != null)? String.valueOf(encode) : "Can't find entry for " + name;
+        return (get != null) ? get : "Can't find entry for " + name;
     }
 
     public static void task72( BufferedReader reader) {
