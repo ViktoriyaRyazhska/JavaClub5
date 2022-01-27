@@ -3,8 +3,11 @@ package main.java.com.softserve.string;
 import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import main.java.com.softserve.MainClass;
 import main.java.com.softserve.ReadConsole;
 
+import static main.java.com.softserve.statics.StaticImports.backToMenuOrRetry;
 import static main.java.com.softserve.statics.StaticImports.start3TaskStrings;
 
 public class Task3 extends ReadConsole {
@@ -25,6 +28,26 @@ public class Task3 extends ReadConsole {
         state = wordsOfWelcome(state);
 
         System.out.print("Say: " + sayHello(name, city, state));
+
+        backToMenuOrRetry();
+        try {
+            switch (br.readLine()) {
+                case "1":
+                    MainClass.main(args);
+                    break;
+
+                case "2":
+                    Task3.main(args);
+                    break;
+
+                default:
+                    System.err.println("You need to do this: put 1 or 2");
+                    System.err.println("Transfer to menu ");
+                    Task3.main(args);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public static String wordsOfWelcome(String i) {

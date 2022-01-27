@@ -1,5 +1,6 @@
 package main.java.com.softserve.string;
 
+import main.java.com.softserve.MainClass;
 import main.java.com.softserve.ReadConsole;
 
 import java.io.IOException;
@@ -8,6 +9,7 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static main.java.com.softserve.statics.StaticImports.backToMenuOrRetry;
 import static main.java.com.softserve.statics.StaticImports.start2TaskStrings;
 
 public class Task2 extends ReadConsole {
@@ -30,6 +32,26 @@ public class Task2 extends ReadConsole {
         }
 
         System.out.print("Result: " + reverseWords(str));
+
+        backToMenuOrRetry();
+        try {
+            switch (br.readLine()) {
+                case "1":
+                    MainClass.main(args);
+                    break;
+
+                case "2":
+                    Task2.main(args);
+                    break;
+
+                default:
+                    System.err.println("You need to do this: put 1 or 2");
+                    System.err.println("Transfer to menu ");
+                    Task2.main(args);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     static boolean isString(String str) {
