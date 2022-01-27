@@ -32,6 +32,7 @@ public class Runner {
      *
      */
     public static void start(BufferedReader reader) {
+        System.out.println("In this task changing number to the opposite.");
         System.out.println("Input a number");
         try {
             double number = Double.parseDouble(reader.readLine());

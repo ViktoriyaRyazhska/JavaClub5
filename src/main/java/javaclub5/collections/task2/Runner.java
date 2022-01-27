@@ -11,12 +11,13 @@ public class Runner {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         start(reader);
     }
-    public static void start(BufferedReader br)
-    {
+
+    public static void start(BufferedReader br) {
+        System.out.println("In this task fixed infinite loop.");
         try {
             System.out.println("Enter size of the list");
             int i = Integer.parseInt(br.readLine());
-            if(i>0)
+            if (i > 0)
                 System.out.println("Result: " + CreateList(i));
             else
                 System.out.println("Wrong input");
@@ -25,12 +26,11 @@ public class Runner {
             System.out.println(e.getMessage());
         }
     }
-    public static List CreateList(int number)
-    {
-        List listS= new ArrayList();
 
-        for(int count = 1; count <= number;count++)
-        {
+    public static List CreateList(int number) {
+        List listS = new ArrayList();
+
+        for (int count = 1; count <= number; count++) {
             listS.add(count);
         }
 

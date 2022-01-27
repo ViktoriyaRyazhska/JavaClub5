@@ -19,6 +19,7 @@ public class Runner {
         start(br);
     }
     public static void start(BufferedReader br) {
+        System.out.println("In this task we will convert name and surname into initials.");
         try {
             System.out.println("Enter your name and surname: ");
             String name = br.readLine();

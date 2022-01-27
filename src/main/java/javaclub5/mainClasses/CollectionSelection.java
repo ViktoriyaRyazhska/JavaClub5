@@ -1,6 +1,7 @@
 package javaclub5.mainClasses;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 
 import static javaclub5.mainClasses.MainProgram.selectTheme;
 
@@ -24,19 +25,19 @@ public final class CollectionSelection {
                     break;
                 case 1:
                     javaclub5.collections.task1.Runner.start(reader);
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                     break;
                 case 2:
                     javaclub5.collections.task2.Runner.start(reader);
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                     break;
                 case 3:
                     javaclub5.collections.task3.Runner.start();
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                     break;
                 case 4:
                     javaclub5.collections.task4.Dictionary.start(reader);
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                     break;
                 case 12:
                     break;
@@ -50,5 +51,17 @@ public final class CollectionSelection {
             System.out.println("Wrong input");
             selectCollections(reader);
         }
+    }
+
+    /**
+     * Method to go to main menu
+     * @param reader BufferedReader
+     * @throws IOException
+     */
+    private static void goToMainMenu(BufferedReader reader) throws IOException {
+        System.out.println("------------------------------");
+        System.out.println("Press Enter");
+        reader.readLine();
+        selectTheme(reader);
     }
 }

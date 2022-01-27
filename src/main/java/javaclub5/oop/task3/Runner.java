@@ -13,6 +13,7 @@ public class Runner {
     */
 
     public static void start(BufferedReader br) {
+        System.out.println("The objective of this task is to provide some way to encode a string into its leetspeak version.");
         System.out.println("Enter string to encode");
         try {
             Leetspeak myEncoder = new Leetspeak();

@@ -26,7 +26,7 @@ public class Runner {
      *
      */
     public static void start(BufferedReader reader) {
-        System.out.println(" Tell Bof if he will be able to fit all the passengers");
+        System.out.println(" Tell Bob if he will be able to fit all the passengers");
         try {
             System.out.println("Input the amount of people the bus can hold excluding the driver");
             int cap = Integer.parseInt(reader.readLine());

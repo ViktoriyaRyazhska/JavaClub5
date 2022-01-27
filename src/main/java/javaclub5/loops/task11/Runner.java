@@ -18,6 +18,7 @@ public class Runner {
         start(br);
     }
     public static void start(BufferedReader br) {
+        System.out.println("Сalculate how many years ago the father was twice as old as his son (or in how many years he will be twice as old).");
         try {
             System.out.println("Enter current father's age: ");
             int b = Integer.parseInt(br.readLine());

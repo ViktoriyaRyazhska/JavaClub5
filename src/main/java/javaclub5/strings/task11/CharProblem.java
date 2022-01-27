@@ -16,16 +16,21 @@ public class CharProblem {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         start(br);
     }
+
     public static void start(BufferedReader br) {
+
         System.out.println("Ask a small girl - How old are you?");
+        System.out.println("*Assume test input string always valid and may look like " +
+                "\"1 year old\" or \"5 years old\", etc.. The first char is number only.*");
         try {
-            String  year = br.readLine();
+            String year = br.readLine();
             System.out.println("Result: " + howOld(year));
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }
-    public static int howOld( String herOld) {
+
+    public static int howOld(String herOld) {
         char ch1 = herOld.charAt(0);
         int a;
         a = ch1 - '0';
