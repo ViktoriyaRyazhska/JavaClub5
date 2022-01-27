@@ -23,7 +23,7 @@ public class Runner {
                 int res = 0;
                 for (int i = 0; i < a; i++){
                     System.out.println("Enter mark: ");
-                    array1[i] = Integer.parseInt(br.readLine());;
+                    array1[i] = Integer.parseInt(br.readLine());
                     sum += array1[i];
                     if (array1.length == a){
                         res = sum/a;
