@@ -200,4 +200,10 @@ public class StaticImports {
         System.out.println("In this task we will calculate your age in past, future and now.");
         System.out.println("Enter your birthday");
     }
+    //Task 6 Conditions
+    public static void start6TaskConditions() {
+        System.out.println("Task 6 starts now!");
+        System.out.println("Let's play Rock Paper Scissors.");
+        System.out.println("Enter player 1 choice");
+    }
 }
