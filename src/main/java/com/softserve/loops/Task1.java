@@ -1,63 +1,57 @@
 package main.java.com.softserve.loops;
 
-import main.java.com.softserve.MainClass;
 import main.java.com.softserve.ReadConsole;
 
 import java.io.IOException;
-import java.util.Objects;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-import static main.java.com.softserve.statics.StaticImports.backToMenuOrRetry;
-import static main.java.com.softserve.statics.StaticImports.start1TaskLoops;
+import static main.java.com.softserve.statics.StaticImports.*;
 
 public class Task1 extends ReadConsole {
-    static int times;
-    static String entered;
+
+    static String str;
+    static int repeat;
 
     public static void main(String[] args) {
 
         start1TaskLoops();
+        System.out.print("n = ");
         try {
-            entered = br.readLine();
-            System.out.println("How many times to repeat? Enter number!");
-            times = Integer.parseInt(br.readLine());
-        } catch (IOException e) {
-            System.out.println("You have entered something wrong! Try again!");
+            repeat = Integer.parseInt(br.readLine());
+            if (repeat < 0) {
+                System.out.println("It's not a positive number");
+                Task1.main(args);
+            }
+        } catch (NumberFormatException | IOException e) {
+            System.out.println("==> It's not a number! Try again! <==");
             Task1.main(args);
         }
-        System.out.println("Now lets se what happens:");
-        System.out.println("Result: " + repeatStr(times, entered));
 
-        backToMenuOrRetry();
-
+        System.out.print("string = ");
         try {
-            switch (br.readLine()) {
-                case "1":
-                    MainClass.main(args);
-                    break;
-
-                case "2":
-                    Task1.main(args);
-                    break;
-
-                default:
-                    System.err.println("You need to do this: put 1 or 2");
-                    System.err.println("Transfer to menu ");
-                    Task1.main(args);
+            str = br.readLine();
+            if (!isString(str)) {
+                System.out.println("It's not a String");
+                Task1.main(args);
             }
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (NumberFormatException | IOException e) {
+            System.out.println("==> It's not a String! Try again! <==");
+            Task1.main(args);
         }
+
+        System.out.print("Result: " + repeatStr(repeat, str));
     }
 
-    public static String repeatStr(final int repeat, final String string) {
-        if (repeat == 0) {
-            return "";
-        }
-        if (Objects.equals(string, "")) {
-            return string;
-        }
+    static boolean isString(String str) {
+        Pattern pattern = Pattern.compile(new String("^[a-zA-Z\\s]*$"));
+        Matcher matcher = pattern.matcher(str);
+        return matcher.matches();
+    }
 
-        return string.repeat(repeat);
+    public static String repeatStr(int repeat, String str) {
+        return (str.repeat(repeat));
     }
 
 }
+

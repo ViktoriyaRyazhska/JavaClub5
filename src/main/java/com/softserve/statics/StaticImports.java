@@ -17,8 +17,8 @@ public class StaticImports {
     //Strings 2Task
     public static void start2TaskStrings() {
         System.out.println("Task 2 runs!");
-        System.out.println("Repeat the given string exactly n times. ");
-        System.out.println("Enter n repetitions (positive number) and some string: ");
+        System.out.println("Complete the solution so that it revers. ");
+        System.out.println("Enter any word or phrase: ");
     }
 
     //Strings 14Task
