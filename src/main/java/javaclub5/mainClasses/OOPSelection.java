@@ -55,7 +55,7 @@ public final class OOPSelection {
     }
 
     private static void goToMainMenu(BufferedReader reader) throws IOException {
-        System.out.println("---------------------");
+        System.out.println("------------------------------");
         System.out.println("Press Enter");
         reader.readLine();
         selectTheme(reader);
