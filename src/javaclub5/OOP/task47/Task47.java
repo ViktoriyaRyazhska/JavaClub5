@@ -22,32 +22,33 @@ public class Task47 {
             System.out.println("Wrong input");
         }
     }
-    }
-     class Human{
-        private String name;
 
-        public Human(String name) {
-            this.name = name;
-        }
 
-         @Override
-         public String toString() {
-             return "Human{" +
-                     "name='" + name + '\'' +
-                     '}';
-         }
-     }
-    class Man extends Human{
+}
+    class Human{
+    private String name;
 
-        public Man(String name) {
-            super(name);
-        }
-    }
-    class Woman extends Human{
-
-        public Woman(String name) {
-            super(name);
-        }
+    public Human(String name) {
+        this.name = name;
     }
 
+    @Override
+    public String toString() {
+        return "Human{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+}
+class Man extends Human{
+
+    public Man(String name) {
+        super(name);
+    }
+}
+class Woman extends Human{
+
+    public Woman(String name) {
+        super(name);
+    }
+}
 
