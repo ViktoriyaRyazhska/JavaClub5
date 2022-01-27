@@ -5,7 +5,13 @@ public class StaticImports {
     public static void backToMenuOrRetry() {
         System.out.println("Back to main menu => input 1 ");
         System.out.println("Try again  => input 2 ");
+    }
 
+    //Strings 1Task
+    public static void start1TaskStrings() {
+        System.out.println("Task 1 runs!");
+        System.out.println("You can transform a number into a string: ");
+        System.out.println("Enter some number: ");
     }
 
     //Strings 14Task
@@ -145,6 +151,13 @@ public class StaticImports {
         System.out.println("Task 1 Starts now!");
         System.out.println("Here u need to add some string to repeat it:");
     }
+
+    //Task 1 Classes
+    public static void start1classes(){
+        System.out.println("Task 1 starts now!");
+        System.out.println("Lombok-implemented EncapsulationDemo class object created . . .");
+    }
+
     //Task 2 Classes
     public static void start2classes(){
         System.out.println("Task 2 starts now!");
