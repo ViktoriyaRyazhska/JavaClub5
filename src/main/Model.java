@@ -2,6 +2,7 @@ package main;
 
 public class Model {
     private int value;
+    private String proceed;
     Database database;
 
     public Model(Database database) {
@@ -16,7 +17,15 @@ public class Model {
         this.value = value;
     }
 
-    public void selectorMenu(int value){
+    public String getProceed() {
+        return proceed;
+    }
+
+    public void setProceed(String proceed) {
+        this.proceed = proceed;
+    }
+
+    public void selectorMenu(int value) {
         database.getPosition().get(value).execute();
     }
 }
