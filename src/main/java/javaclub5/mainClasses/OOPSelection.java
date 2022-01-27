@@ -25,18 +25,26 @@ public final class OOPSelection {
                     break;
                 case 1:
                     javaclub5.oop.task1.Runner.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 2:
                     javaclub5.oop.task2.Runner.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 3:
                     javaclub5.oop.task3.Runner.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 4:
                     javaclub5.oop.task4.Runner.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 12:

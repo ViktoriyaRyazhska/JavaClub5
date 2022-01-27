@@ -26,26 +26,38 @@ public final class ClassesSelection {
                     break;
                 case 1:
                     javaclub5.classes.task1.Runner.start();
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 2:
                     javaclub5.classes.task2.Runner.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 3:
                     javaclub5.classes.task3.Runner.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 4:
                     javaclub5.classes.task4.Runner.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 5:
                     javaclub5.classes.task5.Runner.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 6:
                     Runner.Block.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 12:
