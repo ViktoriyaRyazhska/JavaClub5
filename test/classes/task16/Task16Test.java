@@ -1,5 +1,7 @@
-package javaclub5.classes.task16;
+package classes.task16;
 
+import javaclub5.classes.task16.Task16;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -11,7 +13,7 @@ class Task16Test {
 
     @Test
     void declareWinner() {
-        assertEquals("Lew", Task16.declareWinner(new Task16.Fighter("Lew", 10, 2),new Task16.Fighter("Harry", 5, 4), "Lew"));
+        Assertions.assertEquals("Lew", Task16.declareWinner(new Task16.Fighter("Lew", 10, 2),new Task16.Fighter("Harry", 5, 4), "Lew"));
         assertEquals("Harry", Task16.declareWinner(new Task16.Fighter("Lew", 10, 2),new Task16.Fighter("Harry", 5, 4), "Harry"));
         assertEquals("Harald", Task16.declareWinner(new Task16.Fighter("Harald", 20, 5), new Task16.Fighter("Harry", 5, 4), "Harry"));
         assertEquals("Harald", Task16.declareWinner(new Task16.Fighter("Harald", 20, 5), new Task16.Fighter("Harry", 5, 4), "Harald"));
