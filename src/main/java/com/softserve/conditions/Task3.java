@@ -10,12 +10,13 @@ import static main.java.com.softserve.statics.StaticImports.backToMenuOrRetry;
 import static main.java.com.softserve.statics.StaticImports.start3TaskConditions;
 
 public class Task3 extends ReadConsole {
+
     static int trueOrFalse;
     static boolean choose;
+
     public static void main(String[] args) {
 
         start3TaskConditions();
-
         try {
             trueOrFalse = Integer.parseInt(br.readLine());
             if (trueOrFalse>2||trueOrFalse<=0){
@@ -27,10 +28,9 @@ public class Task3 extends ReadConsole {
             System.out.println("==> It's not an integer! Try again! <==");
             Task3.main(args);
         }
+
         choose = convertToBool(trueOrFalse);
-
         System.out.println("Result of your choice:"+convert(choose));
-
 
         backToMenuOrRetry();
         try {
@@ -55,9 +55,7 @@ public class Task3 extends ReadConsole {
     }
     public static boolean convertToBool(int x){
         return x == 1;
-
     }
-
 
     public static String convert(boolean b){
         return b ? "true" : "false";

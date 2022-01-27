@@ -4,6 +4,7 @@ import main.java.com.softserve.MainClass;
 import main.java.com.softserve.ReadConsole;
 
 import java.io.IOException;
+import java.util.Objects;
 
 import static main.java.com.softserve.statics.StaticImports.backToMenuOrRetry;
 import static main.java.com.softserve.statics.StaticImports.start1TaskLoops;
@@ -13,8 +14,8 @@ public class Task1 extends ReadConsole {
     static String entered;
 
     public static void main(String[] args) {
-        start1TaskLoops();
 
+        start1TaskLoops();
         try {
             entered = br.readLine();
             System.out.println("How many times to repeat? Enter number!");
@@ -24,7 +25,7 @@ public class Task1 extends ReadConsole {
             Task1.main(args);
         }
         System.out.println("Now lets se what happens:");
-        System.out.println("Result: "+repeatStr(times,entered));
+        System.out.println("Result: " + repeatStr(times, entered));
 
         backToMenuOrRetry();
 
@@ -46,17 +47,17 @@ public class Task1 extends ReadConsole {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     public static String repeatStr(final int repeat, final String string) {
-        if (repeat==0){
+        if (repeat == 0) {
             return "";
         }
-        if (string==""){return string;}
+        if (Objects.equals(string, "")) {
+            return string;
+        }
 
         return string.repeat(repeat);
-
-
     }
+
 }

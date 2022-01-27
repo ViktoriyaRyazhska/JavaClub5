@@ -9,6 +9,7 @@ import static main.java.com.softserve.statics.StaticImports.backToMenuOrRetry;
 import static main.java.com.softserve.statics.StaticImports.start1TaskConditions;
 
 public class Task1 extends ReadConsole {
+
     static double number;
 
     public static void main(String[] args) {
@@ -17,7 +18,7 @@ public class Task1 extends ReadConsole {
         try {
             number = Double.parseDouble(br.readLine());
         } catch (NumberFormatException | IOException e) {
-            System.out.println("==> Wrong input!!=) Try again! <==");
+            System.out.println("==> Wrong input!! Try again! <==");
             Task1.main(args);
         }
         System.out.println("Result: " + opposite((int) number));
@@ -48,7 +49,6 @@ public class Task1 extends ReadConsole {
             return 0;
         } else
             return (number > 0) ? number * (-1) : Math.abs(number);
-
-
     }
+
 }

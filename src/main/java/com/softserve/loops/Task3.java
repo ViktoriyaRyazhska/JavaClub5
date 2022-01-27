@@ -10,15 +10,16 @@ import static main.java.com.softserve.statics.StaticImports.start3TaskLoops;
 
 
 public class Task3 extends ReadConsole {
+
     static int sum;
     static int sizeOfArray;
+
     public static void main(String[] args) {
 
         start3TaskLoops();
-
         try {
             sizeOfArray = Integer.parseInt(br.readLine());
-            if (sizeOfArray<=0){
+            if (sizeOfArray <= 0) {
                 System.out.println("Cant be Zero or less! ");
                 System.out.println("Try again!");
                 Task3.main(args);
@@ -28,9 +29,9 @@ public class Task3 extends ReadConsole {
             Task3.main(args);
         }
         System.out.println("Now lets add marks:");
-            int[] marks = new int[sizeOfArray];
+        int[] marks = new int[sizeOfArray];
         for (int i = 0; i < marks.length; i++) {
-            System.out.println("Enter "+(i+1)+" mark");
+            System.out.println("Enter " + (i + 1) + " mark");
             try {
                 marks[i] = Integer.parseInt(br.readLine());
             } catch (IOException e) {
@@ -39,7 +40,7 @@ public class Task3 extends ReadConsole {
             }
         }
         System.out.println("Now lets se the result");
-        System.out.println("Average: "+getAverage(marks));
+        System.out.println("Average: " + getAverage(marks));
 
         backToMenuOrRetry();
         try {
@@ -62,11 +63,12 @@ public class Task3 extends ReadConsole {
         }
 
     }
-    public static int getAverage(int[] marks){
 
-        for (int i = 0; i < marks.length ; i++) {
-            sum += marks[i];
+    public static int getAverage(int[] marks) {
+        for (int mark : marks) {
+            sum += mark;
         }
-       return sum/ marks.length;
+        return sum / marks.length;
     }
+
 }
