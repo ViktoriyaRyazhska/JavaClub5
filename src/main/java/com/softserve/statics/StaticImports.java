@@ -170,4 +170,11 @@ public class StaticImports {
         System.out.println("Task 2 starts now!");
         System.out.println("Enter a number to add +100");
     }
+    //Task 4 Conditions
+    public static void start4Conditions(){
+        System.out.println("Task 4 starts now!");
+        System.out.println("This program will calculate your money. ");
+        System.out.println("It depends from your salary and bonus.");
+        System.out.println("Enter your salary");
+    }
 }
