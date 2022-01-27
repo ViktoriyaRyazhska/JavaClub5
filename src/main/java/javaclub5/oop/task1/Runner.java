@@ -5,6 +5,12 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
+/**
+ * Basic subclasses - Adam and Eve
+ *
+ * @author Mysakovych Maksym
+ */
+
 public class Runner {
     public static Human[] create(String nameMan, String nameWomen) {
         return new Human[]{new Man(nameMan), new Woman(nameWomen)};
