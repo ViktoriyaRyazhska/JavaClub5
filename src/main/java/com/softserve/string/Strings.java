@@ -19,6 +19,10 @@ public class Strings extends ReadConsole {
                     Task2.main(args);
                     break;
 
+                case "3":
+                    Task3.main(args);
+                    break;
+
                 case "14":
                     Task14.main(args);
                     break;

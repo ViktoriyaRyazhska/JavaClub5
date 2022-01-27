@@ -21,6 +21,14 @@ public class StaticImports {
         System.out.println("Enter any word or phrase: ");
     }
 
+    //Strings 3Task
+    public static void start3TaskStrings() {
+        System.out.println("Task 3 runs!");
+        System.out.println("Create a method sayHello/say_hello/SayHello that takes as " +
+                "input a name, city, and state  to welcome a person.");
+        System.out.println("Enter words of welcome: ");
+    }
+
     //Strings 14Task
     public static void start14TaskStrings() {
         System.out.println("Task 14 runs!");
@@ -117,61 +125,69 @@ public class StaticImports {
         System.out.println("Task 9 Starts now!");
         System.out.println("Enter size of array:");
     }
+
     //Task 3 BasicProgram
-    public static void start3TaskBasicProgram(){
+    public static void start3TaskBasicProgram() {
         System.out.println("Task 3 starts now !");
         System.out.println("Bob needs a fast way to calculate the volume of a cuboid.");
         System.out.println("Lets help him =)");
         System.out.println("Enter 3 values: Length, Width, Height");
     }
+
     //Task 1 Conditions
-    public static void start1TaskConditions(){
+    public static void start1TaskConditions() {
         System.out.println("Task 1 has started!");
         System.out.println("Enter a number to get opposite");
     }
+
     //Task 2 Conditions
-    public static void start2TaskConditions(){
+    public static void start2TaskConditions() {
         System.out.println("Task 2 starts now!");
         System.out.println("Enter general number and two numbers to see if we can divide it");
     }
+
     //Task 2 Loops
-    public static void start2TaskLoops(){
+    public static void start2TaskLoops() {
         System.out.println("Task 2 runs now!");
         System.out.println("Enter number to calculate ");
         System.out.println("human years to cat years and dog years");
     }
+
     //Task3 Loops
-    public static void start3TaskLoops(){
+    public static void start3TaskLoops() {
         System.out.println("Task 3 Starts now!");
         System.out.println("All the students come to you and entreat you to calculate their average for them.");
         System.out.println("Lets start.");
         System.out.println("How many grades will you enter?");
     }
+
     //Task 3 Conditions
-    public static void start3TaskConditions(){
+    public static void start3TaskConditions() {
         System.out.println("Task 3 Runs now!");
         System.out.println("If your choice is TRUE - Enter 1");
         System.out.println("Ef your choice if FALSE - Enter 2");
     }
+
     //Task 1 Loops
-    public static void start1TaskLoops(){
+    public static void start1TaskLoops() {
         System.out.println("Task 1 Starts now!");
         System.out.println("Here u need to add some string to repeat it:");
     }
 
     //Task 1 Classes
-    public static void start1classes(){
+    public static void start1classes() {
         System.out.println("Task 1 starts now!");
         System.out.println("Lombok-implemented EncapsulationDemo class object created . . .");
     }
 
     //Task 2 Classes
-    public static void start2classes(){
+    public static void start2classes() {
         System.out.println("Task 2 starts now!");
         System.out.println("Enter a number to add +100");
     }
+
     //Task 4 Conditions
-    public static void start4Conditions(){
+    public static void start4Conditions() {
         System.out.println("Task 4 starts now!");
         System.out.println("This program will calculate your money. ");
         System.out.println("It depends from your salary and bonus.");
