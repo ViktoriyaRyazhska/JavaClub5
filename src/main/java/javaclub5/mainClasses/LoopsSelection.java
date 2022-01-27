@@ -23,8 +23,7 @@ public final class LoopsSelection {
                     selectTheme(reader);
                     break;
                 case 1:
-                    System.out.println("Not done yet");
-                    //javaclub5.loops.task1.Runner.start(reader);
+                    javaclub5.loops.task1.Runner.start(reader);
                     selectTheme(reader);
                     break;
                 case 2:
@@ -64,13 +63,11 @@ public final class LoopsSelection {
                     selectTheme(reader);
                     break;
                 case 10:
-                    System.out.println("Not done yet");
-                    //javaclub5.loops.task10.Runner.start(reader);
+                    javaclub5.loops.task10.Runner.start(reader);
                     selectTheme(reader);
                     break;
                 case 11:
-                    System.out.println("Not done yet");
-                    //javaclub5.loops.task11.Runner.start(reader);
+                    javaclub5.loops.task11.Runner.start(reader);
                     selectTheme(reader);
                     break;
                 case 12:
@@ -79,8 +76,7 @@ public final class LoopsSelection {
                     selectTheme(reader);
                     break;
                 case 13:
-                    System.out.println("Not done yet");
-                    //javaclub5.loops.task13.Runner.start(reader);
+                    javaclub5.loops.task13.Runner.start(reader);
                     selectTheme(reader);
                     break;
                 case 14:

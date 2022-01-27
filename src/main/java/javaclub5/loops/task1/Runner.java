@@ -10,7 +10,7 @@ public class Runner {
         start(br);
     }
 
-    private static void start(BufferedReader br) {
+    public static void start(BufferedReader br) {
         System.out.println("Enter number of times to repeat the string");
         try {
             int repeat = Integer.parseInt(br.readLine());

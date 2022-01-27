@@ -73,12 +73,10 @@ public final class ConditionSelection {
                     selectTheme(reader);
                     break;
                 case 13:
-                    System.out.println("Not done yet");
-                    //javaclub5.conditions.task13.Runner.start(reader);
+                    javaclub5.conditions.task13.Runner.TrafficLights.start(reader);
                     selectTheme(reader);
                 case 14:
-                    System.out.println("Not done yet");
-                    //javaclub5.conditions.task14.Runner.start(reader);
+                    javaclub5.conditions.task14.Runner.start(reader);
                     selectTheme(reader);
                 case 15:
                     break;

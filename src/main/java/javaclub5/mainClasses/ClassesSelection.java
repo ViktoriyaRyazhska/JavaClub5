@@ -1,5 +1,7 @@
 package javaclub5.mainClasses;
 
+import javaclub5.classes.task6.Runner;
+
 import java.io.BufferedReader;
 
 import static javaclub5.mainClasses.MainProgram.selectTheme;
@@ -43,8 +45,7 @@ public final class ClassesSelection {
                     selectTheme(reader);
                     break;
                 case 6:
-                    System.out.println("Not done yet");
-                    //javaclub5.classes.task6.Runner.start(reader);
+                    Runner.Block.start(reader);
                     selectTheme(reader);
                     break;
                 case 12:
