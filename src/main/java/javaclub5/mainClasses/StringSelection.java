@@ -48,8 +48,7 @@ public final class StringSelection {
                     selectTheme(reader);
                     break;
                 case 7:
-                    System.out.println("Not done yet");
-                    //javaclub5.strings.task7.Runner.start(reader);
+                    javaclub5.strings.task7.Runner.start(reader);
                     selectTheme(reader);
                     break;
                 case 8:
