@@ -2,6 +2,7 @@ package main.basicprogram.task11;
 
 import main.InterfaceTestClass;
 import main.basicprogram.task1.CodeFast;
+import main.basicprogram.task6.ParseToBinary;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -28,5 +29,12 @@ public class GrassHopper implements InterfaceTestClass {
         System.out.println("Find the errors in the code to get the celsius converter working properly.\n" + "To convert fahrenheit to celsius:");
         System.out.println("Enter temperature in fahrenheit: ");
         System.out.println(GrassHopper.weatherInfo(scanner.nextInt()));
+        try {
+            GrassHopper.weatherInfo(scanner.nextInt());
+        }
+        catch (Exception e) {
+            System.out.println("Check if your input is correct");
+            System.err.println(e.getMessage());
+        }
     }
 }

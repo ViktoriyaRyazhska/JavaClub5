@@ -22,7 +22,14 @@ public class Transportation implements InterfaceTestClass {
     public void execute() {
         System.out.println("Every day you rent the car costs $40. If you rent the car for 7 or more days, you get $50 off your total. Alternatively, if you rent the car for 3 or more days, you get $20 off your total.");
         System.out.println("Enter number of days: ");
-        System.out.println(Transportation.rentalCarCost(scanner.nextInt()));
+
+        try {
+            System.out.println(Transportation.rentalCarCost(scanner.nextInt()));
+        }
+        catch (Exception e) {
+            System.out.println("Check if your input is correct");
+            System.err.println(e.getMessage());
+        }
     }
 
 }
