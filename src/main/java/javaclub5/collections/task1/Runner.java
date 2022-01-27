@@ -22,9 +22,9 @@ public class Runner {
         System.out.println("This is the item pushed into the list: " + push());
     }
 
-    public static List<String> push() {
+    public static List<String> push(){
         List<String> items = new ArrayList<>();
-        items.add("apple");
+        items.add("an object");
         return items;
     }
 }
