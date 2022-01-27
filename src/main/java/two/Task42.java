@@ -2,7 +2,6 @@ package two;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.sql.SQLOutput;
 
 public class Task42 {
     public static int Older(int father, int son){
