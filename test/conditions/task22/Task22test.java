@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class Task22test {
+public class  Task22test {
     @Test
     void AgeDiffTest() {
         Assertions.assertAll(() ->assertEquals("You are 96 years old.", AgeDiff.CalculateAge(2003, 2099)),
