@@ -1,4 +1,5 @@
 package main.java.com.softserve.loops;
+
 import main.java.com.softserve.loops.Task3;
 import org.junit.jupiter.api.Test;
 
