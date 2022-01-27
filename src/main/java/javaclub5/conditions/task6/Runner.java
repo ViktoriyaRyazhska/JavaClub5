@@ -10,7 +10,7 @@ public class Runner {
         start(br);
     }
 
-    private static void start(BufferedReader br) {
+    public static void start(BufferedReader br) {
         System.out.println("Enter player 1 choise");
         try {
             String p1 =br.readLine();
