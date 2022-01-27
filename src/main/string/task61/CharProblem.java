@@ -1,6 +1,7 @@
 package main.string.task61;
 
 import main.InterfaceTestClass;
+import main.basicprogram.task1.CodeFast;
 import main.basicprogram.task11.GrassHopper;
 
 import java.util.Scanner;
@@ -19,6 +20,12 @@ public class CharProblem implements InterfaceTestClass {
         System.out.println("Ask a small girl - \"How old are you?\". She always says strange things... Lets help her!\n" +
                 "For correct answer program should return int from 0 to 9.");
         System.out.println("Enter age of small girl: ");
-        System.out.println(CharProblem.howOld(scanner.nextLine()));
+        try {
+            System.out.println(CharProblem.howOld(scanner.nextLine()));
+        }
+        catch (Exception e) {
+            System.out.println("Check if your input is correct");
+            System.err.println(e.getMessage());
+        }
     }
 }

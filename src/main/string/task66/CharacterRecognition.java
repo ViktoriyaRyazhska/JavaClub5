@@ -1,6 +1,7 @@
 package main.string.task66;
 
 import main.InterfaceTestClass;
+import main.basicprogram.task1.CodeFast;
 import main.string.task61.CharProblem;
 
 import java.util.Scanner;
@@ -19,6 +20,12 @@ public class CharacterRecognition implements InterfaceTestClass {
                 "O is misinterpreted as 0\n" +
                 "I is misinterpreted as 1");
         System.out.println("Enter incorrect text, I'll make it better: ");
-        System.out.println(CharacterRecognition.correct(scanner.nextLine()));
+        try {
+            System.out.println(CharacterRecognition.correct(scanner.nextLine()));
+        }
+        catch (Exception e) {
+            System.out.println("Check if your input is correct");
+            System.err.println(e.getMessage());
+        }
     }
 }
