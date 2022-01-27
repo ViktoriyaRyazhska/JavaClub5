@@ -11,6 +11,7 @@ public class Runner {
     }
 
     public static void start(BufferedReader br) {
+        System.out.println("In this task checking if we got bonus for salary or no.");
         System.out.println("Enter your salary");
         try {
             int salary = Integer.parseInt(br.readLine());

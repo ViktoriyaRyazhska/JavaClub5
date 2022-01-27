@@ -18,6 +18,7 @@ public class BooleanToString {
     }
 
     public static void start(BufferedReader br) {
+        System.out.println("Converting boolean type to String.");
         System.out.println("Enter a logical value: ");
         try {
             boolean b = Boolean.parseBoolean(br.readLine());

@@ -22,6 +22,7 @@ public class Runner {
                 start(br);
             }
             public static void start(BufferedReader br) {
+                System.out.println("Traffic Lights update.");
                 try {
                     System.out.println("Please specify color: ");
                     String color = br.readLine();

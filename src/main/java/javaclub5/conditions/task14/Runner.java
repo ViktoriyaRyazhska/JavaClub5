@@ -26,6 +26,7 @@ public class Runner {
     }
     public static void start(BufferedReader br) {
         try {
+            System.out.println("In this task we will count car rental cost.");
             System.out.println("How long your vacation: ");
             int d = Integer.parseInt(br.readLine());
             System.out.println("Cost = " + rentalCarCost(d));

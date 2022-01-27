@@ -20,6 +20,7 @@ public class Dictionary {
     }
 
     public static void start(BufferedReader br) {
+        System.out.println("In this task, your job is to create a class Dictionary where you can check words to and their entries.");
         System.out.println("Enter the word: ");
 
         try {
