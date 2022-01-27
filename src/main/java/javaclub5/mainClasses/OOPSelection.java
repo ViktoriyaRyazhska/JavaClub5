@@ -15,7 +15,7 @@ public final class OOPSelection {
      * Method for selection of the Task
      * @param reader BufferedReader
      */
-    public static final void selectOOP(BufferedReader reader) {
+    public static void selectOOP(BufferedReader reader) {
         System.out.println("Select number of Task (1-4) \n 0. Main menu \n 12. exit");
         try {
             int selection = Integer.parseInt(reader.readLine());

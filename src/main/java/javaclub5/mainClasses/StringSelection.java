@@ -15,7 +15,7 @@ public final class StringSelection {
      * Method for selection of the Task
      * @param reader BufferedReader
      */
-    public static final void selectStrings(BufferedReader reader) {
+    public static void selectStrings(BufferedReader reader) {
         System.out.println("Select number of Task (1-18) \n 0. Main menu \n 19. exit");
         try {
             int selection = Integer.parseInt(reader.readLine());
