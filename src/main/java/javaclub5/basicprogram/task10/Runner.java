@@ -17,23 +17,22 @@ public class Runner {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         start(br);
     }
-        public static String datingRange(final int age) {
-            if (age <= 14) {
-                double min = age - 0.10 * age;
-                double max = age + 0.10 * age;
-                return (Math.floor(min) + " " + Math.floor(max));
+    public static String datingRange(int age) {
+        if (age <= 14) {
+            int min = age - age/10;
+            int max = age + age/10;
+            return (min + "-" + max);
 
-            } else {
-                double min = ((double)age) / 2 + 7;
-                double max = (age - 7) * 2;
-                return (Math.floor(min) + " " + Math.floor(max));
-            }
+        } else {
+            int min = (age) / 2 + 7;
+            int max = (age - 7) * 2;
+            return (min + "-" + max);
         }
+    }
         public static void start(BufferedReader br) {
             try {
                 System.out.println("Enter number to search dating range: ");
                 int age = Integer.parseInt(br.readLine());
-                System.out.println(datingRange(age));
                 System.out.println(datingRange(age));
                 } catch (IOException e) {
                 System.out.println("Wrong input");
