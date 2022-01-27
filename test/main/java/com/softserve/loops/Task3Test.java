@@ -1,6 +1,6 @@
 package main.java.com.softserve.loops;
 
-import main.java.com.softserve.clasess.loops.Task3;
+
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
