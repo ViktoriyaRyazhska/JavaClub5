@@ -7,22 +7,10 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class Task07 {
-    public static long passMilliseconds(int hours, int minutes, int sec){
-        Calendar c=Calendar.getInstance();
-        c.set(Calendar.HOUR_OF_DAY, 00);
-        c.set(Calendar.MINUTE, 00);
-        c.set(Calendar.SECOND,00);
-
-        Date d1=c.getTime();
-
-        Calendar c1 =Calendar.getInstance();
-        c.set(Calendar.HOUR_OF_DAY, hours);
-        c.set(Calendar.MINUTE, minutes);
-        c.set(Calendar.SECOND, sec);
-
-        Date d=c1.getTime();
-        long dt=d.getTime()-d1.getTime();
-        return dt;
+    public static long passMilliseconds(int hours, int minutes, int sec) {
+        if(hours < 0 || minutes < 0 || sec < 0)
+            return 0;
+        return (sec * 1000) + (minutes * 60000) + (hours * 3600000);
     }
 
     public static void task07(BufferedReader reader){
