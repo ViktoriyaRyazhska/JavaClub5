@@ -10,7 +10,7 @@ public class Runner {
         start(br);
     }
 
-    private static void start(BufferedReader br) {
+    public static void start(BufferedReader br) {
         System.out.println("Enter your year of birth:");
         try {
             int birth = Integer.parseInt(br.readLine());

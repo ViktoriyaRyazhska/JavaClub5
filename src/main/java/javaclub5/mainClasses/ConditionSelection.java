@@ -39,13 +39,11 @@ public final class ConditionSelection {
                     selectTheme(reader);
                     break;
                 case 5:
-                    System.out.println("Not done yet");
-                    //javaclub5.conditions.task5.Runner.start(reader);
+                    javaclub5.conditions.task5.Runner.start(reader);
                     selectTheme(reader);
                     break;
                 case 6:
-                    System.out.println("Not done yet");
-                    //javaclub5.conditions.task6.Runner.start(reader);
+                    javaclub5.conditions.task6.Runner.start(reader);
                     selectTheme(reader);
                     break;
                 case 7:
