@@ -3,6 +3,7 @@ package main.java.com.softserve.statics;
 public class StaticImports {
     //for all Tasks
     public static void backToMenuOrRetry() {
+        System.out.println("\n");
         System.out.println("Back to main menu => input 1 ");
         System.out.println("Try again  => input 2 ");
     }
@@ -27,6 +28,13 @@ public class StaticImports {
         System.out.println("Create a method sayHello/say_hello/SayHello that takes as " +
                 "input a name, city, and state  to welcome a person.");
         System.out.println("Enter words of welcome: ");
+    }
+
+    //Strings 4Task
+    public static void start4TaskStrings() {
+        System.out.println("Task 4 runs!");
+        System.out.println("Given an integer or floating point number, find its opposite.");
+        System.out.println("Enter number: ");
     }
 
     //Strings 14Task
