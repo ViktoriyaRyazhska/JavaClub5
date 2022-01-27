@@ -24,18 +24,26 @@ public final class CollectionSelection {
                     break;
                 case 1:
                     javaclub5.collections.task1.Runner.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 2:
                     javaclub5.collections.task2.Runner.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 3:
                     javaclub5.collections.task3.Runner.start();
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 4:
                     javaclub5.collections.task4.Dictionary.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 12:
