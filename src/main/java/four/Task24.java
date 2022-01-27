@@ -3,7 +3,7 @@ package four;
 import java.io.BufferedReader;
 
 public class Task24 {
-    public static Integer basicMath(String op, int v1, int v2){
+    public static Integer basicMath(String op, int v1, int v2) throws Exception{
         if(op.equals("+")){
             return v1+v2;
         }
@@ -13,8 +13,11 @@ public class Task24 {
         if(op.equals("*")){
             return v1*v2;
         }
+        try{
         if(op.equals("/")){
             return v1/v2;
+        }}catch (ArithmeticException e){
+            System.out.println(e);
         }
 
         return 0;
