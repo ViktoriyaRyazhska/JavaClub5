@@ -30,6 +30,7 @@ import main.loops.task41.MyHead;
 import main.loops.task43.CodeWarsMath;
 import main.loops.task45.GapInPrimes;
 import main.loops.task46.Sticks;
+import main.oop.task48.ControllerTask48;
 import main.oop.task50.Calculator;
 import main.string.task51.NumberToString;
 import main.string.task53.Hello;
@@ -101,7 +102,7 @@ public class Database {
         map.put(45, new GapInPrimes());
         map.put(46, new Sticks());
 //        map.put(47, new /* назва класу*/);
-//        map.put(48, new /* назва класу*/);
+        map.put(48, new ControllerTask48());
 //        map.put(49, new /* назва класу*/);
         map.put(50, new Calculator());
         map.put(51, new NumberToString());

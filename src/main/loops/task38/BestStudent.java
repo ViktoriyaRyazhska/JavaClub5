@@ -19,10 +19,11 @@ public class BestStudent implements InterfaceTestClass {
 
     @Override
     public void execute() {
+        int num;
         System.out.println("There was a test in your class and you passed it. Congratulations!\n" +
                 "But you're an ambitious person. You want to know if you're better than the average students in your class.");
         System.out.println("Enter the number of your peers:");
-        int num = scanner.nextInt();
+        num = scanner.nextInt();
         int[] classPoints = new int[num];
         System.out.println("Enter your peers' test scores:");
         for (int i = 0; i < num; i++) {
