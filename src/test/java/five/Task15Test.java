@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class Task15Test {
+ public class Task15Test {
     String s = System.lineSeparator();
 
     @Test

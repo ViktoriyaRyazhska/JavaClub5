@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class Task10Test {
+ public class Task10Test {
     @Test
     public void exampleTests(){
         assertEquals("15-20", Task10.datingRange(17));

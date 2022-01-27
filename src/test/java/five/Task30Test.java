@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class Task30Test {
+ public class Task30Test {
     @Test
     public void update_light() {
         assertEquals("green", Task30.updateLight("red"));
