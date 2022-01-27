@@ -24,57 +24,85 @@ public final class ConditionSelection {
                     break;
                 case 1:
                     javaclub5.conditions.task1.Runner.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 2:
                     javaclub5.conditions.task2.DivisibleNb.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 3:
                     javaclub5.conditions.task3.BooleanToString.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 4:
                     javaclub5.conditions.task4.Runner.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 5:
                     javaclub5.conditions.task5.Runner.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 6:
                     javaclub5.conditions.task6.Runner.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 7:
                     javaclub5.conditions.task7.Runner.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 8:
                     javaclub5.conditions.task8.OppositesAttract.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 9:
                     javaclub5.conditions.task9.Runner.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 10:
                     javaclub5.conditions.task10.Runner.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 11:
                     javaclub5.conditions.task11.Runner.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 12:
                     javaclub5.conditions.task12.Runner.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 13:
                     javaclub5.conditions.task13.Runner.TrafficLights.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                 case 14:
                     javaclub5.conditions.task14.Runner.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                 case 15:
                     break;

@@ -26,46 +26,68 @@ public final class BasicProgramSelection {
                     break;
                 case 1:
                     javaclub5.basicprogram.task1.Runner.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 2:
                     javaclub5.basicprogram.task2.Runner.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 3:
                     javaclub5.basicprogram.task3.Runner.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 4:
                     javaclub5.basicprogram.task4.Runner.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 5:
                     javaclub5.basicprogram.task5.Runner.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 6:
                     javaclub5.basicprogram.task6.Runner.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 7:
                     javaclub5.basicprogram.task7.Runner.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 8:
                     javaclub5.basicprogram.task8.Runner.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 9:
                     javaclub5.basicprogram.task9.Runner.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 10:
                     javaclub5.basicprogram.task10.Runner.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 11:
                     javaclub5.basicprogram.task11.GrassHopper.start(reader);
+                    System.out.println("Press Enter");
+                    reader.readLine();
                     selectTheme(reader);
                     break;
                 case 12:
