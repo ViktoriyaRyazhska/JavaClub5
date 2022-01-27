@@ -28,20 +28,42 @@ public class Task47 {
         }
     }
 
-    private static ArrayList<String> create(String man, String woman) {
+    public static ArrayList<String> create(String man, String woman) {
         if (humans == null) {
             humans = new ArrayList<>();
-            humans.add(String.valueOf(new Man()));
-            humans.add(String.valueOf(new Woman()));
+            humans.add(String.valueOf(new Man(man)));
+            humans.add(String.valueOf(new Woman(woman)));
+        } else {
+            humans.add(new Man(man).toString());
+            humans.add(new Woman(woman).toString());
         }
-        humans.add(man);
-        humans.add(woman);
         return humans;
     }
 }
-class Human { }
+class Human {
+    protected String name;
+    public Human(String name) {
+        this.name = name;
+    }
+}
 
-class Man extends Human { }
+class Man extends Human {
+    public Man(String name) {
+        super(name);
+    }
+    @Override
+    public String toString() {
+        return "Man`s name: " + name;
+    }
+}
 
-class Woman extends Human { }
+class Woman extends Human {
+    public Woman(String name) {
+        super(name);
+    }
+    @Override
+    public String toString() {
+        return "Woman`s name: " + name;
+    }
+}
 
