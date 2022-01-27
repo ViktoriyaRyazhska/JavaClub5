@@ -64,6 +64,11 @@ public final class ClassesSelection {
 
     }
 
+    /**
+     * Method to go to main menu
+     * @param reader BufferedReader
+     * @throws IOException
+     */
     private static void goToMainMenu(BufferedReader reader) throws IOException {
         System.out.println("------------------------------");
         System.out.println("Press Enter");
