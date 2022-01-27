@@ -1,6 +1,7 @@
 package javaclub5.mainClasses;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 
 import static javaclub5.mainClasses.MainProgram.selectTheme;
 
@@ -15,7 +16,7 @@ public final class OOPSelection {
      * Method for selection of the Task
      * @param reader BufferedReader
      */
-    public static final void selectOOP(BufferedReader reader) {
+    public static void selectOOP(BufferedReader reader) {
         System.out.println("Select number of Task (1-4) \n 0. Main menu \n 12. exit");
         try {
             int selection = Integer.parseInt(reader.readLine());
@@ -24,22 +25,20 @@ public final class OOPSelection {
                     selectTheme(reader);
                     break;
                 case 1:
-                    System.out.println("Not done yet");
-                    //javaclub5.oop.task1.Runner.start();
-                    selectTheme(reader);
+                    javaclub5.oop.task1.Runner.start(reader);
+                    goToMainMenu(reader);
                     break;
                 case 2:
                     javaclub5.oop.task2.Runner.start(reader);
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                     break;
                 case 3:
-                    System.out.println("Not done yet");
-                    //javaclub5.oop.task3.Runner.start();
-                    selectTheme(reader);
+                    javaclub5.oop.task3.Runner.start(reader);
+                    goToMainMenu(reader);
                     break;
                 case 4:
                     javaclub5.oop.task4.Runner.start(reader);
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                     break;
                 case 12:
                     break;
@@ -53,5 +52,12 @@ public final class OOPSelection {
             System.out.println("Wrong input");
             selectOOP(reader);
         }
+    }
+
+    private static void goToMainMenu(BufferedReader reader) throws IOException {
+        System.out.println("---------------------");
+        System.out.println("Press Enter");
+        reader.readLine();
+        selectTheme(reader);
     }
 }

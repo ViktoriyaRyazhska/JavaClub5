@@ -1,6 +1,7 @@
 package javaclub5.mainClasses;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 
 import static javaclub5.mainClasses.MainProgram.selectTheme;
 
@@ -14,7 +15,7 @@ public final class ConditionSelection {
      * Method for selection of the Task
      * @param reader BufferedReader
      */
-    public static final void selectConditions(BufferedReader reader) {
+    public static void selectConditions(BufferedReader reader) {
         System.out.println("Select number of Task (1-14) \n 0. Main menu \n 15. exit");
         try {
             int selection = Integer.parseInt(reader.readLine());
@@ -24,58 +25,58 @@ public final class ConditionSelection {
                     break;
                 case 1:
                     javaclub5.conditions.task1.Runner.start(reader);
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                     break;
                 case 2:
                     javaclub5.conditions.task2.DivisibleNb.start(reader);
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                     break;
                 case 3:
                     javaclub5.conditions.task3.BooleanToString.start(reader);
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                     break;
                 case 4:
                     javaclub5.conditions.task4.Runner.start(reader);
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                     break;
                 case 5:
                     javaclub5.conditions.task5.Runner.start(reader);
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                     break;
                 case 6:
                     javaclub5.conditions.task6.Runner.start(reader);
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                     break;
                 case 7:
                     javaclub5.conditions.task7.Runner.start(reader);
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                     break;
                 case 8:
                     javaclub5.conditions.task8.OppositesAttract.start(reader);
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                     break;
                 case 9:
                     javaclub5.conditions.task9.Runner.start(reader);
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                     break;
                 case 10:
                     javaclub5.conditions.task10.Runner.start(reader);
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                     break;
                 case 11:
                     javaclub5.conditions.task11.Runner.start(reader);
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                     break;
                 case 12:
                     javaclub5.conditions.task12.Runner.start(reader);
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                     break;
                 case 13:
                     javaclub5.conditions.task13.Runner.TrafficLights.start(reader);
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                 case 14:
                     javaclub5.conditions.task14.Runner.start(reader);
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                 case 15:
                     break;
                 default:{
@@ -88,5 +89,12 @@ public final class ConditionSelection {
             System.out.println("Wrong input");
             selectConditions(reader);
         }
+    }
+
+    private static void goToMainMenu(BufferedReader reader) throws IOException {
+        System.out.println("---------------------");
+        System.out.println("Press Enter");
+        reader.readLine();
+        selectTheme(reader);
     }
 }
