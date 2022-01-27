@@ -24,8 +24,7 @@ public final class OOPSelection {
                     selectTheme(reader);
                     break;
                 case 1:
-                    System.out.println("Not done yet");
-                    //javaclub5.oop.task1.Runner.start();
+                    javaclub5.oop.task1.Runner.start(reader);
                     selectTheme(reader);
                     break;
                 case 2:
