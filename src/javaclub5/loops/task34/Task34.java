@@ -1,11 +1,11 @@
 package javaclub5.loops.task34;
-;
+
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.stream.IntStream;
 
 public class Task34 {
-    public int getAverage(int[] marks){
+    public static int getAverage(int[] marks){
 
         return (int) IntStream.of(marks).average().orElse(0);
     }
@@ -20,8 +20,7 @@ try {
             System.exit(1);
         }
     }
-    Task34 obj = new Task34();
-    System.out.println("Your average:"+obj.getAverage(marks));
+    System.out.println("Your average:"+getAverage(marks));
 }catch (Exception e){
     System.out.println("Wrong input");
 }
