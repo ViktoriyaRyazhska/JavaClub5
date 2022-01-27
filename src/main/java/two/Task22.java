@@ -12,7 +12,7 @@ public class Task22 {
             } else if (age==0) {
                 return "You were born this very year!";
             } else if (age<-1){
-                return "You will be born " + (year + Math.abs(age)) + "year(s)";
+                return "You will be born in " + Math.abs(age) + " years.";
             }
             else if (age==-1){
                 return "You will be born in 1 year.";
