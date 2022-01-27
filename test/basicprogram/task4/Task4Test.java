@@ -4,8 +4,8 @@ import javaclub5.basicprogram.task4.Task4;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+//import static org.junit.jupiter.api.Assertions.assertFalse;
+//import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class Task4Test {
     @Test
