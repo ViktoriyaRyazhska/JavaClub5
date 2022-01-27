@@ -193,4 +193,11 @@ public class StaticImports {
         System.out.println("It depends from your salary and bonus.");
         System.out.println("Enter your salary");
     }
+
+    //Task 5 Conditions
+    public static void start5TaskConditions() {
+        System.out.println("Task 5 starts now!");
+        System.out.println("In this task we will calculate your age in past, future and now.");
+        System.out.println("Enter your birthday");
+    }
 }
