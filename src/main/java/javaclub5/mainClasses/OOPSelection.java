@@ -1,6 +1,7 @@
 package javaclub5.mainClasses;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 
 import static javaclub5.mainClasses.MainProgram.selectTheme;
 
@@ -25,27 +26,19 @@ public final class OOPSelection {
                     break;
                 case 1:
                     javaclub5.oop.task1.Runner.start(reader);
-                    System.out.println("Press Enter");
-                    reader.readLine();
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                     break;
                 case 2:
                     javaclub5.oop.task2.Runner.start(reader);
-                    System.out.println("Press Enter");
-                    reader.readLine();
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                     break;
                 case 3:
                     javaclub5.oop.task3.Runner.start(reader);
-                    System.out.println("Press Enter");
-                    reader.readLine();
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                     break;
                 case 4:
                     javaclub5.oop.task4.Runner.start(reader);
-                    System.out.println("Press Enter");
-                    reader.readLine();
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                     break;
                 case 12:
                     break;
@@ -59,5 +52,12 @@ public final class OOPSelection {
             System.out.println("Wrong input");
             selectOOP(reader);
         }
+    }
+
+    private static void goToMainMenu(BufferedReader reader) throws IOException {
+        System.out.println("---------------------");
+        System.out.println("Press Enter");
+        reader.readLine();
+        selectTheme(reader);
     }
 }

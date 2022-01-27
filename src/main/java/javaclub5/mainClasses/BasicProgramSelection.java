@@ -1,6 +1,7 @@
 package javaclub5.mainClasses;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 
 
 import static javaclub5.mainClasses.MainProgram.selectTheme;
@@ -26,69 +27,47 @@ public final class BasicProgramSelection {
                     break;
                 case 1:
                     javaclub5.basicprogram.task1.Runner.start(reader);
-                    System.out.println("Press Enter");
-                    reader.readLine();
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                     break;
                 case 2:
                     javaclub5.basicprogram.task2.Runner.start(reader);
-                    System.out.println("Press Enter");
-                    reader.readLine();
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                     break;
                 case 3:
                     javaclub5.basicprogram.task3.Runner.start(reader);
-                    System.out.println("Press Enter");
-                    reader.readLine();
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                     break;
                 case 4:
                     javaclub5.basicprogram.task4.Runner.start(reader);
-                    System.out.println("Press Enter");
-                    reader.readLine();
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                     break;
                 case 5:
                     javaclub5.basicprogram.task5.Runner.start(reader);
-                    System.out.println("Press Enter");
-                    reader.readLine();
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                     break;
                 case 6:
                     javaclub5.basicprogram.task6.Runner.start(reader);
-                    System.out.println("Press Enter");
-                    reader.readLine();
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                     break;
                 case 7:
                     javaclub5.basicprogram.task7.Runner.start(reader);
-                    System.out.println("Press Enter");
-                    reader.readLine();
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                     break;
                 case 8:
                     javaclub5.basicprogram.task8.Runner.start(reader);
-                    System.out.println("Press Enter");
-                    reader.readLine();
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                     break;
                 case 9:
                     javaclub5.basicprogram.task9.Runner.start(reader);
-                    System.out.println("Press Enter");
-                    reader.readLine();
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                     break;
                 case 10:
                     javaclub5.basicprogram.task10.Runner.start(reader);
-                    System.out.println("Press Enter");
-                    reader.readLine();
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                     break;
                 case 11:
                     javaclub5.basicprogram.task11.GrassHopper.start(reader);
-                    System.out.println("Press Enter");
-                    reader.readLine();
-                    selectTheme(reader);
+                    goToMainMenu(reader);
                     break;
                 case 12:
                     break;
@@ -102,5 +81,12 @@ public final class BasicProgramSelection {
             System.out.println("Wrong input");
             selectTheme(reader);
         }
+    }
+
+    private static void goToMainMenu(BufferedReader reader) throws IOException {
+        System.out.println("---------------------");
+        System.out.println("Press Enter");
+        reader.readLine();
+        selectTheme(reader);
     }
 }
