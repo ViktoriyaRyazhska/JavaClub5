@@ -27,7 +27,7 @@ public  final class MainProgram {
      * Method for selection of the Theme
      * @param reader BufferedReader
      */
-    public static final void selectTheme(BufferedReader reader) {
+    public static void selectTheme(BufferedReader reader) {
         System.out.println("------------------------------");
         System.out.println("Select theme of the Tasks");
         System.out.println("1. Basic Program \n2. Classes \n3. Colections \n4. Conditions \n5. Loops \n" +
