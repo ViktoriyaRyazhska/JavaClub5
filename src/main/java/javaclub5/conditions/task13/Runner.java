@@ -3,6 +3,12 @@ package javaclub5.conditions.task13;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
+/**
+ * Age Range Compatibility Equation
+ *
+ * @author Mysakovych Maksym
+ */
+
 public class Runner {
         public static class TrafficLights{
                 public static String updateLight(String current) {
