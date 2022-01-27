@@ -2,6 +2,7 @@ package main.classes.task13;
 
 import main.InterfaceTestClass;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class StaticElectrickery implements InterfaceTestClass {
@@ -25,7 +26,11 @@ public class StaticElectrickery implements InterfaceTestClass {
     public void execute() {
         int n;
         System.out.println("Please enter the value you want to increase by 100:");
-        n = scanner.nextInt();
-        System.out.println("Result: " + StaticElectrickery.plus100(n));
+        try {
+            n = scanner.nextInt();
+            System.out.println("Result: " + StaticElectrickery.plus100(n));
+        } catch (InputMismatchException | NumberFormatException e){
+            System.out.println("Wrong input!");
+        }
     }
 }

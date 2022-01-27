@@ -28,7 +28,7 @@ public class Triple implements InterfaceTestClass {
         String second = scanner.nextLine();
         System.out.println("Enter the third string:");
         String third = scanner.nextLine();
-        if(first.length() != second.length() && first.length() != third.length() && third.length() != second.length()){
+        if (first.length() != second.length() && first.length() != third.length() && third.length() != second.length()) {
             System.out.println("The lines must be the same length! Try to enter the strings again!");
             System.out.println("Enter the first string:");
             first = scanner.nextLine();
@@ -37,7 +37,7 @@ public class Triple implements InterfaceTestClass {
             System.out.println("Enter the third string:");
             third = scanner.nextLine();
         }
-        System.out.println("Result: " + Triple.tripleTrouble(first,second,third));
+        System.out.println("Result: " + Triple.tripleTrouble(first, second, third));
 
     }
 }

@@ -3,6 +3,7 @@ package main.oop.task48;
 import main.InterfaceTestClass;
 
 import java.io.IOException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import static main.oop.task48.Dih4.*;
@@ -31,64 +32,68 @@ public class ControllerTask48 implements InterfaceTestClass {
                 7. Reflection in horizontal line;
                 8. Reflection in reverse-diagonal line.""");
         System.out.println("Select action you want to do:");
-        yourSelect = scanner.nextInt();
-        System.out.println("Result of your action:");
-        switch (yourSelect) {
-            case 1 -> {
-                result = result.then(IDENTITY);
-                if (result != null) {
-                    System.out.println("Square -> " + result);
+        try {
+            yourSelect = scanner.nextInt();
+            System.out.println("Result of your action:");
+            switch (yourSelect) {
+                case 1 -> {
+                    result = result.then(IDENTITY);
+                    if (result != null) {
+                        System.out.println("Square -> " + result);
+                    }
+                }
+                case 2 -> {
+                    result = result.then(ROTATE_90_ANTICLOCKWISE);
+                    if (result != null) {
+                        System.out.println("Square -> " + result);
+                    }
+                }
+                case 3 -> {
+                    result = result.then(ROTATE_180);
+                    if (result != null) {
+                        System.out.println("Square -> " + result);
+                    }
+                }
+                case 4 -> {
+                    result = result.then(ROTATE_90_CLOCKWISE);
+                    if (result != null) {
+                        System.out.println("Square -> " + result);
+                    }
+                }
+                case 5 -> {
+                    result = result.then(REFLECT_VERTICAL);
+                    if (result != null) {
+                        System.out.println("Square -> " + result);
+                    }
+                }
+                case 6 -> {
+                    result = result.then(REFLECT_FORWARD_DIAGONAL);
+                    if (result != null) {
+                        System.out.println("Square -> " + result);
+                    }
+                }
+                case 7 -> {
+                    result = result.then(REFLECT_HORIZONTAL);
+                    if (result != null) {
+                        System.out.println("Square -> " + result);
+                    }
+                }
+                case 8 -> {
+                    result = result.then(REFLECT_REVERSE_DIAGONAL);
+                    if (result != null) {
+                        System.out.println("Square -> " + result);
+                    }
+                }
+                default -> {
+                    try {
+                        throw new IOException();
+                    } catch (IOException e) {
+                        System.out.println("Wrong input!");
+                    }
                 }
             }
-            case 2 -> {
-                result = result.then(ROTATE_90_ANTICLOCKWISE);
-                if (result != null) {
-                    System.out.println("Square -> " + result);
-                }
-            }
-            case 3 -> {
-                result = result.then(ROTATE_180);
-                if (result != null) {
-                    System.out.println("Square -> " + result);
-                }
-            }
-            case 4 -> {
-                result = result.then(ROTATE_90_CLOCKWISE);
-                if (result != null) {
-                    System.out.println("Square -> " + result);
-                }
-            }
-            case 5 -> {
-                result = result.then(REFLECT_VERTICAL);
-                if (result != null) {
-                    System.out.println("Square -> " + result);
-                }
-            }
-            case 6 -> {
-                result = result.then(REFLECT_FORWARD_DIAGONAL);
-                if (result != null) {
-                    System.out.println("Square -> " + result);
-                }
-            }
-            case 7 -> {
-                result = result.then(REFLECT_HORIZONTAL);
-                if (result != null) {
-                    System.out.println("Square -> " + result);
-                }
-            }
-            case 8 -> {
-                result = result.then(REFLECT_REVERSE_DIAGONAL);
-                if (result != null) {
-                    System.out.println("Square -> " + result);
-                }
-            }
-            default -> {
-                try {
-                    throw new IOException();
-                } catch (IOException e) {
-                    System.out.println("Wrong input!");
-                }
-            }
+        }catch (InputMismatchException | NumberFormatException e){
+            System.out.println("Wrong input!");
         }
     }
 

@@ -2,6 +2,7 @@ package main.conditions.task28;
 
 import main.InterfaceTestClass;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ModuloThreeSequence implements InterfaceTestClass {
@@ -27,7 +28,11 @@ public class ModuloThreeSequence implements InterfaceTestClass {
         System.out.println("Consider a sequence where the first two numbers " +
                 "are 0 and 1 and the next number of the sequence is the sum of the previous 2 modulo 3.");
         System.out.println("Please enter the number of the sequence you want to know: ");
-        n = scanner.nextInt();
-        System.out.println("Result: " + ModuloThreeSequence.sequence(n));
+        try {
+            n = scanner.nextInt();
+            System.out.println("Result: " + ModuloThreeSequence.sequence(n));
+        }catch (InputMismatchException | NumberFormatException e){
+            System.out.println("Wrong input!");
+        }
     }
 }

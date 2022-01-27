@@ -2,6 +2,7 @@ package main.conditions.task18;
 
 import main.InterfaceTestClass;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class OppositeNumber implements InterfaceTestClass {
@@ -15,8 +16,12 @@ public class OppositeNumber implements InterfaceTestClass {
     public void execute() {
         int number;
         System.out.println("Please enter the number you want to know opposite:");
-        number = scanner.nextInt();
-        System.out.println("Result: " + number + " -> " + OppositeNumber.opposite(number));
+        try {
+            number = scanner.nextInt();
+            System.out.println("Result: " + number + " -> " + OppositeNumber.opposite(number));
+        }catch (InputMismatchException | NumberFormatException e){
+            System.out.println("Wrong input!");
+        }
     }
 }
 

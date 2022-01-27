@@ -2,13 +2,14 @@ package main.basicprogram.task8;
 
 import main.InterfaceTestClass;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class CenturyFromYear implements InterfaceTestClass {
     Scanner scanner = new Scanner(System.in);
 
     public static int century(int year) {
-        int century = 0;
+        int century;
 
         if (year <= 100)
             century = 1;
@@ -23,12 +24,16 @@ public class CenturyFromYear implements InterfaceTestClass {
     public void execute() {
         int year;
         System.out.println("Enter the year whose century you want to know:");
-        year = scanner.nextInt();
-        if (year <= 0) {
-            System.out.println("Year can't be negative!");
-            System.out.println("Please enter the year again:");
+        try {
             year = scanner.nextInt();
+            if (year <= 0) {
+                System.out.println("Year can't be negative!");
+                System.out.println("Please enter the year again:");
+                year = scanner.nextInt();
+            }
+            System.out.println(year + " year -> " + CenturyFromYear.century(year) + " century");
+        } catch (InputMismatchException | NumberFormatException e) {
+            System.out.println("Wrong input!");
         }
-        System.out.println(year + " year -> " + CenturyFromYear.century(year) + " century");
     }
 }

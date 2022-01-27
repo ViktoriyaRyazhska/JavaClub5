@@ -2,6 +2,7 @@ package main.string.task68;
 
 import main.InterfaceTestClass;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ExclamationMarksSeries implements InterfaceTestClass {
@@ -22,8 +23,12 @@ public class ExclamationMarksSeries implements InterfaceTestClass {
         System.out.println("Please write a sentence with exclamation marks(for example \"!!!Hi !!hi!!! !hi\")");
         String s = scanner.nextLine();
         System.out.println("How many exclamation marks do you want ro remove?");
-        int n = scanner.nextInt();
-        System.out.println("Sentence without " + n + " exclamation marks: ");
-        System.out.println(ExclamationMarksSeries.remove(s, n));
+        try {
+            int n = scanner.nextInt();
+            System.out.println("Sentence without " + n + " exclamation marks: ");
+            System.out.println(ExclamationMarksSeries.remove(s, n));
+        }catch (InputMismatchException | NumberFormatException e){
+            System.out.println("Wrong input!");
+        }
     }
 }

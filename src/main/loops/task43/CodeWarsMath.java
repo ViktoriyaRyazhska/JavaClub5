@@ -2,6 +2,7 @@ package main.loops.task43;
 
 import main.InterfaceTestClass;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class CodeWarsMath implements InterfaceTestClass {
@@ -25,7 +26,11 @@ public class CodeWarsMath implements InterfaceTestClass {
     @Override
     public void execute() {
         System.out.println("Please enter the number you want to find the nearest square number:");
-        int n = scanner.nextInt();
-        System.out.println("Result: " + CodeWarsMath.nearestSq(n));
+        try {
+            int n = scanner.nextInt();
+            System.out.println("Result: " + CodeWarsMath.nearestSq(n));
+        }catch (InputMismatchException | NumberFormatException e){
+            System.out.println("Wrong input!");
+        }
     }
 }

@@ -3,6 +3,7 @@ package main.loops.task33;
 import main.InterfaceTestClass;
 
 import java.util.Arrays;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class CatYearsDogYears implements InterfaceTestClass {
@@ -30,7 +31,11 @@ public class CatYearsDogYears implements InterfaceTestClass {
         int humanYears;
         System.out.println("If you want to know the age of your cat and dog " +
                 "knowing how old they are in human years, please enter human years: ");
-        humanYears = scanner.nextInt();
-        System.out.println(" [human years,cat years,dog years]: " + Arrays.toString(CatYearsDogYears.humanYearsCatYearsDogYears(humanYears)));
+        try {
+            humanYears = scanner.nextInt();
+            System.out.println(" [human years,cat years,dog years]: " + Arrays.toString(CatYearsDogYears.humanYearsCatYearsDogYears(humanYears)));
+        }catch (InputMismatchException | NumberFormatException e){
+            System.out.println("Wrong input!");
+        }
     }
 }

@@ -16,7 +16,11 @@ public class AbbreviateTwoWords implements InterfaceTestClass {
     @Override
     public void execute() {
         System.out.println("Please write your name and surname(like this: Sam Harris):");
-        String name = scanner.nextLine();
-        System.out.println("Abbreviate a two word name: " + AbbreviateTwoWords.abbrevName(name));
+        try {
+            String name = scanner.nextLine();
+            System.out.println("Abbreviate a two word name: " + AbbreviateTwoWords.abbrevName(name));
+        }catch (ArrayIndexOutOfBoundsException e){
+            System.out.println("Wrong input! Input must look like this: Sam Harris");
+        }
     }
 }
