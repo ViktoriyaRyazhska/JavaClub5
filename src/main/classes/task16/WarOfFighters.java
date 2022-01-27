@@ -17,28 +17,26 @@ public class WarOfFighters implements InterfaceTestClass {
         int h2 = fighter2.health;
         String winner = "";
 
-        if(f1.equalsIgnoreCase(firstAttacker)){
-            do{
-              h2 = h2-d1;
-              if(h2<=0){
-                  break;
-              }
-              h1 = h1-d2;
-            }while (h1>=0 && h2>=0);
-        }
-        else{
-            do{
-                h1 = h1-d2;
-                if(h1<=0){
+        if (f1.equalsIgnoreCase(firstAttacker)) {
+            do {
+                h2 = h2 - d1;
+                if (h2 <= 0) {
                     break;
                 }
-                h2 = h2-d1;
-            }while (h1>=0 && h2>=0);
+                h1 = h1 - d2;
+            } while (h1 >= 0 && h2 >= 0);
+        } else {
+            do {
+                h1 = h1 - d2;
+                if (h1 <= 0) {
+                    break;
+                }
+                h2 = h2 - d1;
+            } while (h1 >= 0 && h2 >= 0);
         }
-        if(h1<=0){
+        if (h1 <= 0) {
             winner = f2;
-        }
-        else
+        } else
             winner = f1;
 
         return winner;
@@ -52,31 +50,34 @@ public class WarOfFighters implements InterfaceTestClass {
                 "Both health and damagePerAttack  will be integers larger than 0. You can mutate the Fighter objects.");
         Fighter fighter1 = new Fighter();
         Fighter fighter2 = new Fighter();
+        try {
+            System.out.println("Enter name of fighter1 : ");
+            fighter1.name = scanner.nextLine();
 
-        System.out.println("Enter name of fighter1 : ");
-        fighter1.name = scanner.nextLine();
+            System.out.println("Enter health of fighter1 : ");
+            fighter1.health = scanner.nextInt();
 
-        System.out.println("Enter health of fighter1 : ");
-        fighter1.health = scanner.nextInt();
+            System.out.println("Enter damage of fighter1 : ");
+            fighter1.damagePerAttack = scanner.nextInt();
 
-        System.out.println("Enter damage of fighter1 : ");
-        fighter1.damagePerAttack = scanner.nextInt();
+            scanner.nextLine();
+            System.out.println("Enter name of fighter2 : ");
+            fighter2.name = scanner.nextLine();
 
-        scanner.nextLine();
-        System.out.println("Enter name of fighter2 : ");
-        fighter2.name = scanner.nextLine();
+            System.out.println("Enter health of fighter2 : ");
+            fighter2.health = scanner.nextInt();
 
-        System.out.println("Enter health of fighter2 : ");
-        fighter2.health = scanner.nextInt();
+            System.out.println("Enter damage of fighter2 : ");
+            fighter2.damagePerAttack = scanner.nextInt();
 
-        System.out.println("Enter damage of fighter2 : ");
-        fighter2.damagePerAttack = scanner.nextInt();
+            scanner.nextLine();
+            System.out.println("Enter name of the fighter who will start the war : ");
+            String firstAttacker = scanner.nextLine();
 
-        scanner.nextLine();
-        System.out.println("Enter name of the fighter who will start the war : ");
-        String firstAttacker = scanner.nextLine();
-
-        System.out.println("The winner is: " + WarOfFighters.declareWinner(fighter1, fighter2, firstAttacker));
-
+            System.out.println("The winner is: " + WarOfFighters.declareWinner(fighter1, fighter2, firstAttacker));
+        }catch (Exception e) {
+                System.out.println("Check if your input is correct");
+                System.err.println(e.getMessage());
+            }
     }
 }

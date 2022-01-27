@@ -25,27 +25,32 @@ public class BonusTime implements InterfaceTestClass {
                 "If bonus is true, the salary should be multiplied by 10. If bonus is false, the fatcat did not make enough money and must receive only his stated salary.\n" +
                 "Return the total figure the individual will receive as a string prefixed with \"£\"");
         System.out.println("Enter salary of employee: ");
-        int salary = scanner.nextInt();
+        try {
+            int salary = scanner.nextInt();
 
-        scanner.nextLine();
-        System.out.println("Will our employee have a bonus (enter Yes or No): ");
-        String yesOrNo = scanner.nextLine();
-        Boolean flag = false;
-        Boolean rerun = false;
+            scanner.nextLine();
+            System.out.println("Will our employee have a bonus (enter Yes or No): ");
+            String yesOrNo = scanner.nextLine();
+            Boolean flag = false;
+            Boolean rerun = false;
 
-        if(yesOrNo.equalsIgnoreCase("no")){
-            flag = false;
+            if (yesOrNo.equalsIgnoreCase("no")) {
+                flag = false;
+            } else if (yesOrNo.equalsIgnoreCase("yes")) {
+                flag = true;
+            } else {
+                System.out.println("Please enter Yes or No ");
+                rerun = true;
+                execute();
+            }
+            if (!rerun) {
+                System.out.println("Here is the salary for employee: " + BonusTime.bonusTime(salary, flag));
+            }
+
+        }catch (Exception e) {
+            System.out.println("Check if your input is correct");
+            System.err.println(e.getMessage());
         }
-        else if(yesOrNo.equalsIgnoreCase("yes")){
-            flag = true;
-        }
-        else{
-            System.out.println("Please enter Yes or No ");
-            rerun = true;
-            execute();
-        }
-        if(!rerun) {
-            System.out.println("Here is the salary for employee: " + BonusTime.bonusTime(salary, flag));
-        }
+
     }
 }
