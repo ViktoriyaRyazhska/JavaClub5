@@ -3,7 +3,7 @@ package loops.task42;
 import javaclub5.loops.task42.Task42;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Task42test {

@@ -1,7 +1,7 @@
 package basicprogram.task9;
 
 import javaclub5.basicprogram.task9.Task9;
-import javaclub5.classes.task17.Task17;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
