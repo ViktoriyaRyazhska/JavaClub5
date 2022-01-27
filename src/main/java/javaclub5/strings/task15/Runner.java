@@ -11,12 +11,9 @@ import java.util.Arrays;
  */
 
 public class Runner {
-    public static void main(String[] args) {
-        start();
-    }
 
-    public static void start() {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    public static void start(BufferedReader br) {
+
         System.out.println("In this task we will sort the array, then split each letter of the first word with ***.");
         System.out.println("Enter array size:");
         try {
