@@ -10,14 +10,22 @@ import static main.java.com.softserve.statics.StaticImports.start4TaskBasicProgr
 
 public class Task4 extends ReadConsole {
 
-       static String name;
+       static int wallLength;
+       static int pixelSize;
 
     public static void main(String[] args) throws IOException {
         start4TaskBasicProgram();
 
         try {
-            name = br.readLine();
-            System.out.println(greet(name));
+            wallLength = Integer.parseInt(br.readLine());
+            System.out.println("Enter size of the wall:");
+            pixelSize = Integer.parseInt(br.readLine());
+            if (isDivisible(wallLength, pixelSize)) {
+                System.out.println("You can find an exact number");
+            }
+            else {
+                System.out.println("You can't find an exact number");
+            }
         } catch (IOException e) {
             e.printStackTrace();
             Task4.main(args);
@@ -43,6 +51,6 @@ public class Task4 extends ReadConsole {
             e.printStackTrace();
         }
     }
-    public static String greet(String name){return String.format("Hello, %s!", name);
+    public static boolean isDivisible(int wallLength, int pixelSize){return wallLength%pixelSize==0;
     }
 }
