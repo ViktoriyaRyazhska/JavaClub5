@@ -21,6 +21,7 @@ public class Runner {
 
     public static void start(BufferedReader br) {
         String[] fullName = new String[2];
+        System.out.println("In this task we will have a greeting.");
         System.out.println("Enter your name and surname(on different lines): ");
         try {
             for (int i = 0; i < fullName.length; i++) {
