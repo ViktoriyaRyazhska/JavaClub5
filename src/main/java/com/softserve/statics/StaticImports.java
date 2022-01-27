@@ -203,7 +203,7 @@ public class StaticImports {
     //Task 6 Conditions
     public static void start6TaskConditions() {
         System.out.println("Task 6 starts now!");
-        System.out.println("Let's play Rock Paper Scissors.");
+        System.out.println("Let's play rock paper scissors.");
         System.out.println("Enter player 1 choice");
     }
 }
