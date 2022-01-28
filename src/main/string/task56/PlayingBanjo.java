@@ -1,6 +1,7 @@
 package main.string.task56;
 
 import main.InterfaceTestClass;
+import main.basicprogram.task1.CodeFast;
 import main.basicprogram.task11.GrassHopper;
 
 import java.util.Scanner;
@@ -21,6 +22,12 @@ public class PlayingBanjo implements InterfaceTestClass {
         System.out.println("Create a function which answers the question \"Are you playing banjo?\".\n" +
                 "If your name starts with the letter \"R\" or lower case \"r\", you are playing banjo!");
         System.out.println("Enter your name: ");
-        System.out.println(PlayingBanjo.areYouPlayingBanjo(scanner.nextLine()));
+        try {
+            System.out.println(PlayingBanjo.areYouPlayingBanjo(scanner.nextLine()));
+        }
+        catch (Exception e) {
+            System.out.println("Check if your input is correct");
+            System.err.println(e.getMessage());
+        }
     }
 }
