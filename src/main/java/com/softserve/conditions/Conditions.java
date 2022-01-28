@@ -40,7 +40,7 @@ public class Conditions extends ReadConsole {
                     break;
 
                 case "8":
-                    Task7.main(args);
+                    Task8.main(args);
                     break;
 
                 case "9":
