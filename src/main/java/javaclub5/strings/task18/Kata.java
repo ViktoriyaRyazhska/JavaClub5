@@ -36,6 +36,9 @@ public class Kata {
         if (n == 0) {
             return s;
         }
+        if(n<0){
+            return s + " Need to input remove amount more than 0. Can't input less than 0.";
+        }
         String pattern = "!";
         String text = s;
         Pattern p = Pattern.compile(pattern);
