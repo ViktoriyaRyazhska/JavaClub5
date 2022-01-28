@@ -1,9 +1,9 @@
 package string.task51;
 
-import javaclub5.string.task51.Task51;
-import org.testng.annotations.Test;
+import javaclub5.OOP.task51.Task51;
+import org.junit.Test;
 
-import static org.testng.AssertJUnit.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Task51test {
     @Test
