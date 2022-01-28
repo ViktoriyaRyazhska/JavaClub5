@@ -23,7 +23,11 @@ public class Task7 extends ReadConsole {
             v1 = Integer.parseInt(br.readLine());
             System.out.println("Enter second value: ");
             v2 = Integer.parseInt(br.readLine());
-            System.out.println("Result: " + basicMath(op,v1,v2));
+            if (v2 != 0) {
+                System.out.println("Result: " + basicMath(op,v1,v2));
+            } else {
+                System.out.println("==> Wrong input!!=) Try again! <==");
+            }
         } catch (NumberFormatException | IOException e) {
             System.out.println("==> Wrong input!!=) Try again! <==");
             Task7.main(args);
@@ -59,12 +63,7 @@ public class Task7 extends ReadConsole {
             case "*":
                 return v1 * v2;
             case "/":
-                if (v2 == 0) {
-                    throw new ArithmeticException("Can't be divided by 0");
-
-                } else {
-                    return v1 / v2;
-                }
+                return v1 / v2;
             default:
                 throw new IllegalArgumentException("Unknown symbol");
         }
