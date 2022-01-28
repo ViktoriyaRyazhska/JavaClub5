@@ -14,9 +14,4 @@ public class Task47 {
 
 
 }
-class Human{
-}
-class Man extends Human{
-}
-class Woman extends Human{
-}
+
