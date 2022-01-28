@@ -29,6 +29,7 @@ public class GrowX implements InterfaceTestClass {
             System.out.println("Enter value: ");
             x[i] = myObj.nextInt();
         }
+        System.out.println(GrowX.grow(x,size));
 
     }
 }

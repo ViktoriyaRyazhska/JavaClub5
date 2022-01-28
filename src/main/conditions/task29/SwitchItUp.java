@@ -40,6 +40,7 @@ public class SwitchItUp implements InterfaceTestClass {
         System.out.println("When provided with a number between 0-9, return it in words.");
         System.out.println("Enter number: ");
         int  number = myObj.nextInt();
+        System.out.println(SwitchItUp.switchItUp(number));
 
     }
 }

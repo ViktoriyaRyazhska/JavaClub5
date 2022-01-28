@@ -21,6 +21,7 @@ public class Summation implements InterfaceTestClass {
                 " The number will always be a positive integer greater than 0.");
         System.out.println("Enter value: ");
         int  n = myObj.nextInt();
+        System.out.println(Summation.summation(n));
 
     }
 }

@@ -19,6 +19,7 @@ public class PositionAlphabet implements InterfaceTestClass {
         System.out.println("When provided with a letter, return its position in the alphabet.");
         System.out.println("Write your number: ");
         int number = scanner.nextInt();
+        System.out.println(PositionAlphabet.position(number));
 
     }
 }
