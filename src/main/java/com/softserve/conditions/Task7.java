@@ -47,7 +47,7 @@ public class Task7 extends ReadConsole {
             default:
                 System.err.println("You need to do this: put 1 or 2");
                 System.err.println("Transfer to menu ");
-                main.java.com.softserve.basicprogram.Task1.main(args);
+                Task7.main(args);
             }
         } catch (IOException e) {
             e.printStackTrace();
