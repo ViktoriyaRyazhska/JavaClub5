@@ -20,9 +20,13 @@ public class Task68 {
 
     public static String removeExclamation(String word, int remove) {
 
+        if (remove==0) {
+            return word;
+        }
+
         for (int i = 0; i < remove; i++) {
             int j = word.indexOf("!");
-            word = word.substring(0, j) + word.substring(j + 1);
+            word = word.replaceFirst("!", "");
         }
         return word;
     }
