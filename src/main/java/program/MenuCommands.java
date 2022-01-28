@@ -42,6 +42,7 @@ public class MenuCommands {
         namesOfSolutions.get(0).add("Grasshopper");
         namesOfSolutions.get(0).add("MultiplyingTwo");
         namesOfSolutions.get(0).add("PixelArt");
+        namesOfSolutions.get(0).add("Jenny's secret message");
         namesOfSolutions.get(0).add("Return to main menu");
         //сюди всі рішення з basicprograms
 
@@ -59,6 +60,7 @@ public class MenuCommands {
         namesOfSolutions.add(new ArrayList<>());
         namesOfSolutions.get(2).add("Loop bug fixing");
         namesOfSolutions.get(2).add("Remove even numbers");
+        namesOfSolutions.get(2).add("Push an object into array");
         namesOfSolutions.get(2).add("Return to main menu");
 
 
@@ -77,8 +79,8 @@ public class MenuCommands {
         namesOfSolutions.get(3).add("Will be enough space");
         namesOfSolutions.get(3).add("Do I get a bonus");
         namesOfSolutions.get(3).add("Opposite attracts");
+        namesOfSolutions.get(3).add("Return negative");
         namesOfSolutions.get(3).add("Return to main menu");
-
 
 
 
@@ -179,6 +181,9 @@ public class MenuCommands {
         options.put("Get initials from name", new AbbreviateATwoWordName());
         options.put("Do I get a bonus", new DoIGetABonus());
         options.put("Opposite attracts", new OppositesAttract());
+        options.put("Push an object into array", new PushAnObjectIntoArray());
+        options.put("Return negative", new ReturnNegative());
+        options.put("Jenny's secret message", new JennysSecretMessage());
 
 
         options.put("Exit", new Exit());
