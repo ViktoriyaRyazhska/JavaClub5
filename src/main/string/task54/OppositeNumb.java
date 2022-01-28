@@ -17,5 +17,6 @@ public class OppositeNumb implements InterfaceTestClass {
 
         System.out.println("Write your number: ");
         int number = scanner.nextInt();
+        System.out.println(OppositeNumb.opposite(number));
     }
 }

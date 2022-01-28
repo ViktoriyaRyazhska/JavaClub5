@@ -23,6 +23,7 @@ public class MakeNegative implements InterfaceTestClass {
                 "to make it negative. But maybe the number is already negative?\n");
         System.out.println("Enter x: ");
         int  x = myObj.nextInt();
+        System.out.println(MakeNegative.makeNegative(x));
 
     }
 }

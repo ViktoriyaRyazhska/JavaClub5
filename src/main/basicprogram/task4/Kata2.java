@@ -23,6 +23,7 @@ public class Kata2 implements InterfaceTestClass {
         int  wallLength = myObj.nextInt();
         System.out.println("Enter pixelSize: ");
         int  pixelSize = myObj.nextInt();
+        System.out.println(Kata2.isDivisible(pixelSize,wallLength));
 
     }
 }

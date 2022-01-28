@@ -22,6 +22,7 @@ public class IsDivisibleNXY implements InterfaceTestClass {
         long x = myObj.nextInt();
         System.out.println("Enter y: ");
         long y = myObj.nextInt();
+        System.out.println(IsDivisibleNXY.isDivisible(n,x,y));
 
 
     }

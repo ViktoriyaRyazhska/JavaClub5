@@ -28,6 +28,7 @@ public class GetAverage implements InterfaceTestClass {
             System.out.println("Enter value: ");
             marks[i] = myObj.nextInt();
         }
+        System.out.println(GetAverage.getAverage(marks,size));
 
 
 

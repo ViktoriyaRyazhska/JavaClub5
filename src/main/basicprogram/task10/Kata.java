@@ -1,7 +1,9 @@
 package main.basicprogram.task10;
 
 import main.InterfaceTestClass;
+import main.View;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Kata implements InterfaceTestClass {
@@ -18,17 +20,19 @@ public class Kata implements InterfaceTestClass {
         return min + "-" + max;
     }
 
-
-
-
     @Override
     public void execute() {
+        int age = 0;
         System.out.println("Everybody knows the classic \"half your age plus seven\" " +
                 "dating rule that a lot of people follow (including myself). \n" +
                 "It's the 'recommended' age range in which to date someone. ");
         System.out.println("Let's see...");
         System.out.println("Write your age: ");
-        int age = scanner.nextInt();
-        System.out.println("Recommended interval: " + Kata.datingRange(age));
+        try {
+            age = scanner.nextInt();
+            System.out.println("Recommended interval: " + Kata.datingRange(age));
+        }catch (InputMismatchException | NumberFormatException  exception){
+            System.out.println("Wrong input");
+        }
     }
 }

@@ -24,6 +24,7 @@ public class BasicMath implements InterfaceTestClass {
         int v1 = myObj.nextInt();
         System.out.println("Enter vaule of number 2: ");
         int v2 = myObj.nextInt();
+        System.out.println(BasicMath.basicMath(op,v1,v2));
 
     }
 }

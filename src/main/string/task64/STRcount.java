@@ -27,6 +27,7 @@ public class STRcount implements InterfaceTestClass {
         String str = scanner.nextLine();
         System.out.println("Write your letter: ");
         String letter = scanner.nextLine();
+        System.out.println(STRcount.strCount(str,letter));
 
     }
 }

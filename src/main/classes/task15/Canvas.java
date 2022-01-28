@@ -2,6 +2,7 @@ package main.classes.task15;
 
 import main.InterfaceTestClass;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.stream.IntStream;
 
@@ -145,12 +146,18 @@ public class Canvas implements InterfaceTestClass {
 
     @Override
     public void execute() {
+        int width = 0;
+        int height = 0;
         System.out.println("You are going to write a simple console-style drawing board program");
         System.out.println("Let's draw...");
         System.out.println("Put width of table");
-        int width = scanner.nextInt();
-        System.out.println("Put height of table");
-        int height = scanner.nextInt();
+        try {
+            width = scanner.nextInt();
+            System.out.println("Put height of table");
+            height = scanner.nextInt();
+        }catch (InputMismatchException | NumberFormatException exception){
+            System.out.println("Wrong input");
+        }
         System.out.println("Put more 4 digit, like coordinates. \n " +
                 "One digit + \" ENTER \" and so on..");
         int [] coordinates = new int[4];
