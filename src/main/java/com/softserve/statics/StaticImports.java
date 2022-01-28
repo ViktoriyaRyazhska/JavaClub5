@@ -214,4 +214,9 @@ public class StaticImports {
         System.out.println("Let's play rock paper scissors.");
         System.out.println("Enter player 1 choice");
     }
+    public static void start7TaskConditions() {
+        System.out.println("Task 7 starts now!");
+        System.out.println("Your task is to create a function that does four basic mathematical operations.");
+        System.out.println("Enter any one operator: +,-,*,/");
+    }
 }
