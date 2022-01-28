@@ -1,9 +1,9 @@
 package basicprogram.task2;
 
 import javaclub5.basicprogram.task2.Task2;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.testng.AssertJUnit.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Task2Test {
     @Test
