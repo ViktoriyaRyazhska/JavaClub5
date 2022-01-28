@@ -23,21 +23,24 @@ public class Triple implements InterfaceTestClass {
         System.out.println("Please write three strings to combine the first letters of all of its " +
                 "in one string(strings must be the same length!)");
         System.out.println("Enter the first string:");
-        String first = scanner.nextLine();
-        System.out.println("Enter the second string:");
-        String second = scanner.nextLine();
-        System.out.println("Enter the third string:");
-        String third = scanner.nextLine();
-        if (first.length() != second.length() && first.length() != third.length() && third.length() != second.length()) {
-            System.out.println("The lines must be the same length! Try to enter the strings again!");
-            System.out.println("Enter the first string:");
-            first = scanner.nextLine();
+        try {
+            String first = scanner.nextLine();
             System.out.println("Enter the second string:");
-            second = scanner.nextLine();
+            String second = scanner.nextLine();
             System.out.println("Enter the third string:");
-            third = scanner.nextLine();
+            String third = scanner.nextLine();
+            if (first.length() != second.length() && first.length() != third.length() && third.length() != second.length()) {
+                System.out.println("The lines must be the same length! Try to enter the strings again!");
+                System.out.println("Enter the first string:");
+                first = scanner.nextLine();
+                System.out.println("Enter the second string:");
+                second = scanner.nextLine();
+                System.out.println("Enter the third string:");
+                third = scanner.nextLine();
+            }
+            System.out.println("Result: " + Triple.tripleTrouble(first, second, third));
+        } catch (Exception e) {
+            System.out.println("Wrong input!");
         }
-        System.out.println("Result: " + Triple.tripleTrouble(first, second, third));
-
     }
 }
