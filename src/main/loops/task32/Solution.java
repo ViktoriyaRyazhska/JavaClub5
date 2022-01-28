@@ -18,13 +18,16 @@ public class Solution implements InterfaceTestClass {
     @Override
     public void execute() {
         System.out.println("Implement a function which called repeatStr which repeats the given string string exactly n times.");
-        System.out.println("You must enter two digits. ");
-        System.out.println("Lets enter first digit: ");
+        System.out.println("You must enter a digit and a word. ");
+
         try {
+
+            System.out.println("Lets enter a string: ");
+            String s = scan.nextLine();
+            System.out.println("Lets enter digit: ");
             int repeat = scan.nextInt();
-            System.out.println("Lets enter second digit: ");
-            String str = scan.nextLine();
-            System.out.println(Solution.repeatStr(repeat, str));
+            System.out.println("Your answer is: ");
+            System.out.println(Solution.repeatStr(repeat, s));
         }catch (Exception e){
             System.out.println("Please check your input.");
         }
