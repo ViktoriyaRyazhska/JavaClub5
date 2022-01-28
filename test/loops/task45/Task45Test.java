@@ -1,7 +1,7 @@
 package loops.task45;
 
 import javaclub5.loops.task45.Task45;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import java.util.Arrays;
 

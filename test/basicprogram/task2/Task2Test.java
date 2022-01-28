@@ -1,7 +1,7 @@
 package basicprogram.task2;
 
 import javaclub5.basicprogram.task2.Task2;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

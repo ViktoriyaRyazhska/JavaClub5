@@ -1,7 +1,7 @@
 package collections.task71;
 
 import javaclub5.collections.Task71.Task71;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.LinkedList;
