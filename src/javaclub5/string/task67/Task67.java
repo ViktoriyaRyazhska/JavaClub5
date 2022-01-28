@@ -1,10 +1,10 @@
-package javaclub5.collections.Task71;
+package javaclub5.string.task67;
 
 import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
 
-public class Task71 {
+public class Task67 {
     public static void start(Scanner scanner) {
         System.out.println("This task is for changing the letters case in the word to the opposite." +
                 "\nEnter some word to change it case: ");
