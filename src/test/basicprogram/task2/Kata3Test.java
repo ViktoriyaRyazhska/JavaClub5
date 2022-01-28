@@ -9,8 +9,6 @@ import static org.junit.Assert.assertEquals;
 public class Kata3Test {
 
 
-
-
     @Test
     public void sampleTest() {
         assertEquals(4, Kata3.multiply(2, 2));
