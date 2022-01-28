@@ -12,7 +12,7 @@ import java.io.InputStreamReader;
 public class Runner {
     public static String abbrevName(String name) {
         String[] ab = name.split(" ");
-        return (ab[0].charAt(0) + "." + ab[1].charAt(0)).toUpperCase();
+        return (ab[0].charAt(0) + "." + ab[1].charAt(0) + ".").toUpperCase();
     }
     public static void main(String[] args) {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
