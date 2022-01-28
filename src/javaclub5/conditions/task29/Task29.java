@@ -10,34 +10,34 @@ public class Task29 {
             switch (m) {
                 case 0:
                     System.out.println("Zero");
-                    break;
+                    return "Zero";
                 case 1:
                     System.out.println("One");
-                    break;
+                    return "One";
                 case 2:
                     System.out.println("Two");
-                    break;
+                    return "Two";
                 case 3:
                     System.out.println("Three");
-                    break;
+                    return "Three";
                 case 4:
                     System.out.println("Four");
-                    break;
+                    return "Four";
                 case 5:
                     System.out.println("Five");
-                    break;
+                    return "Five";
                 case 6:
                     System.out.println("Six");
-                    break;
+                    return "Six";
                 case 7:
                     System.out.println("Seven");
-                    break;
+                    return "Seven";
                 case 8:
                     System.out.println("Eight");
-                    break;
+                    return "Eight";
                 case 9:
                     System.out.println("Nine");
-                    break;
+                    return "Nine";
             }
         return "";
     }
