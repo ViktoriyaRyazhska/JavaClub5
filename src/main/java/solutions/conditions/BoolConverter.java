@@ -3,6 +3,7 @@ package solutions.conditions;
 import program.helper.Helper;
 import solutions.Executable;
 
+
 public class BoolConverter implements Executable {
 
     boolean b;

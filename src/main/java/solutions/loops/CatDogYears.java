@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 public class CatDogYears implements Executable {
 
-        public static int[] humanYearsCatYearsDogYears(final int humanYears) {
+        public int[] humanYearsCatYearsDogYears(final int humanYears) {
             int[] ints = {humanYears, 0, 0};
             for (int j = 1; j < ints.length; j++) {
 

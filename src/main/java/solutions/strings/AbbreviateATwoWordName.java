@@ -3,14 +3,13 @@ package solutions.strings;
 import program.helper.Helper;
 import solutions.Executable;
 
-import java.util.Arrays;
 
 public class AbbreviateATwoWordName implements Executable {
 
-    public static String abbrevName(String name) {
+    public String abbrevName(String name) {
         String[] initials = name.split(" ");
-        name = String.valueOf(Character.toUpperCase(initials[0].charAt(0))) + "." +
-                String.valueOf(Character.toUpperCase(initials[1].charAt(0)));
+        name = Character.toUpperCase(initials[0].charAt(0)) + "." +
+                Character.toUpperCase(initials[1].charAt(0));
         return name;
     }
 

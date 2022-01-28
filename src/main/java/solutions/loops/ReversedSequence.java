@@ -14,7 +14,7 @@ public class ReversedSequence implements Executable {
         System.out.println(Arrays.toString(createReversedSequence(n)));
     }
 
-    private int[] createReversedSequence(int n) {
+    public int[] createReversedSequence(int n) {
         int[] seq = new int[n];
         for (int i = 0; i < seq.length; i++) {
             seq[i] = seq.length - i;

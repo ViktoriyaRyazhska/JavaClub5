@@ -13,7 +13,7 @@ import solutions.collections.*;
 import solutions.conditions.*;
 import solutions.loops.*;
 import solutions.strings.*;
-import solutions.oop.Leetspeak.Leetspeak;
+import solutions.oop.Leetspeak.LeetSpeak;
 import solutions.oop.AdamEndEve;
 
 
@@ -75,6 +75,8 @@ public class MenuCommands {
         namesOfSolutions.get(3).add("Rock Paper Scissors");
         namesOfSolutions.get(3).add("Transportation on vacation");
         namesOfSolutions.get(3).add("Will be enough space");
+        namesOfSolutions.get(3).add("Do I get a bonus");
+        namesOfSolutions.get(3).add("Opposite attracts");
         namesOfSolutions.get(3).add("Return to main menu");
 
 
@@ -146,7 +148,7 @@ public class MenuCommands {
         options.put("Fibonacci numbers modulo 3", new FibonacciModulo());
         options.put("Block", new Block());
         options.put("CatDogYears", new CatDogYears());
-        options.put("Leetspeak", new Leetspeak());
+        options.put("Leetspeak", new LeetSpeak());
         options.put("SortAndStar", new SortAndStar());
         options.put("Find the position", new FindThePosition());
         options.put("Repeating the string", new StringRepeat());
@@ -175,6 +177,8 @@ public class MenuCommands {
         options.put("Plus 100" , new StaticElectrickery());
         options.put("MultiplyingTwo" , new MultiplyingTwo());
         options.put("Get initials from name", new AbbreviateATwoWordName());
+        options.put("Do I get a bonus", new DoIGetABonus());
+        options.put("Opposite attracts", new OppositesAttract());
 
 
         options.put("Exit", new Exit());

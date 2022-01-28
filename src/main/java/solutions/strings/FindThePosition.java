@@ -4,9 +4,11 @@ import program.helper.Helper;
 import solutions.Executable;
 
 public class FindThePosition implements Executable {
-    public static String position(char alphabet)
+    public String position(char alphabet)
     {
+        if (((int) alphabet - 96) > 0 && ((int) alphabet - 96)<=26)
         return "Position of alphabet: " + ((int) alphabet - 96);
+        else return "Wrong Input";
     }
 
     @Override
