@@ -1,9 +1,9 @@
 package conditions.task29;
 
 import javaclub5.conditions.task29.Task29;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.testng.AssertJUnit.assertEquals;
+import static org.junit.Assert.assertEquals;
 
 
 public class Task29Test {
