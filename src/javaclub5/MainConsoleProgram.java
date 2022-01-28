@@ -198,7 +198,7 @@ public class MainConsoleProgram {
                 Task45.start(scanner);
                 break;
             case 47:
-                Task47.main(scanner);
+                Task47.main();
                 break;
             case 49:
                 Task49.start(scanner);
