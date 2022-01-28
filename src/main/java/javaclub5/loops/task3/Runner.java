@@ -19,20 +19,22 @@ public class Runner {
                 System.out.println("Enter length of array: ");
                 int a = Integer.parseInt(br.readLine());
                 int[] array1 = new int[a];
-                int sum = 0;
-                int res = 0;
-                for (int i = 0; i < a; i++){
+                for (int mark: array1) {
                     System.out.println("Enter mark: ");
-                    array1[i] = Integer.parseInt(br.readLine());
-                    sum += array1[i];
-                    if (array1.length == a){
-                        res = sum/a;
-                    }
+                    array1[mark] = Integer.parseInt(br.readLine());
                 }
-                System.out.println("Mean of an marks: " + res);
+                System.out.println("Mean of an marks: "+ getAverage(array1));
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
+    public static int getAverage(int[] marks){
+        int sum = 0;
+        for (int mark : marks) {
+            sum += mark;
+        }
+        int res = sum / marks.length;
+        return res;
+    }
 }
 
