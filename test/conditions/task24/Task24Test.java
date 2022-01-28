@@ -1,7 +1,7 @@
 package conditions.task24;
 
 import javaclub5.conditions.task24.Task24;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Test;
 
 import static sun.nio.cs.Surrogate.is;
 

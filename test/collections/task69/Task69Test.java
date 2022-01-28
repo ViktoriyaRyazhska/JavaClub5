@@ -1,10 +1,11 @@
-package javaclub5.collections.task69;
+package collections.task69;
 
+import javaclub5.collections.task69.Task69;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class Task69Test {
 
