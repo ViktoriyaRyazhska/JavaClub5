@@ -6,12 +6,12 @@ import java.io.InputStreamReader;
 
 /**
  * The game
- *
+ * <p>
  * In this game, there are 21 sticks lying in a pile. Players take turns taking 1, 2, or 3 sticks.
  * The last person to take a stick wins. For example:
- *
+ * <p>
  * 21 sticks in the pile
- *
+ * <p>
  * Bob takes 2  -->  19 sticks left
  * Jim takes 3  -->  16 sticks
  * Bob takes 3  -->  13 sticks
@@ -28,9 +28,10 @@ public class Runner {
 
     /**
      * main method of Class
-     *
      */
     public static void start(BufferedReader reader) {
+        System.out.println("In this game, there are 21 sticks lying in a pile. " +
+                "Players take turns taking 1, 2, or 3 sticks. The last person to take a stick wins.");
         System.out.println("21 sticks in the pile");
         int sticks = 21;
         int number = makeMove(sticks);
@@ -41,7 +42,7 @@ public class Runner {
         while (sticks != 0) {
             try {
                 System.out.println("You'll take?");
-                number =  Integer.parseInt(reader.readLine());
+                number = Integer.parseInt(reader.readLine());
                 if (number > 3 || number < 1) {
                     System.out.println("Wrong input");
                     continue;
@@ -60,11 +61,10 @@ public class Runner {
     }
 
     /**
-     *
      * @param sticks number of sticks left in the game
      * @return number sticks bot should take
      */
     public static int makeMove(int sticks) {
-        return sticks -  (sticks /4) * 4;
+        return sticks - (sticks / 4) * 4;
     }
 }

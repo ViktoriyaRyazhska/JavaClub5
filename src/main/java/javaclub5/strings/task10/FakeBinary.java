@@ -18,6 +18,7 @@ public class FakeBinary {
     }
 
     public static void start(BufferedReader br) {
+        System.out.println("In this task, input string and get number output.");
         System.out.println("Enter string: ");
         try {
             String str = br.readLine();

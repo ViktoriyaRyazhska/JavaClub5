@@ -11,10 +11,11 @@ public class Runner {
     }
 
     public static void start(BufferedReader br) {
-        System.out.println("Enter player 1 choise");
+        System.out.println("Game: rock, scissors, paper.");
+        System.out.println("Enter player 1 choice");
         try {
             String p1 =br.readLine();
-            System.out.println("Enter player 2 choise");
+            System.out.println("Enter player 2 choice");
             String p2 = br.readLine();
             System.out.println("Result " + rps(p1,p2));
         } catch (IOException e) {

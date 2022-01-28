@@ -11,6 +11,7 @@ public class Runner {
     }
 
     public static void start(BufferedReader br) {
+        System.out.println("In this task we will calculate your age in past, future and now.");
         System.out.println("Enter your year of birth:");
         try {
             int birth = Integer.parseInt(br.readLine());

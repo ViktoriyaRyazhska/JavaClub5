@@ -15,6 +15,7 @@ public class Runner{
     }
 
     public static void start(BufferedReader br) {
+        System.out.println("This task makes the number opposite( 2 -> -2).");
         System.out.println("Enter please number: ");
         try {
             int number = Integer.parseInt(br.readLine());
