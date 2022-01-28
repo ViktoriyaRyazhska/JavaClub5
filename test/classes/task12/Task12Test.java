@@ -13,5 +13,4 @@ public class Task12Test<EncapsulationDemo> {
                 ed.getNumber()
         );
     }
-}
-*/
+}*/
