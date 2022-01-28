@@ -54,6 +54,13 @@ public class StaticImports {
         System.out.println("Enter only with high register");
     }
 
+    //Collections 1Task
+    public static void start1TaskCollections() {
+        System.out.println(" ");
+        System.out.println("Task 1 runs!");
+        System.out.println("You are trying to put a hash java into an array.");
+    }
+
     //Collections 3Task
     public static void start3TaskCollections() {
         System.out.println(" ");
