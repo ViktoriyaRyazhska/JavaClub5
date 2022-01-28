@@ -10,7 +10,9 @@ public class Task35 {
             int a = Integer.parseInt(scanner.nextLine());
             int b = Integer.parseInt(scanner.nextLine());
             int c = Integer.parseInt(scanner.nextLine());
-            int[] ints = valueDoubled(a, b, c);
+            int[] numbers = new int[]{a, b, c};
+            int[] ints = valueDoubled(numbers);
+
             System.out.println("Double " + a + " is " + ints[0] + "\n"
                     + "Double " + b + " is " + ints[1] + "\n"
                     + "Double " + c + " is " + ints[2] + "\n");
@@ -18,12 +20,10 @@ public class Task35 {
         } catch (NumberFormatException e) {
             e.printStackTrace();
         }
-
-
     }
 
-    public static int[] valueDoubled(int a, int b, int c) {
-        int[] ints = {a, b, c};
+    public static int[] valueDoubled(int [] ints) {
+
         for (int i = 0; i < ints.length; i++) {
             ints[i] = ints[i] * 2;
         }
