@@ -1,13 +1,13 @@
 package collections.task71;
 
 import javaclub5.collections.Task71.Task71;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-import static org.testng.AssertJUnit.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Task71Test {
     @Test

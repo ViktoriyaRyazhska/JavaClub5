@@ -1,11 +1,11 @@
 package loops.task45;
 
 import javaclub5.loops.task45.Task45;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-import static org.testng.AssertJUnit.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Task45Test {
     @Test
