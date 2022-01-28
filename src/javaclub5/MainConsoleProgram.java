@@ -3,6 +3,7 @@ package javaclub5;
 
 import javaclub5.OOP.task47.Task47;
 import javaclub5.OOP.task49.Task49;
+import javaclub5.OOP.task50.Task50;
 import javaclub5.OOP.task51.Task51;
 import javaclub5.OOP.task53.Task53;
 import javaclub5.basicprogram.Task8.Task8;
@@ -44,6 +45,7 @@ import javaclub5.loops.task40.Task40;
 import javaclub5.loops.task42.Task42;
 import javaclub5.loops.task43.Task43;
 import javaclub5.loops.task44.Task44;
+import javaclub5.loops.task45.Task45;
 import javaclub5.string.task54.Task54;
 import javaclub5.string.task55.Task55;
 import javaclub5.string.task56.Task56;
@@ -190,6 +192,9 @@ public class MainConsoleProgram {
             case 44:
                 Task44.start(scanner);
                 break;
+            case 45:
+                Task45.start(scanner);
+                break;
             case 47:
                 Task47.main(scanner);
                 break;
@@ -246,6 +251,9 @@ public class MainConsoleProgram {
                 break;
             case 70:
                 Task70.start();
+                break;
+            case 71:
+            //    Task71.start();
                 break;
             default:
                 System.out.println("Ups. Task is not ready yet (.");
