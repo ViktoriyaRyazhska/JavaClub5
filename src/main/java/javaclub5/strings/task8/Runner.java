@@ -5,10 +5,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Runner {
-    public static void main(String[] args) {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        start(reader);
-    }
 
     public static void start(BufferedReader br) {
         System.out.println("In this task we will combine all the strings together. " +
@@ -23,7 +19,6 @@ public class Runner {
             System.out.println("Result: " + tripleTrouble(str1, str2, str3));
         } catch (IOException e) {
             System.out.println("Wrong input");
-            System.out.println(e.getMessage());
         }
     }
 

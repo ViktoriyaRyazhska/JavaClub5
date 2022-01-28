@@ -12,12 +12,9 @@ import java.io.InputStreamReader;
 public class Runner {
     public static int strCount(String str, char letter) {
 
-        return (int)str.chars().filter(x -> x == letter).count();
+        return (int) str.chars().filter(x -> x == letter).count();
     }
-    public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        start(br);
-    }
+
     public static void start(BufferedReader br) {
         try {
             System.out.println("In this task we will try to find amount of letters in the word.");
@@ -31,7 +28,7 @@ public class Runner {
             char let = letter.charAt(0);
             System.out.println(strCount(str, let));
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println("Wrong input.");
         }
     }
 }

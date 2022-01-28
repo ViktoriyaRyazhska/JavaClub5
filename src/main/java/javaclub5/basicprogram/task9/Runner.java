@@ -11,10 +11,6 @@ import java.io.InputStreamReader;
  */
 
 public class Runner {
-    public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        start(br);
-    }
 
     public static int makeNegative(final int x) {
         if (x>0){
@@ -32,7 +28,6 @@ public class Runner {
             System.out.println(makeNegative(x));
         } catch (IOException e) {
             System.out.println("Wrong input");
-            e.printStackTrace();
         }
     }
 }

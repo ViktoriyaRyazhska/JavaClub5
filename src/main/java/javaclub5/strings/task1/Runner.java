@@ -24,9 +24,9 @@ public class Runner {
             int number = Integer.parseInt(br.readLine());
             System.out.println("Transformed from integer to string: " + transformIntToString(number));
         } catch (NumberFormatException e) {
-            System.err.println(e.getMessage());
+            System.out.println("Wrong input.");
         } catch (IOException e) {
-            System.err.println(e.getMessage());
+            System.out.println("Wrong input.");
         }
     }
 

@@ -12,10 +12,6 @@ import java.io.InputStreamReader;
  */
 
 public class BooleanToString {
-    public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        start(br);
-    }
 
     public static void start(BufferedReader br) {
         System.out.println("Converting boolean type to String.");
@@ -24,7 +20,7 @@ public class BooleanToString {
             boolean b = Boolean.parseBoolean(br.readLine());
             System.out.println("Result: " + convert(b));
         } catch (IOException e) {
-            System.out.println(e.getMessage());
+            System.out.println("Wrong input.");
         }
     }
 

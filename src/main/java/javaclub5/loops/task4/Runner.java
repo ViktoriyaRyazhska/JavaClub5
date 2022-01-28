@@ -11,7 +11,7 @@ public class Runner {
         System.out.println("Input the length of array");
         try {
             int length = Integer.parseInt(reader.readLine());
-            int [] arr = new int[length];
+            int[] arr = new int[length];
             for (int i = 0; i < length; i++) {
                 System.out.printf("Input %d element of array\n", i + 1);
                 arr[i] = Integer.parseInt(reader.readLine());

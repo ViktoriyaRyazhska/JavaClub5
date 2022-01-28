@@ -5,10 +5,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Runner {
-    public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        start(br);
-    }
 
     public static void start(BufferedReader br) {
         System.out.println("Game: rock, scissors, paper.");
@@ -20,7 +16,6 @@ public class Runner {
             System.out.println("Result " + rps(p1,p2));
         } catch (IOException e) {
             System.out.println("Wrong input");
-            System.out.println(e.getMessage());
         }
 
     }

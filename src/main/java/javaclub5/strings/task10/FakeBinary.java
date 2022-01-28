@@ -12,10 +12,6 @@ import java.util.stream.Collectors;
  */
 
 public class FakeBinary {
-    public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        start(br);
-    }
 
     public static void start(BufferedReader br) {
         System.out.println("In this task, input string and get number output.");
@@ -24,7 +20,7 @@ public class FakeBinary {
             String str = br.readLine();
             System.out.println("Result: " + fakeBin(str));
         }catch (Exception e){
-            System.out.println(e.getMessage());
+            System.out.println("Wrong input.");
         }
     }
 

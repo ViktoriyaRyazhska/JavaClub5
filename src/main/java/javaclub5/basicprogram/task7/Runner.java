@@ -10,10 +10,6 @@ import java.io.InputStreamReader;
  * @author Dmytro Prudius
  */
 public class Runner{
-    public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        start(br);
-    }
 
     public static void start(BufferedReader br) {
         System.out.println("You need to keep data that returns time from midnight in milliseconds. ");
@@ -26,7 +22,7 @@ public class Runner{
             int seconds = Integer.parseInt(br.readLine());
             System.out.println("Result: " + past(hour,minutes,seconds));
         }catch (Exception e){
-            System.out.println(e.getMessage());
+            System.out.println("Wrong input");
         }
 
     }

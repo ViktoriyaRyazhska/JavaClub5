@@ -10,14 +10,14 @@ public class Runner {
         System.out.println("How many sheep do you have?");
         try {
             int sheepCount = Integer.parseInt(reader.readLine());
-            Boolean [] sheep = new Boolean[sheepCount];
+            Boolean[] sheep = new Boolean[sheepCount];
             for (int i = 0; i < sheepCount; i++) {
                 System.out.printf("Is %d ship present? true/false", i);
                 sheep[i] = Boolean.parseBoolean(reader.readLine());
             }
             System.out.printf("There are %d sheep in total\n", countSheeps(sheep));
         } catch (IOException e) {
-            System.out.println("Wrong Input");;
+            System.out.println("Wrong Input");
         }
 
     }
@@ -28,8 +28,7 @@ public class Runner {
             try {
                 if (arrayOfSheeps[i].equals(true))
                     count++;
-            }
-            catch (NullPointerException e) {
+            } catch (NullPointerException e) {
             }
         }
         return count;

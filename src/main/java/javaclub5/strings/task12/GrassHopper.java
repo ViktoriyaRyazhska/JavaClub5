@@ -7,11 +7,6 @@ import java.io.InputStreamReader;
 
 public class GrassHopper {
 
-    public static void main(String[] args) {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        start(reader);
-    }
-
     public static void start(BufferedReader reader) {
         System.out.println("Convert Fahrenheit to Celsius.");
         System.out.println("Input temperature in Fahrenheit");

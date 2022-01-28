@@ -36,7 +36,6 @@ public class Runner {
             System.out.println(sayHello(fullName, city, state));
         } catch (IOException e) {
             System.out.println("Smth wrong.");
-            e.printStackTrace();
         }
     }
 

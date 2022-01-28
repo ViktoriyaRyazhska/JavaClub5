@@ -19,7 +19,7 @@ public class Runner {
             int secondNum = Integer.parseInt(br.readLine());
             System.out.println("Result: " + multiplyTwoNums(firstNum, secondNum));
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println("Wrong input.");
         }
     }
 

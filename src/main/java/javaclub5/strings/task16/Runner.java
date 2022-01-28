@@ -5,10 +5,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Runner {
-    public static void main(String[] args) {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        start(reader);
-    }
 
     public static void start(BufferedReader br) {
         System.out.println("Correct the string:\nS is misinterpreted as 5\n" +
@@ -20,7 +16,6 @@ public class Runner {
             System.out.println("Result: " + correct(str2));
         } catch (IOException e) {
             System.out.println("Wrong input");
-            System.out.println(e.getMessage());
         }
     }
 

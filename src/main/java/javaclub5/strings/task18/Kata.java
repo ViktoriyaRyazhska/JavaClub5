@@ -7,9 +7,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- *  Remove n exclamation marks in the sentence from left to right. n is positive integer.
+ * Remove n exclamation marks in the sentence from left to right. n is positive integer.
  * Examples
- *
+ * <p>
  * remove("Hi!",1) === "Hi"
  * remove("Hi!",100) === "Hi"
  * remove("Hi!!!",1) === "Hi!!"
@@ -27,7 +27,6 @@ import java.util.regex.Pattern;
 public class Kata {
 
     /**
-     *
      * @param s sentence
      * @param n exclamation marks in the sentence from left to right
      * @return Sentence without n exclamation marks in the sentence from left to right
@@ -36,7 +35,7 @@ public class Kata {
         if (n == 0) {
             return s;
         }
-        if(n<0){
+        if (n < 0) {
             return s + " Need to input remove amount more than 0. Can't input less than 0.";
         }
         String pattern = "!";
@@ -55,6 +54,7 @@ public class Kata {
 
     /**
      * Main method of class
+     *
      * @param reader BufferedReade
      */
     public static void start(BufferedReader reader) {

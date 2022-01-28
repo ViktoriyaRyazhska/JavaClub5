@@ -12,11 +12,6 @@ import java.io.InputStreamReader;
  */
 
 public class Runner {
-    public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        start(br);
-
-    }
 
     public static void start(BufferedReader br) {
         System.out.println("Enter pleas year:");
@@ -24,7 +19,7 @@ public class Runner {
             int year = Integer.parseInt(br.readLine());
             System.out.println("Result: " + century(year));
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println("Wrong input.");
         }
     }
 

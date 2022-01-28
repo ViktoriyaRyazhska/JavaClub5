@@ -12,10 +12,6 @@ import java.util.List;
  */
 
 public class Runner {
-    public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        start(br);
-    }
 
     public static void start(BufferedReader reader) {
         System.out.println("In this task need to add string value.");

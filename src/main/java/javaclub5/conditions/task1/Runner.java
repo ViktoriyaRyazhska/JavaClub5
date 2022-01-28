@@ -9,11 +9,6 @@ import java.io.InputStreamReader;
  */
 public class Runner{
 
-    public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        start(br);
-    }
-
     public static void start(BufferedReader br) {
         System.out.println("This task makes the number opposite( 2 -> -2).");
         System.out.println("Enter please number: ");
@@ -21,7 +16,7 @@ public class Runner{
             int number = Integer.parseInt(br.readLine());
             System.out.println("Result: " + opposite(number));
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println("Wrong input.");
         }
     }
 

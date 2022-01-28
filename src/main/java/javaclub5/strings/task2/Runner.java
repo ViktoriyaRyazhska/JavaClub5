@@ -20,7 +20,6 @@ public class Runner {
             word = br.readLine();
         } catch (IOException e) {
             System.out.println("Smth wrong.");
-            e.printStackTrace();
         }
         System.out.println("Normal word " + word + ".");
         System.out.println("Reversed word: " + reversed(word) + ".");

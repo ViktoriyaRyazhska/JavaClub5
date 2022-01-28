@@ -19,7 +19,6 @@ public class Runner {
             System.out.println("Result: " + doubleInt(number));
         } catch (Exception e) {
             System.out.println("Invalid number provided.");
-            System.err.println(e.getMessage());
         }
     }
 

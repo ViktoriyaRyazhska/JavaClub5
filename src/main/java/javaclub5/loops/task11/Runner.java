@@ -1,4 +1,5 @@
 package javaclub5.loops.task11;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
@@ -9,16 +10,16 @@ import java.io.InputStreamReader;
  */
 
 public class Runner {
-    public static int TwiceAsOld(int a, int b){
+    public static int TwiceAsOld(int a, int b) {
         int result = 0;
         for (int i = 0; i < b; i++) {
-            if ((a - i)/((double)(b - i)) == 2) {
+            if ((a - i) / ((double) (b - i)) == 2) {
                 result = i;
                 break;
             }
         }
         for (int i = 0; i < a * 2; i++) {
-            if ((a + i)/((double)(b + i)) == 2) {
+            if ((a + i) / ((double) (b + i)) == 2) {
                 result = i;
                 break;
             }
@@ -26,10 +27,7 @@ public class Runner {
         return result;
 
     }
-    public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        start(br);
-    }
+
     public static void start(BufferedReader br) {
         System.out.println("Сalculate how many years ago the father was twice as old as his son (or in how many years he will be twice as old).");
         try {
@@ -39,7 +37,7 @@ public class Runner {
             int a = Integer.parseInt(br.readLine());
             System.out.println(TwiceAsOld(a, b));
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println("Wrong input.");
         }
     }
 }

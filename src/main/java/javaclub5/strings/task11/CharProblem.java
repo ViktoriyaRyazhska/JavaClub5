@@ -12,10 +12,6 @@ import java.io.InputStreamReader;
  */
 
 public class CharProblem {
-    public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        start(br);
-    }
 
     public static void start(BufferedReader br) {
 
@@ -26,7 +22,7 @@ public class CharProblem {
             String year = br.readLine();
             System.out.println("Result: " + howOld(year));
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println("Wrong input.");
         }
     }
 

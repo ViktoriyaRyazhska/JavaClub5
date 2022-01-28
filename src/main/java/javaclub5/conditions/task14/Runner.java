@@ -12,18 +12,15 @@ import java.io.InputStreamReader;
 public class Runner {
     public static int rentalCarCost(int d) {
         int total = 40 * d;
-        if (d >= 7){
+        if (d >= 7) {
             return total - 50;
-        } else if (d >= 3){
+        } else if (d >= 3) {
             return total - 20;
         } else {
             return total;
         }
     }
-    public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        start(br);
-    }
+
     public static void start(BufferedReader br) {
         try {
             System.out.println("In this task we will count car rental cost.");
@@ -31,7 +28,7 @@ public class Runner {
             int d = Integer.parseInt(br.readLine());
             System.out.println("Cost = " + rentalCarCost(d));
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println("Wrong input.");
         }
     }
 }

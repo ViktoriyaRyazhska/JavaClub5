@@ -19,11 +19,6 @@ public class Runner {
         return result;
     }
 
-    public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        start(br);
-    }
-
     public static void start(BufferedReader br) {
         System.out.println("Save the animals by switching them back. You will be given an array which will " +
                 "have three values (tail, body, head). It is your job to re-arrange the array so that the animal " +
@@ -38,7 +33,7 @@ public class Runner {
             array[2] = br.readLine();
             System.out.println("Now is the right way of body parts: " + Arrays.toString(Runner.fixTheMeerkat(array)));
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println("Wrong input.");
         }
     }
 }

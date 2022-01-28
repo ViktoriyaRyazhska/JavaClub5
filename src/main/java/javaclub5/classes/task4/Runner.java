@@ -5,10 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Runner {
-    public static void main(String[] args) {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        start(reader);
-    }
+
     public static void start(BufferedReader reader) {
         System.out.println("Simple Drawing Board, Draw the line with 'x' which connects the given points.");
         try {
@@ -31,10 +28,10 @@ public class Runner {
                     .drawCanvas());
 
         } catch (IOException e) {
-            e.printStackTrace();
             System.out.println("Something went wrong");
         }
     }
+
     public static class Canvas {
         int width;
         int height;

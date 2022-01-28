@@ -33,7 +33,6 @@ public class Runner {
             System.out.println("Your changed case in the word: " + changingLetterCase(input));
         } catch (IOException ex) {
             System.out.println("Wrong input.");
-            ex.getStackTrace();
         }
     }
 

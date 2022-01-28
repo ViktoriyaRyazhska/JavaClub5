@@ -16,11 +16,6 @@ public class Runner {
         return new Human[]{new Man("Adam"), new Woman("Eve")};
     }
 
-    public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        start(br);
-    }
-
     public static void start(BufferedReader br) {
         try {
             System.out.println("In this task we will do the God's creation.Humans.");
@@ -31,7 +26,7 @@ public class Runner {
             System.out.println("Here is the God's creation!" + "\n" +
                     Arrays.toString(create()));
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println("Wrong input.");
         }
     }
 }

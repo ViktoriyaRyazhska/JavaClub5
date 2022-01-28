@@ -26,7 +26,7 @@ public class Dictionary {
         try {
             String word = br.readLine();
             Dictionary d = new Dictionary();
-            d.newEntry("Apple","A fruit that grows on trees");
+            d.newEntry("Apple", "A fruit that grows on trees");
             System.out.println(d.look(word));
         } catch (IOException e) {
             e.printStackTrace();

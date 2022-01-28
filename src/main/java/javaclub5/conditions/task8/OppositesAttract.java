@@ -33,7 +33,6 @@ public class OppositesAttract {
             }
         } catch (IOException e) {
             System.out.println("Wrong input");
-            System.out.println(e.getMessage());
         }
     }
 

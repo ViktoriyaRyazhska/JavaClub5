@@ -14,10 +14,6 @@ import java.lang.String;
  */
 
 public class Runner {
-    public static void main(String[] args) {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        start(reader);
-    }
 
     public static void start(BufferedReader reader) {
         System.out.println("Enter user name");
@@ -26,7 +22,6 @@ public class Runner {
             System.out.println("Result: " + greet(name));
         } catch (IOException e) {
             System.out.println("Wrong input");
-            System.out.println(e.getMessage());
         }
 
     }

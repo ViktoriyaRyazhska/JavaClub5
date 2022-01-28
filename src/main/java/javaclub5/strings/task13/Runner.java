@@ -14,10 +14,7 @@ public class Runner {
         String[] ab = name.split(" ");
         return (ab[0].charAt(0) + "." + ab[1].charAt(0) + ".").toUpperCase();
     }
-    public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        start(br);
-    }
+
     public static void start(BufferedReader br) {
         System.out.println("In this task we will convert name and surname into initials.");
         try {
@@ -25,7 +22,7 @@ public class Runner {
             String name = br.readLine();
             System.out.println(abbrevName(name));
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println("Wrong input.");
         }
     }
 }

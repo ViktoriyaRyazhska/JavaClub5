@@ -24,7 +24,7 @@ public class Runner {
             System.out.println("This is the first pair of two prime numbers spaced with a gap: "
                     + Arrays.toString(gettingPrimes(g, m, n)));
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Wrong input.");
         } catch (NumberFormatException e) {
             System.out.println("Not number entered.");
         }

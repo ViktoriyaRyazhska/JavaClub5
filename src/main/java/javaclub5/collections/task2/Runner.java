@@ -7,10 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Runner {
-    public static void main(String[] args) {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        start(reader);
-    }
 
     public static void start(BufferedReader br) {
         System.out.println("In this task fixed infinite loop.");
@@ -23,7 +19,6 @@ public class Runner {
                 System.out.println("Wrong input");
         } catch (IOException e) {
             System.out.println("Wrong input");
-            System.out.println(e.getMessage());
         }
     }
 

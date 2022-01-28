@@ -12,10 +12,6 @@ import java.io.InputStreamReader;
  */
 
 public class DivisibleNb {
-    public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        start(br);
-    }
 
     public static void start(BufferedReader br) {
         System.out.println("Enter a number that is divisible by two numbers: ");
@@ -28,7 +24,7 @@ public class DivisibleNb {
             long number3 = Integer.parseInt(br.readLine());
             System.out.println("Result: " + isDivisible(number, number2, number3));
         } catch (IOException e) {
-            System.out.println(e.getMessage());
+            System.out.println("Wrong input.");
         }
     }
 

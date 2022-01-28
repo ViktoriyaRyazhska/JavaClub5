@@ -23,9 +23,9 @@ public class Runner {
             int value2 = Integer.parseInt(br.readLine());
             System.out.println("Arithmetical result: " + arithmeticResult(sign, value1, value2));
         } catch (ArithmeticException a) {
-            System.out.println(a.getMessage());
+            System.out.println("Can't divide ny 0!");
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println("Wrong input.");
         }
     }
 

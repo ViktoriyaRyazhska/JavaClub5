@@ -22,10 +22,6 @@ import java.io.InputStreamReader;
  */
 
 public class Runner {
-    public static void main(String[] args) {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        start(reader);
-    }
     /**
      * main method of Class
      *
@@ -49,7 +45,7 @@ public class Runner {
             System.out.println("Yours second fraction wil be: " + secondFraction);
             System.out.println("Sum of fractions will be: " + firstFraction.add(secondFraction));
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Wrong input.");
         }
     }
 
