@@ -26,7 +26,7 @@ public class Task7 extends ReadConsole {
             if (v2 != 0) {
                 System.out.println("Result: " + basicMath(op,v1,v2));
             } else {
-                System.out.println("==> Wrong input!!=) Try again! <==");
+                System.out.println("==> Can't be divided by 0 <==");
             }
         } catch (NumberFormatException | IOException e) {
             System.out.println("==> Wrong input!!=) Try again! <==");
