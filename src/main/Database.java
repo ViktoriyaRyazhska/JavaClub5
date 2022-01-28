@@ -49,15 +49,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Database {
-    public Map<Integer, InterfaceTestClass> map = new HashMap<>();;
-
+    public Map<Integer, InterfaceTestClass> map = new HashMap<>();
     public Database() {
         programAdder();
     }
 
     public void programAdder(){
         map.put(1, new CodeFast());
-        map.put(2, new Kata3());
+//        map.put(2, new Kata3());
         map.put(3, new CuboidVolume());
 //        map.put(4, new /* назва класу*/);
         map.put(5, new Greeter());
