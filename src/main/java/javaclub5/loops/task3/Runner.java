@@ -33,7 +33,7 @@ public class Runner {
         for (int mark : marks) {
             sum += mark;
         }
-        int res = sum / marks.length;
+        int res = (int) Math.round ((double)sum / marks.length);
         return res;
     }
 }
