@@ -12,7 +12,7 @@ public class SwitchItUp implements Executable {
         System.out.println("In words: " + IntToWords(i));
     }
 
-    private String IntToWords(int i) {
+    public String IntToWords(int i) {
         if (i>9 || i<0 ) return ("Wrong input!");
         switch (i){
             case 1: return "One";

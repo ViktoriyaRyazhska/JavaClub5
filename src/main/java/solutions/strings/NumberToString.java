@@ -12,7 +12,7 @@ public class NumberToString implements Executable {
         System.out.println(s);
     }
 
-    private String numToString(int i) {
+    public String numToString(int i) {
         return String.valueOf(i);
     }
 }

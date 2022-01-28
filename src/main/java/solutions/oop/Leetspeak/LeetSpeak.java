@@ -4,7 +4,7 @@ package solutions.oop.Leetspeak;
 import program.helper.Helper;
 import solutions.Executable;
 
-public class Leetspeak extends Encoder implements Executable {
+public class LeetSpeak extends Encoder implements Executable {
 
     public String encode(String source){
         if (source == null){return "";}
