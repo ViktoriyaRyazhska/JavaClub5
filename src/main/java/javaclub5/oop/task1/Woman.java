@@ -5,14 +5,7 @@ public class Woman extends Human{
     private String name;
 
     public Woman(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
+        super();
         this.name = name;
     }
 
@@ -20,4 +13,6 @@ public class Woman extends Human{
     public String toString() {
         return "Woman name is " + name + ".";
     }
+
+
 }

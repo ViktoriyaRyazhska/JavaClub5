@@ -10,7 +10,20 @@ import java.io.InputStreamReader;
 
 public class Runner {
     public static int TwiceAsOld(int a, int b){
-        return Math.abs((a*2)-b);
+        int result = 0;
+        for (int i = 0; i < b; i++) {
+            if ((a - i)/((double)(b - i)) == 2) {
+                result = i;
+                break;
+            }
+        }
+        for (int i = 0; i < a * 2; i++) {
+            if ((a + i)/((double)(b + i)) == 2) {
+                result = i;
+                break;
+            }
+        }
+        return result;
 
     }
     public static void main(String[] args) {

@@ -12,8 +12,8 @@ import java.util.Arrays;
  */
 
 public class Runner {
-    public static Human[] create(String nameMan, String nameWomen) {
-        return new Human[]{new Man(nameMan), new Woman(nameWomen)};
+    public static Human[] create() {
+        return new Human[]{new Man("Adam"), new Woman("Eve")};
     }
 
     public static void main(String[] args) {
@@ -29,7 +29,7 @@ public class Runner {
             System.out.println("Name of women: ");
             String nameWomen = br.readLine();
             System.out.println("Here is the God's creation!" + "\n" +
-                    Arrays.toString(create(nameMan, nameWomen)));
+                    Arrays.toString(create()));
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
