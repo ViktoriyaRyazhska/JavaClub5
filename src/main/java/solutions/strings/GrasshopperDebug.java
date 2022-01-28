@@ -9,15 +9,15 @@ public class GrasshopperDebug implements Executable {
 
     int temp;
     public static String weatherInfo(int temp) {
-        double c = convertToCelsius(temp);
+        int c = convertToCelsius(temp);
         if (c <= 0)
             return (c + " is freezing temperature");
         else
             return (c + " is above freezing temperature");
     }
 
-    public static double convertToCelsius(int temperature) {
-        return ((temperature - 32) * (5/9.0));
+    public static int convertToCelsius(int temperature) {
+        return (int) ((temperature - 32) * (5/9.0));
     }
 
     public void getData()
