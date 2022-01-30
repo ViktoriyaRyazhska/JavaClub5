@@ -84,6 +84,11 @@ cmake-build-*/
 
 # File-based project format
 *.iws
+*.vcs
+*.modules
+*.misc
+*.misc
+*.workspace
 
 # IntelliJ
 out/
