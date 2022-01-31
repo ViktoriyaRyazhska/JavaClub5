@@ -88,8 +88,8 @@ vcs.sml
 modules.xml
 misc.xml
 workspace.xml
-.idea/misc.xml
- JavaClub5.iml
+misc.xml
+JavaClub5.iml
 
 # IntelliJ
 out/
