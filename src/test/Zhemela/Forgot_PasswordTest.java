@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Forgot_PasswordTest {
     private ChromeDriver driver;
-    private ChromeDriver driver2;
+    //private ChromeDriver driver2;
 
     @Before
     public  void SetUp(){
