@@ -126,3 +126,4 @@ javadoc/
 cwallet.sso.lck
 .idea/
 *.iml
+pom.xml
