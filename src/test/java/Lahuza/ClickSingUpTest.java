@@ -13,7 +13,7 @@ import java.time.Duration;
 
 import static org.openqa.selenium.By.id;
 
-public class ClickSingUp {
+public class ClickSingUpTest {
     public WebDriver webDriver;
 
     @Before
@@ -67,7 +67,7 @@ public class ClickSingUp {
 
     @Test
     public void singUpLinkToIn() {
-        System.out.printf("Return to sing in");
+        System.out.println("Return to sing in");
         webDriver.findElement(By.className("exist-sign-in")).click();
     }
 
@@ -80,7 +80,8 @@ public class ClickSingUp {
     @After
       public void off(){
         System.out.println("Close window");
-        if(webDriver!=null);
-        webDriver.quit();
+        if(webDriver!=null) {
+            webDriver.quit();
+        }
     }
 }
