@@ -33,26 +33,23 @@ public class Sign_inTest {
         Thread.sleep(1000);
         driver.findElement(By.className("header_sign-in-link")).click();
         Thread.sleep(1000);
-        driver.findElement(By.className("sign-up-link")).click();
-        Thread.sleep(1000);
         driver.findElement(By.id("email")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.id("email")).clear();
         Thread.sleep(1000);
         driver.findElement(By.id("email")).sendKeys("example@gmail.com");
         Thread.sleep(1000);
-        driver.findElement(By.id("firstName")).click();
-        Thread.sleep(1000);
-        driver.findElement(By.id("firstName")).sendKeys("Student");
-        Thread.sleep(1000);
         driver.findElement(By.id("password")).click();
         Thread.sleep(1000);
-        driver.findElement(By.id("password")).sendKeys("sdfsd");;
+        driver.findElement(By.id("password")).clear();
+        Thread.sleep(1000);
+        driver.findElement(By.id("password")).sendKeys("dfsdf");
 
         driver.findElement(By.xpath("//button[@type='submit']")).click();
 
-        WebElement alert=driver.findElement(By.cssSelector("div.alert-general-error.ng-star-inserted"));
-        String expected="Неправильна пошта або пароль";
-        Assert.assertEquals(expected,alert.getText());
-
+        WebElement alert = driver.findElement(By.cssSelector("div.alert-general-error.ng-star-inserted"));
+        String expected = "Неправильна пошта або пароль";
+        Assert.assertEquals(expected, alert.getText());
     }
     @Test
     public void find_Element_Google_Sign_In() throws InterruptedException {
