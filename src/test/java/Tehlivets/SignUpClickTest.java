@@ -6,6 +6,8 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
@@ -23,6 +25,9 @@ public class SignUpClickTest {
         driver.get("https://ita-social-projects.github.io/GreenCityClient/#/");
 
         driver.findElement(By.cssSelector(".header_sign-up-btn")).click();
+
+        WebDriverWait driverWait = new WebDriverWait(driver, 30);
+        driverWait.until(ExpectedConditions.presenceOfElementLocated(By.className("cdk-overlay-container")));
     }
 
     @Test
@@ -44,6 +49,8 @@ public class SignUpClickTest {
         driver.findElement(By.xpath("(//input[@id='password'])[2]")).sendKeys("aaaaaa");
         //
         driver.findElement(By.cssSelector(".primary-global-button > span")).click();
+        //
+        driver.findElement(By.className("google-sign-in")).click();
     }
 
     @Test
@@ -62,4 +69,3 @@ public class SignUpClickTest {
             driver.quit();
     }
 }
-
