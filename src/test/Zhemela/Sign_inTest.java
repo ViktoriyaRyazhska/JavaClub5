@@ -33,17 +33,19 @@ public class Sign_inTest {
         Thread.sleep(1000);
         driver.findElement(By.className("header_sign-in-link")).click();
         Thread.sleep(1000);
-        driver.findElement(By.id("email")).click();
+        driver.findElement(By.className("sign-up-link")).click();
         Thread.sleep(1000);
-        driver.findElement(By.id("email")).clear();
+        driver.findElement(By.id("email")).click();
         Thread.sleep(1000);
         driver.findElement(By.id("email")).sendKeys("example@gmail.com");
         Thread.sleep(1000);
+        driver.findElement(By.id("firstName")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.id("firstName")).sendKeys("Student");
+        Thread.sleep(1000);
         driver.findElement(By.id("password")).click();
         Thread.sleep(1000);
-        driver.findElement(By.id("password")).clear();
-        Thread.sleep(1000);
-        driver.findElement(By.id("password")).sendKeys("dfsdf");
+        driver.findElement(By.id("password")).sendKeys("sdfsd");;
 
         driver.findElement(By.xpath("//button[@type='submit']")).click();
 
