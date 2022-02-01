@@ -12,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class Sign_UpTest {
+public class Sing_UpTest {
     private ChromeDriver driver;
 
 
