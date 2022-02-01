@@ -10,7 +10,7 @@ import java.time.Duration;
 
 import static org.junit.Assert.assertEquals;
 
-public class ClickPage {
+public class ClickPageTest {
     public WebDriver webDriver;
 
     @Before
@@ -35,7 +35,8 @@ public class ClickPage {
     @After
     public void off(){
         System.out.println("Close window");
-        if(webDriver!=null);
-        webDriver.quit();
+        if(webDriver!=null){
+            webDriver.quit();
+        }
     }
 }

@@ -125,3 +125,5 @@ javadoc/
 # lock file, a part of Oracle Credential Store Framework
 cwallet.sso.lck
 .idea/
+*.iml
+pom.xml

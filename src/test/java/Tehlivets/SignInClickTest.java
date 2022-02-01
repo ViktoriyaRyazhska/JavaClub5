@@ -1,4 +1,4 @@
-package test.java.Tehlivets;
+package Tehlivets;
 
 import org.junit.After;
 import org.junit.Before;

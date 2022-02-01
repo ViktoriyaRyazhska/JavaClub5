@@ -14,7 +14,7 @@ import java.time.Duration;
 import static org.junit.Assert.assertTrue;
 import static org.openqa.selenium.By.id;
 
-public class ClickSingIn {
+public class ClickSingInTest {
 
     public WebDriver webDriver;
 
@@ -91,7 +91,8 @@ public class ClickSingIn {
     @After
     public void off(){
         System.out.println("Close window");
-        if(webDriver!=null);
-        webDriver.quit();
+        if(webDriver!=null) {
+            webDriver.quit();
+        }
     }
 }
