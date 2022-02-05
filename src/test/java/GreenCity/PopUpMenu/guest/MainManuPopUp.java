@@ -6,18 +6,22 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class MainManuPopUp {
+
     private WebDriver driver;
     @FindBy(css="span.menu-icon-wrapper")
     private WebElement naviconButton;
+    @FindBy(css=".header_logo > img")
+    private WebElement homePage;
     @FindBy(xpath="//a[contains(text(),'Eco news')]")
     private WebElement menuEcoNews;
 
-    public MainManuPopUp (WebDriver driver){
+    public MainManuPopUp(WebDriver driver){
         this.driver = driver;
         //This initElements method will create all WebElements
         PageFactory.initElements(driver, this);
     }
-//Atimic logic
+
+    //Atimic logic
     //naviconButton
     private WebElement getNaviconButton() {
         return naviconButton;
@@ -32,25 +36,41 @@ public class MainManuPopUp {
     }
 
     public boolean isDisplayedNaviconButton(){
-       return getNaviconButton().isDisplayed();
+        return getNaviconButton().isDisplayed();
+    }
+
+    //homePage
+    private WebElement getHomePage() {
+        return homePage;
+    }
+
+    public String getHomePageText(){
+        return getHomePage().getText();
+    }
+
+    public void clickHomePage(){
+        getHomePage().click();
+    }
+
+    public boolean isDisplayedHomePage(){
+        return getHomePage().isDisplayed();
     }
 
     //menuEcoNews
 
-    private WebElement getmenuEcoNews() {
+    private WebElement getMenuEcoNews() {
         return menuEcoNews;
     }
 
-    public String getMenuEcoNews(){
-        return getmenuEcoNews().getText();
+    public String getMenuEcoNewsText(){
+        return getMenuEcoNews().getText();
     }
 
-
     public void clickMenuEcoNews(){
-        getmenuEcoNews().click();
+        getMenuEcoNews().click();
     }
 
     public boolean isDisplayedMenuEcoNews(){
-        return getmenuEcoNews().isDisplayed();
+        return getMenuEcoNews().isDisplayed();
     }
 }

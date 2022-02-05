@@ -1,5 +1,8 @@
 package GreenCity.PopUpMenu.guest;
 
+import GreenCity.peges.EcoNewsPage;
+import GreenCity.peges.HomePage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,22 +13,31 @@ public abstract class TopPage {
 
         protected WebDriver driver;
 
-        @FindBy(css=".header_sign-up-btn")
-        private WebDriver singUpLink;
-        @FindBy(className="cdk-overlay-container")
-        private WebDriver singInLink;
-        @FindBy(id="language-switcher")
+        //@FindBy(css=".header_sign-up-btn")
+        private WebElement singUpLink;
+        // @FindBy(className="cdk-overlay-container")
+        private WebElement singInLink;
+        // @FindBy(id="language-switcher")
         private Select languageSwitcher;
 
         private SingUpPopUp singUpPopUp;
         private SingInPopUp singInPopUp;
         private MainManuPopUp mainManuPopUp;
+        private HomePage homePage;
 
         public TopPage(WebDriver driver){
                 this.driver = driver;
                 //This initElements method will create all WebElements
-                PageFactory.initElements(driver, this);
+                initElements();
         }
+
+        private void initElements() {
+                singUpLink= driver.findElement(By.cssSelector(".header_sign-up-btn"));
+                singInLink = driver.findElement(By.className("cdk-overlay-container"));
+                languageSwitcher = new Select(driver.findElement(By.id("language-switcher")));
+                mainManuPopUp = new MainManuPopUp(driver);
+        }
+
         //Object
         //Atomic logic
         //singUpLink
@@ -34,7 +46,7 @@ public abstract class TopPage {
         }
 
         public String getSingUpLinkText(){
-               return getSingUpLink().getText();
+                return getSingUpLink().getText();
         }
 
         public void clickSingUpLink(){
@@ -54,6 +66,7 @@ public abstract class TopPage {
         public void clickSingInLink(){
                 getSingInLink().click();
         }
+
         //languageSwitcher
 
         public Select getLanguageSwitcher(){
@@ -76,8 +89,21 @@ public abstract class TopPage {
                 getLanguageSwitcherWebelement().click();
         }
 
+        // mainManuPopUp
+        public MainManuPopUp getMainManuPopUp(){
+                return mainManuPopUp;
+        }
+
         //Functional
 
-       //Business logic
+        //Business logic
+        public HomePage gotoHomePage(){
+                getMainManuPopUp().clickHomePage();
+                return new HomePage(driver);
+        }
 
+        public EcoNewsPage gotoEcoNewsPage(){
+                getMainManuPopUp().clickMenuEcoNews();
+                return new EcoNewsPage(driver);
+        }
 }
