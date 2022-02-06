@@ -1,10 +1,13 @@
 package GreenCity.tests;
 
+import io.netty.channel.DelegatingChannelPromiseNotifier;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.ITest;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -38,10 +41,10 @@ public abstract class GreenCityRunner {
             driver.manage().window().maximize();
         }
         @AfterMethod
-        public void tearDown() throws Exception{
+        public void tearDown(ITestResult result) throws Exception{
             System.out.println("AfterMethod");
             if(!result.isSuccess()){
-                System.out.println("Test "+result.getName+" Error");
+                System.out.println("Test "+result.getName()+" Error");
             }
             driver.get("https://ita-social-projects.github.io/GreenCityClient/#/");
         }
