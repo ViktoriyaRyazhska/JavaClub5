@@ -17,12 +17,12 @@ public abstract class TopPage {
 
         protected WebDriver driver;
 
-        //@FindBy(css=".header_sign-up-btn")
+        @FindBy(css=".header_sign-up-btn")
         private WebElement singUpLink;
-        // @FindBy(className="cdk-overlay-container")
+        @FindBy(className="cdk-overlay-container")
         private WebElement singInLink;
-        // @FindBy(id="language-switcher")
-        private Select languageSwitcher;
+        @FindBy(css="li > span")
+        private WebElement languageSwitcher;
 
         private SingUpPopUp singUpPopUp;
         private SingInPopUp singInPopUp;
@@ -32,13 +32,11 @@ public abstract class TopPage {
         public TopPage(WebDriver driver) {
                 this.driver = driver;
                 //This initElements method will create all WebElements
-                initElements();
+                PageFactory.initElements(driver, this);
+                initialElements();
         }
 
-        private void initElements() {
-                singUpLink = driver.findElement(By.cssSelector(".header_sign-up-btn"));
-                singInLink = driver.findElement(By.className("cdk-overlay-container"));
-                languageSwitcher = new Select(driver.findElement(By.id("language-switcher")));
+        private void initialElements() {
                 mainManuPopUp = new MainManuPopUp(driver);
         }
 
@@ -73,12 +71,12 @@ public abstract class TopPage {
 
         //languageSwitcher
 
-        public Select getLanguageSwitcher() {
+        public WebElement getLanguageSwitcher() {
                 return languageSwitcher;
         }
 
-        public WebElement getLanguageSwitcherWebelement() {
-                return getLanguageSwitcher().getWrappedElement();
+        /*  public WebElement getLanguageSwitcherWebelement() {
+              return getLanguageSwitcher().get();
         }
 
         public String getLanguageSwitcherText() {
@@ -88,9 +86,15 @@ public abstract class TopPage {
         protected void setLanguageSwitcher(String text) {
                 getLanguageSwitcher().selectByVisibleText(String.valueOf(text));
         }
+          protected void SelectLanguageSwitcher() {
+        boolean staus = driver.findElement(By.cssSelector("li > span").isSelected();
+        }
+
+         */
+
 
         protected void clickLanguageSwitcher() {
-                getLanguageSwitcherWebelement().click();
+                getLanguageSwitcher().click();
         }
 
         // mainManuPopUp
@@ -101,7 +105,7 @@ public abstract class TopPage {
         //Functional
         protected void chooseLanguage(Languages languages) {
                 clickLanguageSwitcher();
-                setLanguageSwitcher(languages.toString());
+                driver.findElement(By.cssSelector("li:nth-child." + languages)).click();;
         }
 
         //Business logic
