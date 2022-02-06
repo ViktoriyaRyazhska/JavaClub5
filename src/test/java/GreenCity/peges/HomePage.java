@@ -10,7 +10,7 @@ public class HomePage extends TopPage {
     public HomePage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
-    }
+     }
 
     //Functional
     public HomePage switchLanguage(Languages languages){
