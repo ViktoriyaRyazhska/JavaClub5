@@ -15,12 +15,14 @@ import java.time.Duration;
 
 public abstract class GreenCityRunner {
     protected WebDriver driver;
+
     @Before
     public void BeforeSuite() {
+
         System.setProperty("webdriver.chrome.driver", "src\\resources\\chromedriver.exe");
     }
     @BeforeClass
-        public void BeforeClass() throws Exception{
+        public void BeforeClass(){
         //System.out.println("Open page");
         System.out.println("BeforeClass");
         driver = new ChromeDriver();
@@ -28,8 +30,8 @@ public abstract class GreenCityRunner {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         }
 
-        @AfterClass(alwaysRun = true)
-        public void tearDownAfterClass() throws Exception {
+        @AfterClass
+        public void tearDownAfterClass(){
             if (driver != null) {
                 driver.quit();
             }

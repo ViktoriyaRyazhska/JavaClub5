@@ -5,7 +5,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LogInPage extends TopPage {
     public LogInPage(WebDriver driver) {
-        super(driver, singUpLink, singInLink, languageSwitcher);
+        super(driver);
         PageFactory.initElements(driver, this);
     }
 }
