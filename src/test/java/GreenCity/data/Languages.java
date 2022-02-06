@@ -1,13 +1,13 @@
 package GreenCity.data;
 
-public enum Langauges {
+public enum Languages {
     UKRAINIAN("Укр"),
     RUSSIAN ("Рус"),
     ENGLISH("Eng");
 
     private String name;
 
-    private Langauges(String name){
+    private Languages(String name){
         this.name=name;
     }
 

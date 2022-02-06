@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import static org.openqa.selenium.support.PageFactory.initElements;
+
 public class MainManuPopUp {
 
     private WebDriver driver;
@@ -21,7 +23,9 @@ public class MainManuPopUp {
         PageFactory.initElements(driver, this);
     }
 
-    //Atimic logic
+
+
+//Atimic logic
     //naviconButton
     private WebElement getNaviconButton() {
         return naviconButton;
@@ -36,7 +40,7 @@ public class MainManuPopUp {
     }
 
     public boolean isDisplayedNaviconButton(){
-        return getNaviconButton().isDisplayed();
+       return getNaviconButton().isDisplayed();
     }
 
     //homePage

@@ -1,5 +1,9 @@
-package GreenCity.PopUpMenu.guest;
+package GreenCity.peges;
 
+import GreenCity.PopUpMenu.guest.MainManuPopUp;
+import GreenCity.PopUpMenu.guest.SingInPopUp;
+import GreenCity.PopUpMenu.guest.SingUpPopUp;
+import GreenCity.data.Languages;
 import GreenCity.peges.EcoNewsPage;
 import GreenCity.peges.HomePage;
 import org.openqa.selenium.By;
@@ -23,16 +27,16 @@ public abstract class TopPage {
         private SingUpPopUp singUpPopUp;
         private SingInPopUp singInPopUp;
         private MainManuPopUp mainManuPopUp;
-        private HomePage homePage;
 
-        public TopPage(WebDriver driver){
+
+        public TopPage(WebDriver driver) {
                 this.driver = driver;
                 //This initElements method will create all WebElements
                 initElements();
         }
 
         private void initElements() {
-                singUpLink= driver.findElement(By.cssSelector(".header_sign-up-btn"));
+                singUpLink = driver.findElement(By.cssSelector(".header_sign-up-btn"));
                 singInLink = driver.findElement(By.className("cdk-overlay-container"));
                 languageSwitcher = new Select(driver.findElement(By.id("language-switcher")));
                 mainManuPopUp = new MainManuPopUp(driver);
@@ -41,68 +45,72 @@ public abstract class TopPage {
         //Object
         //Atomic logic
         //singUpLink
-        public WebElement getSingUpLink(){
-                return (WebElement) singUpLink;
+        public WebElement getSingUpLink() {
+                return singUpLink;
         }
 
-        public String getSingUpLinkText(){
+        public String getSingUpLinkText() {
                 return getSingUpLink().getText();
         }
 
-        public void clickSingUpLink(){
+        public void clickSingUpLink() {
                 getSingUpLink().click();
         }
 
         //singInLink
 
-        public WebElement getSingInLink(){
-                return (WebElement) singInLink;
+        public WebElement getSingInLink() {
+                return singInLink;
         }
 
-        public String getSingInLinkText(){
+        public String getSingInLinkText() {
                 return getSingInLink().getText();
         }
 
-        public void clickSingInLink(){
+        public void clickSingInLink() {
                 getSingInLink().click();
         }
 
         //languageSwitcher
 
-        public Select getLanguageSwitcher(){
+        public Select getLanguageSwitcher() {
                 return languageSwitcher;
         }
 
-        public WebElement getLanguageSwitcherWebelement(){
+        public WebElement getLanguageSwitcherWebelement() {
                 return getLanguageSwitcher().getWrappedElement();
         }
 
-        public String getLanguageSwitcherText(){
+        public String getLanguageSwitcherText() {
                 return getLanguageSwitcher().getFirstSelectedOption().getText();
         }
 
-        public void setLanguageSwitcher(Select text){
+        protected void setLanguageSwitcher(String text) {
                 getLanguageSwitcher().selectByVisibleText(String.valueOf(text));
         }
 
-        public void clickLanguageSwitcher(){
+        protected void clickLanguageSwitcher() {
                 getLanguageSwitcherWebelement().click();
         }
 
         // mainManuPopUp
-        public MainManuPopUp getMainManuPopUp(){
+        public MainManuPopUp getMainManuPopUp() {
                 return mainManuPopUp;
         }
 
         //Functional
+        protected void chooseLanguage(Languages languages) {
+                clickLanguageSwitcher();
+                setLanguageSwitcher(languages.toString());
+        }
 
         //Business logic
-        public HomePage gotoHomePage(){
+        public HomePage gotoHomePage() {
                 getMainManuPopUp().clickHomePage();
                 return new HomePage(driver);
         }
 
-        public EcoNewsPage gotoEcoNewsPage(){
+        public EcoNewsPage gotoEcoNewsPage() {
                 getMainManuPopUp().clickMenuEcoNews();
                 return new EcoNewsPage(driver);
         }
