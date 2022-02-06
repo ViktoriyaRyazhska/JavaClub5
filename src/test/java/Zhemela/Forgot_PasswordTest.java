@@ -6,6 +6,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -13,13 +14,14 @@ import java.util.concurrent.TimeUnit;
 
 public class Forgot_PasswordTest {
     private ChromeDriver driver;
-    //private ChromeDriver driver2;
+    private  WebDriver driverwebdriver;
 
     @Before
     public  void SetUp(){
         System.setProperty("webdriver.chrome.driver","D:\\Java clab\\Test Automotion\\chromedriver_win32\\chromedriver.exe");
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        System.out.println("Wait for dialogue window");
+        WebDriver.Timeouts timeouts = driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         System.out.println("Start");
 
     }
@@ -30,23 +32,31 @@ public class Forgot_PasswordTest {
         Assert.assertEquals("GreenCity", title);
 
     }
+//    @Test
+//    public void first_() {
+//        driverwebdriver=new FirefoxDriver();
+//        driverwebdriver.get("https://ita-social-projects.github.io/GreenCityClient/#/");
+//        String title=driverwebdriver.getTitle();
+//        Assert.assertEquals("GreenCity", title);
+//
+//    }
     @Test
     public void find_Element() throws InterruptedException {
         driver.get("https://ita-social-projects.github.io/GreenCityClient/#/");
-        Thread.sleep(1000);
+        //Thread.sleep(1000);
         driver.findElement(By.className("header_sign-in-link")).click();
-        Thread.sleep(1000);
+       // Thread.sleep(1000);
         driver.findElement(By.className("forgot-password")).click();
-        Thread.sleep(1000);
+       // Thread.sleep(1000);
 
         driver.findElement(By.id("email")).click();
-        Thread.sleep(1000);
+        //Thread.sleep(1000);
         driver.findElement(By.id("email")).clear();
         driver.findElement(By.id("email")).sendKeys("example@email.com");
-        Thread.sleep(1000);
+        //Thread.sleep(1000);
         System.out.println("1");
         driver.findElement(By.xpath("//span[contains(.,'Надіслати посилання для входу')]")).click();
-        Thread.sleep(1000);
+        //Thread.sleep(1000);
         System.out.println("2");
         WebElement alert=driver.findElement(By.cssSelector("div.validation-email-error.ng-star-inserted"));
         System.out.println("3");
@@ -59,20 +69,20 @@ public class Forgot_PasswordTest {
     @Test
     public void find_Element_not_corect_put() throws InterruptedException {
         driver.get("https://ita-social-projects.github.io/GreenCityClient/#/");
-        Thread.sleep(1000);
+       // Thread.sleep(1000);
         driver.findElement(By.className("header_sign-in-link")).click();
-        Thread.sleep(1000);
+        //Thread.sleep(1000);
         driver.findElement(By.className("forgot-password")).click();
-        Thread.sleep(1000);
+        //Thread.sleep(1000);
 
         driver.findElement(By.id("email")).click();
-        Thread.sleep(1000);
+       // Thread.sleep(1000);
         driver.findElement(By.id("email")).clear();
         driver.findElement(By.id("email")).sendKeys("ihuiuh");
-        Thread.sleep(1000);
+        //Thread.sleep(1000);
         System.out.println("1");
         driver.findElement(By.xpath("//span[contains(.,'Надіслати посилання для входу')]")).click();
-        Thread.sleep(1000);
+        //Thread.sleep(1000);
         System.out.println("2");
         WebElement alert=driver.findElement(By.cssSelector("div.validation-email-error.ng-star-inserted"));
         System.out.println("3");
@@ -84,18 +94,18 @@ public class Forgot_PasswordTest {
     @Test
     public void find_Element_Google_Sign_In() throws InterruptedException {
         driver.get("https://ita-social-projects.github.io/GreenCityClient/#/");
-        Thread.sleep(1000);
+       // Thread.sleep(1000);
         driver.findElement(By.className("header_sign-in-link")).click();
-        Thread.sleep(1000);
+       // Thread.sleep(1000);
         System.out.println("1");
         driver.findElement(By.className("forgot-password")).click();
-        Thread.sleep(1000);
+        //Thread.sleep(1000);
         System.out.println("2");
         driver.findElement(By.cssSelector("button.google-sign-in")).click();
-        Thread.sleep(1000);
+       // Thread.sleep(1000);
         System.out.println("3");
         WebElement alert=driver.findElement(By.tagName("body"));
-        Thread.sleep(1000);
+       // Thread.sleep(1000);
         System.out.println("4");
         Assert.assertFalse(alert.getText().equals("Вход – Google Аккаунты"));
     }
@@ -103,18 +113,18 @@ public class Forgot_PasswordTest {
     @Test
     public void Back_to_The_Enter () throws InterruptedException {
         driver.get("https://ita-social-projects.github.io/GreenCityClient/#/");
-        Thread.sleep(1000);
+       // Thread.sleep(1000);
         driver.findElement(By.className("header_sign-in-link")).click();
-        Thread.sleep(1000);
+       // Thread.sleep(1000);
         System.out.println("1");
         driver.findElement(By.className("forgot-password")).click();
-        Thread.sleep(1000);
+       // Thread.sleep(1000);
         System.out.println("2");
         driver.findElement(By.cssSelector(".sign-in-link")).click();
-        Thread.sleep(1000);
+        //Thread.sleep(1000);
         System.out.println("3");
         WebElement alert=driver.findElement(By.className("header_sign-in-link"));
-        Thread.sleep(1000);
+       // Thread.sleep(1000);
         System.out.println("4");
         String title=driver.getTitle();
         Assert.assertFalse(alert.getText().equals("GreenCity"));
