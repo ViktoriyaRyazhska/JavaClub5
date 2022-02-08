@@ -1,13 +1,13 @@
 package GreenCity.tests;
 
+import GreenCity.peges.HomePage;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -16,6 +16,7 @@ import java.time.Duration;
 
 public abstract class GreenCityRunner {
     protected static WebDriver driver;
+    private final Long ONE_SECOND_DELAY = 1000L;
 
     @Before
     public void BeforeSuite() {
@@ -60,7 +61,23 @@ public abstract class GreenCityRunner {
             }
           //  driver.get("https://ita-social-projects.github.io/GreenCityClient/#/");
         }
+        public HomePage LoadApplication(){
+        return new HomePage(driver);
+            //return new HomePage(driver);
+        }
 
+
+        protected void PresentationSleep(){
+            presentationSleep(1);
+        }
+
+    private void presentationSleep(int seconds) {
+            try{
+                Thread.sleep(seconds*ONE_SECOND_DELAY);
+            }catch (InterruptedException e){
+                e.printStackTrace();
+            }
+    }
 
 
 

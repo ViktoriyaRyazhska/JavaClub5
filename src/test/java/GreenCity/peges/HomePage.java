@@ -14,7 +14,8 @@ public class HomePage extends TopPage {
 
     //Functional
     public HomePage switchLanguage(Languages languages){
-        chooseLanguage(languages);
+        clickLanguageButton(languages);
         return new HomePage(driver);
     }
+
 }

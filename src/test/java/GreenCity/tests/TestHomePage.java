@@ -1,7 +1,9 @@
 package GreenCity.tests;
 
 
+import GreenCity.data.Languages;
 import GreenCity.peges.HomePage;
+import org.junit.Assert;
 import org.junit.Test;
 import org.testng.annotations.DataProvider;
 
@@ -16,8 +18,10 @@ public class TestHomePage extends GreenCityRunner {
     @Test
     public void Check() throws Exception{
         System.out.println("");
-        HomePage homePage = new HomePage(driver);
-        Thread.sleep(1000);
+        HomePage homePage = LoadApplication()
+        .switchLanguage(Languages.UKRAINIAN);
+        Assert.assertEquals(homePage.getLanguageButtonText(), Languages.UKRAINIAN.toString());
+        PresentationSleep();
     }
 
 
