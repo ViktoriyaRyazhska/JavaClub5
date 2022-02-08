@@ -1,0 +1,30 @@
+package models;
+
+import javax.persistence.*;
+import java.util.Date;
+
+@Entity
+@Table(name = "loggers")
+public class Logger {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "book_id", referencedColumnName = "id")
+    private Book bookId;
+
+    @OneToOne
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    private User userId;
+
+    @Column(name = "start_date")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date startDate;
+    @Column(name = "deadline_date")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date deadlineDate;
+    @Column(name = "return_date")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date returnDate;
+}
