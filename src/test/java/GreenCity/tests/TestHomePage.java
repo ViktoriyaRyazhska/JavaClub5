@@ -7,6 +7,8 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.testng.annotations.DataProvider;
 
+import java.util.List;
+
 public class TestHomePage extends GreenCityRunner {
     @DataProvider
     public Object [][] validDataProvider() {
@@ -17,12 +19,13 @@ public class TestHomePage extends GreenCityRunner {
 
     @Test
     public void Check() throws Exception{
-        System.out.println("");
+        System.out.println("Check and set language");
+
         HomePage homePage = LoadApplication()
-        .switchLanguage(Languages.UKRAINIAN);
-        Assert.assertEquals(homePage.getLanguageButtonText(), Languages.UKRAINIAN.toString());
+        .switchLanguage(Languages.RUSSIAN);
+
+        Assert.assertEquals(homePage.getLanguageButtonText(), Languages.RUSSIAN.toString());
         PresentationSleep();
     }
-
 
 }

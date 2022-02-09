@@ -22,7 +22,7 @@ public abstract class TopPage {
         private WebElement singInLink;
         @FindBy(css="li > span")
         private WebElement languageButton;
-        private List<WebElement> languageSwitcher;
+
 
         private SingUpPopUp singUpPopUp;
         private SingInPopUp singInPopUp;
@@ -106,15 +106,11 @@ public abstract class TopPage {
         }
 
 
-        public void clickLanguageButton(Languages languages) {
+        public void clickLanguageButton1() {
                 getLanguageButton().click();
         }
 
-        //languageSwitcher
 
-        public List<WebElement> getLanguageSwitcher() {
-                return  languageSwitcher;
-        }
 
 
         // mainManuPopUp
@@ -123,41 +119,40 @@ public abstract class TopPage {
         }
 
         //Functional
-        /*
-        public String clickLanguageSwitcher(Languages languages) {
-                clickLanguageButton();
-                WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+//
+        public void clicklanguageButton2(Languages languages) {
+                WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+                clickLanguageButton1();
+                WebElement lang_dropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//ul[@class='add-shadow header_lang-switcher-wrp header_navigation-menu-right-list']/li/span")));
+                List<WebElement> allOptions = driver.findElements(By.xpath("//ul[@class='add-shadow header_lang-switcher-wrp header_navigation-menu-right-list']/li/."));
 
-                WebElement lang_dropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a.li:nth-child > span")));
-                Select lang_dd = new Select(lang_dropdown);
-                List <WebElement> lang_lists = lang_dd.getOptions();
-                int total_lang= lang_lists.size();
-                System.out.println("Total language count is"+ total_lang);
-
-                for(WebElement ele:lang_lists) {
+                for (WebElement ele : allOptions) {
                         String lang_name = ele.getText();
                         System.out.println(lang_name);
-                        if (ele.getText().equals(languageSwitcher)){
-                               ele.click();
+                        System.out.println(languages);
+                        if (ele.getText().equals(languages.toString())) {
+                                ele.click();
                         }
-                        куег
+                        else {
+                                System.out.println("Do not work");
+                        }
                 }
-
-
-
-                // List<WebElement> allOptions = driver.findElements(By.cssSelector("a.li:nth-child > span"));
-
-              //  java.util.Iterator<WebElement> i = allOptions.iterator();
-              //  while(i.hasNext()) {
-              //         WebElement ele = i.next();
-               //         if (ele.getText().equals(languageSwitcher)){
-              //                  ele.click();
-              //          }
-               // }
-                return languages.toString();
         }
 
-         */
+
+
+      //  public List<WebElement> clickLanguageSwitcher(Languages languages) {
+      //  List<WebElement> allOptions = driver.findElements(By.cssSelector("add-shadow header_lang-switcher-wrp header_navigation-menu-right-list"));
+      //   clickLanguageButton(languages);
+      //          for (WebElement ele : allOptions) {
+       //                 if (ele.getText().equals(languageSwitcher)) {
+       //                         ele.click();
+        //                }
+       //         }
+        //          return languageSwitcher;
+       //   }
+
+
 
         //Business logic
         public HomePage gotoHomePage() {

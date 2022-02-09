@@ -16,6 +16,9 @@ public class MainManuPopUp {
     private WebElement homePage;
     @FindBy(xpath="//a[contains(text(),'Eco news')]")
     private WebElement menuEcoNews;
+    @FindBy(xpath="//a[contains(text(),'About us')]")
+    private WebElement menuAboutUsPage;
+
 
     public MainManuPopUp(WebDriver driver){
         this.driver = driver;
@@ -36,7 +39,8 @@ public class MainManuPopUp {
     }
 
     public void clickNaviconButton(){
-        getNaviconButton().click();
+        if(isDisplayedNaviconButton()){
+        getNaviconButton().click();}
     }
 
     public boolean isDisplayedNaviconButton(){
@@ -77,4 +81,24 @@ public class MainManuPopUp {
     public boolean isDisplayedMenuEcoNews(){
         return getMenuEcoNews().isDisplayed();
     }
+
+    //AboutUs
+    private WebElement getMenuAboutUsPage() {
+        return menuAboutUsPage;
+    }
+
+    public String getMenuAboutUsPageText(){
+        return getMenuAboutUsPage().getText();
+    }
+
+    public void clickMenuAboutUsPage(){
+        if(isDisplayedMenuAboutUsPage()){
+            getMenuAboutUsPage().click();}
+    }
+
+    public boolean isDisplayedMenuAboutUsPage(){
+        return getMenuAboutUsPage().isDisplayed();
+    }
+
+
 }

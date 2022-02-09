@@ -13,7 +13,7 @@ public class EcoNewsPage extends TopPage {
 
      //Business Logic
     public EcoNewsPage switchLanguage(Languages languages){
-        chooseLanguage(languages);
+       // chooseLanguage(languages);
         return new EcoNewsPage(driver);
     }
 }
