@@ -10,7 +10,7 @@ import static org.openqa.selenium.support.PageFactory.initElements;
 public class MainManuPopUp {
 
     private WebDriver driver;
-    @FindBy(css="span.menu-icon-wrapper")
+    @FindBy(css=".menu-icon")
     private WebElement naviconButton;
     @FindBy(css=".header_logo > img")
     private WebElement homePage;
