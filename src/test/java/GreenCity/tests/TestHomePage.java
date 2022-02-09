@@ -22,9 +22,9 @@ public class TestHomePage extends GreenCityRunner {
         System.out.println("Check and set language");
 
         HomePage homePage = LoadApplication()
-        .switchLanguage(Languages.RUSSIAN);
+        .switchLanguage(Languages.UKRAINIAN);
 
-        Assert.assertEquals(homePage.getLanguageButtonText(), Languages.RUSSIAN.toString());
+        Assert.assertEquals(homePage.getLanguageButtonText(), Languages.UKRAINIAN.toString());
         PresentationSleep();
     }
 

@@ -121,36 +121,36 @@ public abstract class TopPage {
         //Functional
 //
         public void clicklanguageButton2(Languages languages) {
-                WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
                 clickLanguageButton1();
-                WebElement lang_dropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//ul[@class='add-shadow header_lang-switcher-wrp header_navigation-menu-right-list']/li/span")));
-                List<WebElement> allOptions = driver.findElements(By.xpath("//ul[@class='add-shadow header_lang-switcher-wrp header_navigation-menu-right-list']/li/."));
+                List<WebElement> listElementLinkCheck =
+                        driver.findElements(By.xpath("//ul[@class='add-shadow header_lang-switcher-wrp header_navigation-menu-right-list']/li/."));
 
-                for (WebElement ele : allOptions) {
-                        String lang_name = ele.getText();
-                        System.out.println(lang_name);
-                        System.out.println(languages);
-                        if (ele.getText().equals(languages.toString())) {
-                                ele.click();
-                        }
-                        else {
-                                System.out.println("Do not work");
+                for (WebElement element : listElementLinkCheck) {
+                        System.out.println("Element inside ul -->" + element.getText());
+                        System.out.println("Attrbite for that element-->" + element.getTagName());
+                        if (element.getText().equals(languages.toString())) {
+                                System.out.println("Create account is identified.-->" + element.getText());
+                                element.click();
+                                break;
                         }
                 }
+//                WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+//                clickLanguageButton1();
+//                WebElement lang_dropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//ul[@class='add-shadow header_lang-switcher-wrp header_navigation-menu-right-list']/li/span")));
+//                List<WebElement> allOptions = driver.findElements(By.xpath("//ul[@class='add-shadow header_lang-switcher-wrp header_navigation-menu-right-list']/li/."));
+//
+//                for (WebElement ele : allOptions) {
+//                        String lang_name = ele.getText();
+//                        System.out.println(lang_name);
+//                        System.out.println(languages);
+//                        if (ele.getText().equals(languages.toString())) {
+//                                ele.click();
+//                        }
+//                        else {
+//                                System.out.println("Do not work");
+//                        }
+//                }
         }
-
-
-
-      //  public List<WebElement> clickLanguageSwitcher(Languages languages) {
-      //  List<WebElement> allOptions = driver.findElements(By.cssSelector("add-shadow header_lang-switcher-wrp header_navigation-menu-right-list"));
-      //   clickLanguageButton(languages);
-      //          for (WebElement ele : allOptions) {
-       //                 if (ele.getText().equals(languageSwitcher)) {
-       //                         ele.click();
-        //                }
-       //         }
-        //          return languageSwitcher;
-       //   }
 
 
 
