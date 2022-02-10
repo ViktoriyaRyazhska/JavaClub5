@@ -121,7 +121,7 @@ public abstract class TopPage {
         //Functional
 //
         public void clicklanguageButton2(Languages languages) {
-                clickLanguageButton1();
+               clickLanguageButton1();
                 List<WebElement> listElementLinkCheck =
                         driver.findElements(By.xpath("//ul[@class='add-shadow header_lang-switcher-wrp header_navigation-menu-right-list']/li/."));
 
