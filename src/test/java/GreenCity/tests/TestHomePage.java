@@ -3,29 +3,39 @@ package GreenCity.tests;
 
 import GreenCity.data.Languages;
 import GreenCity.peges.HomePage;
-import org.junit.Assert;
-import org.junit.Test;
+
+
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
 import java.util.List;
 
 public class TestHomePage extends GreenCityRunner {
     @DataProvider
-    public Object [][] validDataProvider() {
+    public Object [][] validData() {
         return new Object[][]{
-
+                {Languages.ENGLISH}
         };
     }
 
-    @Test
-    public void Check() throws Exception{
+    @Test(dataProvider = "validData")
+    public void Check(Languages languages) throws Exception{
         System.out.println("Check and set language");
 
         HomePage homePage = LoadApplication()
-        .switchLanguage(Languages.UKRAINIAN);
+        .switchLanguage(languages);
 
-        Assert.assertEquals(homePage.getLanguageButtonText(), Languages.UKRAINIAN.toString());
+        Assert.assertEquals(homePage.getLanguageButtonText(), Languages.ENGLISH.toString());
         PresentationSleep();
+
+        homePage=homePage
+                .navigateMenuAboutUs()
+                .navigateMenuMySpace()
+                .navigateMenuEvents()
+                .navigateMenuEcoNews()
+                .navigateMenuTipsAndTricks()
+                .navigateMenuHome();
     }
 
 }
