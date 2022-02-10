@@ -4,12 +4,9 @@ package GreenCity.tests;
 import GreenCity.data.Languages;
 import GreenCity.peges.HomePage;
 
-
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import java.util.List;
 
 public class TestHomePage extends GreenCityRunner {
     @DataProvider
@@ -24,6 +21,7 @@ public class TestHomePage extends GreenCityRunner {
         System.out.println("Check and set language");
 
         HomePage homePage = LoadApplication()
+
         .switchLanguage(languages);
 
         Assert.assertEquals(homePage.getLanguageButtonText(), Languages.ENGLISH.toString());

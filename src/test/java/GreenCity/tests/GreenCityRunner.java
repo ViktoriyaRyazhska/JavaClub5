@@ -1,10 +1,18 @@
 package GreenCity.tests;
 
+<<<<<<< HEAD
 import GreenCity.peges.HomePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 //import io.github.bonigarcia.wdm.WebDriverManager;
 
+=======
+
+import GreenCity.peges.HomePage;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+>>>>>>> 1aea14b246d06c034deb959cbe4790c29582498a
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 
@@ -13,7 +21,9 @@ import java.time.Duration;
 public abstract class GreenCityRunner {
     protected static WebDriver driver;
     private final Long ONE_SECOND_DELAY = 1000L;
+    
 
+<<<<<<< HEAD
     @BeforeSuite
     public void BeforeSuite() {
         System.setProperty("webdriver.chrome.driver", "src\\resources\\chromedriver.exe");
@@ -27,13 +37,25 @@ public abstract class GreenCityRunner {
 
      */
 
+=======
+   //@Before
+    //public void BeforeSuite() {
+       // System.setProperty("webdriver.chrome.driver", "src\\resources\\chromedriver.exe");
+
+   // }
+
+      @BeforeSuite
+         public void beforeSuite (){
+             WebDriverManager.chromedriver().setup();
+         }
+>>>>>>> 1aea14b246d06c034deb959cbe4790c29582498a
     @BeforeClass
         public static void setUpBeforeClass() throws Exception{
         System.out.println("Open page");
         System.setProperty("webdriver.chrome.driver","src\\resources\\chromedriver.exe" );
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+        //driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://ita-social-projects.github.io/GreenCityClient/#/");
 
@@ -66,6 +88,7 @@ public abstract class GreenCityRunner {
           //  driver.get("https://ita-social-projects.github.io/GreenCityClient/#/");
         }
         public HomePage LoadApplication(){
+            System.out.println("LoadApplication");
         return new HomePage(driver);
             //return new HomePage(driver);
         }
