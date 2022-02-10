@@ -3,8 +3,8 @@ package GreenCity.peges;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
-public class AboutPage extends TopPage {
-    public AboutPage(WebDriver driver) {
+public class AboutUsPage extends TopPage {
+    public AboutUsPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
     }
