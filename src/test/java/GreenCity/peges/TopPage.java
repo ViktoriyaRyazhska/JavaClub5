@@ -155,13 +155,35 @@ public abstract class TopPage {
 
 
         //Business logic
-        public HomePage gotoHomePage() {
+        public HomePage navigateHomePage() {
                 getMainManuPopUp().clickHomePage();
                 return new HomePage(driver);
         }
 
-        public EcoNewsPage gotoEcoNewsPage() {
+        public EcoNewsPage navigateEcoNewsPage() {
                 getMainManuPopUp().clickMenuEcoNews();
                 return new EcoNewsPage(driver);
         }
+
+        public HomePage navigateTipsTricksPage() {
+                getMainManuPopUp().clickMenuTipsTricks();
+                return new HomePage(driver);
+        }
+
+        public MapPage navigatePlacesPage() {
+                getMainManuPopUp().clickMenuPlaces();
+                return new MapPage(driver);
+        }
+
+        public AboutPage navigateAboutPage() {
+                getMainManuPopUp().clickMenuAbout();
+                return new AboutPage(driver);
+        }
+
+        public HomePage navigateMySpacePage() {
+                getMainManuPopUp().clickMenuMySpace();
+                return new HomePage(driver);
+        }
+
+
 }

@@ -23,6 +23,12 @@ public class TestHomePage extends GreenCityRunner {
         HomePage homePage = LoadApplication()
         .switchLanguage(Languages.UKRAINIAN);
         System.out.println("assert");
+        homePage = homePage
+                .navigateHomePage()
+                .navigateAboutPage()
+                .navigateEcoNewsPage()
+                .navigateTipsTricksPage()
+                .navigateMySpacePage();
 
         Assert.assertEquals(homePage.getLanguageButtonText(), Languages.UKRAINIAN.toString());
         PresentationSleep();
