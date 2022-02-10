@@ -3,7 +3,8 @@ package GreenCity.tests;
 
 import GreenCity.data.Languages;
 import GreenCity.peges.HomePage;
-import org.junit.Assert;
+//import org.junit.Assert;
+import org.testng.Assert;
 //import org.junit.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.DataProvider;
