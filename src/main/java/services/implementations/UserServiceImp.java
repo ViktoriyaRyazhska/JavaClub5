@@ -35,4 +35,8 @@ public class UserServiceImp implements UserService {
         usersDao.update(user);
     }
 
+    public User findById(long id) {
+        return usersDao.findById(id);
+    }
+
 }
