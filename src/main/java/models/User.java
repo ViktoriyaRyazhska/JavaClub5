@@ -1,13 +1,16 @@
 package models;
 
-import org.hibernate.annotations.Type;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
-import java.text.DateFormat;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
 @Table (name = "users")
+@Getter
+@Setter
 public class User {
     public User(){
 
@@ -20,7 +23,7 @@ public class User {
         this.password = password;
         this.age = age;
         this.role = role;
-        this.registrationDate = new Date();
+        this.registrationDate = LocalDate.now();
     }
 
     @Id
@@ -32,15 +35,11 @@ public class User {
     private String email;
     private String password;
     private int age;
+
     @Column(name = "registration_date")
-    @Temporal(TemporalType.TIMESTAMP)
-    private java.util.Date registrationDate;
+    private LocalDate registrationDate;
 
-/*    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "role_id")
-     */
-    @Enumerated(EnumType.STRING)
-    @Type(type = "config.EnumTypePostgreSql")
     private Role role;
-
 }

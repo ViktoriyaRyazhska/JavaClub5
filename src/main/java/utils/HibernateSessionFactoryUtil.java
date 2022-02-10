@@ -15,7 +15,7 @@ public class HibernateSessionFactoryUtil {
             try {
                 Configuration configuration = new Configuration().configure();
                 configuration.addAnnotatedClass(User.class);
- //               configuration.addAnnotatedClass(Role.class);
+                configuration.addAnnotatedClass(Role.class);
                 configuration.addAnnotatedClass(Author.class);
                 configuration.addAnnotatedClass(Book.class);
                 configuration.addAnnotatedClass(Logger.class);

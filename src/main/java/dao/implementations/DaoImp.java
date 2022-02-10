@@ -6,26 +6,26 @@ import org.hibernate.Transaction;
 import utils.HibernateSessionFactoryUtil;
 
 public class DaoImp<T> implements Dao<T> {
-    public void save(T user) {
+    public void save(T entity) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         Transaction tx1 = session.beginTransaction();
-        session.save(user);
+        session.save(entity);
         tx1.commit();
         session.close();
     }
 
-    public void update(T user) {
+    public void update(T entity) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         Transaction tx1 = session.beginTransaction();
-        session.update(user);
+        session.update(entity);
         tx1.commit();
         session.close();
     }
 
-    public void delete(T user) {
+    public void delete(T entity) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         Transaction tx1 = session.beginTransaction();
-        session.delete(user);
+        session.delete(entity);
         tx1.commit();
         session.close();
     }

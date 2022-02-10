@@ -1,23 +1,24 @@
 package models;
 
-import javax.persistence.*;
-public enum Role {
-    admin(1), user(2);
+import org.hibernate.annotations.Type;
 
-    Role(int i) {}
-}
-/*
+import javax.persistence.*;
+
 @Entity
 @Table(name = "roles")
 public class Role {
-    public Role() {
-        roleName = "user";
+    public Role() { }
+    public Role(RoleEnum role) {
+        this.role = role;
     }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column(name = "role_name")
-    private String roleName;
+
+    @Column(name = "role_name", unique = true)
+    @Enumerated(EnumType.STRING)
+    private RoleEnum role;
+
 
 }
-*/
