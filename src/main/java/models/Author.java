@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -24,11 +25,15 @@ public class Author {
         this.firstname = firstname;
         this.lastname = lastname;
     }
-// list of main books ?
-    /*
-    @OneToMany
-    private List<Book> mainBooks;
-    */
+/*
+     list of main books ?
+
+ */
+     @OneToMany(cascade = CascadeType.REFRESH)
+     @JoinColumn(name = "main_books_id")
+     private List<Book> mainBooks = new ArrayList<>();
+
+
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable(
@@ -36,5 +41,5 @@ public class Author {
             joinColumns = { @JoinColumn(name = "author_id") },
             inverseJoinColumns = { @JoinColumn(name = "book_id") }
     )
-    private List<Book> coBooks;
+    private List<Book> coBooks = new ArrayList<>();
 }

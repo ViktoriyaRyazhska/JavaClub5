@@ -13,7 +13,7 @@ import java.util.Date;
 public class Logger {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "book_id", referencedColumnName = "id")
