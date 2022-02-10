@@ -34,6 +34,9 @@ public class Main {
         book.setMainAuthor(author);
         bookService.saveBook(book);
 
+
+        User foundUser = userService.findById(1);
+        System.out.println(foundUser.getFirstname() + " " + foundUser.getLastname());
         context.close();
     }
 }
