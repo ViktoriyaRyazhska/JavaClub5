@@ -1,18 +1,11 @@
 package GreenCity.tests;
 
-<<<<<<< HEAD
-import GreenCity.peges.HomePage;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-//import io.github.bonigarcia.wdm.WebDriverManager;
-
-=======
 
 import GreenCity.peges.HomePage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
->>>>>>> 1aea14b246d06c034deb959cbe4790c29582498a
+
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 
@@ -23,32 +16,16 @@ public abstract class GreenCityRunner {
     private final Long ONE_SECOND_DELAY = 1000L;
     
 
-<<<<<<< HEAD
-    @BeforeSuite
-    public void BeforeSuite() {
-        System.setProperty("webdriver.chrome.driver", "src\\resources\\chromedriver.exe");
-    }
-
-    /*
-    @BeforeSuite
-    public void beforeSuite (){
-        WebDriverManager.chromedriver().setup();
-    }
-
-     */
-
-=======
-   //@Before
-    //public void BeforeSuite() {
-       // System.setProperty("webdriver.chrome.driver", "src\\resources\\chromedriver.exe");
-
-   // }
+   //@BeforeSuite
+   // public void BeforeSuite() {
+    //   System.setProperty("webdriver.chrome.driver", "src\\resources\\chromedriver.exe");
+    //}
 
       @BeforeSuite
-         public void beforeSuite (){
+      public void beforeSuite (){
              WebDriverManager.chromedriver().setup();
-         }
->>>>>>> 1aea14b246d06c034deb959cbe4790c29582498a
+        }
+
     @BeforeClass
         public static void setUpBeforeClass() throws Exception{
         System.out.println("Open page");
