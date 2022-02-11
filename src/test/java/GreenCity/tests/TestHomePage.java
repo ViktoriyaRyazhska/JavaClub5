@@ -25,10 +25,10 @@ public class TestHomePage extends GreenCityRunner {
                 .switchLanguage(languages);
 
         homePage = homePage
-                .navigateMenuAboutUs()
-                .navigateMenuEvents()
                 .navigateMenuEcoNews()
                 .navigateMenuTipsTricks()
+                .navigateMenuEvents()
+                .navigateMenuAboutUs()
                 //.navigateMenuMySpace()
                 //.navigateMenuUBSCourier()
                 .navigateMenuHome();
