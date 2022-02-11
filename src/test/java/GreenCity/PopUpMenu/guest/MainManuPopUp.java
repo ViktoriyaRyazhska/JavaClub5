@@ -76,7 +76,6 @@ public class MainManuPopUp {
     //
     //Home Page
     private WebElement getHomePage() {
-
         return homePage;
     }
 
