@@ -13,19 +13,19 @@ public class MainManuPopUp {
     private WebElement naviconButton;
     @FindBy(css=".header_logo > img")
     private WebElement homePage;
-    @FindBy(xpath="//a[contains(text(),'Eco news')]")
+    @FindBy(css=".header_navigation-menu-left li:nth-child(1) > a")
     private WebElement menuEcoNewsPage;
-    @FindBy(xpath="//a[contains(text(),'Tips & Tricks')]")
+    @FindBy(css=".header_navigation-menu-left li:nth-child(2) > a")
     private WebElement menuTipsTricksPage;
-    @FindBy(xpath="//a[contains(text(),'Events')]")
+    @FindBy(css=".header_navigation-menu-left li:nth-child(3) > a")
     private WebElement menuEventsPage;
-    @FindBy(xpath="//a[contains(text(),'Places')]")
+    @FindBy(css=".ng-star-inserted:nth-child(4) > a")
     private WebElement menuPlacesPage;
-    @FindBy(xpath = "//a[contains(text(),'About us')]")
+    @FindBy(css = ".header_navigation-menu-left li:nth-child(5) > a")
     private WebElement menuAboutUsPage;
-    @FindBy( xpath = "//a[contains(text(),'My space')]" )
+    @FindBy( css = ".header_navigation-menu-left-col li:nth-child(6) > a" )
     private WebElement menuMySpacePage;
-    @FindBy(  xpath = "//a[contains(text(),'UBS courier')]" )
+    @FindBy(  css = "li:nth-child(7) > a" )
     private WebElement menuUBSCourierPage;
     //
     @FindBy(css = ".header_navigation-menu-left-col li:nth-child(3) > a")
