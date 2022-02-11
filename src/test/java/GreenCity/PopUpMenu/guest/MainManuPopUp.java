@@ -9,7 +9,7 @@ public class MainManuPopUp {
 
     private WebDriver driver;
 
-    @FindBy(css="span.menu-icon-wrapper")
+    @FindBy(className="header_burger-btn")
     private WebElement naviconButton;
     @FindBy(css=".header_logo > img")
     private WebElement homePage;
@@ -28,14 +28,16 @@ public class MainManuPopUp {
     @FindBy(  css = "li:nth-child(7) > a" )
     private WebElement menuUBSCourierPage;
     //
-    @FindBy(css = ".header_navigation-menu-left-col li:nth-child(3) > a")
-    private WebElement homePagePopUp;
+    //@FindBy(css = ".header_navigation-menu-left-col li:nth-child(3) > a")
+   // private WebElement homePagePopUp;
     @FindBy(css = ".header_navigation-menu-left-col li:nth-child(1) > a")
     private WebElement menuEcoNewsPopUp;
     @FindBy(css = ".header_navigation-menu-left-col li:nth-child(2) > a")
     private WebElement menuTipsTricksPopUp;
     @FindBy(css = ".ng-star-inserted:nth-child(4) > a")
     private WebElement menuPlacesPopUp;
+    @FindBy(css=".header_navigation-menu-left-col li:nth-child(3) > a")
+    private WebElement menuEventsPopUp;
     @FindBy(css = ".header_navigation-menu-left-col li:nth-child(5) > a")
     private WebElement menuAboutPopUp;
     @FindBy(css = "li:nth-child(7) > a")
@@ -64,7 +66,7 @@ public class MainManuPopUp {
     }
 
     public void clickNaviconButton(){
-        if(!isDisplayedNaviconButton()){
+        if(isDisplayedNaviconButton()){
             getNaviconButton().click();}
     }
 
@@ -74,10 +76,7 @@ public class MainManuPopUp {
     //
     //Home Page
     private WebElement getHomePage() {
-        if (!isDisplayedHomePage()) {
-            clickNaviconButton();
-            return getHomePagePopUp();
-        }
+
         return homePage;
     }
 
@@ -133,21 +132,22 @@ public class MainManuPopUp {
     }
     //
     //Events
-    private WebElement getMenuEventsPage() {
+    private WebElement getMenuEvents() {
+        if (!isDisplayedMenuEventsPage()) {
+            clickNaviconButton();
+            return getMenuEventsPopUp();
+        }
         return menuEventsPage;
     }
 
     public String getMenuEventsText(){
-        return getMenuEventsPage().getText();
+        return getMenuEvents().getText();
     }
 
-    public void clickMenuEventsPage(){
-            getMenuEventsPage().click();
+    public void clickMenuEventsPage(){getMenuEvents().click();}
 
-    }
-
-    public boolean isDisplayedEventsPage(){
-        return getMenuEventsPage().isDisplayed();
+    public boolean isDisplayedMenuEventsPage(){
+        return menuEventsPage.isDisplayed();
     }
     //
     //Places
@@ -239,7 +239,7 @@ public class MainManuPopUp {
     public boolean isDisplayedMenuUBSCourierPage(){
         return menuMySpacePage.isDisplayed();
     }
-
+/*
     //homePagePopUp
 
     public WebElement getHomePagePopUp() {
@@ -253,6 +253,8 @@ public class MainManuPopUp {
     public void clickHomePagePopUp() {
         getHomePagePopUp().click();
     }
+
+ */
 //
 //    public boolean isDisplayedHomePagePopUp() {
 //        return getHomePagePopUp().isDisplayed();
@@ -361,10 +363,24 @@ public class MainManuPopUp {
     public void clickMenuMySpacePopUp() {
         getMenuMySpacePopUp().click();
     }
+
+    // Events
+    private WebElement getMenuEventsPopUp() {
+        return menuEventsPopUp;
+    }
+
+    public String getMenuEventsPopUpText() {
+        return getMenuMySpacePopUp().getText();
+    }
+
+    public void clickMenuEventsPopUp() {
+        getMenuMySpacePopUp().click();
+    }
 }
 //    public boolean isDisplayedMenuMySpacePopUp() {
 //        return menuMySpacePopUp.isDisplayed();
 //    }
+
 
 
 
