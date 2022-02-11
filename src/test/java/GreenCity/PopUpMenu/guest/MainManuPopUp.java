@@ -5,11 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import static org.openqa.selenium.support.PageFactory.initElements;
-
 public class MainManuPopUp {
 
     private WebDriver driver;
+
     @FindBy(css="span.menu-icon-wrapper")
     private WebElement naviconButton;
     @FindBy(css=".header_logo > img")
@@ -17,7 +16,7 @@ public class MainManuPopUp {
     @FindBy(xpath="//a[contains(text(),'Eco news')]")
     private WebElement menuEcoNewsPage;
     @FindBy(xpath="//a[contains(text(),'Tips & Tricks')]")
-    private WebElement menuTipsAndTricksPage;
+    private WebElement menuTipsTricksPage;
     @FindBy(xpath="//a[contains(text(),'Events')]")
     private WebElement menuEventsPage;
     @FindBy(xpath="//a[contains(text(),'Places')]")
@@ -28,19 +27,33 @@ public class MainManuPopUp {
     private WebElement menuMySpacePage;
     @FindBy(  xpath = "//a[contains(text(),'UBS courier')]" )
     private WebElement menuUBSCourierPage;
+    //
+    @FindBy(css = ".header_navigation-menu-left-col li:nth-child(3) > a")
+    private WebElement homePagePopUp;
+    @FindBy(css = ".header_navigation-menu-left-col li:nth-child(1) > a")
+    private WebElement menuEcoNewsPopUp;
+    @FindBy(css = ".header_navigation-menu-left-col li:nth-child(2) > a")
+    private WebElement menuTipsTricksPopUp;
+    @FindBy(css = ".ng-star-inserted:nth-child(4) > a")
+    private WebElement menuPlacesPopUp;
+    @FindBy(css = ".header_navigation-menu-left-col li:nth-child(5) > a")
+    private WebElement menuAboutPopUp;
+    @FindBy(css = "li:nth-child(7) > a")
+    private WebElement menuUSBCourierPopUp;
+    @FindBy(css = ".header_navigation-menu-left-col li:nth-child(6) > a")
+    private WebElement menuMySpacePopUp;
 
 
 
-    public MainManuPopUp(WebDriver driver){
+
+    public MainManuPopUp(WebDriver driver) {
         this.driver = driver;
         //This initElements method will create all WebElements
         PageFactory.initElements(driver, this);
+        System.out.println("********");
     }
 
 
-
-      //Atomic logic
-     //
     //naviconButton
     private WebElement getNaviconButton() {
         return naviconButton;
@@ -52,15 +65,19 @@ public class MainManuPopUp {
 
     public void clickNaviconButton(){
         if(!isDisplayedNaviconButton()){
-        getNaviconButton().click();}
+            getNaviconButton().click();}
     }
 
     public boolean isDisplayedNaviconButton(){
-       return getNaviconButton().isDisplayed();
+        return getNaviconButton().isDisplayed();
     }
     //
     //Home Page
     private WebElement getHomePage() {
+        if (!isDisplayedHomePage()) {
+            clickNaviconButton();
+            return getHomePagePopUp();
+        }
         return homePage;
     }
 
@@ -68,54 +85,53 @@ public class MainManuPopUp {
         return getHomePage().getText();
     }
 
-    public void clickHomePage(){
-        if(!isDisplayedHomePage()) {
-            getHomePage().click();
-        }
-    }
+    public void clickHomePage(){getHomePage().click();}
 
     public boolean isDisplayedHomePage(){
-        return getHomePage().isDisplayed();
+        return homePage.isDisplayed();
     }
-     //
+    //
     //EcoNews
     private WebElement getMenuEcoNewsPage() {
+        if (!isDisplayedMenuEcoNewsPage()) {
+            clickNaviconButton();
+            return getMenuEcoNewsPopUp();}
+
         return menuEcoNewsPage;
     }
 
-    public String getMenuEcoNewsPageText(){
-        return getMenuEcoNewsPage().getText();
-    }
+    public String getMenuEcoNewsPageText(){return getMenuEcoNewsPage().getText();}
 
     public void clickMenuEcoNewsPage() {
-        if(!isDisplayedMenuEcoNewsPage()){
-           getMenuEcoNewsPage().click();
-        }
+            getMenuEcoNewsPage().click();
     }
 
     public boolean isDisplayedMenuEcoNewsPage(){
-        return getMenuEcoNewsPage().isDisplayed();
+        return menuEcoNewsPage.isDisplayed();
     }
-     //
+    //
     //Tips And Tricks
-    private WebElement getMenuTipsAndTricksPage() {
-        return menuTipsAndTricksPage;
-    }
-
-    public String getMenuTipsAndTricksText(){
-        return getMenuTipsAndTricksPage().getText();
-    }
-
-    public void clickMenuTipsAndTricksPage() {
-        if (!isDisplayedTipsAndTricksPage()) {
-            getMenuTipsAndTricksPage().click();
+    private WebElement getMenuTipsTricksPage() {
+        if (!isDisplayedTipsTricksPage()) {
+            clickNaviconButton();
+            return getMenuTipsTricksPopUp();
         }
+        return menuTipsTricksPage;
     }
 
-    public boolean isDisplayedTipsAndTricksPage(){
-        return getMenuTipsAndTricksPage().isDisplayed();
+    public String getMenuTipsTricksText(){
+        return getMenuTipsTricksPage().getText();
     }
-     //
+
+    public void clickMenuTipsTricksPage() {
+            getMenuTipsTricksPage().click();
+
+    }
+
+    public boolean isDisplayedTipsTricksPage(){
+        return menuTipsTricksPage.isDisplayed();
+    }
+    //
     //Events
     private WebElement getMenuEventsPage() {
         return menuEventsPage;
@@ -126,17 +142,20 @@ public class MainManuPopUp {
     }
 
     public void clickMenuEventsPage(){
-        if(!isDisplayedEventsPage()) {
-            getMenuTipsAndTricksPage().click();
-        }
+            getMenuEventsPage().click();
+
     }
 
     public boolean isDisplayedEventsPage(){
         return getMenuEventsPage().isDisplayed();
     }
-     //
+    //
     //Places
     private WebElement getMenuPlacesPage() {
+        if (!isDisplayedPlacesPage()) {
+            clickNaviconButton();
+            return getMenuPlacesPopUp();
+        }
         return menuPlacesPage;
     }
 
@@ -145,17 +164,21 @@ public class MainManuPopUp {
     }
 
     public void clickMenuPlacesPage(){
-        if(!isDisplayedPlacesPage()){
-           getMenuTipsAndTricksPage().click();
-        }
+
+            getMenuTipsTricksPage().click();
+
     }
 
     public boolean isDisplayedPlacesPage(){
-        return getMenuPlacesPage().isDisplayed();
+        return menuPlacesPage.isDisplayed();
     }
-     //
+    //
     //About Us
     private WebElement getMenuAboutUsPage() {
+        if (!isDisplayedMenuAboutUsPage()) {
+            clickNaviconButton();
+            return getMenuAboutPopUp();
+        }
         return menuAboutUsPage;
     }
 
@@ -164,17 +187,21 @@ public class MainManuPopUp {
     }
 
     public void clickMenuAboutUsPage(){
-        if(!isDisplayedMenuAboutUsPage()){
+
             getMenuAboutUsPage().click();
-        }
+
     }
     public boolean isDisplayedMenuAboutUsPage(){
-        return getMenuAboutUsPage().isDisplayed();
+        return menuAboutUsPage.isDisplayed();
     }
-     //
+    //
     //My Space
 
     private WebElement getMenuMySpacePage() {
+        if(!isDisplayedMenuMySpacePage()){
+            clickNaviconButton();
+            return getMenuMySpacePopUp();
+        }
         return menuMySpacePage;
     }
 
@@ -183,30 +210,161 @@ public class MainManuPopUp {
     }
 
     public void clickMenuMySpacePage(){
-        if(!isDisplayedMenuMySpacePage()){
+
             getMenuMySpacePage().click();
-        }
+
     }
     public boolean isDisplayedMenuMySpacePage(){
-        return getMenuMySpacePage().isDisplayed();
+        return menuMySpacePage.isDisplayed();
     }
-     //
+    //
     //UBS Courier
-     private WebElement getMenuUBSCourierPage() {
-         return menuUBSCourierPage;
-     }
+    private WebElement getMenuUBSCourierPage() {
+        if (!isDisplayedMenuUBSCourierPage()) {
+            clickNaviconButton();
+            return getMenuUSBCourierPopUp();
+        }
+        return menuUBSCourierPage;
+    }
 
     public String getMenuUBSCourierPageText(){
         return getMenuUBSCourierPage().getText();
     }
 
     public void clickMenuUBSCourierPage(){
-        if(!isDisplayedMenuUBSCourierPage()){
+
             getMenuMySpacePage().click();
-        }
+
     }
     public boolean isDisplayedMenuUBSCourierPage(){
-        return getMenuMySpacePage().isDisplayed();
+        return menuMySpacePage.isDisplayed();
     }
 
+    //homePagePopUp
+
+    public WebElement getHomePagePopUp() {
+        return homePagePopUp;
+    }
+
+    public String getHomePagePopUpText() {
+        return getHomePagePopUp().getText();
+    }
+
+    public void clickHomePagePopUp() {
+        getHomePagePopUp().click();
+    }
+//
+//    public boolean isDisplayedHomePagePopUp() {
+//        return getHomePagePopUp().isDisplayed();
+//    }
+
+    //menuEcoNewsPopUp
+
+    public WebElement getMenuEcoNewsPopUp() {
+        return menuEcoNewsPopUp;
+    }
+
+    public String getMenuEcoNewsPopUpText() {
+        return getMenuEcoNewsPopUp().getText();
+    }
+
+    public void clickMenuEcoNewsPopUp() {
+        getMenuEcoNewsPopUp().click();
+    }
+
+//    public boolean isDisplayedMenuEcoNewsPopUp() {
+//        return menuEcoNewsPopUp.isDisplayed();
+//    }
+
+    //menuTipsTricksPopUp
+
+    public WebElement getMenuTipsTricksPopUp() {
+        return menuTipsTricksPopUp;
+    }
+
+    public String getMenuTipsTricksPopUpText() {
+        return getMenuEcoNewsPopUp().getText();
+    }
+
+    public void clickMenuTipsTricksPopUp() {
+        getMenuEcoNewsPopUp().click();
+    }
+//
+//    public boolean isDisplayedMenuTipsTricksPopUp() {
+//        return menuTipsTricksPopUp.isDisplayed();
+//    }
+
+    //menuPlacesPopUp
+
+    public WebElement getMenuPlacesPopUp() {
+        return menuPlacesPopUp;
+    }
+
+    public String getMenuPlacesPopUpText() {
+        return getMenuPlacesPopUp().getText();
+    }
+
+    public void clickMenuPlacesPopUp() {
+        getMenuPlacesPopUp().click();
+    }
+//
+//    public boolean isDisplayedMenuPlacesPopUp() {
+//        return menuPlacesPopUp.isDisplayed();
+//    }
+
+    //menuAboutPopUp
+
+    public WebElement getMenuAboutPopUp() {
+        return menuAboutPopUp;
+    }
+
+    public String getMenuAboutPopUpText() {
+        return getMenuAboutPopUp().getText();
+    }
+
+    public void clickMenuAboutPopUp() {
+        getMenuAboutPopUp().click();
+    }
+
+//    public boolean isDisplayedMenuAboutPopUp() {
+//        return menuAboutPopUp.isDisplayed();
+//    }
+
+    //menuUSBCourierPopUp
+
+    public WebElement getMenuUSBCourierPopUp() {
+        return menuUSBCourierPopUp;
+    }
+
+    public String getMenuUSBCourierPopUpText() {
+        return getMenuUSBCourierPopUp().getText();
+    }
+
+    public void clickMenuUSBCourierPopUp() {
+        getMenuUSBCourierPopUp().click();
+    }
+
+//    public boolean isDisplayedMenuUSBCourierPopUp() {
+//        return menuUSBCourierPopUp.isDisplayed();
+//    }
+
+    //menuMySpacePopUp
+
+    public WebElement getMenuMySpacePopUp() {
+        return menuMySpacePopUp;
+    }
+
+    public String getMenuMySpacePopUpText() {
+        return getMenuMySpacePopUp().getText();
+    }
+
+    public void clickMenuMySpacePopUp() {
+        getMenuMySpacePopUp().click();
+    }
 }
+//    public boolean isDisplayedMenuMySpacePopUp() {
+//        return menuMySpacePopUp.isDisplayed();
+//    }
+
+
+

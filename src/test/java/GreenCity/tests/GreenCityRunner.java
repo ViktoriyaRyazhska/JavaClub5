@@ -2,7 +2,7 @@ package GreenCity.tests;
 
 
 import GreenCity.peges.HomePage;
-import io.github.bonigarcia.wdm.WebDriverManager;
+// io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -16,15 +16,15 @@ public abstract class GreenCityRunner {
     private final Long ONE_SECOND_DELAY = 1000L;
     
 
-   //@BeforeSuite
-   // public void BeforeSuite() {
-    //   System.setProperty("webdriver.chrome.driver", "src\\resources\\chromedriver.exe");
-    //}
+   @BeforeSuite
+   public void BeforeSuite() {
+     System.setProperty("webdriver.chrome.driver", "src\\resources\\chromedriver.exe");
+    }
 
-      @BeforeSuite
-      public void beforeSuite (){
-             WebDriverManager.chromedriver().setup();
-        }
+     // @BeforeSuite
+     // public void beforeSuite (){
+     //        WebDriverManager.chromedriver().setup();
+      //  }
 
     @BeforeClass
         public static void setUpBeforeClass() throws Exception{

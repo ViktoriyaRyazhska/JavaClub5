@@ -10,30 +10,30 @@ import org.testng.annotations.Test;
 
 public class TestHomePage extends GreenCityRunner {
     @DataProvider
-    public Object [][] validData() {
+    public Object[][] validData() {
         return new Object[][]{
                 {Languages.ENGLISH}
         };
     }
 
     @Test(dataProvider = "validData")
-    public void Check(Languages languages) throws Exception{
+    public void Check(Languages languages) throws Exception {
         System.out.println("Check and set language");
 
         HomePage homePage = LoadApplication()
+                .switchLanguage(languages);
 
-        .switchLanguage(languages);
+        homePage = homePage
+                .navigateMenuAboutUs()
+                .navigateMenuEvents()
+                .navigateMenuEcoNews()
+                .navigateMenuTipsTricks()
+                //.navigateMenuMySpace()
+                //.navigateMenuUBSCourier()
+                .navigateMenuHome();
 
         Assert.assertEquals(homePage.getLanguageButtonText(), Languages.ENGLISH.toString());
         PresentationSleep();
 
-        homePage=homePage
-                .navigateMenuAboutUs()
-                .navigateMenuMySpace()
-                .navigateMenuEvents()
-                .navigateMenuEcoNews()
-                .navigateMenuTipsAndTricks()
-                .navigateMenuHome();
     }
-
 }

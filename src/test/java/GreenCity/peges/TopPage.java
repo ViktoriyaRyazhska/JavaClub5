@@ -143,7 +143,6 @@ public abstract class TopPage {
         }
 
 
-
         //Business logic
         public HomePage navigateMenuHome() {
                 getMainManuPopUp().clickHomePage();
@@ -155,10 +154,11 @@ public abstract class TopPage {
                 return new EcoNewsPage(driver);
         }
 
-        public TipsAndTricksPage navigateMenuTipsAndTricks() {
-                getMainManuPopUp().clickMenuTipsAndTricksPage();
-                return new TipsAndTricksPage(driver);
+        public TipsTricksPage navigateMenuTipsTricks() {
+                getMainManuPopUp().clickMenuTipsTricksPage();
+                return new TipsTricksPage(driver);
         }
+
         public EventsPage navigateMenuEvents() {
                 getMainManuPopUp().clickMenuEventsPage();
                 return new EventsPage(driver);
