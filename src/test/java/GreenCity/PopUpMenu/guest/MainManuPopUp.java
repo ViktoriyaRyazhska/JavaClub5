@@ -24,17 +24,16 @@ public class MainManuPopUp {
     private WebElement menuAboutUsPage;
     @FindBy( css = "div.app-wrapper .header_navigation-menu>nav>ul>li:nth-child(6) > a" )
     private WebElement menuMySpacePage;
-    @FindBy(  css = "li:nth-child(7) > a" )
+    @FindBy(css = "div.app-wrapper .header_navigation-menu>nav>ul>li:nth-child(7) > a" )
     private WebElement menuUBSCourierPage;
-
+    @FindBy(className = "close-modal-window")
+    protected WebElement closeSingIn;
 
     public MainManuPopUp(WebDriver driver){
         this.driver = driver;
         //This initElements method will create all WebElements
         PageFactory.initElements(driver, this);
     }
-
-
 
     //Atomic logic
     //
@@ -193,6 +192,20 @@ public class MainManuPopUp {
     public boolean isDisplayedMenuMySpacePage(){
         return getMenuMySpacePage().isDisplayed();
     }
+
+    private WebElement getCloseSingIn(){return closeSingIn;}
+    public String getCloseSingInText() {
+        return getCloseSingIn().getText();
+    }
+    public void clickCloseSingInPopUp() {
+        if(isDisplayedCloseSingIn())
+            getCloseSingIn().click();
+    }
+    public boolean isDisplayedCloseSingIn(){
+        return getCloseSingIn().isDisplayed();
+    }
+
+
     //
     //UBS Courier
     private WebElement getMenuUBSCourierPage() {
@@ -206,11 +219,11 @@ public class MainManuPopUp {
     public void clickMenuUBSCourierPage(){
         clickNaviconButton();
         if(isDisplayedMenuUBSCourierPage()){
-            getMenuMySpacePage().click();
+            getMenuUBSCourierPage().click();
         }
     }
     public boolean isDisplayedMenuUBSCourierPage(){
-        return getMenuMySpacePage().isDisplayed();
+        return getMenuUBSCourierPage().isDisplayed();
     }
 
 }
