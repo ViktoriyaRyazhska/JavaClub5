@@ -3,6 +3,7 @@ package GreenCity.peges;
 import GreenCity.PopUpMenu.guest.MainManuPopUp;
 import GreenCity.PopUpMenu.guest.SingInPopUp;
 import GreenCity.PopUpMenu.guest.SingUpPopUp;
+import GreenCity.PopUpMenu.guest.UBSCourierPopUp;
 import GreenCity.data.Languages;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
@@ -22,11 +23,16 @@ public abstract class TopPage {
         private WebElement singInLink;
         @FindBy(className="header_lang-switcher-wrp")
         private WebElement languageButton;
+        @FindBy(id="copyright-label")
+        private WebElement copyright;
 
 
         private SingUpPopUp singUpPopUp;
         private SingInPopUp singInPopUp;
         private MainManuPopUp mainManuPopUp;
+        private UBSCourierPopUp ubcCourierPopUp;
+
+
 
 
         public TopPage(WebDriver driver) {
@@ -35,6 +41,7 @@ public abstract class TopPage {
                 PageFactory.initElements(driver, this);
                 CloseAlertIsPresent();
                 initialElements();
+
         }
 
 
@@ -48,24 +55,27 @@ public abstract class TopPage {
                 fluentWait.ignoring(NoSuchElementException.class);
                 //TimeoutException
                 fluentWait.ignoring(TimeoutException.class);
-                 //This is how we specify the condition to wait on.
-                 //This is what we will explore more in this chapter
-                  Alert alert =null;
-                   try {
-                       alert = (Alert) fluentWait.until(ExpectedConditions.alertIsPresent());
-               }catch (TimeoutException e){
+                //This is how we specify the condition to wait on.
+                //This is what we will explore more in this chapter
+                Alert alert =null;
+                try {
+                        alert = (Alert) fluentWait.until(ExpectedConditions.alertIsPresent());
+                }catch (TimeoutException e){
 
-                   }
+                }
                 if(alert!=null) {
-                   alert.accept();
-                      // driver.switchTo().alert().accept();
+                        alert.accept();
+                        // driver.switchTo().alert().accept();
                 }
         }
 
 
         private void initialElements() {
+
                 mainManuPopUp = new MainManuPopUp(driver);
+                ubcCourierPopUp = new UBSCourierPopUp(driver);
         }
+
 
         //Object
         //Atomic logic
@@ -111,22 +121,38 @@ public abstract class TopPage {
         }
 
 
+        //Copyright
+        public WebElement getCopyright() {
+                return copyright;
+        }
+
+        public String getCopyrightText() {
+                return getCopyright().getText();
+        }
 
 
-        // mainManuPopUp
+        public void clickCopyright() {
+                getCopyright().click();
+        }
+
+        //
+
+        //MySpase
+
+
+        // ManuPopUp
         public MainManuPopUp getMainManuPopUp() {
                 return mainManuPopUp;
         }
+        public UBSCourierPopUp getUBSCourierPopUp(){return ubcCourierPopUp;}
 
         //Functional
 //
         public void clicklanguageButton2(Languages languages) {
-
-                WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+                //WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
                 clickLanguageButton1();
-               // WebElement lang_dropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//ul[@class='add-shadow header_lang-switcher-wrp header_navigation-menu-right-list']/li/span")));
+                // WebElement lang_dropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//ul[@class='add-shadow header_lang-switcher-wrp header_navigation-menu-right-list']/li/span")));
                 List<WebElement> allOptions = driver.findElements(By.xpath("//ul[@class='add-shadow header_lang-switcher-wrp header_navigation-menu-right-list']/li/."));
-
 
                 for (WebElement ele : allOptions) {
                         String lang_name = ele.getText();
@@ -143,7 +169,9 @@ public abstract class TopPage {
         }
 
 
+
         //Business logic
+
         public HomePage navigateMenuHome() {
                 getMainManuPopUp().clickHomePage();
                 return new HomePage(driver);
@@ -158,7 +186,6 @@ public abstract class TopPage {
                 getMainManuPopUp().clickMenuTipsTricksPage();
                 return new TipsTricksPage(driver);
         }
-
         public EventsPage navigateMenuEvents() {
                 getMainManuPopUp().clickMenuEventsPage();
                 return new EventsPage(driver);
@@ -176,11 +203,17 @@ public abstract class TopPage {
 
         public MySpacePage navigateMenuMySpace() {
                 getMainManuPopUp().clickMenuMySpacePage();
+                getMainManuPopUp().clickCloseSingInPopUp();
                 return new MySpacePage(driver);
         }
 
+
         public UBSCourierPage navigateMenuUBSCourier() {
                 getMainManuPopUp().clickMenuUBSCourierPage();
+                return new UBSCourierPage(driver);
+        }
+        public UBSCourierPage navigateGreenCity() {
+                getUBSCourierPopUp().clickGreenCityPage();
                 return new UBSCourierPage(driver);
         }
 

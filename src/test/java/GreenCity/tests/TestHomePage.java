@@ -30,8 +30,8 @@ public class TestHomePage extends GreenCityRunner {
                 .navigateMenuEvents()
                 //.navigateMenuPlaces()
                 .navigateMenuAboutUs()
-                //.navigateMenuMySpace()
-                //.navigateMenuUBSCourier()
+                .navigateMenuMySpace()
+                .navigateMenuUBSCourier()
                 .navigateMenuHome();
 
         Assert.assertEquals(homePage.getLanguageButtonText(), Languages.ENGLISH.toString());
