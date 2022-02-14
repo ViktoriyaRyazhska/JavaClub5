@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class MainManuPopUp {
 
-    private final int Window_Heigth_toClick_Footer=480;
+    protected final int Window_Heigth_toClick_Footer=480;
 
     private WebDriver driver;
     //Upper Menu

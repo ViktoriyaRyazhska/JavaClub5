@@ -31,8 +31,7 @@ public abstract class TopPage {
         private SingInPopUp singInPopUp;
         private MainManuPopUp mainManuPopUp;
         private UBSCourierPopUp ubcCourierPopUp;
-
-
+        private int Window_Heigth_toClick_Footer=480;
 
 
         public TopPage(WebDriver driver) {
@@ -214,9 +213,8 @@ public abstract class TopPage {
 
         public UBSCourierPage navigateMenuUBSCourier() {
                 getMainManuPopUp().clickMenuUBSCourierPage();
-                getUBSCourierPopUp().clickGreenCityPage();
+                if(driver.manage().window().getSize().height> Window_Heigth_toClick_Footer){
+                        getUBSCourierPopUp().clickGreenCityPage();}
                 return new UBSCourierPage(driver);
         }
-
-
 }
