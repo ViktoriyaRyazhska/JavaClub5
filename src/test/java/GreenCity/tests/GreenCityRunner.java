@@ -56,7 +56,10 @@ public abstract class GreenCityRunner {
             System.out.println("BeforeMethod");
             driver.get("https://ita-social-projects.github.io/GreenCityClient/#/");
             // driver.manage().window().maximize();
+            //driver.manage().window().setSize(new Dimension(640,480));
             driver.manage().window().setSize(new Dimension(480,640));
+            //driver.manage().window().setSize(new Dimension(600,400));
+
         }
         @AfterMethod
         public void tearDown(ITestResult result) throws Exception{

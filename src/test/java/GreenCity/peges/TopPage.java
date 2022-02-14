@@ -23,8 +23,8 @@ public abstract class TopPage {
         private WebElement singInLink;
         @FindBy(className="header_lang-switcher-wrp")
         private WebElement languageButton;
-        @FindBy(id="copyright-label")
-        private WebElement copyright;
+        // @FindBy(id="copyright-label")
+        // private WebElement copyright;
 
 
         private SingUpPopUp singUpPopUp;
@@ -122,18 +122,18 @@ public abstract class TopPage {
 
 
         //Copyright
-        public WebElement getCopyright() {
-                return copyright;
-        }
+        // public WebElement getCopyright() {
+        //         return copyright;
+        // }
 
-        public String getCopyrightText() {
-                return getCopyright().getText();
-        }
+        // public String getCopyrightText() {
+        //        return getCopyright().getText();
+        //}
 
 
-        public void clickCopyright() {
-                getCopyright().click();
-        }
+        // public void clickCopyright() {
+        //         getCopyright().click();
+        // }
 
         //
 
@@ -146,10 +146,11 @@ public abstract class TopPage {
         }
         public UBSCourierPopUp getUBSCourierPopUp(){return ubcCourierPopUp;}
 
+
         //Functional
 //
         public void clicklanguageButton2(Languages languages) {
-                //WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+                WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
                 clickLanguageButton1();
                 // WebElement lang_dropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//ul[@class='add-shadow header_lang-switcher-wrp header_navigation-menu-right-list']/li/span")));
                 List<WebElement> allOptions = driver.findElements(By.xpath("//ul[@class='add-shadow header_lang-switcher-wrp header_navigation-menu-right-list']/li/."));
@@ -168,6 +169,10 @@ public abstract class TopPage {
                 }
         }
 
+        //  protected void scrollDown(){
+        //         JavascriptExecutor js = (JavascriptExecutor) driver;
+        //         js.executeScript("arguments[0].scrollIntoView(true);", getCopyright());
+        // }
 
 
         //Business logic
@@ -203,16 +208,12 @@ public abstract class TopPage {
 
         public MySpacePage navigateMenuMySpace() {
                 getMainManuPopUp().clickMenuMySpacePage();
-                getMainManuPopUp().clickCloseSingInPopUp();
                 return new MySpacePage(driver);
         }
 
 
         public UBSCourierPage navigateMenuUBSCourier() {
                 getMainManuPopUp().clickMenuUBSCourierPage();
-                return new UBSCourierPage(driver);
-        }
-        public UBSCourierPage navigateGreenCity() {
                 getUBSCourierPopUp().clickGreenCityPage();
                 return new UBSCourierPage(driver);
         }

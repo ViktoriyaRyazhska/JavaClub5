@@ -8,4 +8,8 @@ public class UBSCourierPage extends TopPage{
         super(driver);
         PageFactory.initElements(driver, this);
     }
+    public UBSCourierPage navigateGreenCity() {
+        getUBSCourierPopUp().clickGreenCityPage();
+        return new UBSCourierPage(driver);
+    }
 }

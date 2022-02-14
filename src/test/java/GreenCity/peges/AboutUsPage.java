@@ -9,6 +9,8 @@ public class AboutUsPage extends TopPage {
         super(driver);
         PageFactory.initElements(driver, this);
     }
+}
+    /*
     private void scrollDown(){
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView(true);", getCopyright());
@@ -54,8 +56,10 @@ public class AboutUsPage extends TopPage {
         scrollDown();
         return super.navigateMenuUBSCourier();
     }
-    public UBSCourierPage navigateGreenCity() {
-        scrollDown();
-        return super.navigateGreenCity();
-    }
+   // public UBSCourierPage navigateGreenCity() {
+   //     scrollDown();
+    //    return super.navigateGreenCity();
+    //}
 }
+
+     */
