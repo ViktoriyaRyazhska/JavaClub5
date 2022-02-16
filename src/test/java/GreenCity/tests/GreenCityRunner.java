@@ -58,7 +58,7 @@ public abstract class GreenCityRunner {
             // driver.manage().window().maximize();
             //driver.manage().window().setSize(new Dimension(640,480));
             //driver.manage().window().setSize(new Dimension(480,640));
-            driver.manage().window().setSize(new Dimension(600,400));
+            //driver.manage().window().setSize(new Dimension(600,400));
 
         }
         @AfterMethod

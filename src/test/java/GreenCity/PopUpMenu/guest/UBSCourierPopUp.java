@@ -48,7 +48,7 @@ public class UBSCourierPopUp extends MainManuPopUp {
 
     public void clickGreenCityPage(){
         clickNaviconButtonUBS();
-        if(isDisplayedGreenCityPage() && IfMenuClick()) {
+        if(isDisplayedGreenCityPage()) {
             getGreenCityPage().click();
         }
     }
