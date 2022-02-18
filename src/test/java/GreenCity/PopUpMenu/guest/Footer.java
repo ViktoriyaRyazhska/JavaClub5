@@ -5,24 +5,27 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class Footer extends MainManuPopUp {
+public class Footer  {
+    private WebDriver driver;
 
-    //Lower menu.Footer
-    @FindBy(xpath="//a[contains(@href, '#/about')]")
+    @FindBy(css= ".footer_logo-wrp>a>img.logo")
     private WebElement footerHomePage;
-    @FindBy(css="ul.footer_left-side>li>a[href*='#/news']")
+    @FindBy(css="ul.footer_left-side>li:nth-child(1) > a")
     private WebElement footerEcoNewsPage;
-    @FindBy(css="div.container>nav.footer_links>ul.footer_left-side>li>a[href*='#/tips']")
+    //@FindBy(css="div.container>nav.footer_links>ul.footer_left-side>li>a[href*='#/tips']")
+    @FindBy(css = "ul.footer_left-side>li:nth-child(2) > a")
     private WebElement footerTipsTricksPage;
-    @FindBy(xpath="//a[contains(@href, '#/events')]")
+    //@FindBy(xpath="//a[contains(@href, '#/events')]")
+    @FindBy(css= "ul.footer_left-side>li:nth-child(3) > a")
     private WebElement footerEventsPage;
-    @FindBy(css="div.container>nav.footer_links>ul.footer_left-side>li>a[href*='#/places']")
+    @FindBy(css="ul.footer_left-side>li:nth-child(4) > a")
     private WebElement footerPlacesPage;
-    @FindBy(xpath="//a[contains(@href, '#/about')]")
+    @FindBy(css="ul.footer_left-side>li:nth-child(5) > a")
     private WebElement footerAboutUsPage;
-    @FindBy( css = "div.container>nav.footer_links>ul.footer_left-side>li>a[href*='#/profile']" )
+    @FindBy( css = "ul.footer_left-side>li:nth-child(6) > a" )
     private WebElement footerMyHabitsPage;
-    @FindBy(css="#copyright-label")
+    // @FindBy(css="img.logo")
+    @FindBy(css = "div#copyright-label")
     private WebElement copyright;
     @FindBy(css=".footer_social-link:nth-child(1) > img")
     private WebElement footerLinkTwitter;
@@ -32,7 +35,9 @@ public class Footer extends MainManuPopUp {
     private WebElement footerLinkFacebook;
 
     public Footer(WebDriver driver) {
-        super(driver);
+
+        //super(driver);
+        this.driver = driver;
     }
 
 
@@ -41,35 +46,35 @@ public class Footer extends MainManuPopUp {
         js.executeScript("arguments[0].scrollIntoView(true);", getCopyright());
     }
 
-   // Business logic
-   public void checkFooter() {
-        scrollDown();
-        clickFooterHomePage();
-        scrollDown();
-        clickFooterEcoNewsPage();
-        System.out.println("FooterEcoNews");
-        scrollDown();
-        clickFooterTipsTricksPage();
-        scrollDown();
-        clickFooterEventsPage();
-       // scrollDown();
-        //clickFooterPlacesPage();
-        scrollDown();
-        clickFooterMyHabitsPage();
-        System.out.println("MyHabitsPage");
-        clickCloseSingIn();
-        scrollDown();
-        clickFooterAboutUsPage();
-        scrollDown();
-        clickFooterLinkTwitter();
-        System.out.println("LinkTwitter");
-        scrollDown();
-        clickFooterLinkInstagram();
-        System.out.println("LinkInstagram");
-        scrollDown();
-        clickFooterLinkFacebook();
-        System.out.println("LinkFacebook");
-    }
+    //Business logic
+//   public void checkFooter() {
+//        scrollDown();
+//        clickFooterHomePage();
+//        scrollDown();
+//        clickFooterEcoNewsPage();
+//        System.out.println("FooterEcoNews");
+//        scrollDown();
+//        clickFooterTipsTricksPage();
+//        scrollDown();
+//        clickFooterEventsPage();
+//       // scrollDown();
+//        //clickFooterPlacesPage();
+//        scrollDown();
+//        clickFooterMyHabitsPage();
+//        System.out.println("MyHabitsPage");
+//       // clickCloseSingIn();
+//        scrollDown();
+//        clickFooterAboutUsPage();
+//        scrollDown();
+//        clickFooterLinkTwitter();
+//        System.out.println("LinkTwitter");
+//        scrollDown();
+//        clickFooterLinkInstagram();
+//        System.out.println("LinkInstagram");
+//        scrollDown();
+//        clickFooterLinkFacebook();
+//        System.out.println("LinkFacebook");
+//    }
 
 
 
@@ -93,6 +98,7 @@ public class Footer extends MainManuPopUp {
     //
     //Home Page
     private WebElement getFooterHomePage() {
+
         return footerHomePage;
     }
 
@@ -100,10 +106,12 @@ public class Footer extends MainManuPopUp {
         return getFooterHomePage().getText();
     }
 
-    public void clickFooterHomePage(){
-        if(isDisplayedFooterHomePage()) {
-            getFooterHomePage().click();
-        }
+    public void clickFooterHomePage() throws InterruptedException {
+        scrollDown();
+        // Thread.sleep(1000);
+
+        getFooterHomePage().click();
+
     }
 
     public boolean isDisplayedFooterHomePage(){
@@ -111,21 +119,26 @@ public class Footer extends MainManuPopUp {
     }
     //
     //EcoNews
-    private WebElement getFooterEcoNewsPage() {
+    private WebElement getFooterEcoNewsPage() throws InterruptedException {
+
         return footerEcoNewsPage;
     }
 
-    public String getFooterEcoNewsPageText(){
+    public String getFooterEcoNewsPageText() throws InterruptedException {
         return getFooterEcoNewsPage().getText();
     }
 
-    public void clickFooterEcoNewsPage() {
-        if(isDisplayedFooterEcoNewsPage()){
-            getFooterEcoNewsPage().click();
-        }
+    public void clickFooterEcoNewsPage() throws InterruptedException {
+        Thread.sleep(1000);
+        System.out.println("scrollDown");
+        scrollDown();
+        Thread.sleep(1000);
+
+        System.out.println("clickFooterEcoNewsPage");
+        getFooterEcoNewsPage().click();
     }
 
-    public boolean isDisplayedFooterEcoNewsPage(){
+    public boolean isDisplayedFooterEcoNewsPage() throws InterruptedException {
         return getFooterEcoNewsPage().isDisplayed();
     }
     //
@@ -138,10 +151,15 @@ public class Footer extends MainManuPopUp {
         return getFooterTipsTricksPage().getText();
     }
 
-    public void clickFooterTipsTricksPage() {
-        if (isDisplayedFooterTipsTricksPage()) {
-            getFooterTipsTricksPage().click();
-        }
+    public void clickFooterTipsTricksPage() throws InterruptedException {
+
+        System.out.println("scrollDown");
+        scrollDown();
+        Thread.sleep(1000);
+        System.out.println("getFooterTipsTricksPage().click()");
+        getFooterTipsTricksPage().click();
+
+
     }
 
     public boolean isDisplayedFooterTipsTricksPage(){
@@ -157,11 +175,15 @@ public class Footer extends MainManuPopUp {
         return getFooterEventsPage().getText();
     }
 
-    public void clickFooterEventsPage(){
-        if(isDisplayedFooterEventsPage()) {
-            getFooterEventsPage().click();
-        }
+    public void clickFooterEventsPage() throws InterruptedException {
+
+        System.out.println("scrollDown");
+        scrollDown();
+        Thread.sleep(1000);
+        System.out.println(" getFooterEventsPage().click()");
+        getFooterEventsPage().click();
     }
+
 
     public boolean isDisplayedFooterEventsPage(){
         return getFooterEventsPage().isDisplayed();
@@ -176,11 +198,14 @@ public class Footer extends MainManuPopUp {
         return getFooterPlacesPage().getText();
     }
 
-    public void clickFooterPlacesPage(){
-        if(isDisplayedFooterPlacesPage()){
-            getFooterPlacesPage().click();
-        }
+    public void clickFooterPlacesPage() throws InterruptedException {
+        System.out.println("scrollDown");
+        scrollDown();
+        Thread.sleep(5000);
+        System.out.println(" getFooterPlacesPage().click()");
+        getFooterPlacesPage().click();
     }
+
 
     public boolean isDisplayedFooterPlacesPage(){
         return getFooterPlacesPage().isDisplayed();
@@ -195,10 +220,13 @@ public class Footer extends MainManuPopUp {
         return getFooterAboutUsPage().getText();
     }
 
-    public void clickFooterAboutUsPage(){
-        if(isDisplayedFooterAboutUsPage()){
-            getFooterAboutUsPage().click();
-        }
+    public void clickFooterAboutUsPage() throws InterruptedException {
+        System.out.println("scrollDown");
+        scrollDown();
+        Thread.sleep(1000);
+        System.out.println(" getFooterAboutUsPage().click()");
+        getFooterAboutUsPage().click();
+
     }
     public boolean isDisplayedFooterAboutUsPage(){
         return getFooterAboutUsPage().isDisplayed();
@@ -214,12 +242,16 @@ public class Footer extends MainManuPopUp {
         return getFooterMyHabitsPage().getText();
     }
 
-    public void clickFooterMyHabitsPage(){
-        if(isDisplayedFooterMyHabitsPage()){
-            getFooterMyHabitsPage().click();
-            System.out.println("MyHabitsPage");
-        }
+    public void clickFooterMyHabitsPage() throws InterruptedException {
+        System.out.println("scrollDown");
+        // Thread.sleep(1000);
+        scrollDown();
+        Thread.sleep(1000);
+        System.out.println(" getFooterMyHabitsPage().click();");
+        getFooterMyHabitsPage().click();
+        System.out.println("MyHabitsPage");
     }
+
 
     public boolean isDisplayedFooterMyHabitsPage(){
         return getFooterMyHabitsPage().isDisplayed();
