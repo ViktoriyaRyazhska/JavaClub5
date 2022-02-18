@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 
 
 public class SingInPopUp {
@@ -22,7 +21,8 @@ public class SingInPopUp {
     private WebElement loginMail;
     @FindBy(xpath="//a[contains(text(),'Зареєструватись')]")
     private WebElement toLogUp;
-    @FindBy(className = "close-modal-window")
+   // @FindBy(className = "close-modal-window")
+    @FindBy (css = "img.cross-btn")
     private WebElement close;
 
    public SingInPopUp(WebDriver driver){
