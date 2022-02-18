@@ -1,6 +1,5 @@
 package GreenCity.PopUpMenu.guest;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,6 +10,8 @@ public class MainManuPopUp {
     //Upper Menu
     @FindBy(css = ".header_burger-btn")
     private WebElement naviconButton;
+    @FindBy(css = ".header_burger-btn>div>div")
+    private WebElement naviconButtonInUBSourier;
     @FindBy(css = ".header_logo > img")
     private WebElement homePage;
     @FindBy(css = "div.app-wrapper .header_navigation-menu>nav>ul>li:nth-child(1) > a")
@@ -29,6 +30,11 @@ public class MainManuPopUp {
     private WebElement menuUBSCourierPage;
     @FindBy(xpath = "//img[@alt='close button']")
     protected WebElement closeSingIn;
+    @FindBy( css ="a.ubs-header-sign-in.ng-star-inserted")
+    private WebElement singInLinkUBS;
+    @FindBy (css = ".header_navigation-menu-ubs .header_mobile-menu-sign-in>a")
+    private  WebElement menuSingUpDropdownInUBS;
+
 /*
     //Lower menu.Footer
     @FindBy(xpath="//a[contains(@href, '#/about')]")
@@ -61,15 +67,17 @@ public class MainManuPopUp {
         this.driver = driver;
         //This initElements method will create all WebElements
         PageFactory.initElements(driver, this);
+
+
     }
 
     //Functional
-    public void closeNaviconBotton() {
-        if (isDisplayedNaviconButton() && isDisplayedMenuAboutUsPage()) {
-            clickNaviconButton();
-            System.out.println("Close NB");
-        }
-    }
+//    public void closeNaviconBotton() {
+//        if (isDisplayedNaviconButton() && isDisplayedMenuAboutUsPage()) {
+//            clickNaviconButton();
+//            System.out.println("Close NB");
+//        }
+//    }
 
 
     //Atomic logic
@@ -93,6 +101,26 @@ public class MainManuPopUp {
         return getNaviconButton().isDisplayed();
     }
 
+    //naviconButtonInUBSourier
+    public WebElement getNaviconButtonInUBSourier (){
+        return naviconButtonInUBSourier;
+    }
+
+    public String NaviconButtonInUBSourierText() {
+        return getNaviconButtonInUBSourier().getText();
+    }
+
+    public void clickNaviconButtonInUBSourier(){
+        if(isDisplayedNaviconButtonInUBSourier()){
+            getNaviconButtonInUBSourier().click();
+        }}
+
+    public boolean isDisplayedNaviconButtonInUBSourier() { return getNaviconButtonInUBSourier().isDisplayed();
+    }
+
+
+
+
     //
     //Home Page
     private WebElement getHomePage() {
@@ -115,6 +143,7 @@ public class MainManuPopUp {
         return getHomePage().isDisplayed();
     }
 
+
     private WebElement getCloseSingIn() {
         return closeSingIn;
     }
@@ -135,28 +164,47 @@ public class MainManuPopUp {
 
     //
     //EcoNews
-    private WebElement getMenuEcoNewsPage() {
-        return menuEcoNewsPage;
+//    private WebElement getMenuEcoNewsPage() {
+//        return menuEcoNewsPage;
+//    }
+//
+//    public String getMenuEcoNewsPageText() {
+//        return getMenuEcoNewsPage().getText();
+//    }
+//
+//    public void clickMenuEcoNewsPage() {
+//        clickNaviconButton();
+//        if (isDisplayedMenuEcoNewsPage()) {
+//            getMenuEcoNewsPage().click();
+//        }
+//        /*
+//        else {
+//            closeNaviconBotton();
+//            scrollDown();
+//            clickFooterEcoNewsPage();
+//            System.out.println("FooterEcoNews");
+//        }
+//
+//         */
+//    }
+    public WebElement getMenuEcoNewsPage(){
+        if(!isDisplayedMenuEcoNewsPage()){
+            clickNaviconButton();
+        }return menuEcoNewsPage; }
+
+
+    public void  clickMenuEcoNewsPage(){
+        if(!isDisplayedMenuEcoNewsPage()){
+            clickNaviconButton();
+        }
+        getMenuEcoNewsPage().click();
     }
 
     public String getMenuEcoNewsPageText() {
+        if(!isDisplayedMenuEcoNewsPage()){
+            clickNaviconButton();
+        }
         return getMenuEcoNewsPage().getText();
-    }
-
-    public void clickMenuEcoNewsPage() {
-        clickNaviconButton();
-        if (isDisplayedMenuEcoNewsPage()) {
-            getMenuEcoNewsPage().click();
-        }
-        /*
-        else {
-            closeNaviconBotton();
-            scrollDown();
-            clickFooterEcoNewsPage();
-            System.out.println("FooterEcoNews");
-        }
-
-         */
     }
 
     public boolean isDisplayedMenuEcoNewsPage() {
@@ -165,28 +213,48 @@ public class MainManuPopUp {
 
     //
     //Tips And Tricks
-    private WebElement getMenuTipsTricksPage() {
+//    private WebElement getMenuTipsTricksPage() {
+//        return menuTipsTricksPage;
+//    }
+//
+//    public String getMenuTipsTricksText() {
+//        return getMenuTipsTricksPage().getText();
+//    }
+//
+//    public void clickMenuTipsTricksPage() {
+//        clickNaviconButton();
+//        if (isDisplayedTipsTricksPage()) {
+//            getMenuTipsTricksPage().click();
+//        }
+//        /*
+//        else {
+//            closeNaviconBotton();
+//            scrollDown();
+//            clickFooterTipsTricksPage();
+//            System.out.println("FooterTipsTricks");
+//        }
+//
+//         */
+//    }
+    public WebElement getMenuTipsTricksPage(){
+        if(!isDisplayedTipsTricksPage()){
+            clickNaviconButton();
+        }
         return menuTipsTricksPage;
     }
 
     public String getMenuTipsTricksText() {
+        if(!isDisplayedTipsTricksPage()){
+            clickNaviconButton();
+        }
         return getMenuTipsTricksPage().getText();
     }
 
-    public void clickMenuTipsTricksPage() {
-        clickNaviconButton();
-        if (isDisplayedTipsTricksPage()) {
-            getMenuTipsTricksPage().click();
+    public void clickMenuTipsTricksPage(){
+        if(!isDisplayedTipsTricksPage()){
+            clickNaviconButton();
         }
-        /*
-        else {
-            closeNaviconBotton();
-            scrollDown();
-            clickFooterTipsTricksPage();
-            System.out.println("FooterTipsTricks");
-        }
-
-         */
+        getMenuTipsTricksPage().click();
     }
 
     public boolean isDisplayedTipsTricksPage() {
@@ -195,28 +263,51 @@ public class MainManuPopUp {
 
     //
     //Events
-    private WebElement getMenuEventsPage() {
+//    private WebElement getMenuEventsPage() {
+//        return menuEventsPage;
+//    }
+//
+//    public String getMenuEventsText() {
+//        return getMenuEventsPage().getText();
+//    }
+//
+//    public void clickMenuEventsPage() {
+//        clickNaviconButton();
+//        if (isDisplayedEventsPage()) {
+//            getMenuEventsPage().click();
+//        }
+//        /*
+//        else {
+//            closeNaviconBotton();
+//            scrollDown();
+//            clickFooterEventsPage();
+//            System.out.println("FooterEvents");
+//        }
+//
+//         */
+//    }
+    public WebElement getMenuEventsPage(){
+        if(!isDisplayedEventsPage()){
+            clickNaviconButton();
+        }
         return menuEventsPage;
     }
 
-    public String getMenuEventsText() {
-        return getMenuEventsPage().getText();
+
+
+    public void clickMenuEventsPage(){
+        if(!isDisplayedEventsPage()){
+            clickNaviconButton();
+        }
+
+        getMenuEventsPage().click();
     }
 
-    public void clickMenuEventsPage() {
-        clickNaviconButton();
-        if (isDisplayedEventsPage()) {
-            getMenuEventsPage().click();
+    public String getMenuEventsText() {
+        if(!isDisplayedEventsPage()){
+            clickNaviconButton();
         }
-        /*
-        else {
-            closeNaviconBotton();
-            scrollDown();
-            clickFooterEventsPage();
-            System.out.println("FooterEvents");
-        }
-
-         */
+        return getMenuEventsPage().getText();
     }
 
 
@@ -226,28 +317,51 @@ public class MainManuPopUp {
 
     //
     //Places
-    private WebElement getMenuPlacesPage() {
+//    private WebElement getMenuPlacesPage() {
+//        return menuPlacesPage;
+//    }
+//
+//    public String getMenuPlacesText() {
+//        return getMenuPlacesPage().getText();
+//    }
+//
+//    public void clickMenuPlacesPage() {
+//        clickNaviconButton();
+//        if (isDisplayedPlacesPage()) {
+//            getMenuPlacesPage().click();
+//        }
+//        /*
+//        else {
+//            closeNaviconBotton();
+//            scrollDown();
+//            clickFooterPlacesPage();
+//            System.out.println("Plase");
+//        }
+//
+//         */
+//    }
+
+    public WebElement getMenuPlacesPage(){
+        if(!isDisplayedPlacesPage()){
+            clickNaviconButton();
+        }
         return menuPlacesPage;
     }
 
-    public String getMenuPlacesText() {
-        return getMenuPlacesPage().getText();
+
+    public void clickMenuPlacesPage(){
+        if(!isDisplayedPlacesPage()){
+            clickNaviconButton();
+        }
+
+        getMenuPlacesPage().click();
     }
 
-    public void clickMenuPlacesPage() {
-        clickNaviconButton();
-        if (isDisplayedPlacesPage()) {
-            getMenuPlacesPage().click();
+    public String getMenuPlacesText() {
+        if(!isDisplayedPlacesPage()){
+            clickNaviconButton();
         }
-        /*
-        else {
-            closeNaviconBotton();
-            scrollDown();
-            clickFooterPlacesPage();
-            System.out.println("Plase");
-        }
-
-         */
+        return getMenuPlacesPage().getText();
     }
 
     public boolean isDisplayedPlacesPage() {
@@ -256,26 +370,49 @@ public class MainManuPopUp {
 
     //
     //About Us
-    private WebElement getMenuAboutUsPage() {
+//    private WebElement getMenuAboutUsPage() {
+//        return menuAboutUsPage;
+//    }
+//
+//    public String getMenuAboutUsPageText() {
+//        return getMenuAboutUsPage().getText();
+//    }
+//
+//    public void clickMenuAboutUsPage() {
+//        clickNaviconButton();
+//        if (isDisplayedMenuAboutUsPage()) {
+//            getMenuAboutUsPage().click();
+//        }
+//        /*else {
+//            closeNaviconBotton();
+//            scrollDown();
+//            clickFooterAboutUsPage();
+//            System.out.println("from AU to HP");
+//        }
+//         */
+//    }
+    public WebElement getMenuAboutUsPage(){
+        if(!isDisplayedMenuAboutUsPage()){
+            clickNaviconButton();
+        }
         return menuAboutUsPage;
     }
 
-    public String getMenuAboutUsPageText() {
-        return getMenuAboutUsPage().getText();
+
+
+    public void clickMenuAboutUsPage(){
+        if(!isDisplayedMenuAboutUsPage()){
+            clickNaviconButton();
+        }
+
+        getMenuAboutUsPage().click();
     }
 
-    public void clickMenuAboutUsPage() {
-        clickNaviconButton();
-        if (isDisplayedMenuAboutUsPage()) {
-            getMenuAboutUsPage().click();
+    public String getMenuAboutUsPageText() {
+        if(!isDisplayedMenuAboutUsPage()){
+            clickNaviconButton();
         }
-        /*else {
-            closeNaviconBotton();
-            scrollDown();
-            clickFooterAboutUsPage();
-            System.out.println("from AU to HP");
-        }
-         */
+        return getMenuAboutUsPage().getText();
     }
 
     public boolean isDisplayedMenuAboutUsPage() {
@@ -284,30 +421,54 @@ public class MainManuPopUp {
     //
     //My Space
 
-    private WebElement getMenuMySpacePage() {
-        return menuMySpacePage;
+//    private WebElement getMenuMySpacePage() {
+//        return menuMySpacePage;
+//    }
+//
+//    public String getMenuMySpacePageText() {
+//        return getMenuMySpacePage().getText();
+//    }
+//
+//    public void clickMenuMySpacePage() {
+//        clickNaviconButton();
+//        if (isDisplayedMenuMySpacePage()) {
+//            getMenuMySpacePage().click();
+//            clickCloseSingIn();
+//        }
+//        /*
+//        else {
+//            closeNaviconBotton();
+//            scrollDown();
+//            clickHomePage();
+//            System.out.println("Space to HM");
+//        }
+//
+//         */
+//    }
+public WebElement getMenuMySpacePage(){
+    if(!isDisplayedMenuMySpacePage()){
+        clickNaviconButton();
+    }
+    return menuMySpacePage;
+}
+
+
+
+    public void clickMenuMySpacePage(){
+        if(!isDisplayedMenuMySpacePage()){
+            clickNaviconButton();
+        }
+        getMenuMySpacePage().click();
+
     }
 
     public String getMenuMySpacePageText() {
+        if(!isDisplayedMenuMySpacePage()){
+            clickNaviconButton();
+        }
         return getMenuMySpacePage().getText();
     }
 
-    public void clickMenuMySpacePage() {
-        clickNaviconButton();
-        if (isDisplayedMenuMySpacePage()) {
-            getMenuMySpacePage().click();
-            clickCloseSingIn();
-        }
-        /*
-        else {
-            closeNaviconBotton();
-            scrollDown();
-            clickHomePage();
-            System.out.println("Space to HM");
-        }
-
-         */
-    }
 
     public boolean isDisplayedMenuMySpacePage() {
         return getMenuMySpacePage().isDisplayed();
@@ -316,34 +477,111 @@ public class MainManuPopUp {
 
     //
     //UBS Courier
-    private WebElement getMenuUBSCourierPage() {
+//    private WebElement getMenuUBSCourierPage() {
+//        return menuUBSCourierPage;
+//    }
+//
+//    public String getMenuUBSCourierPageText() {
+//        return getMenuUBSCourierPage().getText();
+//    }
+//
+//    public void clickMenuUBSCourierPage() {
+//        clickNaviconButton();
+//        if (isDisplayedMenuUBSCourierPage()) {
+//            getMenuUBSCourierPage().click();
+//        }
+//        /*
+//        else {
+//            closeNaviconBotton();
+//            scrollDown();
+//            clickFooterHomePage();
+//            System.out.println("UBS to HP");
+//        }
+//
+//         */
+//    }
+    public WebElement getMenuUBSCourierPage(){
+        if(!isDisplayedMenuUBSCourierPage()){
+            clickNaviconButton();
+
+        }
         return menuUBSCourierPage;
     }
 
-    public String getMenuUBSCourierPageText() {
-        return getMenuUBSCourierPage().getText();
+
+
+    public void clickMenuUBSCourierPage(){
+        if(!isDisplayedMenuUBSCourierPage()){
+            clickNaviconButton();
+        }
+
+        getMenuUBSCourierPage().click();
+
     }
 
-    public void clickMenuUBSCourierPage() {
-        clickNaviconButton();
-        if (isDisplayedMenuUBSCourierPage()) {
-            getMenuUBSCourierPage().click();
+    public String getMenuUBSCourierPageText() {
+        if(!isDisplayedMenuUBSCourierPage()){
+            clickNaviconButton();
         }
-        /*
-        else {
-            closeNaviconBotton();
-            scrollDown();
-            clickFooterHomePage();
-            System.out.println("UBS to HP");
-        }
-
-         */
+        return getMenuUBSCourierPage().getText();
     }
 
     public boolean isDisplayedMenuUBSCourierPage() {
         return getMenuUBSCourierPage().isDisplayed();
     }
+
+
+    // menuSingInDropdoun
+    public WebElement getSingInDropdown(){
+        if (isDisplayedmenuSingUpDropdownUBS()){ return singInLinkUBS;   }
+
+        // if (isDisplayedmenuSingUpDropdown()){     return singInLink;     }
+
+        if (!isDisplayedmenuSingUpDropdownInUBSInMenu()){  clickNaviconButtonInUBSourier();
+
+        }
+        return menuSingUpDropdownInUBS;
+
+    }
+
+
+    public void clickSingInDropdown() throws InterruptedException {
+        if(!isDisplayedmenuSingUpDropdownUBS()){
+            clickNaviconButtonInUBSourier();
+        }
+        getSingInDropdown().click();
+
+    }
+
+    public String SingInDropdownText() throws InterruptedException {
+        if(!isDisplayedmenuSingUpDropdownUBS()){
+            clickNaviconButtonInUBSourier();
+        }
+        return getSingInDropdown().getText();
+    }
+
+
+    public boolean isDisplayedmenuSingUpDropdownUBS() {
+        return singInLinkUBS.isDisplayed();
+
+    }
+    public boolean isDisplayedmenuSingUpDropdownInUBSInMenu() {
+        return menuSingUpDropdownInUBS.isDisplayed();
+
+    }
+//    public boolean isDisplayedmenuSingUpDropdown() {
+//        return singInLink.isDisplayed();
+
+    // }
+
+
+
+
+    //Functional
+
+    //Basiness Logic
 }
+
 
 
 
