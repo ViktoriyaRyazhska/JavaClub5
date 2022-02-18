@@ -1,14 +1,13 @@
 package GreenCity.peges;
 
-import GreenCity.PopUpMenu.guest.MainManuPopUp;
-import GreenCity.PopUpMenu.guest.SingInPopUp;
-import GreenCity.PopUpMenu.guest.SingUpPopUp;
-import GreenCity.PopUpMenu.guest.UBSCourierPopUp;
+import GreenCity.PopUpMenu.guest.*;
 import GreenCity.data.Languages;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.List;
@@ -31,6 +30,7 @@ public abstract class TopPage {
         private SingInPopUp singInPopUp;
         private MainManuPopUp mainManuPopUp;
         private UBSCourierPopUp ubcCourierPopUp;
+        private Footer footer;
         private int Window_Heigth_toClick_Footer=480;
 
 
@@ -40,6 +40,7 @@ public abstract class TopPage {
                 PageFactory.initElements(driver, this);
                 CloseAlertIsPresent();
                 initialElements();
+
 
         }
 
@@ -73,6 +74,7 @@ public abstract class TopPage {
 
                 mainManuPopUp = new MainManuPopUp(driver);
                 ubcCourierPopUp = new UBSCourierPopUp(driver);
+                footer=new Footer(driver);
         }
 
 
@@ -173,6 +175,19 @@ public abstract class TopPage {
         //         js.executeScript("arguments[0].scrollIntoView(true);", getCopyright());
         // }
 
+        //mainMenuDropdown
+        public MainManuPopUp getMainMenuDropdown(){
+                return mainManuPopUp;
+        }
+        //footer
+        public Footer getFooter(){
+                return footer;
+        }
+
+        //SingInDropdoun
+        protected SingInPopUp SingInDropdoun (){
+                System.out.println("closeSingInDropdoun-1");
+                return new SingInPopUp(driver);}
 
         //Business logic
 
@@ -180,41 +195,124 @@ public abstract class TopPage {
                 getMainManuPopUp().clickHomePage();
                 return new HomePage(driver);
         }
+        public HomePage navigateMenuHomeFooter() throws InterruptedException {
+                System.out.println("gotoMenuHomeFooter()");
+                getFooter().clickFooterHomePage();
+                return new HomePage(driver);
+        }
 
         public EcoNewsPage navigateMenuEcoNews() {
                 getMainManuPopUp().clickMenuEcoNewsPage();
                 return new EcoNewsPage(driver);
         }
+        public EcoNewsPage navigateMenuEcoNewsFooter() throws InterruptedException {
+                System.out.println("navigateMenuEcoNewsFooter()");
+                getFooter().clickFooterEcoNewsPage();
+                System.out.println("footer.clickFooterEcoNewsPage();");
+                return new EcoNewsPage(driver);}
+
 
         public TipsTricksPage navigateMenuTipsTricks() {
                 getMainManuPopUp().clickMenuTipsTricksPage();
+                return new TipsTricksPage(driver);
+        }
+        public TipsTricksPage navigateMenuTripandTricksFooter() throws InterruptedException {
+                System.out.println("navigateMenuTripandTricksFooter()");
+                // getFooter().scrollDown();
+                System.out.println("footer.scrollDown();");
+                getFooter().clickFooterTipsTricksPage();
+                System.out.println(" footer.clickFooterTipsTricksPage()");
                 return new TipsTricksPage(driver);
         }
         public EventsPage navigateMenuEvents() {
                 getMainManuPopUp().clickMenuEventsPage();
                 return new EventsPage(driver);
         }
+        public EventsPage navigateMenuEventsFooter() throws InterruptedException {
+                System.out.println("navigateMenuTripandTricksFooter");
+                // getFooter().scrollDown();
+                // System.out.println("footer.scrollDown();");
+                getFooter().clickFooterEventsPage();
+                System.out.println(" footer.clickFooterTipsTricksPage()");
+                return new EventsPage(driver);
+        }
 
         public PlacesPage navigateMenuPlaces() {
                 getMainManuPopUp().clickMenuPlacesPage();
+                if(SingInDropdoun ().isDisplayedcloseWindow()){
+                        SingInDropdoun().clickcloseWindow();
+                        return new PlacesPage(driver);
+                }
+                return new PlacesPage(driver);
+        }
+        public PlacesPage navigateMenuPlacesFooter() throws InterruptedException {
+                System.out.println("gotoPlacesPageFooter");
+                getFooter().clickFooterPlacesPage();
+                if(SingInDropdoun ().isDisplayedcloseWindow()){
+                        SingInDropdoun().clickcloseWindow();
+                        return new PlacesPage(driver);
+                }
                 return new PlacesPage(driver);
         }
 
         public AboutUsPage navigateMenuAboutUs() {
                 getMainManuPopUp().clickMenuAboutUsPage();
+//                if(SingInDropdoun ().isDisplayedcloseWindow()){
+//                        SingInDropdoun().clickcloseWindow();
+//                        return new AboutUsPage(driver);
+//                }
+                return new AboutUsPage(driver);
+        }
+        public AboutUsPage navigateMenuAboutUsFooter() throws InterruptedException {
+                System.out.println("gotoAboutusPagefooter()");
+                getFooter().clickFooterAboutUsPage();
+//                if(SingInDropdoun ().isDisplayedcloseWindow()){
+//                        SingInDropdoun().clickcloseWindow();
+//                        return new AboutUsPage(driver);
+//                }
                 return new AboutUsPage(driver);
         }
 
         public MySpacePage navigateMenuMySpace() {
                 getMainManuPopUp().clickMenuMySpacePage();
+                if(SingInDropdoun ().isDisplayedcloseWindow()){
+                        SingInDropdoun().clickcloseWindow();
+                        return new MySpacePage(driver);
+                }
                 return new MySpacePage(driver);
         }
 
 
-        public UBSCourierPage navigateMenuUBSCourier() {
-                getMainManuPopUp().clickMenuUBSCourierPage();
-                if(driver.manage().window().getSize().height> Window_Heigth_toClick_Footer){
-                        getUBSCourierPopUp().clickGreenCityPage();}
-                return new UBSCourierPage(driver);
+//        public UBSCourierPage navigateMenuUBSCourier() {
+//                getMainManuPopUp().clickMenuUBSCourierPage();
+//                if(driver.manage().window().getSize().height> Window_Heigth_toClick_Footer){
+//                        getUBSCourierPopUp().clickGreenCityPage();}
+//                return new UBSCourierPage(driver);
+//        }
+public UBSCourierPage navigateMenuUBSCourier(){
+        System.out.println("gotoUbsCourierPage()");
+        getMainManuPopUp().clickMenuUBSCourierPage();;
+        return new UBSCourierPage(driver);
+}
+        public SingInPopUp navigateSingInDropdown() throws InterruptedException {
+                System.out.println("navigateSingInDropdown()");
+                getMainMenuDropdown().clickSingInDropdown();
+                System.out.println(".clickSingInDropdown()");
+                if(SingInDropdoun ().isDisplayedcloseWindow()){
+                        SingInDropdoun().clickcloseWindow();
+                        return new SingInPopUp(driver);
+                }
+                return new SingInPopUp(driver);
         }
+        public MyhabitsPage navigateMyhabitsPageFooter() throws InterruptedException {
+                System.out.println("navigateMyhabitsPageFooter()");
+                getFooter().clickFooterMyHabitsPage();
+                System.out.println(".clickFooterMyHabitsPage()");
+                if(SingInDropdoun ().isDisplayedcloseWindow()){
+                        SingInDropdoun().clickcloseWindow();
+                        return new MyhabitsPage(driver);
+                }
+                return new MyhabitsPage(driver);
+        }
+
 }

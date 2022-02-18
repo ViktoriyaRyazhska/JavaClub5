@@ -1,4 +1,4 @@
-package GreenCity.PopUpMenu.guest;
+package GreenCity.peges;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-public class SingInPopUp {
+public class SingInPopUp extends TopPage {
 
     private WebDriver driver;
     @FindBy(id="email")
@@ -26,7 +26,9 @@ public class SingInPopUp {
     private WebElement close;
 
    public SingInPopUp(WebDriver driver){
+       super(driver);
         this.driver = driver;
+
         //This initElements method will create all WebElements
         PageFactory.initElements(driver, this);
     }
@@ -56,9 +58,9 @@ public class SingInPopUp {
         toLogUp.click();
     }
     //Close the window
-    public void closeWindow(){
-        close.click();
-    }
+   // public void closeWindow(){
+        //close.click();
+   // }
 
     public void loginToGuest(String strUserName,String strPasword){
         //Fill user name
@@ -67,6 +69,23 @@ public class SingInPopUp {
         this.setPassword(strPasword);
         //Click Login button
         this.clickLogin();
+    }
+    //closeWindow()
+    private WebElement closeWindow() {
+        return close;
+    }
+
+    public String getcloseWindowText(){
+        return closeWindow().getText();
+    }
+
+    public void clickcloseWindow(){
+        System.out.println(" closeSingInDropdoun.click()");
+        close.click();
+    }
+
+    public boolean isDisplayedcloseWindow(){
+        return closeWindow().isDisplayed();
     }
 
 }

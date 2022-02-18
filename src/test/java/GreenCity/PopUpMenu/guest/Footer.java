@@ -41,7 +41,7 @@ public class Footer  {
     }
 
 
-    protected void scrollDown(){
+    public void scrollDown(){
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView(true);", getCopyright());
     }
@@ -108,7 +108,7 @@ public class Footer  {
 
     public void clickFooterHomePage() throws InterruptedException {
         scrollDown();
-        // Thread.sleep(1000);
+         Thread.sleep(1000);
 
         getFooterHomePage().click();
 

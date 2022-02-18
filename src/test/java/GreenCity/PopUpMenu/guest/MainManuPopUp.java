@@ -208,7 +208,7 @@ public class MainManuPopUp {
     }
 
     public boolean isDisplayedMenuEcoNewsPage() {
-        return getMenuEcoNewsPage().isDisplayed();
+        return menuEcoNewsPage.isDisplayed();
     }
 
     //
@@ -258,7 +258,7 @@ public class MainManuPopUp {
     }
 
     public boolean isDisplayedTipsTricksPage() {
-        return getMenuTipsTricksPage().isDisplayed();
+        return menuTipsTricksPage.isDisplayed();
     }
 
     //
@@ -312,7 +312,7 @@ public class MainManuPopUp {
 
 
     public boolean isDisplayedEventsPage() {
-        return getMenuEventsPage().isDisplayed();
+        return menuEventsPage.isDisplayed();
     }
 
     //
@@ -365,7 +365,7 @@ public class MainManuPopUp {
     }
 
     public boolean isDisplayedPlacesPage() {
-        return getMenuPlacesPage().isDisplayed();
+        return menuPlacesPage.isDisplayed();
     }
 
     //
@@ -416,7 +416,7 @@ public class MainManuPopUp {
     }
 
     public boolean isDisplayedMenuAboutUsPage() {
-        return getMenuAboutUsPage().isDisplayed();
+        return menuAboutUsPage.isDisplayed();
     }
     //
     //My Space
@@ -471,7 +471,7 @@ public WebElement getMenuMySpacePage(){
 
 
     public boolean isDisplayedMenuMySpacePage() {
-        return getMenuMySpacePage().isDisplayed();
+        return menuMySpacePage.isDisplayed();
     }
 
 
@@ -527,7 +527,7 @@ public WebElement getMenuMySpacePage(){
     }
 
     public boolean isDisplayedMenuUBSCourierPage() {
-        return getMenuUBSCourierPage().isDisplayed();
+        return menuUBSCourierPage.isDisplayed();
     }
 
 

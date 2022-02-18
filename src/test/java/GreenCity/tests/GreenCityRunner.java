@@ -2,15 +2,14 @@ package GreenCity.tests;
 
 
 import GreenCity.peges.HomePage;
-// io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 
 import java.time.Duration;
+
+// io.github.bonigarcia.wdm.WebDriverManager;
 
 public abstract class GreenCityRunner {
     protected static WebDriver driver;
@@ -55,11 +54,9 @@ public abstract class GreenCityRunner {
         public void setUp() throws Exception{
             System.out.println("BeforeMethod");
             driver.get("https://ita-social-projects.github.io/GreenCityClient/#/");
-            // driver.manage().window().maximize();
-            //driver.manage().window().setSize(new Dimension(640,480));
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(80));
+             driver.manage().window().maximize();
             //driver.manage().window().setSize(new Dimension(480,640));
-            //driver.manage().window().setSize(new Dimension(600,400));
-
         }
         @AfterMethod
         public void tearDown(ITestResult result) throws Exception{
