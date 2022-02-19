@@ -12,6 +12,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
+/**
+ * Base abstract class TopPage of Header and Footer
+ */
+
 public abstract class TopPage {
 
         protected WebDriver driver;
@@ -121,23 +125,6 @@ public abstract class TopPage {
                 getLanguageButton().click();
         }
 
-
-        //Copyright
-        // public WebElement getCopyright() {
-        //         return copyright;
-        // }
-
-        // public String getCopyrightText() {
-        //        return getCopyright().getText();
-        //}
-
-
-        // public void clickCopyright() {
-        //         getCopyright().click();
-        // }
-
-        //
-
         //MySpase
 
 
@@ -170,10 +157,6 @@ public abstract class TopPage {
                 }
         }
 
-        //  protected void scrollDown(){
-        //         JavascriptExecutor js = (JavascriptExecutor) driver;
-        //         js.executeScript("arguments[0].scrollIntoView(true);", getCopyright());
-        // }
 
         //mainMenuDropdown
         public MainManuPopUp getMainMenuDropdown(){
@@ -191,32 +174,61 @@ public abstract class TopPage {
 
         //Business logic
 
+        /**
+         * Go to HomePage from Main Menu.
+         * @return HomePage
+         */
+
         public HomePage navigateMenuHome() {
                 getMainManuPopUp().clickHomePage();
                 return new HomePage(driver);
         }
-        public HomePage navigateMenuHomeFooter() throws InterruptedException {
+
+        /**
+         *  Go to HomePage from Footer.
+         * @return HomePage
+         */
+        public HomePage navigateMenuHomeFooter(){
                 System.out.println("gotoMenuHomeFooter()");
                 getFooter().clickFooterHomePage();
                 return new HomePage(driver);
         }
 
+        /**
+         * Go to EcoNewsPage from Main Manu.
+         * @return EcoNewsPage
+         */
+
         public EcoNewsPage navigateMenuEcoNews() {
                 getMainManuPopUp().clickMenuEcoNewsPage();
                 return new EcoNewsPage(driver);
         }
-        public EcoNewsPage navigateMenuEcoNewsFooter() throws InterruptedException {
+
+        /**
+         *  Go to EcoNewsPage from Footer.
+         * @return EcoNewsPage
+         */
+        public EcoNewsPage navigateMenuEcoNewsFooter() {
                 System.out.println("navigateMenuEcoNewsFooter()");
                 getFooter().clickFooterEcoNewsPage();
                 System.out.println("footer.clickFooterEcoNewsPage();");
                 return new EcoNewsPage(driver);}
 
-
+        /**
+         * Go to TipsTricksPage from Main Manu.
+         * @return TipsTricksPage
+         */
         public TipsTricksPage navigateMenuTipsTricks() {
                 getMainManuPopUp().clickMenuTipsTricksPage();
                 return new TipsTricksPage(driver);
         }
-        public TipsTricksPage navigateMenuTripandTricksFooter() throws InterruptedException {
+
+        /**
+         * Go to TipsTricksPage from Footer.
+         * @return TipsTricksPage
+         */
+
+        public TipsTricksPage navigateMenuTripandTricksFooter(){
                 System.out.println("navigateMenuTripandTricksFooter()");
                 // getFooter().scrollDown();
                 System.out.println("footer.scrollDown();");
@@ -224,19 +236,31 @@ public abstract class TopPage {
                 System.out.println(" footer.clickFooterTipsTricksPage()");
                 return new TipsTricksPage(driver);
         }
+
+        /**
+         * Go to EventsPage from Main Manu.
+         * @return EventsPage
+         */
         public EventsPage navigateMenuEvents() {
                 getMainManuPopUp().clickMenuEventsPage();
                 return new EventsPage(driver);
         }
-        public EventsPage navigateMenuEventsFooter() throws InterruptedException {
+
+        /**
+         * Go to EventsPage from Footer.
+         * @return EventsPage
+         */
+        public EventsPage navigateMenuEventsFooter()  {
                 System.out.println("navigateMenuTripandTricksFooter");
-                // getFooter().scrollDown();
-                // System.out.println("footer.scrollDown();");
                 getFooter().clickFooterEventsPage();
                 System.out.println(" footer.clickFooterTipsTricksPage()");
                 return new EventsPage(driver);
         }
 
+        /**
+         * Go to PlacesPage from Main Manu.
+         * @return PlacesPage
+         */
         public PlacesPage navigateMenuPlaces() {
                 getMainManuPopUp().clickMenuPlacesPage();
                 if(SingInDropdoun ().isDisplayedcloseWindow()){
@@ -245,6 +269,12 @@ public abstract class TopPage {
                 }
                 return new PlacesPage(driver);
         }
+
+        /**
+         * Go to PlacesPage from Footer.
+         * @return PlacesPage
+         * @throws InterruptedException
+         */
         public PlacesPage navigateMenuPlacesFooter() throws InterruptedException {
                 System.out.println("gotoPlacesPageFooter");
                 getFooter().clickFooterPlacesPage();
@@ -255,6 +285,10 @@ public abstract class TopPage {
                 return new PlacesPage(driver);
         }
 
+        /**
+         * Go to AboutUsPage from Main Manu.
+         * @return AboutUsPage
+         */
         public AboutUsPage navigateMenuAboutUs() {
                 getMainManuPopUp().clickMenuAboutUsPage();
 //                if(SingInDropdoun ().isDisplayedcloseWindow()){
@@ -263,7 +297,12 @@ public abstract class TopPage {
 //                }
                 return new AboutUsPage(driver);
         }
-        public AboutUsPage navigateMenuAboutUsFooter() throws InterruptedException {
+
+        /**
+         * Go to AboutUsPage form Footer.
+         * @return AboutUsPage
+         */
+        public AboutUsPage navigateMenuAboutUsFooter() {
                 System.out.println("gotoAboutusPagefooter()");
                 getFooter().clickFooterAboutUsPage();
 //                if(SingInDropdoun ().isDisplayedcloseWindow()){
@@ -273,6 +312,10 @@ public abstract class TopPage {
                 return new AboutUsPage(driver);
         }
 
+        /**
+         * Go to MySpacePage from Main Manu. Close SingInDropdown.
+         * @return MySpacePage
+         */
         public MySpacePage navigateMenuMySpace() {
                 getMainManuPopUp().clickMenuMySpacePage();
                 if(SingInDropdoun ().isDisplayedcloseWindow()){
@@ -282,21 +325,23 @@ public abstract class TopPage {
                 return new MySpacePage(driver);
         }
 
+        /**
+         * Go to UBSCourierPage from Main Manu.
+         * @return UBSCourierPage
+         */
+        public UBSCourierPage navigateMenuUBSCourier(){
+             System.out.println("gotoUbsCourierPage()");
+             getMainManuPopUp().clickMenuUBSCourierPage();
+              return new UBSCourierPage(driver);
+        }
 
-//        public UBSCourierPage navigateMenuUBSCourier() {
-//                getMainManuPopUp().clickMenuUBSCourierPage();
-//                if(driver.manage().window().getSize().height> Window_Heigth_toClick_Footer){
-//                        getUBSCourierPopUp().clickGreenCityPage();}
-//                return new UBSCourierPage(driver);
-//        }
-public UBSCourierPage navigateMenuUBSCourier(){
-        System.out.println("gotoUbsCourierPage()");
-        getMainManuPopUp().clickMenuUBSCourierPage();;
-        return new UBSCourierPage(driver);
-}
-        public SingInPopUp navigateSingInDropdown() throws InterruptedException {
+        /**
+         * Close SingInDropdown on UBSCourierPage
+         * @return SingInPopUp
+         */
+        public SingInPopUp navigateSingInDropdown() {
                 System.out.println("navigateSingInDropdown()");
-                getMainMenuDropdown().clickSingInDropdown();
+               // getMainMenuDropdown().clickSingInDropdown();
                 System.out.println(".clickSingInDropdown()");
                 if(SingInDropdoun ().isDisplayedcloseWindow()){
                         SingInDropdoun().clickcloseWindow();
@@ -304,7 +349,12 @@ public UBSCourierPage navigateMenuUBSCourier(){
                 }
                 return new SingInPopUp(driver);
         }
-        public MyhabitsPage navigateMyhabitsPageFooter() throws InterruptedException {
+
+        /**
+         * Go to MyhabitsPage from Footer.
+         * @return MyhabitsPage
+         */
+        public MyhabitsPage navigateMyhabitsPageFooter() {
                 System.out.println("navigateMyhabitsPageFooter()");
                 getFooter().clickFooterMyHabitsPage();
                 System.out.println(".clickFooterMyHabitsPage()");

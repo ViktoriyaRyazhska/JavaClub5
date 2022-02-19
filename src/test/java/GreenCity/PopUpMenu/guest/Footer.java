@@ -1,9 +1,15 @@
 package GreenCity.PopUpMenu.guest;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class Footer  {
     private WebDriver driver;
@@ -35,7 +41,7 @@ public class Footer  {
     private WebElement footerLinkFacebook;
 
     public Footer(WebDriver driver) {
-
+        PageFactory.initElements(driver, this);
         //super(driver);
         this.driver = driver;
     }
@@ -46,36 +52,10 @@ public class Footer  {
         js.executeScript("arguments[0].scrollIntoView(true);", getCopyright());
     }
 
-    //Business logic
-//   public void checkFooter() {
-//        scrollDown();
-//        clickFooterHomePage();
-//        scrollDown();
-//        clickFooterEcoNewsPage();
-//        System.out.println("FooterEcoNews");
-//        scrollDown();
-//        clickFooterTipsTricksPage();
-//        scrollDown();
-//        clickFooterEventsPage();
-//       // scrollDown();
-//        //clickFooterPlacesPage();
-//        scrollDown();
-//        clickFooterMyHabitsPage();
-//        System.out.println("MyHabitsPage");
-//       // clickCloseSingIn();
-//        scrollDown();
-//        clickFooterAboutUsPage();
-//        scrollDown();
-//        clickFooterLinkTwitter();
-//        System.out.println("LinkTwitter");
-//        scrollDown();
-//        clickFooterLinkInstagram();
-//        System.out.println("LinkInstagram");
-//        scrollDown();
-//        clickFooterLinkFacebook();
-//        System.out.println("LinkFacebook");
-//    }
-
+    public void waitOfPageFullDownloading(){
+        WebDriverWait driverWait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        driverWait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div#copyright-label")));
+    }
 
 
     //Atomic logic
@@ -106,10 +86,10 @@ public class Footer  {
         return getFooterHomePage().getText();
     }
 
-    public void clickFooterHomePage() throws InterruptedException {
+    public void clickFooterHomePage() {
         scrollDown();
-         Thread.sleep(1000);
-
+         //Thread.sleep(1000);
+        waitOfPageFullDownloading();
         getFooterHomePage().click();
 
     }
@@ -119,26 +99,27 @@ public class Footer  {
     }
     //
     //EcoNews
-    private WebElement getFooterEcoNewsPage() throws InterruptedException {
+    private WebElement getFooterEcoNewsPage() {
 
         return footerEcoNewsPage;
     }
 
-    public String getFooterEcoNewsPageText() throws InterruptedException {
+    public String getFooterEcoNewsPageText()  {
         return getFooterEcoNewsPage().getText();
     }
 
-    public void clickFooterEcoNewsPage() throws InterruptedException {
-        Thread.sleep(1000);
+    public void clickFooterEcoNewsPage() {
+        //Thread.sleep(1000);
+        waitOfPageFullDownloading();
         System.out.println("scrollDown");
         scrollDown();
-        Thread.sleep(1000);
-
+        //Thread.sleep(1000);
+        waitOfPageFullDownloading();
         System.out.println("clickFooterEcoNewsPage");
         getFooterEcoNewsPage().click();
     }
 
-    public boolean isDisplayedFooterEcoNewsPage() throws InterruptedException {
+    public boolean isDisplayedFooterEcoNewsPage()  {
         return getFooterEcoNewsPage().isDisplayed();
     }
     //
@@ -151,11 +132,12 @@ public class Footer  {
         return getFooterTipsTricksPage().getText();
     }
 
-    public void clickFooterTipsTricksPage() throws InterruptedException {
+    public void clickFooterTipsTricksPage() {
 
         System.out.println("scrollDown");
         scrollDown();
-        Thread.sleep(1000);
+        waitOfPageFullDownloading();
+        //Thread.sleep(1000);
         System.out.println("getFooterTipsTricksPage().click()");
         getFooterTipsTricksPage().click();
 
@@ -175,11 +157,12 @@ public class Footer  {
         return getFooterEventsPage().getText();
     }
 
-    public void clickFooterEventsPage() throws InterruptedException {
+    public void clickFooterEventsPage(){
 
         System.out.println("scrollDown");
         scrollDown();
-        Thread.sleep(1000);
+        waitOfPageFullDownloading();
+       // Thread.sleep(1000);
         System.out.println(" getFooterEventsPage().click()");
         getFooterEventsPage().click();
     }
@@ -201,6 +184,8 @@ public class Footer  {
     public void clickFooterPlacesPage() throws InterruptedException {
         System.out.println("scrollDown");
         scrollDown();
+        //waitOfPageFullDownloading();
+
         Thread.sleep(5000);
         System.out.println(" getFooterPlacesPage().click()");
         getFooterPlacesPage().click();
@@ -220,10 +205,11 @@ public class Footer  {
         return getFooterAboutUsPage().getText();
     }
 
-    public void clickFooterAboutUsPage() throws InterruptedException {
+    public void clickFooterAboutUsPage(){
         System.out.println("scrollDown");
         scrollDown();
-        Thread.sleep(1000);
+        waitOfPageFullDownloading();
+       //Thread.sleep(1000);
         System.out.println(" getFooterAboutUsPage().click()");
         getFooterAboutUsPage().click();
 
@@ -242,11 +228,12 @@ public class Footer  {
         return getFooterMyHabitsPage().getText();
     }
 
-    public void clickFooterMyHabitsPage() throws InterruptedException {
+    public void clickFooterMyHabitsPage() {
         System.out.println("scrollDown");
         // Thread.sleep(1000);
         scrollDown();
-        Thread.sleep(1000);
+        waitOfPageFullDownloading();
+       // Thread.sleep(1000);
         System.out.println(" getFooterMyHabitsPage().click();");
         getFooterMyHabitsPage().click();
         System.out.println("MyHabitsPage");
@@ -264,6 +251,8 @@ public class Footer  {
     }
 
     public void clickFooterLinkTwitter(){
+        scrollDown();
+        waitOfPageFullDownloading();
         if(isDisplayedFooterLinkTwitter()){
             getFooterLinkTwitter().click();
             System.out.println("MyHabitsPage");
@@ -279,6 +268,8 @@ public class Footer  {
     }
 
     public void clickFooterLinkInstagram(){
+        scrollDown();
+        waitOfPageFullDownloading();
         if(isDisplayedFooterLinkInstagram()){
             getFooterLinkInstagram().click();
             System.out.println("MyHabitsPage");
@@ -295,6 +286,8 @@ public class Footer  {
     }
 
     public void clickFooterLinkFacebook(){
+        scrollDown();
+        waitOfPageFullDownloading();
         if(isDisplayedFooterLinkFacebook()){
             getFooterLinkFacebook().click();
             System.out.println("MyHabitsPage");

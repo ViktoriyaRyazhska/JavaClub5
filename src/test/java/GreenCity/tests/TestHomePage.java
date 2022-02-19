@@ -26,7 +26,7 @@ public class TestHomePage extends GreenCityRunner {
                 .navigateMenuEcoNews()
                 .navigateMenuTipsTricks()
                 .navigateMenuEvents()
-                //.navigateMenuPlaces()
+                .navigateMenuPlaces()
                 .navigateMenuAboutUs()
                 .navigateMenuMySpace()
                 .navigateMenuUBSCourier()
