@@ -5,6 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.time.Duration;
+
+/**
+ * Base abstract class MainManuPopUp of Header
+ */
+
 public class MainManuPopUp {
     protected WebDriver driver;
     //Upper Menu
@@ -35,33 +41,6 @@ public class MainManuPopUp {
     @FindBy (css = ".header_navigation-menu-ubs .header_mobile-menu-sign-in>a")
     private  WebElement menuSingUpDropdownInUBS;
 
-/*
-    //Lower menu.Footer
-    @FindBy(xpath="//a[contains(@href, '#/about')]")
-    private WebElement footerHomePage;
-    @FindBy(css="ul.footer_left-side>li>a[href*='#/news']")
-    private WebElement footerEcoNewsPage;
-    @FindBy(css="div.container>nav.footer_links>ul.footer_left-side>li>a[href*='#/tips']")
-    private WebElement footerTipsTricksPage;
-    @FindBy(xpath="//a[contains(@href, '#/events')]")
-    private WebElement footerEventsPage;
-    @FindBy(css="div.container>nav.footer_links>ul.footer_left-side>li>a[href*='#/places']")
-    private WebElement footerPlacesPage;
-    @FindBy(xpath="//a[contains(@href, '#/about')]")
-    private WebElement footerAboutUsPage;
-    @FindBy( css = "div.container>nav.footer_links>ul.footer_left-side>li>a[href*='#/profile']" )
-    private WebElement footerMyHabitsPage;
-    @FindBy(css="#copyright-label")
-    private WebElement copyright;
-    @FindBy(css=".footer_social-link:nth-child(1) > img")
-    private WebElement footerLinkTwitter;
-    @FindBy(css=".footer_social-link:nth-child(2) > img")
-    private WebElement footerLinkInstagram;
-    @FindBy(css=".footer_social-link:nth-child(3) > img")
-    private WebElement footerLinkFacebook;
-
- */
-
 
     public MainManuPopUp(WebDriver driver) {
         this.driver = driver;
@@ -70,15 +49,6 @@ public class MainManuPopUp {
 
 
     }
-
-    //Functional
-//    public void closeNaviconBotton() {
-//        if (isDisplayedNaviconButton() && isDisplayedMenuAboutUsPage()) {
-//            clickNaviconButton();
-//            System.out.println("Close NB");
-//        }
-//    }
-
 
     //Atomic logic
     //
@@ -162,31 +132,7 @@ public class MainManuPopUp {
     }
 
 
-    //
-    //EcoNews
-//    private WebElement getMenuEcoNewsPage() {
-//        return menuEcoNewsPage;
-//    }
-//
-//    public String getMenuEcoNewsPageText() {
-//        return getMenuEcoNewsPage().getText();
-//    }
-//
-//    public void clickMenuEcoNewsPage() {
-//        clickNaviconButton();
-//        if (isDisplayedMenuEcoNewsPage()) {
-//            getMenuEcoNewsPage().click();
-//        }
-//        /*
-//        else {
-//            closeNaviconBotton();
-//            scrollDown();
-//            clickFooterEcoNewsPage();
-//            System.out.println("FooterEcoNews");
-//        }
-//
-//         */
-//    }
+
     public WebElement getMenuEcoNewsPage(){
         if(!isDisplayedMenuEcoNewsPage()){
             clickNaviconButton();
@@ -211,31 +157,7 @@ public class MainManuPopUp {
         return menuEcoNewsPage.isDisplayed();
     }
 
-    //
-    //Tips And Tricks
-//    private WebElement getMenuTipsTricksPage() {
-//        return menuTipsTricksPage;
-//    }
-//
-//    public String getMenuTipsTricksText() {
-//        return getMenuTipsTricksPage().getText();
-//    }
-//
-//    public void clickMenuTipsTricksPage() {
-//        clickNaviconButton();
-//        if (isDisplayedTipsTricksPage()) {
-//            getMenuTipsTricksPage().click();
-//        }
-//        /*
-//        else {
-//            closeNaviconBotton();
-//            scrollDown();
-//            clickFooterTipsTricksPage();
-//            System.out.println("FooterTipsTricks");
-//        }
-//
-//         */
-//    }
+
     public WebElement getMenuTipsTricksPage(){
         if(!isDisplayedTipsTricksPage()){
             clickNaviconButton();
@@ -262,30 +184,8 @@ public class MainManuPopUp {
     }
 
     //
-    //Events
-//    private WebElement getMenuEventsPage() {
-//        return menuEventsPage;
-//    }
-//
-//    public String getMenuEventsText() {
-//        return getMenuEventsPage().getText();
-//    }
-//
-//    public void clickMenuEventsPage() {
-//        clickNaviconButton();
-//        if (isDisplayedEventsPage()) {
-//            getMenuEventsPage().click();
-//        }
-//        /*
-//        else {
-//            closeNaviconBotton();
-//            scrollDown();
-//            clickFooterEventsPage();
-//            System.out.println("FooterEvents");
-//        }
-//
-//         */
-//    }
+
+//    Events
     public WebElement getMenuEventsPage(){
         if(!isDisplayedEventsPage()){
             clickNaviconButton();
@@ -317,29 +217,7 @@ public class MainManuPopUp {
 
     //
     //Places
-//    private WebElement getMenuPlacesPage() {
-//        return menuPlacesPage;
-//    }
-//
-//    public String getMenuPlacesText() {
-//        return getMenuPlacesPage().getText();
-//    }
-//
-//    public void clickMenuPlacesPage() {
-//        clickNaviconButton();
-//        if (isDisplayedPlacesPage()) {
-//            getMenuPlacesPage().click();
-//        }
-//        /*
-//        else {
-//            closeNaviconBotton();
-//            scrollDown();
-//            clickFooterPlacesPage();
-//            System.out.println("Plase");
-//        }
-//
-//         */
-//    }
+
 
     public WebElement getMenuPlacesPage(){
         if(!isDisplayedPlacesPage()){
@@ -370,35 +248,13 @@ public class MainManuPopUp {
 
     //
     //About Us
-//    private WebElement getMenuAboutUsPage() {
-//        return menuAboutUsPage;
-//    }
-//
-//    public String getMenuAboutUsPageText() {
-//        return getMenuAboutUsPage().getText();
-//    }
-//
-//    public void clickMenuAboutUsPage() {
-//        clickNaviconButton();
-//        if (isDisplayedMenuAboutUsPage()) {
-//            getMenuAboutUsPage().click();
-//        }
-//        /*else {
-//            closeNaviconBotton();
-//            scrollDown();
-//            clickFooterAboutUsPage();
-//            System.out.println("from AU to HP");
-//        }
-//         */
-//    }
+
     public WebElement getMenuAboutUsPage(){
         if(!isDisplayedMenuAboutUsPage()){
             clickNaviconButton();
         }
         return menuAboutUsPage;
     }
-
-
 
     public void clickMenuAboutUsPage(){
         if(!isDisplayedMenuAboutUsPage()){
@@ -420,38 +276,13 @@ public class MainManuPopUp {
     }
     //
     //My Space
-
-//    private WebElement getMenuMySpacePage() {
-//        return menuMySpacePage;
-//    }
 //
-//    public String getMenuMySpacePageText() {
-//        return getMenuMySpacePage().getText();
-//    }
-//
-//    public void clickMenuMySpacePage() {
-//        clickNaviconButton();
-//        if (isDisplayedMenuMySpacePage()) {
-//            getMenuMySpacePage().click();
-//            clickCloseSingIn();
-//        }
-//        /*
-//        else {
-//            closeNaviconBotton();
-//            scrollDown();
-//            clickHomePage();
-//            System.out.println("Space to HM");
-//        }
-//
-//         */
-//    }
-public WebElement getMenuMySpacePage(){
-    if(!isDisplayedMenuMySpacePage()){
+     public WebElement getMenuMySpacePage(){
+        if(!isDisplayedMenuMySpacePage()){
         clickNaviconButton();
-    }
-    return menuMySpacePage;
-}
-
+        }
+        return menuMySpacePage;
+     }
 
 
     public void clickMenuMySpacePage(){
@@ -477,29 +308,7 @@ public WebElement getMenuMySpacePage(){
 
     //
     //UBS Courier
-//    private WebElement getMenuUBSCourierPage() {
-//        return menuUBSCourierPage;
-//    }
-//
-//    public String getMenuUBSCourierPageText() {
-//        return getMenuUBSCourierPage().getText();
-//    }
-//
-//    public void clickMenuUBSCourierPage() {
-//        clickNaviconButton();
-//        if (isDisplayedMenuUBSCourierPage()) {
-//            getMenuUBSCourierPage().click();
-//        }
-//        /*
-//        else {
-//            closeNaviconBotton();
-//            scrollDown();
-//            clickFooterHomePage();
-//            System.out.println("UBS to HP");
-//        }
-//
-//         */
-//    }
+
     public WebElement getMenuUBSCourierPage(){
         if(!isDisplayedMenuUBSCourierPage()){
             clickNaviconButton();
@@ -507,8 +316,6 @@ public WebElement getMenuMySpacePage(){
         }
         return menuUBSCourierPage;
     }
-
-
 
     public void clickMenuUBSCourierPage(){
         if(!isDisplayedMenuUBSCourierPage()){
