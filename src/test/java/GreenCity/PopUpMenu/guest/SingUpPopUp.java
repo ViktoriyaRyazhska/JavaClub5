@@ -26,14 +26,28 @@ public class SingUpPopUp extends TopPage {
     private WebElement turnToSingIn;
     @FindBy(className="close-modal-window")
     private WebElement closeWindow;
-    // @FindBy(className="google-sign-in")
-    // private WebElement singInGoogle;
+    @FindBy(id = "email-err-msg")
+    private WebElement wrongEmail;
+    @FindBy(xpath="//div[@id='firstname-err-msg']/app-error/div")
+    private WebElement errorSymbolName;
+    @FindBy(xpath="//div[@id='password-err-msg']/app-error/div")
+    private WebElement errorAmountPassword;
+    @FindBy(xpath="//div[@id='password-err-msg']/app-error/div")
+    private WebElement errorSymbolPassword;
+    @FindBy(id="confirm-err-msg")
+    private WebElement errorCoincidePassword;
+    @FindBy(xpath="//div[@id='password-err-msg']/app-error/div")
+    private WebElement errorNoPassword;
+
+
 
     public SingUpPopUp(WebDriver driver) {
         //this.driver=driver;
          super(driver);
         PageFactory.initElements(driver, this);
     }
+
+
     //Email
     public WebElement getEmail() {
         return email;
@@ -90,8 +104,8 @@ public class SingUpPopUp extends TopPage {
         getRepeatPassword().click();
     }
 
-    public void sendKeysRepeatPassword(String repassword){
-        getRepeatPassword().sendKeys(repassword);
+    public void sendKeysRepeatPassword(String password){
+        getRepeatPassword().sendKeys(password);
     }
 
     //singInBotton
@@ -129,8 +143,53 @@ public class SingUpPopUp extends TopPage {
         getCloseWindow().click();
     }
 
+    //email error
+    public WebElement getWrongEmail() {
+        return wrongEmail;
+    }
+    public String getWrongEmailText() {
+        return getWrongEmail().getText();
+    }
+    //errorSymbolName
+    public WebElement getErrorSymbolName() {
+        return errorSymbolName;
+    }
+    public String getErrorSymbolNameText() {
+        return getErrorSymbolName().getText();
+    }
+    //errorSymbolPassword
+    public WebElement getErrorSymbolPassword() {
+        return errorSymbolPassword;
+    }
+    public String getErrorSymbolPasswordText() {
+        return getErrorSymbolPassword().getText();
+    }
+    //errorAmountPassword
+    public WebElement getErrorAmountPassword() {
+        return errorAmountPassword;
+    }
+    public String getErrorAmountPasswordText() {
+        return getErrorAmountPassword().getText();
+    }
+    //errorCoincidePassword
+
+    public WebElement getErrorCoincidePassword() {
+        return errorCoincidePassword;
+    }
+    public String getErrorCoincidePasswordText() {
+        return getErrorCoincidePassword().getText();
+    }
+    //errorNoPassword
+    public WebElement getErrorNoPassword() {
+        return errorNoPassword;
+    }
+    public String getErrorNoPasswordText() {
+        return getErrorNoPassword().getText();
+    }
+
+
     //Functional
-    public void singUp(String email, String name, String password, String repassword){
+    public void singUp(String email, String name, String password){
         clickEmail();
         sendKeysEmail(email);
         clickName();
@@ -138,9 +197,67 @@ public class SingUpPopUp extends TopPage {
         clickPassword();
         sendKeysPassword(password);
         clickRepeatPassword();
-        sendKeysRepeatPassword(repassword);
+        sendKeysRepeatPassword(password);
         clickSingInButton();
     }
+
+    public void singUpWrongEmail(String wrongEmail){
+        clickEmail();
+        sendKeysEmail(wrongEmail);
+        clickName();
+    }
+
+    public void singUpErrorSymbolName(String email, String wrongName){
+        clickEmail();
+        sendKeysEmail(email);
+        clickName();
+        sendKeysName(wrongName);
+        clickPassword();
+    }
+
+    public void singUpAmountPassword(String email, String name, String amountPassword) {
+        clickEmail();
+        sendKeysEmail(email);
+        clickName();
+        sendKeysName(name);
+        clickPassword();
+        sendKeysPassword(amountPassword);
+        clickRepeatPassword();
+    }
+
+    //errorSymbolPassword
+    public void singUpErrorSymbolPassword (String email, String name, String errorSymbolPassword) {
+        clickEmail();
+        sendKeysEmail(email);
+        clickName();
+        sendKeysName(name);
+        clickPassword();
+        sendKeysPassword(errorSymbolPassword);
+        clickRepeatPassword();
+    }
+
+    //errorCoincidePassword
+    public void singUpErrorCoincidePassword(String email, String name, String password, String errorSymbolPassword){
+        clickEmail();
+        sendKeysEmail(email);
+        clickName();
+        sendKeysName(name);
+        clickPassword();
+        sendKeysPassword(password);
+        clickRepeatPassword();
+        sendKeysRepeatPassword(errorSymbolPassword);
+        clickSingInButton();
+    }
+
+    public void singUpNoPassword(String email, String name){
+        clickEmail();
+        sendKeysEmail(email);
+        clickName();
+        sendKeysName(name);
+        clickPassword();
+        clickRepeatPassword();
+    }
+
 
     public void regGoogleAccount(){
         GoogleAccountPage googleAccountPage =new GoogleAccountPage(driver);
