@@ -1,8 +1,10 @@
 package GreenCity.peges;
 
+import GreenCity.Components.TopGuestComponent;
 import GreenCity.PopUpMenu.guest.*;
 import GreenCity.data.Languages;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -18,20 +20,16 @@ import java.util.List;
 
 public abstract class TopPage {
 
+
         protected WebDriver driver;
 
-        @FindBy(css=".header_sign-up-btn")
-        private WebElement singUpLink;
-        @FindBy(className="cdk-overlay-container")
-        private WebElement singInLink;
         @FindBy(className="header_lang-switcher-wrp")
         private WebElement languageButton;
         // @FindBy(id="copyright-label")
         // private WebElement copyright;
 
 
-        private SingUpPopUp singUpPopUp;
-        private SingInPopUp singInPopUp;
+        private TopGuestComponent topGuestComponent;
         private MainManuPopUp mainManuPopUp;
         private UBSCourierPopUp ubcCourierPopUp;
         private Footer footer;
@@ -79,38 +77,12 @@ public abstract class TopPage {
                 mainManuPopUp = new MainManuPopUp(driver);
                 ubcCourierPopUp = new UBSCourierPopUp(driver);
                 footer=new Footer(driver);
+                topGuestComponent = new TopGuestComponent(driver);
         }
 
 
         //Object
         //Atomic logic
-        //singUpLink
-        public WebElement getSingUpLink() {
-                return singUpLink;
-        }
-
-        public String getSingUpLinkText() {
-                return getSingUpLink().getText();
-        }
-
-        public void clickSingUpLink() {
-                getSingUpLink().click();
-        }
-
-        //singInLink
-
-        public WebElement getSingInLink() {
-                return singInLink;
-        }
-
-        public String getSingInLinkText() {
-                return getSingInLink().getText();
-        }
-
-        public void clickSingInLink() {
-                getSingInLink().click();
-        }
-
         //languageButton
         public WebElement getLanguageButton() {
                 return  languageButton;
@@ -136,7 +108,11 @@ public abstract class TopPage {
 
 
         //Functional
-//
+        protected void scrollToElement(WebElement el) {
+                Actions action = new Actions(driver);
+                action.moveToElement(el).perform();
+        }
+        //
         public void clicklanguageButton2(Languages languages) {
                 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
                 clickLanguageButton1();
@@ -291,10 +267,10 @@ public abstract class TopPage {
          */
         public AboutUsPage navigateMenuAboutUs() {
                 getMainManuPopUp().clickMenuAboutUsPage();
-//                if(SingInDropdoun ().isDisplayedcloseWindow()){
-//                        SingInDropdoun().clickcloseWindow();
-//                        return new AboutUsPage(driver);
-//                }
+                // if(SingInDropdoun ().isDisplayedcloseWindow()){
+                //         SingInDropdoun().clickcloseWindow();
+                //         return new AboutUsPage(driver);
+                //}
                 return new AboutUsPage(driver);
         }
 
@@ -305,10 +281,10 @@ public abstract class TopPage {
         public AboutUsPage navigateMenuAboutUsFooter() {
                 System.out.println("gotoAboutusPagefooter()");
                 getFooter().clickFooterAboutUsPage();
-//                if(SingInDropdoun ().isDisplayedcloseWindow()){
-//                        SingInDropdoun().clickcloseWindow();
-//                        return new AboutUsPage(driver);
-//                }
+                if(SingInDropdoun ().isDisplayedcloseWindow()){
+                        SingInDropdoun().clickcloseWindow();
+                        return new AboutUsPage(driver);
+                }
                 return new AboutUsPage(driver);
         }
 
@@ -330,9 +306,9 @@ public abstract class TopPage {
          * @return UBSCourierPage
          */
         public UBSCourierPage navigateMenuUBSCourier(){
-             System.out.println("gotoUbsCourierPage()");
-             getMainManuPopUp().clickMenuUBSCourierPage();
-              return new UBSCourierPage(driver);
+                System.out.println("gotoUbsCourierPage()");
+                getMainManuPopUp().clickMenuUBSCourierPage();
+                return new UBSCourierPage(driver);
         }
 
         /**
@@ -341,7 +317,7 @@ public abstract class TopPage {
          */
         public SingInPopUp navigateSingInDropdown() {
                 System.out.println("navigateSingInDropdown()");
-               // getMainMenuDropdown().clickSingInDropdown();
+                // getMainMenuDropdown().clickSingInDropdown();
                 System.out.println(".clickSingInDropdown()");
                 if(SingInDropdoun ().isDisplayedcloseWindow()){
                         SingInDropdoun().clickcloseWindow();
@@ -365,4 +341,13 @@ public abstract class TopPage {
                 return new MyhabitsPage(driver);
         }
 
+        /**
+         * Click on SingUpPopUp.
+         * @return
+         */
+        public SingUpPopUp gotoSingUpPopUp(){
+                topGuestComponent = new TopGuestComponent(driver);
+                topGuestComponent.clickSingUpLink();
+                return new SingUpPopUp(driver);
+        }
 }
