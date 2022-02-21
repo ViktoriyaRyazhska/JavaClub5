@@ -42,6 +42,7 @@ public class AboutUsPage extends TopPage {
         getFromHabit().click();
         if (SingInDropdoun().isDisplayedcloseWindow()) {
             SingInDropdoun().clickcloseWindow();
+            navigateMenuAboutUs();
         }
     }
 
