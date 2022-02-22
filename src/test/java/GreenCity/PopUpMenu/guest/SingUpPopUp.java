@@ -1,5 +1,6 @@
 package GreenCity.PopUpMenu.guest;
 
+import GreenCity.data.RegistrationData;
 import GreenCity.peges.GoogleAccountPage;
 import GreenCity.peges.TopPage;
 import org.openqa.selenium.WebDriver;
@@ -34,10 +35,14 @@ public class SingUpPopUp extends TopPage {
     private WebElement errorAmountPassword;
     @FindBy(xpath="//div[@id='password-err-msg']/app-error/div")
     private WebElement errorSymbolPassword;
-    @FindBy(id="confirm-err-msg")
+    @FindBy(css="div#confirm-err-msg.error-message.ng-star-inserted")
     private WebElement errorCoincidePassword;
     @FindBy(xpath="//div[@id='password-err-msg']/app-error/div")
     private WebElement errorNoPassword;
+    @FindBy(xpath="//mat-dialog-container[@id='mat-dialog-0']/app-auth-modal/div/div/div[2]/div/app-sign-up/form/div/img")
+    private WebElement showHidePassword;
+    @FindBy(xpath="//mat-dialog-container[@id='mat-dialog-0']/app-auth-modal/div/div/div[2]/div/app-sign-up/form/div[2]/img")
+    private WebElement showHideRepassword;
 
 
 
@@ -187,6 +192,21 @@ public class SingUpPopUp extends TopPage {
         return getErrorNoPassword().getText();
     }
 
+    //showHidePassword
+    public WebElement getShowHidePassword() {
+        return showHidePassword;
+    }
+    public void clickShowHidePassword() {
+        getShowHidePassword().click();
+    }
+
+    //showHideRepassword
+    public WebElement getShowHideRepassword() {
+        return showHideRepassword;
+    }
+    public void clickShowHideRepassword() {
+        getShowHideRepassword().click();
+    }
 
     //Functional
     public void singUp(String email, String name, String password){
@@ -196,8 +216,11 @@ public class SingUpPopUp extends TopPage {
         sendKeysName(name);
         clickPassword();
         sendKeysPassword(password);
+        clickShowHidePassword();
         clickRepeatPassword();
         sendKeysRepeatPassword(password);
+        clickShowHidePassword();
+        clickShowHideRepassword();
         clickSingInButton();
     }
 
@@ -222,6 +245,7 @@ public class SingUpPopUp extends TopPage {
         sendKeysName(name);
         clickPassword();
         sendKeysPassword(amountPassword);
+        clickShowHidePassword();
         clickRepeatPassword();
     }
 
@@ -233,6 +257,7 @@ public class SingUpPopUp extends TopPage {
         sendKeysName(name);
         clickPassword();
         sendKeysPassword(errorSymbolPassword);
+        clickShowHidePassword();
         clickRepeatPassword();
     }
 
@@ -244,8 +269,10 @@ public class SingUpPopUp extends TopPage {
         sendKeysName(name);
         clickPassword();
         sendKeysPassword(password);
+        clickShowHidePassword();
         clickRepeatPassword();
         sendKeysRepeatPassword(errorSymbolPassword);
+        clickShowHideRepassword();
         clickSingInButton();
     }
 

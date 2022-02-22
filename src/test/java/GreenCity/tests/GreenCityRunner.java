@@ -27,7 +27,7 @@ public abstract class GreenCityRunner {
         System.out.println("Open page");
         System.setProperty("webdriver.chrome.driver","src\\resources\\chromedriver.exe" );
         driver = new ChromeDriver();
-        driver.manage().window().maximize();
+       // driver.manage().window().maximize();
         //driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://ita-social-projects.github.io/GreenCityClient/#/");

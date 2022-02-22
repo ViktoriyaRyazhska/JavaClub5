@@ -6,26 +6,24 @@ import GreenCity.data.Languages;
 import GreenCity.data.RegistrationData;
 import GreenCity.peges.GoogleAccountPage;
 import GreenCity.peges.HomePage;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class TestSingUp extends GreenCityRunner{
-
-    @DataProvider
-    public Object[][] validRegistrationData() {
-        return new Object[][]{
-                {RegistrationData.getGuestData()}
-        };
-    }
+    private RegistrationData registrationData=new RegistrationData();
 
     @Test
-    public void registration(){
+    public void registration() {
         SingUpPopUp singUpPopUp = new SingUpPopUp(driver);
         singUpPopUp.gotoSingUpPopUp();
-        singUpPopUp.singUp("nastacia@yahoo.com", "Anastasiia", "1q2w3e4r5t6y&U");
+        singUpPopUp.singUp(registrationData.getEmail(), registrationData.getUserName(), registrationData.getPassword());
         System.out.println("Registration was successful");
     }
+
     @Test
     public void WrongEmail(){
         SingUpPopUp singUpPopUp = new SingUpPopUp(driver);
@@ -91,12 +89,12 @@ public class TestSingUp extends GreenCityRunner{
         Assert.assertEquals(expected, singUpPopUp.getErrorSymbolPasswordText());
         System.out.println("test was successful:" + expected);
     }
-
-    @Test
+    /*
+     @Test
     public void WrongCoincidePassword(){
         SingUpPopUp singUpPopUp = new SingUpPopUp(driver);
         singUpPopUp.gotoSingUpPopUp();
-        singUpPopUp.singUpErrorCoincidePassword("nastacia@yahoo.com", "Anastasiia", "1q2w3e4r5t6y&U", "1q2w3ehhhhhh");
+         singUpPopUp.singUpErrorCoincidePassword("nastacia@yahoo.com", "Anastasiia", "1q2w3e4r5t6y&U", "1q2w3ehhhhhh");
         String expected;
         if(singUpPopUp.getLanguageButtonText().equals("Ua") ){
             expected="Пароль не співпадає";
@@ -109,6 +107,8 @@ public class TestSingUp extends GreenCityRunner{
         System.out.println("test was successful:" + expected);
     }
 
+
+     */
     @Test
     public void  NoPassword(){
         SingUpPopUp singUpPopUp = new SingUpPopUp(driver);
@@ -142,6 +142,10 @@ public class TestSingUp extends GreenCityRunner{
         //singUpPopUp.regGoogleAccount();
         GoogleAccountPage googleAccountPage =new GoogleAccountPage(driver);
         googleAccountPage.clickSingInGoogle();
+       // WebDriver driver2 = new ChromeDriver();
+       // driver2.get("https://accounts.google.com/o/oauth2/auth/identifier?redirect_uri=storagerelay%3A%2F%2Fhttps%2Fita-social-projects.github.io%3Fid%3Dauth989942&response_type=permission%20id_token&scope=email%20profile%20openid&openid.realm&include_granted_scopes=true&client_id=129513550972-eu9ej46rviv1ac8q14at62t2k5qon1pu.apps.googleusercontent.com&ss_domain=https%3A%2F%2Fita-social-projects.github.io&fetch_basic_profile=true&gsiwebsdk=2&flowName=GeneralOAuthFlow");
+        driver.findElement(By.className("whsOnd")).sendKeys("sdgjhkjshdg ");
+        googleAccountPage.clickFurtherBotton();
     }
 
 }

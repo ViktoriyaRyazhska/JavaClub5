@@ -193,8 +193,6 @@ public class MainManuPopUp {
         return menuEventsPage;
     }
 
-
-
     public void clickMenuEventsPage(){
         if(!isDisplayedEventsPage()){
             clickNaviconButton();

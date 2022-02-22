@@ -3,29 +3,26 @@ package GreenCity.data;
 import java.util.ArrayList;
 
 public class RegistrationData {
-
+/*
     public static ArrayList<String> getGuestData(){
     ArrayList<String> guestData = new ArrayList<>();
     guestData.add("nastacy@yahoo.com");
     guestData.add("1q2w3e4r5t6y&U");
-    guestData.add("Aнастасія");
+    guestData.add("Anastasiia");
     return guestData;
     }
+ */
 
-
-
-}
-    /*
     private String email;
     private String password;
     private String userName;
 
 
 
-    private RegistrationData(){
+    public RegistrationData(){
         email = "nastacy@yahoo.com";
         password = "1q2w3e4r5t6y&U";
-        userName = "Aнастасія";
+        userName = "Anastasiia";
     }
 
     // setters
@@ -52,10 +49,12 @@ public class RegistrationData {
 
     public String getUserName(){return userName;}
 
-    @Override
+   /* @Override
     public String toString() {
     return "User [email=" + email +"userName="+ userName+ ", password=" + password + "]";
     }
+
+    */
 }
 
-     */
+
