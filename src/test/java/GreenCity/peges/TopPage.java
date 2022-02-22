@@ -1,8 +1,13 @@
 package GreenCity.peges;
 
 import GreenCity.Components.TopGuestComponent;
-import GreenCity.PopUpMenu.guest.*;
+import GreenCity.PopUpMenu.guest.Footer;
+import GreenCity.PopUpMenu.guest.MainManuPopUp;
+import GreenCity.PopUpMenu.guest.SingUpPopUp;
+import GreenCity.PopUpMenu.guest.UBSCourierPopUp;
 import GreenCity.data.Languages;
+import GreenCity.data.SingInData;
+import GreenCity.user.UserMenuRight;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -33,6 +38,8 @@ public abstract class TopPage {
         private MainManuPopUp mainManuPopUp;
         private UBSCourierPopUp ubcCourierPopUp;
         private Footer footer;
+        private SingInData singInData;
+        private UserMenuRight userMenuRight;
         private int Window_Heigth_toClick_Footer=480;
 
 
@@ -78,6 +85,8 @@ public abstract class TopPage {
                 ubcCourierPopUp = new UBSCourierPopUp(driver);
                 footer=new Footer(driver);
                 topGuestComponent = new TopGuestComponent(driver);
+                singInData=new SingInData();
+                userMenuRight= new UserMenuRight(driver);
         }
 
 
@@ -142,6 +151,9 @@ public abstract class TopPage {
         public Footer getFooter(){
                 return footer;
         }
+        //UserMenuRight
+        public UserMenuRight getUserMenuRight(){return userMenuRight;}
+
 
         //SingInDropdoun
         protected SingInPopUp SingInDropdoun (){
@@ -239,10 +251,12 @@ public abstract class TopPage {
          */
         public PlacesPage navigateMenuPlaces() {
                 getMainManuPopUp().clickMenuPlacesPage();
+                try{
                 if(SingInDropdoun ().isDisplayedcloseWindow()){
                         SingInDropdoun().clickcloseWindow();
                         return new PlacesPage(driver);
-                }
+                }}catch (NoSuchElementException e){
+                return new PlacesPage(driver);}
                 return new PlacesPage(driver);
         }
 
@@ -254,11 +268,16 @@ public abstract class TopPage {
         public PlacesPage navigateMenuPlacesFooter() throws InterruptedException {
                 System.out.println("gotoPlacesPageFooter");
                 getFooter().clickFooterPlacesPage();
+                try{
                 if(SingInDropdoun ().isDisplayedcloseWindow()){
                         SingInDropdoun().clickcloseWindow();
                         return new PlacesPage(driver);
+
+
+                }}catch (NoSuchElementException e){
+                     return   new PlacesPage(driver)   ;
                 }
-                return new PlacesPage(driver);
+               return new PlacesPage(driver);
         }
 
         /**
@@ -281,10 +300,12 @@ public abstract class TopPage {
         public AboutUsPage navigateMenuAboutUsFooter() {
                 System.out.println("gotoAboutusPagefooter()");
                 getFooter().clickFooterAboutUsPage();
+                try{
                 if(SingInDropdoun ().isDisplayedcloseWindow()){
                         SingInDropdoun().clickcloseWindow();
                         return new AboutUsPage(driver);
-                }
+                }}catch (NoSuchElementException e){
+                return new AboutUsPage(driver);}
                 return new AboutUsPage(driver);
         }
 
@@ -294,11 +315,13 @@ public abstract class TopPage {
          */
         public MySpacePage navigateMenuMySpace() {
                 getMainManuPopUp().clickMenuMySpacePage();
+                try{
                 if(SingInDropdoun ().isDisplayedcloseWindow()){
                         SingInDropdoun().clickcloseWindow();
                         return new MySpacePage(driver);
-                }
-                return new MySpacePage(driver);
+                }}catch (NoSuchElementException e){
+                return new MySpacePage(driver);}
+        return new MySpacePage(driver);
         }
 
         /**
@@ -319,10 +342,12 @@ public abstract class TopPage {
                 System.out.println("navigateSingInDropdown()");
                 // getMainMenuDropdown().clickSingInDropdown();
                 System.out.println(".clickSingInDropdown()");
+                try{
                 if(SingInDropdoun ().isDisplayedcloseWindow()){
                         SingInDropdoun().clickcloseWindow();
                         return new SingInPopUp(driver);
-                }
+                }}catch (NoSuchElementException e){
+                return new SingInPopUp(driver);}
                 return new SingInPopUp(driver);
         }
 
@@ -334,8 +359,11 @@ public abstract class TopPage {
                 System.out.println("navigateMyhabitsPageFooter()");
                 getFooter().clickFooterMyHabitsPage();
                 System.out.println(".clickFooterMyHabitsPage()");
+                try{
                 if(SingInDropdoun ().isDisplayedcloseWindow()){
                         SingInDropdoun().clickcloseWindow();
+                        return new MyhabitsPage(driver);
+                }}catch (NoSuchElementException e){
                         return new MyhabitsPage(driver);
                 }
                 return new MyhabitsPage(driver);
@@ -350,4 +378,52 @@ public abstract class TopPage {
                 topGuestComponent.clickSingUpLink();
                 return new SingUpPopUp(driver);
         }
-}
+        /**
+         * Click and Enter(Data) on SingInPopUp.
+         * @return
+         */
+        public HomePage navigateSingInDropdownEnter() throws InterruptedException {
+                getMainMenuDropdown().clickMenuMySpacePage();
+                SingInDropdoun ().clickEmailSingInDropdoun();
+                SingInDropdoun ().clearEmailSingInDropdoun();
+                SingInDropdoun ().sendKeysEmail(singInData.getEmail());
+                SingInDropdoun ().clickPasswordSingInDropdoun();
+                SingInDropdoun ().clearPasswordSingInDropdoun();
+                SingInDropdoun ().sendKeysPassword(singInData.getPassword());
+                SingInDropdoun ().clickbButtonSingInDropdoun();
+                Thread.sleep(12000);
+                //  wait.until();
+                // wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div.app-wrapper .header_navigation-menu>nav>ul>li:nth-child(1) > a")));
+                return new HomePage(driver);
+
+        }
+
+        public MySpacePage navigateSingInRightEnter() throws InterruptedException {
+                getMainMenuDropdown().clicksingInLinke();
+                SingInDropdoun().clickEmailSingInDropdoun();
+                SingInDropdoun().clearEmailSingInDropdoun();
+                SingInDropdoun().sendKeysEmail(singInData.getEmail());
+                SingInDropdoun().clickPasswordSingInDropdoun();
+                SingInDropdoun().clearPasswordSingInDropdoun();
+                SingInDropdoun().sendKeysPassword(singInData.getPassword());
+                SingInDropdoun().clickbButtonSingInDropdoun();
+                Thread.sleep(12000);
+                return new MySpacePage(driver);
+        }
+
+        public HomePage navigateSingOut() throws InterruptedException {
+               // userMenuRight=new UserMenuRight(driver);
+                System.out.println("getUserMenuRight().isDisplayedHeaderUserName()"+getUserMenuRight().isDisplayedHeaderUserName());
+                if(getUserMenuRight().isDisplayedHeaderUserName()){
+                        getUserMenuRight().clickHeaderUserName();
+                        getUserMenuRight().clickSignout();
+                        return new HomePage(driver);
+                }
+                getUserMenuRight().clickSignout();
+
+                 return new HomePage(driver);}
+        }
+
+
+
+
