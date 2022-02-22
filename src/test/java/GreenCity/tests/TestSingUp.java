@@ -2,10 +2,8 @@ package GreenCity.tests;
 
 
 import GreenCity.PopUpMenu.guest.SingUpPopUp;
-import GreenCity.data.Languages;
 import GreenCity.data.RegistrationData;
 import GreenCity.peges.GoogleAccountPage;
-import GreenCity.peges.HomePage;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
