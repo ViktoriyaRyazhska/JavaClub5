@@ -1,34 +1,42 @@
 package GreenCity.tests;
 
 
+import GreenCity.Components.TopGuestComponent;
 import GreenCity.PopUpMenu.guest.SingUpPopUp;
-import GreenCity.data.Languages;
 import GreenCity.data.RegistrationData;
 import GreenCity.peges.GoogleAccountPage;
-import GreenCity.peges.HomePage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class TestSingUp extends GreenCityRunner{
-    private RegistrationData registrationData=new RegistrationData();
+import java.util.Set;
 
-    @Test
+public class TestSingUp extends GreenCityRunner{
+    private final RegistrationData registrationData=new RegistrationData();
+
+
+    @Test(priority = 1)
     public void registration() {
         SingUpPopUp singUpPopUp = new SingUpPopUp(driver);
-        singUpPopUp.gotoSingUpPopUp();
-        singUpPopUp.singUp(registrationData.getEmail(), registrationData.getUserName(), registrationData.getPassword());
-        System.out.println("Registration was successful");
+        TopGuestComponent topGuestComponent=new TopGuestComponent(driver);
+        if( topGuestComponent.isDisplayedSingUp()) {
+            singUpPopUp.gotoSingUpPopUp();
+            singUpPopUp.singUp(registrationData.getEmail(), registrationData.getUserName(), registrationData.getPassword());
+            System.out.println("Registration was successful");
+        }
+       else {
+            singUpPopUp.gotoSingUpPopUp();
+            //singUpPopUp.singUp(registrationData.getEmail(), registrationData.getUserName(), registrationData.getPassword());
+        }
     }
 
-    @Test
+    @Test(priority = 2)
     public void WrongEmail(){
         SingUpPopUp singUpPopUp = new SingUpPopUp(driver);
+        TopGuestComponent topGuestComponent=new TopGuestComponent(driver);
+        if( topGuestComponent.isDisplayedSingUp()) {
         singUpPopUp.gotoSingUpPopUp();
-        singUpPopUp.singUpWrongEmail("Gbhj.googlecom");
+        singUpPopUp.singUpWrongEmail(registrationData.getWrongEmail());
         String expected;
                if(singUpPopUp.getLanguageButtonText().equals("Ua") ){
                    expected="Перевірте, чи правильно вказано вашу адресу електронної пошти";
@@ -39,12 +47,17 @@ public class TestSingUp extends GreenCityRunner{
                else {expected = "Please check that your e-mail address is indicated correctly";}
         Assert.assertEquals(expected, singUpPopUp.getWrongEmailText());
         System.out.println("test was successful:" + expected);
+        }
+        else{singUpPopUp.gotoSingUpPopUp();
+            System.out.println("Link is not available");}
     }
-    @Test
+    @Test(priority = 3)
     public void WrongName(){
         SingUpPopUp singUpPopUp = new SingUpPopUp(driver);
+        TopGuestComponent topGuestComponent=new TopGuestComponent(driver);
+        if( topGuestComponent.isDisplayedSingUp()) {
         singUpPopUp.gotoSingUpPopUp();
-        singUpPopUp.singUpErrorSymbolName("nastacia@yahoo.com", "F");
+        singUpPopUp.singUpErrorSymbolName(registrationData.getEmail(), registrationData.getWrongName());
         String expected;
         if(singUpPopUp.getLanguageButtonText().equals("Ua") ){
             expected="Ім'я повинно містити 6-30 символів і може складатись з літер(a-z), цифр(0-9) та крапки(.), крапка на початку імені, в кінці та послідовність крапок заборонена";
@@ -55,13 +68,19 @@ public class TestSingUp extends GreenCityRunner{
         else {expected = "The name must contain 6-30 characters and can contain letters(a-z), numbers(0-9) and a dot(.), dot at the start, at the end and consecutive dot is forbidden";}
         Assert.assertEquals(expected, singUpPopUp.getErrorSymbolNameText());
         System.out.println("test was successful:" + expected);
+        }
+        else{
+            singUpPopUp.gotoSingUpPopUp();
+            System.out.println("Link is not available");}
     }
 
-    @Test
+    @Test(priority = 4)
     public void WrongAmountPassword(){
         SingUpPopUp singUpPopUp = new SingUpPopUp(driver);
+        TopGuestComponent topGuestComponent=new TopGuestComponent(driver);
+        if( topGuestComponent.isDisplayedSingUp()) {
         singUpPopUp.gotoSingUpPopUp();
-        singUpPopUp.singUpAmountPassword("nastacia@yahoo.com", "Anastasiia", "1q2w3e");
+        singUpPopUp.singUpAmountPassword(registrationData.getEmail(), registrationData.getUserName(), registrationData.getAmountPassword());
         String expected;
         if(singUpPopUp.getLanguageButtonText().equals("Ua") ){
             expected="Пароль повинен містити принаймі 8 символів";
@@ -73,11 +92,17 @@ public class TestSingUp extends GreenCityRunner{
         Assert.assertEquals(expected, singUpPopUp.getErrorAmountPasswordText());
         System.out.println("test was successful:" + expected);
     }
-    @Test
+        else{
+            singUpPopUp.gotoSingUpPopUp();
+            System.out.println("Link is not available");}
+    }
+    @Test(priority = 5)
     public void WrongSymbolPassword(){
         SingUpPopUp singUpPopUp = new SingUpPopUp(driver);
+        TopGuestComponent topGuestComponent=new TopGuestComponent(driver);
+        if( topGuestComponent.isDisplayedSingUp()){
         singUpPopUp.gotoSingUpPopUp();
-        singUpPopUp.singUpErrorSymbolPassword("nastacia@yahoo.com", "Anastasiia","1q2w3ehhhhhh");
+        singUpPopUp.singUpErrorSymbolPassword(registrationData.getEmail(), registrationData.getUserName(),registrationData.getErrorSymbolPassword());
         String expected;
         if(singUpPopUp.getLanguageButtonText().equals("Ua") ){
             expected="Пароль має містити хоча б один символ латинського алфавіту верхнього (A-Z) та нижнього регістру (a-z), число (0-9) та спеціальний символ (~`!@#$%^&*()+=_-{}[]|:;”’?/<>,.)";
@@ -87,65 +112,103 @@ public class TestSingUp extends GreenCityRunner{
         }
         else {expected = "Password has contain at least one character of Uppercase letter (A-Z), Lowercase letter (a-z), Digit (0-9), Special character (~`!@#$%^&*()+=_-{}[]|:;”’?/<>,.)";}
         Assert.assertEquals(expected, singUpPopUp.getErrorSymbolPasswordText());
-        System.out.println("test was successful:" + expected);
+        System.out.println("test was successful:" + expected);}
+        else{
+            singUpPopUp.gotoSingUpPopUp();
+            System.out.println("Link is not available");
+        }
     }
-    /*
-     @Test
+     @Test(priority = 6)
     public void WrongCoincidePassword(){
         SingUpPopUp singUpPopUp = new SingUpPopUp(driver);
-        singUpPopUp.gotoSingUpPopUp();
-         singUpPopUp.singUpErrorCoincidePassword("nastacia@yahoo.com", "Anastasiia", "1q2w3e4r5t6y&U", "1q2w3ehhhhhh");
-        String expected;
-        if(singUpPopUp.getLanguageButtonText().equals("Ua") ){
-            expected="Пароль не співпадає";
-        }
-        else if(singUpPopUp.getLanguageButtonText().equals("Ru")){
-            expected="Пароли не совпадают";
-        }
-        else {expected = "Passwords do not match";}
-        Assert.assertEquals(expected, singUpPopUp.getErrorCoincidePasswordText());
-        System.out.println("test was successful:" + expected);
+         TopGuestComponent topGuestComponent=new TopGuestComponent(driver);
+         if( topGuestComponent.isDisplayedSingUp()) {
+             singUpPopUp.gotoSingUpPopUp();
+             singUpPopUp.singUpErrorCoincidePassword(registrationData.getEmail(), registrationData.getUserName(), registrationData.getPassword(), registrationData.getErrorSymbolPassword());
+             String expected;
+             if (singUpPopUp.getLanguageButtonText().equals("Ua")) {
+                 expected = "Пароль не співпадає";
+             } else if (singUpPopUp.getLanguageButtonText().equals("Ru")) {
+                 expected = "Пароли не совпадают";
+             } else {
+                 expected = "Passwords do not match";
+             }
+             Assert.assertEquals(expected, singUpPopUp.getErrorCoincidePasswordText());
+             System.out.println("test was successful:" + expected);
+         }
+        else{
+                 singUpPopUp.gotoSingUpPopUp();
+                 System.out.println("Link is not available");
+             }
     }
 
-
-     */
-    @Test
+    @Test(priority = 7)
     public void  NoPassword(){
         SingUpPopUp singUpPopUp = new SingUpPopUp(driver);
-        singUpPopUp.gotoSingUpPopUp();
-        singUpPopUp.singUpNoPassword("nastacia@yahoo.com", "Anastasiia");
-        String expected;
-        if(singUpPopUp.getLanguageButtonText().equals("Ua") ){
-            expected="Введіть пароль";
+        TopGuestComponent topGuestComponent=new TopGuestComponent(driver);
+        if( topGuestComponent.isDisplayedSingUp()) {
+            singUpPopUp.gotoSingUpPopUp();
+            singUpPopUp.singUpNoPassword(registrationData.getEmail(), registrationData.getUserName());
+            String expected;
+            if (singUpPopUp.getLanguageButtonText().equals("Ua")) {
+                expected = "Введіть пароль";
+            } else if (singUpPopUp.getLanguageButtonText().equals("Ru")) {
+                expected = "Введите пароль";
+            } else {
+                expected = "Password is required";
+            }
+            Assert.assertEquals(expected, singUpPopUp.getErrorNoPasswordText());
+            System.out.println("test was successful:" + expected);
         }
-        else if(singUpPopUp.getLanguageButtonText().equals("Ru")){
-            expected="Введите пароль";
+        else{
+            singUpPopUp.gotoSingUpPopUp();
+            System.out.println("Link is not available");
         }
-        else {expected = "Password is required";}
-        Assert.assertEquals(expected, singUpPopUp.getErrorNoPasswordText());
-        System.out.println("test was successful:" + expected);
     }
 
 
-    @Test
-    public void gotoSingIn(){
+    @Test(priority = 8)
+    public void gotoSingIn() {
         SingUpPopUp singUpPopUp = new SingUpPopUp(driver);
+        TopGuestComponent topGuestComponent=new TopGuestComponent(driver);
+        if( topGuestComponent.isDisplayedSingUp()) {
         singUpPopUp.gotoSingUpPopUp();
         singUpPopUp.clickTurnToSingIn();
+    }else{
+            singUpPopUp.gotoSingUpPopUp();
+            System.out.println("Link is not available");
+    }
     }
 
 
-    @Test
-    public void registerGoogleAccount(){
+    @Test(priority = 9)
+    public void registerGoogleAccount() throws InterruptedException {
         SingUpPopUp singUpPopUp = new SingUpPopUp(driver);
+        TopGuestComponent topGuestComponent=new TopGuestComponent(driver);
+        if( topGuestComponent.isDisplayedSingUp()) {
         singUpPopUp.gotoSingUpPopUp();
-        //singUpPopUp.regGoogleAccount();
         GoogleAccountPage googleAccountPage =new GoogleAccountPage(driver);
         googleAccountPage.clickSingInGoogle();
-       // WebDriver driver2 = new ChromeDriver();
-       // driver2.get("https://accounts.google.com/o/oauth2/auth/identifier?redirect_uri=storagerelay%3A%2F%2Fhttps%2Fita-social-projects.github.io%3Fid%3Dauth989942&response_type=permission%20id_token&scope=email%20profile%20openid&openid.realm&include_granted_scopes=true&client_id=129513550972-eu9ej46rviv1ac8q14at62t2k5qon1pu.apps.googleusercontent.com&ss_domain=https%3A%2F%2Fita-social-projects.github.io&fetch_basic_profile=true&gsiwebsdk=2&flowName=GeneralOAuthFlow");
-        driver.findElement(By.className("whsOnd")).sendKeys("sdgjhkjshdg ");
-        googleAccountPage.clickFurtherBotton();
+        String parentWindow = driver.getWindowHandle();
+        Set<String> handles =  driver.getWindowHandles();
+        for(String windowHandle  : handles)
+        {
+            if(!windowHandle.equals(parentWindow))
+            {
+                driver.switchTo().window(windowHandle);
+                driver.findElement(By.className("whsOnd")).sendKeys(registrationData.getEmail());
+                googleAccountPage.clickFurtherBotton();
+               driver.close(); //closing child window
+               driver.switchTo().window(parentWindow);
+
+            }
+        }
+        }else{
+            singUpPopUp.gotoSingUpPopUp();
+            System.out.println("Link is not available");}
+
     }
+
+
 
 }

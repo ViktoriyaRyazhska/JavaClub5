@@ -35,7 +35,7 @@ public class SingUpPopUp extends TopPage {
     private WebElement errorAmountPassword;
     @FindBy(xpath="//div[@id='password-err-msg']/app-error/div")
     private WebElement errorSymbolPassword;
-    @FindBy(css="div#confirm-err-msg.error-message.ng-star-inserted")
+    @FindBy(id="confirm-err-msg")
     private WebElement errorCoincidePassword;
     @FindBy(xpath="//div[@id='password-err-msg']/app-error/div")
     private WebElement errorNoPassword;
@@ -273,7 +273,6 @@ public class SingUpPopUp extends TopPage {
         clickRepeatPassword();
         sendKeysRepeatPassword(errorSymbolPassword);
         clickShowHideRepassword();
-        clickSingInButton();
     }
 
     public void singUpNoPassword(String email, String name){

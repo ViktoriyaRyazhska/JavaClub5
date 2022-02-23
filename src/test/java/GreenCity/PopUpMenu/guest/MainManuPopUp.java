@@ -1,11 +1,10 @@
 package GreenCity.PopUpMenu.guest;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-import java.time.Duration;
 
 /**
  * Base abstract class MainManuPopUp of Header
@@ -40,6 +39,10 @@ public class MainManuPopUp {
     private WebElement singInLinkUBS;
     @FindBy (css = ".header_navigation-menu-ubs .header_mobile-menu-sign-in>a")
     private  WebElement menuSingUpDropdownInUBS;
+    @FindBy(css ="a.header_sign-in-link.tertiary-global-button")
+    private WebElement singInLink;
+    @FindBy(css =".tertiary-global-button:nth-child(1)")
+    private  WebElement menuSingInDropdown;
 
 
     public MainManuPopUp(WebDriver driver) {
@@ -48,6 +51,10 @@ public class MainManuPopUp {
         PageFactory.initElements(driver, this);
 
 
+    }
+    public void scrollDown(){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);", menuSingInDropdown);
     }
 
     //Atomic logic
@@ -378,6 +385,39 @@ public class MainManuPopUp {
 //        return singInLink.isDisplayed();
 
     // }
+    public WebElement getsingInLink () throws InterruptedException {
+        if(!isDisplayedsingInLink()){
+            clickNaviconButton();
+            scrollDown();
+
+            return menuSingInDropdown;
+        }
+        System.out.println("getsingInLink ()");
+        return singInLink;
+    }
+
+
+    //sinInlinke
+public void clicksingInLinke() throws InterruptedException {
+//        if(!isDisplayedsingInLink()){
+//            clickNaviconButton();
+//        }
+        System.out.println("clicksingInLinke()");
+        getsingInLink ().click();
+
+    }
+
+    public String MysingInLinkText() throws InterruptedException {
+        if(!isDisplayedsingInLink()){
+            clickNaviconButton();
+        }
+        return getsingInLink().getText();
+    }
+
+    public boolean isDisplayedsingInLink() {
+
+        return singInLink.isDisplayed();
+    }
 
 
 

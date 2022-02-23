@@ -16,13 +16,20 @@ public class RegistrationData {
     private String email;
     private String password;
     private String userName;
-
+    private  String wrongEmail;
+    private String wrongName;
+    private String amountPassword;
+    private String errorSymbolPassword;
 
 
     public RegistrationData(){
         email = "nastacy@yahoo.com";
         password = "1q2w3e4r5t6y&U";
         userName = "Anastasiia";
+        wrongEmail = "Gbhj.googlecom";
+        wrongName = "F";
+        amountPassword = "1q2w3e";
+        errorSymbolPassword = "1q2w3ehhhhhh";
     }
 
     // setters
@@ -49,12 +56,16 @@ public class RegistrationData {
 
     public String getUserName(){return userName;}
 
-   /* @Override
-    public String toString() {
-    return "User [email=" + email +"userName="+ userName+ ", password=" + password + "]";
-    }
+    public String getWrongEmail(){return wrongEmail;}
 
-    */
+    public String getWrongName(){return wrongName;}
+
+    public String getAmountPassword(){return amountPassword;}
+
+    public String getErrorSymbolPassword(){return errorSymbolPassword;}
+
+
+
 }
 
 

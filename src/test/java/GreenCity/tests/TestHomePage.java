@@ -3,7 +3,6 @@ package GreenCity.tests;
 
 import GreenCity.data.Languages;
 import GreenCity.peges.HomePage;
-import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -33,8 +32,8 @@ public class TestHomePage extends GreenCityRunner {
                 .navigateSingInDropdown()
                 .navigateMenuHome();
 
-        Assert.assertEquals(homePage.getLanguageButtonText(), Languages.ENGLISH.toString());
-        PresentationSleep();
+//        Assert.assertEquals(homePage.getLanguageButtonText(), Languages.ENGLISH.toString());
+//        PresentationSleep();
 
     }
     @Test(dataProvider = "validData")
@@ -46,14 +45,62 @@ public class TestHomePage extends GreenCityRunner {
                 .navigateMenuEcoNews()
                 .navigateMenuEcoNewsFooter()
                 .navigateMenuTripandTricksFooter()
-                //.navigateMenuMySpace()
-                .navigateMenuEventsFooter()
                 .navigateMenuMySpace()
+                .navigateMenuEventsFooter()
+               // .navigateMenuMySpace()
                 .navigateMenuPlacesFooter()
                 .navigateMenuAboutUsFooter()
                 .navigateMyhabitsPageFooter()
                 .navigateMenuHomeFooter();
         /// .navigateMenuHome();
+        PresentationSleep();
+
+    }
+
+    @Test(dataProvider = "validData")
+    public void CheckElementsEnterSingIn(Languages languages) throws Exception{
+        HomePage homePage1= LoadApplication();
+        PresentationSleep();
+        homePage1= homePage1
+                .navigateMenuEcoNews()
+                .navigateSingInDropdownEnter()
+                .navigateMenuEcoNews()
+                //.navigateMenuTipsTricks()
+               // .navigateMenuEvents()
+               //  .navigateMenuMySpace()
+               // .navigateMenuAboutUs()
+               //.navigateMenuMySpace()
+               // .navigateMenuEcoNewsFooter()
+               // .navigateMenuTripandTricksFooter()
+               // .navigateMenuPlacesFooter()
+               // .navigateMenuAboutUsFooter()
+               // .navigateMyhabitsPageFooter()
+                .navigateSingOut()
+        .navigateMenuHome();
+        PresentationSleep();
+
+    }
+
+    @Test(dataProvider = "validData")
+    public void CheckElementsEnterRightSingIn(Languages languages) throws Exception{
+        HomePage homePage3=LoadApplication();
+        PresentationSleep();
+        homePage3= homePage3
+                .navigateMenuEcoNews()
+                .navigateSingInRightEnter()
+                .navigateMenuEcoNews()
+                //.navigateMenuTipsTricks()
+                // .navigateMenuEvents()
+                //  .navigateMenuMySpace()
+                // .navigateMenuAboutUs()
+                //.navigateMenuMySpace()
+                // .navigateMenuEcoNewsFooter()
+                // .navigateMenuTripandTricksFooter()
+                // .navigateMenuPlacesFooter()
+                // .navigateMenuAboutUsFooter()
+                // .navigateMyhabitsPageFooter()
+                .navigateSingOut()
+                .navigateMenuHome();
         PresentationSleep();
 
     }
