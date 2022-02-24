@@ -34,6 +34,14 @@ public class UBSCourierPage extends TopPage{
     private WebElement subscribeToNewsletter;
     @FindBy(css="button:nth-child(4)")
     private WebElement subscribeButton;
+    @FindBy(css="div.social-networks>a.fa.fa-facebook")
+    private WebElement facebook;
+    @FindBy(css="div.social-networks>a.fa.fa-instagram")
+    private WebElement instagram;
+    @FindBy(css="div.social-networks>a.fa.fa-telegram")
+    private WebElement telegram;
+    @FindBy(css="div.social-networks>a.fa.fa-youtube")
+    private WebElement youtube;
 
 
     public UBSCourierPage(WebDriver driver) {
@@ -65,7 +73,7 @@ public class UBSCourierPage extends TopPage{
 
     public void clickCloseLogin() {getCloseLogin().click();}
 
-    public boolean isDisplayedCloseLoginBotton() {return closeLogin.isDisplayed();}
+    public boolean isDisplayedCloseLoginButton() {return closeLogin.isDisplayed();}
 
     //User Agreement Page
     public WebElement getUserAgreement() {return userAgreement;}
@@ -113,6 +121,27 @@ public class UBSCourierPage extends TopPage{
         getSubscribeButton().click();
     }
 
+    //footerLinkInstagram
+    private WebElement getLinkInstagram() {return instagram;}
+
+    public void clickLinkInstagram(){getLinkInstagram().click();}
+
+    // footerLinkFacebook
+    private WebElement getLinkFacebook() {return facebook;}
+
+    public void clickLinkFacebook(){getLinkFacebook().click();}
+
+    // footerLinkTelegram
+    private WebElement getLinkTelegram() {return telegram;}
+
+    public void clickLinkTelegram(){getLinkTelegram().click();}
+
+    // footerLinkYoutube
+    private WebElement getLinkYoutube() {return youtube;}
+
+    public void clickLinkYoutube(){getLinkYoutube().click();}
+
+
 
     //Functional
     public void skipFromWindows() throws InterruptedException{
@@ -141,13 +170,36 @@ public class UBSCourierPage extends TopPage{
             Thread.sleep(1000);
     }
 
+    public void getNews(String userMail) throws InterruptedException {
+        scrollToElement(subscribeToNewsletter);
+        clickSubscribeToNewsletter();
+        sendKeysSubscribeToNewsletter(userMail);
+        clickSubscribeButton();
+        Thread.sleep(1000);
+    }
+
+    public void getNewsWrong(String wrongEmail) throws InterruptedException {
+        scrollToElement(subscribeToNewsletter);
+        clickSubscribeToNewsletter();
+        sendKeysSubscribeToNewsletter(wrongEmail);
+        clickSubscribeButton();
+    }
+
     //Business logic
+
+    /**
+     * Navigate GreenCity Page
+     * @return UBSCourierPage
+     */
     public UBSCourierPage navigateGreenCity() {
         getUBSCourierPopUp().clickGreenCityPage();
         return new UBSCourierPage(driver);
     }
 
-
+    /**
+     * Open links to another pages
+     * @throws InterruptedException
+     */
     public void gotoLinkPages() throws InterruptedException {
         scrollToElement(userAgreement);
         Thread.sleep(3000);
@@ -172,10 +224,26 @@ public class UBSCourierPage extends TopPage{
         Thread.sleep(3000);
     }
 
-    public void getNews(String userMail){
-        scrollToElement(subscribeToNewsletter);
-        clickSubscribeToNewsletter();
-        sendKeysSubscribeToNewsletter(userMail);
-        clickSubscribeButton();
+    /**
+     * Go to Social Networks
+     * @throws InterruptedException
+     */
+    public void gotoSocialNetworks() throws InterruptedException {
+        scrollToElement(facebook);
+        Thread.sleep(3000);
+        clickLinkFacebook();
+        skipFromWindows();
+        scrollToElement(instagram);
+        Thread.sleep(3000);
+        clickLinkInstagram();
+        skipFromWindows();
+        scrollToElement(telegram);
+        Thread.sleep(3000);
+        clickLinkTelegram();
+        skipFromWindows();
+        //scrollToElement(youtube);
+       // Thread.sleep(3000);
+       // clickLinkYoutube();
+       // skipFromWindows();
     }
 }
