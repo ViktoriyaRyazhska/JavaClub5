@@ -9,8 +9,18 @@ import org.openqa.selenium.support.PageFactory;
 public class UBSCourierPopUp extends MainManuPopUp {
     @FindBy(css=".menu-icon-wrapper")
     protected WebElement naviconButtonUBS;
+    @FindBy(css = ".ubs > li:nth-child(1) > a")
+    protected WebElement aboutUsUBSPopUp;
+    @FindBy(css = ".ubs > li:nth-child(2) > a")
+    protected WebElement storingRulesPopUp;
+    @FindBy(css = ".ubs > li:nth-child(3) > a")
+    private WebElement ecoShopPopUp;
     @FindBy(css = ".ubs > li:nth-child(4) > a")
-    protected WebElement greenCityPage;
+    protected WebElement greenCityPagePopUp;
+    @FindBy(css="a.tertiary-global-button")
+    private WebElement singInUBSPopUp;
+    @FindBy(css = "li.header_mobile-menu-sign-up>div.ubs-header_sign-up-btn")
+    private WebElement singUpUBSPopUp;
 
     public UBSCourierPopUp(WebDriver driver){
         super(driver);
@@ -36,24 +46,50 @@ public class UBSCourierPopUp extends MainManuPopUp {
         return getNaviconButtonUBS().isDisplayed();
     }
 
+    //AboutUsUBSPopUp
+    public WebElement getAboutUsUBSPopUp() {
+        return aboutUsUBSPopUp;
+    }
+
+    public void clickAboutUsUBSPopUp() {getAboutUsUBSPopUp().click();}
+
+    public boolean isDisplayedAboutUsUBSPopUp() {return aboutUsUBSPopUp.isDisplayed();}
+
+    //StoringRulesPopUp
+    public WebElement getStoringRulesPopUp() {
+        return storingRulesPopUp;
+    }
+
+    public void clickStoringRulesPopUp() {getStoringRulesPopUp().click();}
+
+    public boolean isDisplayedStoringRulesPopUp() {return storingRulesPopUp.isDisplayed();}
+
+    //EcoShop
+    public WebElement getEcoShopPopUp() {
+        return ecoShopPopUp;
+    }
+
+    public void clickEcoShopPopUp() {getEcoShopPopUp().click();}
+
+    public boolean isDisplayedEcoShopPopUp() {return ecoShopPopUp.isDisplayed();}
 
     //HomePage(GreenCity)
 
-    protected WebElement getGreenCityPage(){
-        return greenCityPage;
+    protected WebElement getGreenCityPagePopUp(){
+        return greenCityPagePopUp;
     }
-    protected String getGreenCityPageText(){
-        return getGreenCityPage().getText();
+    protected String getGreenCityPagePopUpText(){
+        return getGreenCityPagePopUp().getText();
     }
 
     public void clickGreenCityPage(){
         clickNaviconButtonUBS();
-        if(isDisplayedGreenCityPage()) {
-            getGreenCityPage().click();
+        if(isDisplayedGreenCityPagePopUp()) {
+            getGreenCityPagePopUp().click();
         }
     }
-    protected boolean isDisplayedGreenCityPage(){
-        return getGreenCityPage().isDisplayed();
+    protected boolean isDisplayedGreenCityPagePopUp(){
+        return getGreenCityPagePopUp().isDisplayed();
     }
 
 
