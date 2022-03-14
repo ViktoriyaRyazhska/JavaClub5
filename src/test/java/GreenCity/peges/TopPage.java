@@ -40,6 +40,7 @@ public abstract class TopPage {
         private Footer footer;
         private SingInData singInData;
         private UserMenuRight userMenuRight;
+        private EcoNewsPage ecoNewsPage;
         private int Window_Heigth_toClick_Footer=480;
 
 
@@ -87,6 +88,7 @@ public abstract class TopPage {
                 topGuestComponent = new TopGuestComponent(driver);
                 singInData=new SingInData();
                 userMenuRight= new UserMenuRight(driver);
+                ecoNewsPage=new EcoNewsPage(driver);
         }
 
 
@@ -190,6 +192,51 @@ public abstract class TopPage {
         public EcoNewsPage navigateMenuEcoNews() {
                 getMainManuPopUp().clickMenuEcoNewsPage();
                 return new EcoNewsPage(driver);
+                        }
+        /**
+         * Go to EcoNewsPage and check the items.
+         * @return EcoNewsPage
+         */
+
+        public EcoNewsPage navigateMenuEcoNewsfilter() throws InterruptedException {
+                ecoNewsPage = new EcoNewsPage(driver);
+                try {
+                        if (ecoNewsPage.isDisplayedPanelAccoun()) {
+
+                                ecoNewsPage.clickPanelAccoun();
+                                Thread.sleep(8000);
+                                ecoNewsPage.clickFilterBy();
+                                ecoNewsPage.endClickFilterBy();
+                                ecoNewsPage.scrollDown(ecoNewsPage.getFooter().getCopyright());
+                                ecoNewsPage.scrollDown(ecoNewsPage.getFooterapp());
+                                Thread.sleep(3000);
+                                ecoNewsPage.clickWrapper_btnbars();
+                                Thread.sleep(1000);
+                                ecoNewsPage.scrollDown(ecoNewsPage.getFooter().getCopyright());
+                                Thread.sleep(1000);
+                                ecoNewsPage.scrollDown(ecoNewsPage.getFooterapp());
+                                ecoNewsPage.clickPanelAccoun();
+                                return  new EcoNewsPage(driver);
+
+
+                        }
+                } catch (NoSuchElementException e) {
+                        ecoNewsPage.clickFilterBy();
+                        ecoNewsPage.endClickFilterBy();
+                        ecoNewsPage.scrollDown(ecoNewsPage.getFooter().getCopyright());
+                        ecoNewsPage.scrollDown(ecoNewsPage.getFooterapp());
+                        Thread.sleep(3000);
+                        ecoNewsPage.clickWrapper_btnbars();
+                        Thread.sleep(1000);
+                        ecoNewsPage.scrollDown(ecoNewsPage.getFooter().getCopyright());
+                        Thread.sleep(1000);
+                        ecoNewsPage.scrollDown(ecoNewsPage.getFooterapp());
+                        return  new EcoNewsPage(driver);
+
+
+
+                }
+                return null;
         }
 
         /**
