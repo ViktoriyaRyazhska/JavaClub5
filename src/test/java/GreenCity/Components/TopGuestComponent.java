@@ -9,22 +9,21 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class TopGuestComponent extends MainManuPopUp {
-    private WebDriver driver;
 
-    @FindBy(className="cdk-overlay-container")
+    @FindBy(className = "cdk-overlay-container")
     private WebElement singInLink;
-    @FindBy(css="div.header_sign-up-btn>span")
+    @FindBy(css = "div.header_sign-up-btn>span")
     private WebElement singUpLink;
-    @FindBy(css="li.header_mobile-menu-sign-up>div.header_sign-up-btn.secondary-global-button")
+    @FindBy(css = "li.header_mobile-menu-sign-up>div.header_sign-up-btn.secondary-global-button")
     private WebElement singUpLinkPopUp;
 
-    public TopGuestComponent (WebDriver driver){
-        //this.driver=driver;
+    public TopGuestComponent(WebDriver driver) {
+        // this.driver=driver;
         super(driver);
         PageFactory.initElements(driver, this);
     }
 
-    //singInLink
+    // singInLink
 
     public WebElement getSingInLink() {
         return singInLink;
@@ -38,7 +37,7 @@ public class TopGuestComponent extends MainManuPopUp {
         getSingInLink().click();
     }
 
-    //singUpLink
+    // singUpLink
 
     public WebElement getSingUpLink() {
         return singUpLink;
@@ -56,19 +55,21 @@ public class TopGuestComponent extends MainManuPopUp {
         return getSingUpLink().isDisplayed();
     }
 
-   //singUpLinkPopUp
-   public WebElement getSingUpLinkPopUp() {
-       return singUpLinkPopUp;
-   }
+    // singUpLinkPopUp
+    public WebElement getSingUpLinkPopUp() {
+        return singUpLinkPopUp;
+    }
 
     public String getSingUpLinkPopUpText() {
         return getSingUpLinkPopUp().getText();
     }
 
     public void clickSingUpLinkPopUp() {
-        if(isDisplayedSingUpLinkPopUp()){
-        getSingUpLinkPopUp().click();}
+        if (isDisplayedSingUpLinkPopUp()) {
+            getSingUpLinkPopUp().click();
+        }
     }
+
     public boolean isDisplayedSingUpLinkPopUp() {
         return getSingUpLinkPopUp().isDisplayed();
     }

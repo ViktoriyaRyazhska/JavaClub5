@@ -1,17 +1,16 @@
 package GreenCity.tests;
 
-
 import GreenCity.data.Languages;
 import GreenCity.peges.AboutUsPage;
 import GreenCity.peges.HomePage;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-
 public class TestAboutUsPage extends GreenCityRunner {
 
     @Test
-    public void CheckAboutUsPage () throws InterruptedException {
+    public void CheckAboutUsPage() throws InterruptedException {
+        logger.info("Check links to Pages");
         AboutUsPage aboutUs = new AboutUsPage(driver);
         aboutUs = aboutUs
                 .navigateMenuAboutUs();
@@ -20,7 +19,7 @@ public class TestAboutUsPage extends GreenCityRunner {
         aboutUs.backFromPlace();
         aboutUs.goToTipsTricks();
         aboutUs.backFromTipsTricks();
-
+        logger.info("Links are avaliable");
     }
 
 }

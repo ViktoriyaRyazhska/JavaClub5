@@ -2,20 +2,17 @@ package GreenCity.Containers;
 
 import GreenCity.PopUpMenu.guest.UBSCourierPopUp;
 import GreenCity.data.Languages;
-import GreenCity.peges.HomePage;
 import GreenCity.peges.UBSCourierPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 import java.util.List;
 
 public class UBSCourierHeaderContainer extends UBSCourierPage {
     private UBSCourierPopUp ubs = new UBSCourierPopUp(driver);
+
     @FindBy(css = "div.header_container a.header_logo.active-link")
     private WebElement ubsHome;
     @FindBy(css = "div.header_navigation-menu-ubs>nav>ul.ubs>li:nth-child(1)>a")
@@ -237,6 +234,11 @@ public class UBSCourierHeaderContainer extends UBSCourierPage {
         ubs.clickGreenCityPage();
         Thread.sleep(1000);
 
+    }
+
+    public void gotoRegistration() {
+        ubs.clickNaviconButtonUBS();
+        clickSingUpUBS();
     }
 
 }

@@ -1,16 +1,16 @@
 package GreenCity.tests;
 
-
 import GreenCity.data.Languages;
 import GreenCity.peges.HomePage;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class TestHomePage extends GreenCityRunner {
     @DataProvider
     public Object[][] validData() {
-        return new Object[][]{
-                {Languages.ENGLISH}
+        return new Object[][] {
+                { Languages.ENGLISH }
         };
     }
 
@@ -32,68 +32,69 @@ public class TestHomePage extends GreenCityRunner {
                 .navigateSingInDropdown()
                 .navigateMenuHome();
 
-//        Assert.assertEquals(homePage.getLanguageButtonText(), Languages.ENGLISH.toString());
-//        PresentationSleep();
+        Assert.assertEquals(homePage.getLanguageButtonText(), Languages.ENGLISH.toString());
+        PresentationSleep();
 
     }
+
     @Test(dataProvider = "validData")
-    public void CheckElementsFooter(Languages languages) throws Exception{
-        HomePage homePage1= LoadApplication();
-        // EcoNewsPage homePage2=loadApplicationHomePage().ScrollDown2().navigateMenuEcoNewsFooter();
+    public void CheckElementsFooter(Languages languages) throws Exception {
+        HomePage homePage1 = LoadApplication();
+        // EcoNewsPage
+        // homePage2=loadApplicationHomePage().ScrollDown2().navigateMenuEcoNewsFooter();
         PresentationSleep();
-        homePage1= homePage1
+        homePage1 = homePage1
                 .navigateMenuEcoNews()
                 .navigateMenuEcoNewsFooter()
                 .navigateMenuTripandTricksFooter()
                 .navigateMenuMySpace()
                 .navigateMenuEventsFooter()
-               // .navigateMenuMySpace()
                 .navigateMenuPlacesFooter()
                 .navigateMenuAboutUsFooter()
                 .navigateMyhabitsPageFooter()
                 .navigateMenuHomeFooter();
-        /// .navigateMenuHome();
+
         PresentationSleep();
 
     }
 
     @Test(dataProvider = "validData")
-    public void CheckElementsEnterSingIn(Languages languages) throws Exception{
-        HomePage homePage1= LoadApplication();
+    public void CheckElementsEnterSingIn(Languages languages) throws Exception {
+        HomePage homePage1 = LoadApplication();
         PresentationSleep();
-        homePage1= homePage1
+        homePage1 = homePage1
                 .navigateMenuEcoNews()
                 .navigateSingInDropdownEnter()
                 .navigateMenuEcoNews()
-                //.navigateMenuTipsTricks()
-               // .navigateMenuEvents()
-               //  .navigateMenuMySpace()
-               // .navigateMenuAboutUs()
-               //.navigateMenuMySpace()
-               // .navigateMenuEcoNewsFooter()
-               // .navigateMenuTripandTricksFooter()
-               // .navigateMenuPlacesFooter()
-               // .navigateMenuAboutUsFooter()
-               // .navigateMyhabitsPageFooter()
+                // .navigateMenuTipsTricks()
+                // .navigateMenuEvents()
+                // .navigateMenuMySpace()
+                // .navigateMenuAboutUs()
+                // .navigateMenuMySpace()
+                // .navigateMenuEcoNewsFooter()
+                // .navigateMenuTripandTricksFooter()
+                // .navigateMenuPlacesFooter()
+                // .navigateMenuAboutUsFooter()
+                // .navigateMyhabitsPageFooter()
                 .navigateSingOut()
-        .navigateMenuHome();
+                .navigateMenuHome();
         PresentationSleep();
 
     }
 
     @Test(dataProvider = "validData")
-    public void CheckElementsEnterRightSingIn(Languages languages) throws Exception{
-        HomePage homePage3=LoadApplication();
+    public void CheckElementsEnterRightSingIn(Languages languages) throws Exception {
+        HomePage homePage3 = LoadApplication();
         PresentationSleep();
-        homePage3= homePage3
+        homePage3 = homePage3
                 .navigateMenuEcoNews()
                 .navigateSingInRightEnter()
                 .navigateMenuEcoNews()
-                //.navigateMenuTipsTricks()
+                // .navigateMenuTipsTricks()
                 // .navigateMenuEvents()
-                //  .navigateMenuMySpace()
+                // .navigateMenuMySpace()
                 // .navigateMenuAboutUs()
-                //.navigateMenuMySpace()
+                // .navigateMenuMySpace()
                 // .navigateMenuEcoNewsFooter()
                 // .navigateMenuTripandTricksFooter()
                 // .navigateMenuPlacesFooter()

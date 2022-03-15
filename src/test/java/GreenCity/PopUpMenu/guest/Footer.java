@@ -10,57 +10,54 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
-
-public class Footer  {
+public class Footer {
     private WebDriver driver;
 
-    @FindBy(css= ".footer_logo-wrp>a>img.logo")
+    @FindBy(css = ".footer_logo-wrp>a>img.logo")
     private WebElement footerHomePage;
-    @FindBy(css="ul.footer_left-side>li:nth-child(1) > a")
+    @FindBy(css = "ul.footer_left-side>li:nth-child(1) > a")
     private WebElement footerEcoNewsPage;
-    //@FindBy(css="div.container>nav.footer_links>ul.footer_left-side>li>a[href*='#/tips']")
+    // @FindBy(css="div.container>nav.footer_links>ul.footer_left-side>li>a[href*='#/tips']")
     @FindBy(css = "ul.footer_left-side>li:nth-child(2) > a")
     private WebElement footerTipsTricksPage;
-    //@FindBy(xpath="//a[contains(@href, '#/events')]")
-    @FindBy(css= "ul.footer_left-side>li:nth-child(3) > a")
+    // @FindBy(xpath="//a[contains(@href, '#/events')]")
+    @FindBy(css = "ul.footer_left-side>li:nth-child(3) > a")
     private WebElement footerEventsPage;
-    @FindBy(css="ul.footer_left-side>li:nth-child(4) > a")
+    @FindBy(css = "ul.footer_left-side>li:nth-child(4) > a")
     private WebElement footerPlacesPage;
-    @FindBy(css="ul.footer_left-side>li:nth-child(5) > a")
+    @FindBy(css = "ul.footer_left-side>li:nth-child(5) > a")
     private WebElement footerAboutUsPage;
-    @FindBy( css = "ul.footer_left-side>li:nth-child(6) > a" )
+    @FindBy(css = "ul.footer_left-side>li:nth-child(6) > a")
     private WebElement footerMyHabitsPage;
     // @FindBy(css="img.logo")
     @FindBy(css = "div#copyright-label")
     private WebElement copyright;
-    @FindBy(css=".footer_social-link:nth-child(1) > img")
+    @FindBy(css = ".footer_social-link:nth-child(1) > img")
     private WebElement footerLinkTwitter;
-    @FindBy(css=".footer_social-link:nth-child(2) > img")
+    @FindBy(css = ".footer_social-link:nth-child(2) > img")
     private WebElement footerLinkInstagram;
-    @FindBy(css=".footer_social-link:nth-child(3) > img")
+    @FindBy(css = ".footer_social-link:nth-child(3) > img")
     private WebElement footerLinkFacebook;
 
     public Footer(WebDriver driver) {
         PageFactory.initElements(driver, this);
-        //super(driver);
+        // super(driver);
         this.driver = driver;
     }
 
-
-    public void scrollDown(){
+    public void scrollDown() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView(true);", getCopyright());
     }
 
-    public void waitOfPageFullDownloading(){
+    public void waitOfPageFullDownloading() {
         WebDriverWait driverWait = new WebDriverWait(driver, Duration.ofSeconds(30));
         driverWait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div#copyright-label")));
     }
 
+    // Atomic logic
 
-    //Atomic logic
-
-    //Copyright
+    // Copyright
     public WebElement getCopyright() {
         return copyright;
     }
@@ -69,66 +66,67 @@ public class Footer  {
         return getCopyright().getText();
     }
 
-
     public void clickCopyright() {
         getCopyright().click();
     }
 
-    //Footer
+    // Footer
     //
-    //Home Page
+    // Home Page
     private WebElement getFooterHomePage() {
 
         return footerHomePage;
     }
 
-    public String getFooterHomePageText(){
+    public String getFooterHomePageText() {
         return getFooterHomePage().getText();
     }
 
     public void clickFooterHomePage() {
         scrollDown();
-         //Thread.sleep(1000);
+        // Thread.sleep(1000);
         waitOfPageFullDownloading();
         getFooterHomePage().click();
 
     }
 
-    public boolean isDisplayedFooterHomePage(){
+    public boolean isDisplayedFooterHomePage() {
         return getFooterHomePage().isDisplayed();
     }
+
     //
-    //EcoNews
+    // EcoNews
     private WebElement getFooterEcoNewsPage() {
 
         return footerEcoNewsPage;
     }
 
-    public String getFooterEcoNewsPageText()  {
+    public String getFooterEcoNewsPageText() {
         return getFooterEcoNewsPage().getText();
     }
 
     public void clickFooterEcoNewsPage() {
-        //Thread.sleep(1000);
+        // Thread.sleep(1000);
         waitOfPageFullDownloading();
         System.out.println("scrollDown");
         scrollDown();
-        //Thread.sleep(1000);
+        // Thread.sleep(1000);
         waitOfPageFullDownloading();
         System.out.println("clickFooterEcoNewsPage");
         getFooterEcoNewsPage().click();
     }
 
-    public boolean isDisplayedFooterEcoNewsPage()  {
+    public boolean isDisplayedFooterEcoNewsPage() {
         return getFooterEcoNewsPage().isDisplayed();
     }
+
     //
-    //Tips And Tricks
+    // Tips And Tricks
     private WebElement getFooterTipsTricksPage() {
         return footerTipsTricksPage;
     }
 
-    public String getFooterTipsTricksPageText(){
+    public String getFooterTipsTricksPageText() {
         return getFooterTipsTricksPage().getText();
     }
 
@@ -137,94 +135,95 @@ public class Footer  {
         System.out.println("scrollDown");
         scrollDown();
         waitOfPageFullDownloading();
-        //Thread.sleep(1000);
+        // Thread.sleep(1000);
         System.out.println("getFooterTipsTricksPage().click()");
         getFooterTipsTricksPage().click();
 
-
     }
 
-    public boolean isDisplayedFooterTipsTricksPage(){
+    public boolean isDisplayedFooterTipsTricksPage() {
         return getFooterTipsTricksPage().isDisplayed();
     }
+
     //
-    //Events
+    // Events
     private WebElement getFooterEventsPage() {
         return footerEventsPage;
     }
 
-    public String getFooterEventsText(){
+    public String getFooterEventsText() {
         return getFooterEventsPage().getText();
     }
 
-    public void clickFooterEventsPage(){
+    public void clickFooterEventsPage() {
 
         System.out.println("scrollDown");
         scrollDown();
-        waitOfPageFullDownloading();
-       // Thread.sleep(1000);
+        // waitOfPageFullDownloading();
+        // Thread.sleep(1000);
         System.out.println(" getFooterEventsPage().click()");
         getFooterEventsPage().click();
     }
 
-
-    public boolean isDisplayedFooterEventsPage(){
+    public boolean isDisplayedFooterEventsPage() {
         return getFooterEventsPage().isDisplayed();
     }
+
     //
-    //Places
+    // Places
     private WebElement getFooterPlacesPage() {
         return footerPlacesPage;
     }
 
-    public String getFooterPlacesText(){
+    public String getFooterPlacesText() {
         return getFooterPlacesPage().getText();
     }
 
     public void clickFooterPlacesPage() throws InterruptedException {
         System.out.println("scrollDown");
         scrollDown();
-        //waitOfPageFullDownloading();
+        // waitOfPageFullDownloading();
 
         Thread.sleep(5000);
         System.out.println(" getFooterPlacesPage().click()");
         getFooterPlacesPage().click();
     }
 
-
-    public boolean isDisplayedFooterPlacesPage(){
+    public boolean isDisplayedFooterPlacesPage() {
         return getFooterPlacesPage().isDisplayed();
     }
+
     //
-    //About Us
+    // About Us
     private WebElement getFooterAboutUsPage() {
         return footerAboutUsPage;
     }
 
-    public String getFooterAboutUsPageText(){
+    public String getFooterAboutUsPageText() {
         return getFooterAboutUsPage().getText();
     }
 
-    public void clickFooterAboutUsPage(){
+    public void clickFooterAboutUsPage() {
         System.out.println("scrollDown");
         scrollDown();
         waitOfPageFullDownloading();
-       //Thread.sleep(1000);
+        // Thread.sleep(1000);
         System.out.println(" getFooterAboutUsPage().click()");
         getFooterAboutUsPage().click();
 
     }
-    public boolean isDisplayedFooterAboutUsPage(){
+
+    public boolean isDisplayedFooterAboutUsPage() {
         return getFooterAboutUsPage().isDisplayed();
     }
     //
-    //My Habits
+    // My Habits
 
     private WebElement getFooterMyHabitsPage() {
         return footerMyHabitsPage;
     }
 
-    public String getFooterMyHabitsPageText(){
+    public String getFooterMyHabitsPageText() {
         return getFooterMyHabitsPage().getText();
     }
 
@@ -233,50 +232,50 @@ public class Footer  {
         // Thread.sleep(1000);
         scrollDown();
         waitOfPageFullDownloading();
-       // Thread.sleep(1000);
+        // Thread.sleep(1000);
         System.out.println(" getFooterMyHabitsPage().click();");
         getFooterMyHabitsPage().click();
         System.out.println("MyHabitsPage");
     }
 
-
-    public boolean isDisplayedFooterMyHabitsPage(){
+    public boolean isDisplayedFooterMyHabitsPage() {
         return getFooterMyHabitsPage().isDisplayed();
     }
 
-    //Follow us
-    //Link Twitter
+    // Follow us
+    // Link Twitter
     private WebElement getFooterLinkTwitter() {
         return footerLinkTwitter;
     }
 
-    public void clickFooterLinkTwitter(){
+    public void clickFooterLinkTwitter() {
         scrollDown();
         waitOfPageFullDownloading();
-        if(isDisplayedFooterLinkTwitter()){
+        if (isDisplayedFooterLinkTwitter()) {
             getFooterLinkTwitter().click();
             System.out.println("MyHabitsPage");
         }
     }
 
-    public boolean isDisplayedFooterLinkTwitter(){
+    public boolean isDisplayedFooterLinkTwitter() {
         return getFooterMyHabitsPage().isDisplayed();
     }
-    //footerLinkInstagram
+
+    // footerLinkInstagram
     private WebElement getFooterLinkInstagram() {
         return footerLinkInstagram;
     }
 
-    public void clickFooterLinkInstagram(){
+    public void clickFooterLinkInstagram() {
         scrollDown();
         waitOfPageFullDownloading();
-        if(isDisplayedFooterLinkInstagram()){
+        if (isDisplayedFooterLinkInstagram()) {
             getFooterLinkInstagram().click();
             System.out.println("MyHabitsPage");
         }
     }
 
-    public boolean isDisplayedFooterLinkInstagram(){
+    public boolean isDisplayedFooterLinkInstagram() {
         return getFooterMyHabitsPage().isDisplayed();
     }
 
@@ -285,16 +284,16 @@ public class Footer  {
         return footerLinkFacebook;
     }
 
-    public void clickFooterLinkFacebook(){
+    public void clickFooterLinkFacebook() {
         scrollDown();
         waitOfPageFullDownloading();
-        if(isDisplayedFooterLinkFacebook()){
+        if (isDisplayedFooterLinkFacebook()) {
             getFooterLinkFacebook().click();
             System.out.println("MyHabitsPage");
         }
     }
 
-    public boolean isDisplayedFooterLinkFacebook(){
+    public boolean isDisplayedFooterLinkFacebook() {
         return getFooterLinkFacebook().isDisplayed();
     }
 

@@ -1,13 +1,13 @@
 package GreenCity.PopUpMenu.guest;
 
-import GreenCity.peges.TopPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class UBSCourierPopUp extends MainManuPopUp {
-    @FindBy(css=".menu-icon-wrapper")
+
+    @FindBy(css = ".menu-icon-wrapper")
     protected WebElement naviconButtonUBS;
     @FindBy(css = ".ubs > li:nth-child(1) > a")
     protected WebElement aboutUsUBSPopUp;
@@ -17,83 +17,115 @@ public class UBSCourierPopUp extends MainManuPopUp {
     private WebElement ecoShopPopUp;
     @FindBy(css = ".ubs > li:nth-child(4) > a")
     protected WebElement greenCityPagePopUp;
-    @FindBy(css="a.tertiary-global-button")
+    @FindBy(css = "a.tertiary-global-button")
     private WebElement singInUBSPopUp;
     @FindBy(css = "li.header_mobile-menu-sign-up>div.ubs-header_sign-up-btn")
     private WebElement singUpUBSPopUp;
 
-    public UBSCourierPopUp(WebDriver driver){
+    public UBSCourierPopUp(WebDriver driver) {
         super(driver);
-        //This initElements method will create all WebElements
+        // This initElements method will create all WebElements
         PageFactory.initElements(driver, this);
     }
 
-
-    //naviconButtonUBS
+    // naviconButtonUBS
     private WebElement getNaviconButtonUBS() {
         return naviconButtonUBS;
     }
 
-    public String getNaviconButtonUBSText(){
+    public String getNaviconButtonUBSText() {
         return getNaviconButtonUBS().getText();
     }
 
-    public void clickNaviconButtonUBS(){
-        if(isDisplayedNaviconButtonUBS()){
-            getNaviconButtonUBS().click();}
+    public void clickNaviconButtonUBS() {
+        if (isDisplayedNaviconButtonUBS()) {
+            getNaviconButtonUBS().click();
+        }
     }
-    public boolean isDisplayedNaviconButtonUBS(){
+
+    public boolean isDisplayedNaviconButtonUBS() {
         return getNaviconButtonUBS().isDisplayed();
     }
 
-    //AboutUsUBSPopUp
+    // AboutUsUBSPopUp
     public WebElement getAboutUsUBSPopUp() {
         return aboutUsUBSPopUp;
     }
 
-    public void clickAboutUsUBSPopUp() {getAboutUsUBSPopUp().click();}
+    public void clickAboutUsUBSPopUp() {
+        getAboutUsUBSPopUp().click();
+    }
 
-    public boolean isDisplayedAboutUsUBSPopUp() {return aboutUsUBSPopUp.isDisplayed();}
+    public boolean isDisplayedAboutUsUBSPopUp() {
+        return aboutUsUBSPopUp.isDisplayed();
+    }
 
-    //StoringRulesPopUp
+    // StoringRulesPopUp
     public WebElement getStoringRulesPopUp() {
         return storingRulesPopUp;
     }
 
-    public void clickStoringRulesPopUp() {getStoringRulesPopUp().click();}
+    public void clickStoringRulesPopUp() {
+        getStoringRulesPopUp().click();
+    }
 
-    public boolean isDisplayedStoringRulesPopUp() {return storingRulesPopUp.isDisplayed();}
+    public boolean isDisplayedStoringRulesPopUp() {
+        return storingRulesPopUp.isDisplayed();
+    }
 
-    //EcoShop
+    // EcoShop
     public WebElement getEcoShopPopUp() {
         return ecoShopPopUp;
     }
 
-    public void clickEcoShopPopUp() {getEcoShopPopUp().click();}
+    public void clickEcoShopPopUp() {
+        getEcoShopPopUp().click();
+    }
 
-    public boolean isDisplayedEcoShopPopUp() {return ecoShopPopUp.isDisplayed();}
+    public boolean isDisplayedEcoShopPopUp() {
+        return ecoShopPopUp.isDisplayed();
+    }
 
-    //HomePage(GreenCity)
+    // SingUp
 
-    protected WebElement getGreenCityPagePopUp(){
+    protected WebElement getSingUpUBSPopUp() {
+        return singUpUBSPopUp;
+    }
+
+    protected String getSingUpUBSPopUpText() {
+        return getSingUpUBSPopUp().getText();
+    }
+
+    public void clickSingUpUBSPopUp() {
+        clickNaviconButtonUBS();
+        if (isDisplayedSingUpUBSPopUp()) {
+            getSingUpUBSPopUp().click();
+        }
+    }
+
+    protected boolean isDisplayedSingUpUBSPopUp() {
+        return getSingUpUBSPopUp().isDisplayed();
+    }
+
+    // HomePage(GreenCity)
+
+    protected WebElement getGreenCityPagePopUp() {
         return greenCityPagePopUp;
     }
-    protected String getGreenCityPagePopUpText(){
+
+    protected String getGreenCityPagePopUpText() {
         return getGreenCityPagePopUp().getText();
     }
 
-    public void clickGreenCityPage(){
+    public void clickGreenCityPage() {
         clickNaviconButtonUBS();
-        if(isDisplayedGreenCityPagePopUp()) {
+        if (isDisplayedGreenCityPagePopUp()) {
             getGreenCityPagePopUp().click();
         }
     }
-    protected boolean isDisplayedGreenCityPagePopUp(){
+
+    protected boolean isDisplayedGreenCityPagePopUp() {
         return getGreenCityPagePopUp().isDisplayed();
     }
 
-
-
 }
-
-
