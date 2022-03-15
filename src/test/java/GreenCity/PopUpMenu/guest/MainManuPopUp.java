@@ -326,7 +326,6 @@ public class MainManuPopUp {
         if(!isDisplayedMenuUBSCourierPage()){
             clickNaviconButton();
         }
-
         getMenuUBSCourierPage().click();
 
     }
