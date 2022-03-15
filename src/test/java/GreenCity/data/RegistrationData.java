@@ -1,28 +1,16 @@
 package GreenCity.data;
 
-import java.util.ArrayList;
-
 public class RegistrationData {
-/*
-    public static ArrayList<String> getGuestData(){
-    ArrayList<String> guestData = new ArrayList<>();
-    guestData.add("nastacy@yahoo.com");
-    guestData.add("1q2w3e4r5t6y&U");
-    guestData.add("Anastasiia");
-    return guestData;
-    }
- */
 
     private String email;
     private String password;
     private String userName;
-    private  String wrongEmail;
+    private String wrongEmail;
     private String wrongName;
     private String amountPassword;
     private String errorSymbolPassword;
 
-
-    public RegistrationData(){
+    public RegistrationData() {
         email = "nastacy@yahoo.com";
         password = "1q2w3e4r5t6y&U";
         userName = "Anastasiia";
@@ -42,7 +30,9 @@ public class RegistrationData {
         this.password = password;
     }
 
-     public void setUserName(String userName) {this.userName = userName;}
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
     // getters
 
@@ -54,18 +44,29 @@ public class RegistrationData {
         return password;
     }
 
-    public String getUserName(){return userName;}
+    public String getUserName() {
+        return userName;
+    }
 
-    public String getWrongEmail(){return wrongEmail;}
+    public String getWrongEmail() {
+        return wrongEmail;
+    }
 
-    public String getWrongName(){return wrongName;}
+    public String getWrongName() {
+        return wrongName;
+    }
 
-    public String getAmountPassword(){return amountPassword;}
+    public String getAmountPassword() {
+        return amountPassword;
+    }
 
-    public String getErrorSymbolPassword(){return errorSymbolPassword;}
+    public String getErrorSymbolPassword() {
+        return errorSymbolPassword;
+    }
 
-
+    @Override
+    public String toString() {
+        return "User [email=" + email + "userName=" + userName + ", password=" + password + "]";
+    }
 
 }
-
-

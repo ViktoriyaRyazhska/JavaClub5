@@ -6,7 +6,7 @@ public class SearchData {
 
     public SearchData() {
         request1 = "rule";
-        request2 = "Courier works";
+        request2 = "News";
     }
 
     // setters
