@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class TipsTricksPage extends TopPage {
 
-    @FindBy(css = ".full-text-block:nth-child(2) > .primary-global-button")
+    @FindBy(xpath = "//div[@id='nav-row']/button[2]/em")
     private WebElement findTipsTricks;
 
     public TipsTricksPage(WebDriver driver) {
@@ -40,6 +40,7 @@ public class TipsTricksPage extends TopPage {
     public boolean isDisplayedFindTipsTricks() {
         return findTipsTricks.isDisplayed();
     }
+
     public TipsTricksPage backFromTipsTricks() {
         navigateMenuTipsTricks();
         return new TipsTricksPage(driver);
